@@ -3,8 +3,8 @@ import Home from './pages/home/Home'
 import Login from './pages/login/Login'
 import Signup from './pages/signup/Signup'
 import Dashboard from './pages/dashboard/Dashboard'
-import About from './pages/about/About'
 import Landing from './pages/Landing'
+import About from './pages/about/About'
 
 function App() {
   return (
