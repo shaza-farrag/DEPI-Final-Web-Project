@@ -6,9 +6,7 @@ import Footer from '../../components/footer/Footer'
 function Home() {
   return (
     <div className={styles.home}>
-      <Header />
       <div>Home</div>
-      <Footer />
     </div>
   )
 }
