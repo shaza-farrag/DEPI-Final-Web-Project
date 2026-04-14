@@ -1,4 +1,254 @@
-.h{
-    color: red;
-    background-color: black;
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* .scroll {
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeInUp linear forwards;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+} */
+
+.container {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.hero {
+    width: 100%;
+    height: 33vh;
+    background: #ddd;
+}
+
+.section {
+    text-align: center;
+    padding: 60px 20px;
+    animation: fadeUp 1s ease;
+}
+
+.section h2 {
+    margin-bottom: 20px;
+    color:rgb(225, 182, 182);
+    font-size: 40px ;
+    font-family :Oswald;
+    letter-spacing: 4px;
+    font-weight: 500;
+}
+
+.section p {
+    max-width: 600px;
+    margin: auto;
+    line-height: 2;
+    color: #333;
+    font-size: 17px;
+    font-family:Raleway;
+}
+
+.button {
+    display: inline-block;
+    margin-top: 40px;
+    padding: 12px 55px;
+    background: rgb(222, 180, 180);
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-family :Oswald;
+    letter-spacing: 4px;
+    font-weight: 500;
+}
+
+.button:hover{
+    opacity: 0.7;
+}
+
+.shopSection {
+    height: 100vh;
+    background: rgb(255, 235, 233);
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    
+}
+
+.shopSection h1 {
+    margin-top: 40px;
+    font-size: 40px;
+    font-family :Oswald;
+    letter-spacing: 4px;
+    font-weight: 500;
+}
+
+.reviewSection {
+    background: black;
+    padding: 65px 0;
+    display: flex;
+    justify-content: center;
+    font-family:Raleway;
+    font-size: 19PX;
+  
+}
+
+.reviewCard {
+    background: white;
+    padding: 60px;
+    width: 500px;
+    text-align: center;
+    position: relative;
+}
+
+.icon {
+    position: absolute;
+    top: -35px;
+    left: 40%;
+    font-size: 55px;  
+    color: rgb(225, 182, 182);
+    padding: 10px;
+    
+}
+
+.reviewCard span {
+    display: block;
+    margin-top: 15px;
+    color: rgb(225, 182, 182);
+    font-weight: bold;
+}
+
+
+.lastSection {
+    display: flex;
+    height: 100vh;
+
+}
+
+.textSide {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px;
+    order: 2;
+
+}
+
+.textSide h2 {
+    color: rgb(225, 182, 182);
+    margin-bottom: 20px;
+    font-family :Oswald;
+    letter-spacing: 4px;
+    font-weight: 500;
+}
+
+.textSide p {
+    color: rgba(0, 0, 0, 0.712);
+    margin-bottom: 30px ;
+    font-family:Raleway;
+    /* width: 400px; */
+    line-height: 1.8;
+}
+
+.shopBtn {
+    background: rgb(225, 182, 182);
+    border: none;
+    font-size: 15px ;
+    margin-top: 10px;
+    padding: 12px;
+    cursor: pointer;
+    font-family :Oswald;
+    letter-spacing: 4px;
+    font-weight: 500;
+    width: 300px;
+}
+
+.shopBtn:hover{
+    opacity: 0.8;
+}
+
+.imageSide {
+    width: 50%;
+    background: #ccc;
+}
+
+/*  Animation */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/*  Responsive  */ 
+
+@media (max-width: 992px) {
+
+.section h2 {
+    font-size: 30px;
+}
+.shopSection h1 {
+    font-size: 30px;
+}
+.lastSection {
+    flex-direction: column;
+    height: auto;
+}
+.textSide,
+.imageSide {
+    width: 100%;
+}
+.imageSide {
+    height: 300px;
+}
+.textSide {
+    text-align: center;
+    padding: 30px 20px;
+}
+.shopBtn {
+    margin: auto;
+}
+}
+
+@media (max-width: 600px) {
+
+    .section {
+        padding: 40px 15px;
+    }
+
+    .section p {
+        font-size: 15px;
+    }
+
+    .button {
+        padding: 10px 30px;
+        font-size: 14px;
+    }
+
+    .reviewCard {
+        width: 90%;
+        padding: 30px 20px;
+    }
+
+    .icon {
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 40px;
+    }
+
+    .shopBtn {
+        width: 100%;
+    }
+
+    .hero {
+        height: 25vh;
+    }
 }
