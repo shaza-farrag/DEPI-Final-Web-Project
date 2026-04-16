@@ -1,0 +1,64 @@
+2026-04-16 06:05:06 | INFO | {"firstName":"Shaza","lastName":"Farrag","email":"sw1190@fayoum.edu.eg","password":"123456789"}
+2026-04-16 06:05:07 | ERROR | Error: Missing credentials for "PLAIN"
+    at SMTPConnection._formatError (C:\Users\yathrip\Desktop\DEPI-Final-Web-Project\backend\node_modules\nodemailer\lib\smtp-connection\index.js:887:19)
+    at SMTPConnection.login (C:\Users\yathrip\Desktop\DEPI-Final-Web-Project\backend\node_modules\nodemailer\lib\smtp-connection\index.js:524:38)
+    at C:\Users\yathrip\Desktop\DEPI-Final-Web-Project\backend\node_modules\nodemailer\lib\smtp-transport\index.js:261:32
+    at SMTPConnection.<anonymous> (C:\Users\yathrip\Desktop\DEPI-Final-Web-Project\backend\node_modules\nodemailer\lib\smtp-connection\index.js:248:17)
+    at Object.onceWrapper (node:events:633:28)
+    at SMTPConnection.emit (node:events:519:28)
+    at SMTPConnection._actionEHLO (C:\Users\yathrip\Desktop\DEPI-Final-Web-Project\backend\node_modules\nodemailer\lib\smtp-connection\index.js:1479:14)
+    at SMTPConnection._processResponse (C:\Users\yathrip\Desktop\DEPI-Final-Web-Project\backend\node_modules\nodemailer\lib\smtp-connection\index.js:1072:20)
+    at SMTPConnection._onData (C:\Users\yathrip\Desktop\DEPI-Final-Web-Project\backend\node_modules\nodemailer\lib\smtp-connection\index.js:847:14)
+    at SMTPConnection._onSocketData (C:\Users\yathrip\Desktop\DEPI-Final-Web-Project\backend\node_modules\nodemailer\lib\smtp-connection\index.js:217:44)
+2026-04-16 06:06:07 | INFO | {"firstName":"Shaza","lastName":"Farrag","email":"sw1190@fayoum.edu.eg","password":"123456789"}
+2026-04-16 06:06:44 | INFO | {"firstName":"Shaza","lastName":"Farrag","email":"sw1190@fayoum.edu.eg","password":"123456789"}
+2026-04-16 06:06:45 | ERROR | Error: Missing credentials for "PLAIN"
+    at SMTPConnection._formatError (C:\Users\yathrip\Desktop\DEPI-Final-Web-Project\backend\node_modules\nodemailer\lib\smtp-connection\index.js:887:19)
+    at SMTPConnection.login (C:\Users\yathrip\Desktop\DEPI-Final-Web-Project\backend\node_modules\nodemailer\lib\smtp-connection\index.js:524:38)
+    at C:\Users\yathrip\Desktop\DEPI-Final-Web-Project\backend\node_modules\nodemailer\lib\smtp-transport\index.js:261:32
+    at SMTPConnection.<anonymous> (C:\Users\yathrip\Desktop\DEPI-Final-Web-Project\backend\node_modules\nodemailer\lib\smtp-connection\index.js:248:17)
+    at Object.onceWrapper (node:events:633:28)
+    at SMTPConnection.emit (node:events:519:28)
+    at SMTPConnection._actionEHLO (C:\Users\yathrip\Desktop\DEPI-Final-Web-Project\backend\node_modules\nodemailer\lib\smtp-connection\index.js:1479:14)
+    at SMTPConnection._processResponse (C:\Users\yathrip\Desktop\DEPI-Final-Web-Project\backend\node_modules\nodemailer\lib\smtp-connection\index.js:1072:20)
+    at SMTPConnection._onData (C:\Users\yathrip\Desktop\DEPI-Final-Web-Project\backend\node_modules\nodemailer\lib\smtp-connection\index.js:847:14)
+    at SMTPConnection._onSocketData (C:\Users\yathrip\Desktop\DEPI-Final-Web-Project\backend\node_modules\nodemailer\lib\smtp-connection\index.js:217:44)
+2026-04-16 06:08:22 | INFO | {"firstName":"Shaza","lastName":"Farrag","email":"sw1190@faym.edu.eg","password":"123456789"}
+2026-04-16 06:08:22 | ERROR | Error: Missing credentials for "PLAIN"
+    at SMTPConnection._formatError (C:\Users\yathrip\Desktop\DEPI-Final-Web-Project\backend\node_modules\nodemailer\lib\smtp-connection\index.js:887:19)
+    at SMTPConnection.login (C:\Users\yathrip\Desktop\DEPI-Final-Web-Project\backend\node_modules\nodemailer\lib\smtp-connection\index.js:524:38)
+    at C:\Users\yathrip\Desktop\DEPI-Final-Web-Project\backend\node_modules\nodemailer\lib\smtp-transport\index.js:261:32
+    at SMTPConnection.<anonymous> (C:\Users\yathrip\Desktop\DEPI-Final-Web-Project\backend\node_modules\nodemailer\lib\smtp-connection\index.js:248:17)
+    at Object.onceWrapper (node:events:633:28)
+    at SMTPConnection.emit (node:events:519:28)
+    at SMTPConnection._actionEHLO (C:\Users\yathrip\Desktop\DEPI-Final-Web-Project\backend\node_modules\nodemailer\lib\smtp-connection\index.js:1479:14)
+    at SMTPConnection._processResponse (C:\Users\yathrip\Desktop\DEPI-Final-Web-Project\backend\node_modules\nodemailer\lib\smtp-connection\index.js:1072:20)
+    at SMTPConnection._onData (C:\Users\yathrip\Desktop\DEPI-Final-Web-Project\backend\node_modules\nodemailer\lib\smtp-connection\index.js:847:14)
+    at SMTPConnection._onSocketData (C:\Users\yathrip\Desktop\DEPI-Final-Web-Project\backend\node_modules\nodemailer\lib\smtp-connection\index.js:217:44)
+2026-04-16 06:09:25 | INFO | {"firstName":"Shaza","lastName":"Farrag","email":"sw1190@fayoum.edu.eg","password":"123456789"}
+2026-04-16 06:09:26 | ERROR | Error: Missing credentials for "PLAIN"
+    at SMTPConnection._formatError (C:\Users\yathrip\Desktop\DEPI-Final-Web-Project\backend\node_modules\nodemailer\lib\smtp-connection\index.js:887:19)
+    at SMTPConnection.login (C:\Users\yathrip\Desktop\DEPI-Final-Web-Project\backend\node_modules\nodemailer\lib\smtp-connection\index.js:524:38)
+    at C:\Users\yathrip\Desktop\DEPI-Final-Web-Project\backend\node_modules\nodemailer\lib\smtp-transport\index.js:261:32
+    at SMTPConnection.<anonymous> (C:\Users\yathrip\Desktop\DEPI-Final-Web-Project\backend\node_modules\nodemailer\lib\smtp-connection\index.js:248:17)
+    at Object.onceWrapper (node:events:633:28)
+    at SMTPConnection.emit (node:events:519:28)
+    at SMTPConnection._actionEHLO (C:\Users\yathrip\Desktop\DEPI-Final-Web-Project\backend\node_modules\nodemailer\lib\smtp-connection\index.js:1479:14)
+    at SMTPConnection._processResponse (C:\Users\yathrip\Desktop\DEPI-Final-Web-Project\backend\node_modules\nodemailer\lib\smtp-connection\index.js:1072:20)
+    at SMTPConnection._onData (C:\Users\yathrip\Desktop\DEPI-Final-Web-Project\backend\node_modules\nodemailer\lib\smtp-connection\index.js:847:14)
+    at SMTPConnection._onSocketData (C:\Users\yathrip\Desktop\DEPI-Final-Web-Project\backend\node_modules\nodemailer\lib\smtp-connection\index.js:217:44)
+2026-04-16 06:12:15 | INFO | {"firstName":"Shaza","lastName":"Farrag","email":"sw1190@fayoum.edu.eg","password":"123456789"}
+2026-04-16 06:12:21 | INFO | {"firstName":"Shaza","lastName":"Farrag","email":"sw1190@fayo.edu.eg","password":"123456789"}
+2026-04-16 06:12:42 | INFO | {"firstName":"Shaza","lastName":"Farrag","email":"sw1190@fayoum.edu.eg","password":"123456789"}
+2026-04-16 06:19:24 | INFO | {"firstName":"Shaza","lastName":"Farrag","email":"sw1190@fayoum.edu.eg","password":"123456789"}
+2026-04-16 06:21:17 | INFO | {"firstName":"Shaza","lastName":"Farrag","email":"sw1190@fayoum.edu.eg","password":"123456789"}
+2026-04-16 06:28:55 | INFO | {"firstName":"Shaza","lastName":"Farrag","email":"sw1190@fayoum.edu.eg","password":"123456789"}
+2026-04-16 06:31:38 | INFO | {"firstName":"Shaza","lastName":"Farrag","email":"sw1190@fayoum.edu.eg","password":"123456789"}
+2026-04-16 06:34:38 | INFO | {"firstName":"Shaza","lastName":"Farrag","email":"sw1190@fayoum.edu.eg","password":"123456789"}
+2026-04-16 06:36:36 | INFO | {"firstName":"Shaza","lastName":"Farrag","email":"sw1190@fayoum.edu.eg","password":"123456789"}
+2026-04-16 06:39:58 | INFO | {"firstName":"Shaza","lastName":"Farrag","email":"sw1190@fayoum.edu.eg","password":"123456789"}
+2026-04-16 06:41:09 | INFO | {"firstName":"Shaza","lastName":"Farrag","email":"sw1190@fayoum.edu.eg","password":"123456789"}
+2026-04-16 06:41:56 | INFO | {"firstName":"Shaza","lastName":"Farrag","email":"sw1190@fayoum.edu.eg","password":"123456789"}
+2026-04-16 06:43:31 | INFO | {"firstName":"Shaza","lastName":"Farrag","email":"sw1190@fayoum.edu.eg","password":"123456789"}
+2026-04-16 06:44:34 | INFO | {"firstName":"Shaza","lastName":"Farrag","email":"sw1190@fayoum.edu.eg","password":"123456789"}
+2026-04-16 06:47:08 | INFO | {"firstName":"Shaza","lastName":"Farrag","email":"sw1190@fayoum.edu.eg","password":"123456789"}
