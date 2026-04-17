@@ -140,7 +140,7 @@ export default function Header() {
           {["HOME", "ABOUT US", "FAQ", "BLOG", "CONTACT"].map((item) => (
             <a
               key={item}
-              href={`/${item.toLowerCase().replace(/\s+/g, "-")}`}
+              href={item === "HOME" ? "/" : `/${item.toLowerCase().replace(/\s+/g, "-")}`}
               className=" text-black hover:text-[#d4a0a0] transition-colors"
               style={{ letterSpacing: "0.12em" }}
             >
