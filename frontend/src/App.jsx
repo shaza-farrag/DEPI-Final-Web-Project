@@ -8,23 +8,27 @@ import About from './pages/about/About'
 import Verify from './pages/verifyEmail/Verify'
 import ForgotPassword from "./pages/forgotPassword/ForgotPassword";
 import ShoppingCartProvider from "./context/ShoppingCartContext"; // 1. استيراد الـ Provider
+import ResetPassword from "./pages/resetPassword/ResetPassword"
+import SuccessfulEmail from './pages/successfulEmail/SuccessfulEmail'
 
 function App() {
   return (
     <ShoppingCartProvider>
-    <Routes>
-      <Route path="/" element={<Landing />}>
-        <Route index element={<Home />} />
-        <Route path="login" element={<Login />} />
+      <Routes>
+        <Route path="/" element={<Landing />}>
+          <Route index element={<Home />} />
+          <Route path="dashboard" element={<Dashboard />} />
+          <Route path="about" element={<About />} />
+        </Route>
+
         <Route path="signup" element={<Signup />} />
-        <Route path="dashboard" element={<Dashboard />} />
-        <Route path="about" element={<About />} />
+        <Route path="login" element={<Login />} />
         <Route path="verifyEmail" element={<Verify />} />
         <Route path="forgotPassword" element={<ForgotPassword />} />
-
-      </Route>
-    </Routes>
-  </ShoppingCartProvider>
+        <Route path="resetPassword" element={<ResetPassword />} />
+        <Route path="successfulEmail" element={<SuccessfulEmail />} />
+      </Routes>
+    </ShoppingCartProvider>
   );
 }
 
