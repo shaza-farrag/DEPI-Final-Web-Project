@@ -1,16 +1,18 @@
 import React from "react";
-import styles from "./about.module.css";
+import styles from "./About.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faQuoteRight } from "@fortawesome/free-solid-svg-icons";
-import { useNavigate } from "react-router-dom";
-
-
+import { Link,useNavigate } from "react-router-dom";
+import logoPaige from "../../assets/logoPaige.png";
+import heroAbout from "../../assets/heroAbout.jpg.jpeg"
 function About() {
   const navigate = useNavigate();
 
   return (
     <div className={styles.container}>
-      <div className={styles.hero}></div>
+      <div className={styles.hero}>
+        <img src={heroAbout}/>
+      </div>
 
       <div className={styles.section}>
         <h2>HOW IT ALL STARTED</h2>
@@ -68,12 +70,16 @@ function About() {
             everything you love into one place with care and passion.
           </p>
 
-          <button className={styles.shopBtn} onClick={() => navigate("/")} >
+          <button className={styles.shopBtn} onClick={() => navigate("/")}>
             Shop Now!
           </button>
         </div>
 
-        <div className={styles.imageSide}></div>
+        <div className={styles.imageSide}>
+            <Link to="/">
+              <img src={logoPaige} alt="logo"  />
+            </Link>
+        </div>
       </div>
     </div>
   );
