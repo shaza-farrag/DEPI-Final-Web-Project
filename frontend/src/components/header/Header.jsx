@@ -110,14 +110,11 @@ export default function Header() {
           className="flex items-center justify-center gap-8 px-6 py-2.5 text-xs font-bold tracking-widest"
           style={{ background: "#fce8e8" }}
         >
-          {NAV_LINKS.map(({ label, to }) => (
-            <NavLink
-              key={label}
-              to={to}
-              end={to === "/"}
-              className={({ isActive }) =>
-                `transition-colors ${isActive ? "text-[#d4a0a0]" : "text-black hover:text-[#d4a0a0]"}`
-              }
+          {["HOME", "ABOUT US", "FAQ", "BLOG", "CONTACT"].map((item) => (
+            <a
+              key={item}
+              href={`/${item.toLowerCase().replace(/\s+/g, "-")}`}
+              className=" text-black hover:text-[#d4a0a0] transition-colors"
               style={{ letterSpacing: "0.12em" }}
             >
               {label}

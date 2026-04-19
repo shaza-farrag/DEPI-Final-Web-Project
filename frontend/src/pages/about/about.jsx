@@ -1,7 +1,6 @@
 import React from "react";
 import styles from "./About.module.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faQuoteRight } from "@fortawesome/free-solid-svg-icons";
+
 import { useNavigate } from "react-router-dom";
 
 
