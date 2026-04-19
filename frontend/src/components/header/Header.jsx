@@ -1,12 +1,13 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, forwardRef } from "react";
 import { Search, X } from "lucide-react";
-import { FaFacebook, FaInstagram, FaPinterest, FaTiktok, FaShoppingCart, FaUser, FaChevronCircleDown } from "react-icons/fa";
+import { FaShoppingCart, FaUser, FaChevronCircleDown } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { useShoppingCart } from "../../context/ShoppingCartContext";
+import logo from "../../assets/logo.png";
 
 const SHOP_ITEMS = ["Hijabs", "Mugs", "Skincare", "Makeup"];
 
-export default function Header() {
+const Header = forwardRef(function Header(_, headerRef) {
   const { openCart, cartQuantity } = useShoppingCart();
   const [searchOpen, setSearchOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
@@ -45,45 +46,32 @@ export default function Header() {
   return (
     <>
       <header
+        ref={headerRef}
         className="fixed top-0 left-0 right-0 z-50 bg-white shadow-sm"
         style={{
           transform: visible ? "translateY(0)" : "translateY(-100%)",
           transition: "transform 0.4s cubic-bezier(0.4, 0, 0.2, 1)",
         }}
       >
-        <div className="relative flex items-center justify-between px-6 py-3 border-b border-gray-100">
-          <button
-            aria-label="Open search"
-            onClick={() => setSearchOpen(true)}
-            className="p-1 text-gray-700 hover:text-black transition-colors"
-          >
-            <Search size={20} strokeWidth={1.5} />
-          </button>
-
-          {/* Absolutely centered logo */}
-          <Link to="/" className="absolute left-1/2 -translate-x-1/2 select-none">
-            <span
-              className="text-3xl font-black tracking-widest uppercase"
-              style={{ color: "#d4a0a0", fontFamily: "'Arial Black', sans-serif" }}
+        <div className="grid grid-cols-3 items-center px-6 py-2 border-b border-gray-100">
+          {/* LEFT — search */}
+          <div className="flex items-center">
+            <button
+              aria-label="Open search"
+              onClick={() => setSearchOpen(true)}
+              className="p-1 text-gray-700 hover:text-black transition-colors"
             >
-              SHERWIT
-            </span>
+              <Search size={20} strokeWidth={1.5} />
+            </button>
+          </div>
+
+          {/* CENTER — logo in normal flow, drives row height */}
+          <Link to="/" className="flex justify-center select-none">
+            <img src={logo} alt="Brand Logo" className="h-[120px] w-auto object-contain" />
           </Link>
 
-          <div className="flex items-center gap-3 text-black ml-auto">
-            <a href="#" aria-label="Facebook" className="hover:text-[#d4a0a0] transition-colors hidden sm:inline-flex">
-              <FaFacebook />
-            </a>
-            <a href="#" aria-label="Pinterest" className="hover:text-[#d4a0a0] transition-colors hidden sm:inline-flex">
-              <FaPinterest />
-            </a>
-            <a href="#" aria-label="Instagram" className="hover:text-[#d4a0a0] transition-colors hidden sm:inline-flex">
-              <FaInstagram />
-            </a>
-            <a href="#" aria-label="TikTok" className="hover:text-[#d4a0a0] transition-colors hidden sm:inline-flex">
-              <FaTiktok />
-            </a>
-
+          {/* RIGHT — cart + user */}
+          <div className="flex items-center justify-end gap-6 text-black">
             <button
               onClick={openCart}
               aria-label="Cart"
@@ -203,4 +191,6 @@ export default function Header() {
       </div>
     </>
   );
-}
+});
+
+export default Header;

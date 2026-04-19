@@ -161,7 +161,7 @@ function HeroSlider() {
   return (
     <section
       ref={ref}
-      className="relative w-full overflow-hidden"
+      className="relative w-full min-h-screen overflow-hidden flex flex-col"
       style={{
         background: "#fce8e8",
         opacity: visible ? 1 : 0,
@@ -169,26 +169,23 @@ function HeroSlider() {
         transition: "opacity 0.7s ease, transform 0.7s ease",
       }}
     >
-      {/* Decorative blobs */}
-      <div className="absolute left-0 top-1/2 w-48 h-64 opacity-40 pointer-events-none" style={{ background: "radial-gradient(ellipse at 30% 50%, #c9898f 0%, transparent 70%)", filter: "blur(18px)", transform: "translateY(-50%) scaleX(0.6) rotate(-8deg)", zIndex: 0 }} />
-      <div className="absolute right-0 top-1/4 w-40 h-48 opacity-30 pointer-events-none" style={{ background: "radial-gradient(ellipse at 70% 30%, #c9898f 0%, transparent 70%)", filter: "blur(22px)", zIndex: 0 }} />
-
-      {/* Sliding track */}
-      <div
-        className="flex"
-        style={{
-          transform: `translateX(-${current * 100}%)`,
-          transition: "transform 0.6s cubic-bezier(0.4, 0, 0.2, 1)",
-          willChange: "transform",
-        }}
-      >
-        {SLIDES.map((slide) => (
-          <div
-            key={slide.id}
-            className="relative z-10 w-full shrink-0 max-w-full px-6 py-12"
-            style={{ minWidth: "100%" }}
-          >
-            <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-8 md:gap-16">
+      {/* Sliding track — flex-1 fills remaining height */}
+      <div className="flex-1 overflow-hidden">
+        <div
+          className="flex h-full"
+          style={{
+            transform: `translateX(-${current * 100}%)`,
+            transition: "transform 0.6s cubic-bezier(0.4, 0, 0.2, 1)",
+            willChange: "transform",
+          }}
+        >
+          {SLIDES.map((slide) => (
+            <div
+              key={slide.id}
+              className="relative z-10 shrink-0 px-6 py-12 flex items-center"
+              style={{ minWidth: "100%", width: "100%" }}
+            >
+            <div className="max-w-6xl w-full mx-auto flex flex-col md:flex-row items-center justify-between gap-16">
               {/* ── LEFT: text ── */}
               <div className="flex-1 flex flex-col items-start">
                 <div className="flex items-start gap-4 mb-2">
@@ -232,6 +229,7 @@ function HeroSlider() {
             </div>
           </div>
         ))}
+        </div>
       </div>
 
       {/* ── CONTROLS ── */}
@@ -273,7 +271,7 @@ function HeroSlider() {
 function ShopPicks() {
   const [ref, visible] = useScrollReveal();
   return (
-    <section className="py-14 px-6" style={{ background: "#fce8e8" }}>
+    <section className="w-full min-h-screen py-14 px-6 flex flex-col justify-center" style={{ background: "#fce8e8" }}>
       <div
         ref={ref}
         style={{
@@ -357,7 +355,7 @@ function ShopPicks() {
 function AboutSherwit() {
   const [ref, visible] = useScrollReveal();
   return (
-    <section className="bg-white py-16 px-6 overflow-hidden">
+    <section className="w-full min-h-screen bg-white py-16 px-6 overflow-hidden flex items-center justify-center">
       <div
         ref={ref}
         className="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-12"
@@ -468,14 +466,14 @@ function Subscribe() {
   };
 
   return (
-    <section className="relative overflow-hidden">
+    <section className="relative w-full min-h-screen overflow-hidden flex flex-col">
       {/* Top half – white with watermark */}
-      <div className="relative bg-white pt-16 pb-24 flex flex-col items-center">
+      <div className="relative flex-1 bg-white flex flex-col items-center justify-center py-16">
         <span className="absolute inset-0 flex items-center justify-center text-[10vw] font-black select-none pointer-events-none" style={{ fontFamily: "Georgia, 'Times New Roman', serif", fontStyle: "italic", color: "#f0d0d0", opacity: 0.6, whiteSpace: "nowrap", lineHeight: 1 }}>
           subscribe
         </span>
         {/* Envelope — animated */}
-        <div ref={ref} className="relative z-10 mt-auto" style={{ opacity: visible ? 1 : 0, transform: visible ? "translateY(0)" : "translateY(40px)", transition: "opacity 0.7s ease, transform 0.7s ease" }}>
+        <div ref={ref} className="relative z-10" style={{ opacity: visible ? 1 : 0, transform: visible ? "translateY(0)" : "translateY(40px)", transition: "opacity 0.7s ease, transform 0.7s ease" }}>
           <span className="absolute -top-3 left-1/2 -translate-x-1/2 text-2xl select-none" style={{ color: "#e8b4b8" }}>♥</span>
           <svg viewBox="0 0 80 60" className="w-20 h-16" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect x="1" y="1" width="78" height="58" rx="2" fill="#111" />
@@ -487,7 +485,7 @@ function Subscribe() {
       </div>
 
       {/* Bottom half – blush pink, animated */}
-      <div className="flex flex-col items-center px-6 py-14" style={{ background: "#fce8e8" }}>
+      <div className="flex-1 flex flex-col items-center justify-center px-6 py-14" style={{ background: "#e8c4c4" }}>
         <div style={{ opacity: visible ? 1 : 0, transform: visible ? "translateY(0)" : "translateY(40px)", transition: "opacity 0.7s ease 0.15s, transform 0.7s ease 0.15s" }} className="w-full flex flex-col items-center">
           <h2 className="text-lg md:text-xl font-black tracking-[0.18em] text-gray-900 text-center mb-4" style={{ letterSpacing: "0.18em" }}>
             JOIN THE LIST FOR 10% OFF YOUR FIRST PURCHASE!
@@ -517,7 +515,7 @@ function Subscribe() {
 function KindWords() {
   const [ref, visible] = useScrollReveal();
   return (
-    <section className="relative py-16 px-6 overflow-hidden" style={{ background: "#e8c4c4" }}>
+    <section className="relative w-full min-h-screen py-16 px-6 overflow-hidden flex flex-col justify-center" style={{ background: "#e8c4c4" }}>
       {/* Background SVG — always visible */}
       <div className="absolute bottom-0 left-0 right-0 pointer-events-none overflow-hidden">
         <svg viewBox="0 0 1440 200" preserveAspectRatio="none" className="w-full" style={{ height: "160px", opacity: 0.35 }}>
