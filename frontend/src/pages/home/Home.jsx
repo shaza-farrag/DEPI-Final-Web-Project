@@ -5,10 +5,13 @@ import Footer from '../../components/footer/Footer'
 
 function Home() {
   return (
-    <div className={styles.home}>
-      <div>Home</div>
+    <div className="w-full">
+      <HeroSlider />
+      <ShopPicks />
+      <Subscribe />
+      <KindWords />
     </div>
-  )
+  );
 }
 
 export default Home

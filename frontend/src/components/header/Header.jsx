@@ -1,8 +1,17 @@
 import { useState, useEffect, useRef } from "react";
 import { Search, X } from "lucide-react";
-import { FaFacebook, FaInstagram, FaYoutube, FaPinterest, FaTiktok, FaShoppingCart, FaUser, FaChevronCircleDown } from "react-icons/fa";
+import { FaFacebook, FaInstagram, FaPinterest, FaTiktok, FaShoppingCart, FaUser, FaChevronCircleDown } from "react-icons/fa";
+import { Link, NavLink } from "react-router-dom";
 
 const SHOP_ITEMS = ["Hijabs", "Mugs", "Skincare", "Makeup"];
+
+const NAV_LINKS = [
+  { label: "HOME", to: "/" },
+  { label: "ABOUT US", to: "/about" },
+  { label: "FAQ", to: "/faq" },
+  { label: "BLOG", to: "/blog" },
+  { label: "CONTACT", to: "/contact" },
+];
 
 export default function Header() {
   const [searchOpen, setSearchOpen] = useState(false);
@@ -48,7 +57,7 @@ export default function Header() {
           transition: "transform 0.4s cubic-bezier(0.4, 0, 0.2, 1)",
         }}
       >
-        <div className="flex items-center justify-between px-6 py-3 border-b border-gray-100">
+        <div className="relative flex items-center justify-between px-6 py-3 border-b border-gray-100">
           <button
             aria-label="Open search"
             onClick={() => setSearchOpen(true)}
@@ -57,79 +66,43 @@ export default function Header() {
             <Search size={20} strokeWidth={1.5} />
           </button>
 
-          <a href="/" className="flex flex-col items-center select-none">
-            <div className="flex items-baseline gap-1 leading-none">
-              <span
-                className="text-3xl font-black tracking-widest uppercase"
-                style={{
-                  color: "#d4a0a0",
-                  fontFamily: "'Arial Black', sans-serif",
-                }}
-              >
-                OUR BRAND
-              </span>
-            </div>
-          </a>
-
-          <div className="flex items-center gap-3 text-black">
-            <a
-              href="#"
-              aria-label="Facebook"
-              className="hover:text-[#d4a0a0] transition-colors hidden sm:inline-flex"
+          {/* Absolutely centered logo */}
+          <Link to="/" className="absolute left-1/2 -translate-x-1/2 select-none">
+            <span
+              className="text-3xl font-black tracking-widest uppercase"
+              style={{ color: "#d4a0a0", fontFamily: "'Arial Black', sans-serif" }}
             >
+              OUR BRAND
+            </span>
+          </Link>
+
+          <div className="flex items-center gap-3 text-black ml-auto">
+            <a href="#" aria-label="Facebook" className="hover:text-[#d4a0a0] transition-colors hidden sm:inline-flex">
               <FaFacebook />
             </a>
-            <a
-              href="#"
-              aria-label="Pinterest"
-              className="hover:text-[#d4a0a0] transition-colors hidden sm:inline-flex"
-            >
+            <a href="#" aria-label="Pinterest" className="hover:text-[#d4a0a0] transition-colors hidden sm:inline-flex">
               <FaPinterest />
             </a>
-
-            <a
-              href="#"
-              aria-label="Instagram"
-              className="hover:text-[#d4a0a0] transition-colors hidden sm:inline-flex"
-            >
-              <FaInstagram/>
+            <a href="#" aria-label="Instagram" className="hover:text-[#d4a0a0] transition-colors hidden sm:inline-flex">
+              <FaInstagram />
             </a>
-
-            <a
-              href="#"
-              aria-label="TikTok"
-              className="hover:text-[#d4a0a0] transition-colors hidden sm:inline-flex"
-            >
+            <a href="#" aria-label="TikTok" className="hover:text-[#d4a0a0] transition-colors hidden sm:inline-flex">
               <FaTiktok />
             </a>
-            <a
-              href="#"
-              aria-label="YouTube"
-              className="hover:text-[#d4a0a0] transition-colors hidden sm:inline-flex"
-            >
-            </a>
 
-            <a
-              href="/cart"
-              aria-label="Cart"
-              className="relative hover:text-[#d4a0a0] transition-colors ml-1"
-            >
-              <FaShoppingCart size={20} strokeWidth={1.5} />
+            <Link to="/cart" aria-label="Cart" className="relative hover:text-[#d4a0a0] transition-colors ml-1">
+              <FaShoppingCart size={20} />
               <span
                 className="absolute -top-1.5 -right-1.5 text-white text-[9px] font-bold w-4 h-4 rounded-full flex items-center justify-center"
                 style={{ background: "#111" }}
               >
                 0
               </span>
-            </a>
+            </Link>
 
-            <a
-              href="/account"
-              aria-label="Account"
-              className="hover:text-[#d4a0a0] transition-colors"
-            >
-              <FaUser size={20} strokeWidth={1.5} />
-            </a>
+            <Link to="/login" aria-label="Account" className="hover:text-[#d4a0a0] transition-colors">
+              <FaUser size={20} />
+            </Link>
           </div>
         </div>
 
@@ -144,8 +117,8 @@ export default function Header() {
               className=" text-black hover:text-[#d4a0a0] transition-colors"
               style={{ letterSpacing: "0.12em" }}
             >
-              {item}
-            </a>
+              {label}
+            </NavLink>
           ))}
 
           <div className="relative" data-shop-dropdown>
@@ -157,7 +130,6 @@ export default function Header() {
               SHOP
               <FaChevronCircleDown
                 size={12}
-                strokeWidth={2}
                 style={{
                   transform: shopOpen ? "rotate(180deg)" : "rotate(0deg)",
                   transition: "transform 0.25s ease",
@@ -168,13 +140,14 @@ export default function Header() {
             {shopOpen && (
               <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-40 bg-white shadow-lg border border-gray-100 rounded z-50">
                 {SHOP_ITEMS.map((s) => (
-                  <a
+                  <Link
                     key={s}
-                    href={`/shop/${s.toLowerCase()}`}
+                    to={`/shop/${s.toLowerCase()}`}
                     className="block px-4 py-2.5 text-xs tracking-widest text-gray-600 hover:underline hover:text-black transition-colors font-semibold"
+                    onClick={() => setShopOpen(false)}
                   >
                     {s.toUpperCase()}
-                  </a>
+                  </Link>
                 ))}
               </div>
             )}
@@ -186,7 +159,7 @@ export default function Header() {
         role="dialog"
         aria-modal="true"
         aria-label="Search"
-        className="fixed inset-0 z-[100] flex items-start justify-center"
+        className="fixed inset-0 z-100 flex items-start justify-center"
         style={{
           background: "rgba(255,255,255,0.96)",
           opacity: searchOpen ? 1 : 0,

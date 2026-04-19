@@ -4,9 +4,10 @@ import { Outlet } from "react-router-dom"
 
 export default function Landing() {
   return (
-    <div>
+    <div className="flex flex-col min-h-screen">
       <Header />
         <Outlet />
+      </main>
       <Footer />
     </div>
   )
