@@ -45,7 +45,7 @@ export default function Footer() {
                   letterSpacing: "-0.06em",
                 }}
               >
-                <span style={{ color: "#d4a0a0" }}>brand</span>
+                <span style={{ color: "#d4a0a0" }}>sherwit</span>
               </span>
               <span className="absolute top-3 right-5 text-black text-lg select-none">✦</span>
               <span className="absolute top-1 right-8 text-black text-xs select-none">+</span>
@@ -55,7 +55,7 @@ export default function Footer() {
               className="text-xs tracking-[0.25em] font-semibold text-gray-700 mt-1"
               style={{ letterSpacing: "0.28em" }}
             >
-              OUR BRAND
+              SHERWIT
             </p>
           </div>
 
@@ -146,7 +146,7 @@ export default function Footer() {
       </div>
 
       <div className="bg-black text-white text-xs text-center py-4 tracking-wide mt-0">
-        © 2026, OUR BRAND
+        © 2026, SHERWIT
       </div>
     </footer>
   );

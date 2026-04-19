@@ -1,19 +1,13 @@
 import { useState, useEffect, useRef } from "react";
 import { Search, X } from "lucide-react";
 import { FaFacebook, FaInstagram, FaPinterest, FaTiktok, FaShoppingCart, FaUser, FaChevronCircleDown } from "react-icons/fa";
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
+import { useShoppingCart } from "../../context/ShoppingCartContext";
 
 const SHOP_ITEMS = ["Hijabs", "Mugs", "Skincare", "Makeup"];
 
-const NAV_LINKS = [
-  { label: "HOME", to: "/" },
-  { label: "ABOUT US", to: "/about" },
-  { label: "FAQ", to: "/faq" },
-  { label: "BLOG", to: "/blog" },
-  { label: "CONTACT", to: "/contact" },
-];
-
 export default function Header() {
+  const { openCart, cartQuantity } = useShoppingCart();
   const [searchOpen, setSearchOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const [shopOpen, setShopOpen] = useState(false);
@@ -72,7 +66,7 @@ export default function Header() {
               className="text-3xl font-black tracking-widest uppercase"
               style={{ color: "#d4a0a0", fontFamily: "'Arial Black', sans-serif" }}
             >
-              OUR BRAND
+              SHERWIT
             </span>
           </Link>
 
@@ -90,15 +84,21 @@ export default function Header() {
               <FaTiktok />
             </a>
 
-            <Link to="/cart" aria-label="Cart" className="relative hover:text-[#d4a0a0] transition-colors ml-1">
+            <button
+              onClick={openCart}
+              aria-label="Cart"
+              className="relative hover:text-[#d4a0a0] transition-colors ml-1"
+            >
               <FaShoppingCart size={20} />
-              <span
-                className="absolute -top-1.5 -right-1.5 text-white text-[9px] font-bold w-4 h-4 rounded-full flex items-center justify-center"
-                style={{ background: "#111" }}
-              >
-                0
-              </span>
-            </Link>
+              {cartQuantity > 0 && (
+                <span
+                  className="absolute -top-1.5 -right-1.5 text-white text-[9px] font-bold w-4 h-4 rounded-full flex items-center justify-center"
+                  style={{ background: "#111" }}
+                >
+                  {cartQuantity}
+                </span>
+              )}
+            </button>
 
             <Link to="/login" aria-label="Account" className="hover:text-[#d4a0a0] transition-colors">
               <FaUser size={20} />
@@ -110,15 +110,21 @@ export default function Header() {
           className="flex items-center justify-center gap-8 px-6 py-2.5 text-xs font-bold tracking-widest"
           style={{ background: "#fce8e8" }}
         >
-          {["HOME", "ABOUT US", "FAQ", "BLOG", "CONTACT"].map((item) => (
-            <a
-              key={item}
-              href={`/${item.toLowerCase().replace(/\s+/g, "-")}`}
-              className=" text-black hover:text-[#d4a0a0] transition-colors"
+          {[
+            { label: "HOME", to: "/" },
+            { label: "ABOUT", to: "/about" },
+            { label: "FAQ", to: "/faq" },
+            { label: "BLOG", to: "/blog" },
+            { label: "CONTACT", to: "/contact" },
+          ].map(({ label, to }) => (
+            <Link
+              key={label}
+              to={to}
+              className="text-black hover:text-[#d4a0a0] transition-colors"
               style={{ letterSpacing: "0.12em" }}
             >
-              {item}
-            </a>
+              {label}
+            </Link>
           ))}
 
           <div className="relative" data-shop-dropdown>
