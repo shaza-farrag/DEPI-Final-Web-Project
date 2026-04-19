@@ -6,7 +6,9 @@ export default function Landing() {
   return (
     <div>
       <Header />
+      <main className="pt-[88px]">
         <Outlet />
+      </main>
       <Footer />
     </div>
   )
