@@ -117,8 +117,8 @@ export default function Header() {
               className=" text-black hover:text-[#d4a0a0] transition-colors"
               style={{ letterSpacing: "0.12em" }}
             >
-              {label}
-            </NavLink>
+              {item}
+            </a>
           ))}
 
           <div className="relative" data-shop-dropdown>
