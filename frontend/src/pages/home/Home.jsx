@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { ArrowRight, ChevronLeft, ChevronRight, Pause, Play } from "lucide-react";
+import ProductCard from "../../components/ProductCard";
 
 // ─────────────────────────────────────────────────────────────────────────────
 // SCROLL REVEAL HOOK
@@ -74,8 +75,8 @@ const PRODUCTS = [
     price: 32.0,
     originalPrice: 39.0,
     isSale: true,
-    href: "/products/flower-scrapbook-journal",
-    img: "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=600&q=80",
+    href: "",
+    img: "",
     imgAlt: "Flower Scrapbook Journal",
   },
   {
@@ -84,8 +85,8 @@ const PRODUCTS = [
     price: 24.0,
     originalPrice: null,
     isSale: false,
-    href: "/products/pink-gold-journal",
-    img: "https://images.unsplash.com/photo-1518640467707-6811f4a6ab73?w=600&q=80",
+    href: "",
+    img: "",
     imgAlt: "Pink & Gold Journal",
   },
   {
@@ -94,8 +95,8 @@ const PRODUCTS = [
     price: 19.0,
     originalPrice: null,
     isSale: false,
-    href: "/products/hello-there-mug",
-    img: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&q=80",
+    href: "",
+    img: "",
     imgAlt: "Hello There Mug",
   },
 ];
@@ -295,52 +296,17 @@ function ShopPicks() {
       </div>
 
       {/* Product grid */}
-      <div className="max-w-5xl mx-auto bg-white p-6 grid grid-cols-1 sm:grid-cols-3 gap-0">
-        {PRODUCTS.map((p, i) => (
-          <a
+      <div className="max-w-5xl mx-auto bg-white p-6 grid grid-cols-1 sm:grid-cols-3 gap-3">
+        {PRODUCTS.map((p) => (
+          <ProductCard
             key={p.id}
+            image={p.img}
+            imageAlt={p.imgAlt}
+            name={p.name}
+            price={p.price}
+            originalPrice={p.originalPrice}
             href={p.href}
-            className={`group block relative ${
-              i < PRODUCTS.length - 1 ? "sm:border-r border-gray-100" : ""
-            }`}
-          >
-            {/* Sale badge */}
-            {p.isSale && (
-              <span
-                className="absolute top-3 left-3 z-10 text-white text-xs font-bold px-2 py-0.5 rounded-full"
-                style={{ background: "#d4a0a0" }}
-              >
-                Sale
-              </span>
-            )}
-
-            {/* Image */}
-            <div className="overflow-hidden" style={{ aspectRatio: "1/1" }}>
-              <img
-                src={p.img}
-                alt={p.imgAlt}
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-              />
-            </div>
-
-            {/* Info */}
-            <div className="pt-4 pb-6 px-2 text-center">
-              <h3
-                className="text-xs font-bold tracking-[0.14em] mb-2"
-                style={{ color: "#d4a0a0", letterSpacing: "0.14em" }}
-              >
-                {p.name}
-              </h3>
-              <div className="flex items-center justify-center gap-2 text-sm font-semibold text-gray-800">
-                {p.originalPrice && (
-                  <span className="line-through text-gray-400 text-xs">
-                    ${p.originalPrice.toFixed(2)} USD
-                  </span>
-                )}
-                <span>${p.price.toFixed(2)} USD</span>
-              </div>
-            </div>
-          </a>
+          />
         ))}
       </div>
       </div>
