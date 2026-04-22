@@ -11,8 +11,11 @@ import ShoppingCartProvider from "./context/ShoppingCartContext"; // 1. استي
 import ResetPassword from "./pages/resetPassword/ResetPassword"
 import SuccessfulEmail from './pages/successfulEmail/SuccessfulEmail'
 
+
 function App() {
+
   return (
+
     <ShoppingCartProvider>
       <Routes>
         <Route path="/" element={<Landing />}>
@@ -30,6 +33,7 @@ function App() {
       </Routes>
     </ShoppingCartProvider>
   );
+
 }
 
 export default App;

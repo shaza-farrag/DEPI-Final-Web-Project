@@ -1,3 +1,4 @@
+
 import { useState, useEffect, useRef, forwardRef } from "react";
 import { Search, X } from "lucide-react";
 import { FaShoppingCart, FaUser, FaChevronCircleDown } from "react-icons/fa";
@@ -43,7 +44,9 @@ const Header = forwardRef(function Header(_, headerRef) {
     return () => document.removeEventListener("mousedown", close);
   }, []);
 
+
   return (
+
     <>
       <header
         ref={headerRef}
@@ -64,6 +67,7 @@ const Header = forwardRef(function Header(_, headerRef) {
               <Search size={20} strokeWidth={1.5} />
             </button>
           </div>
+
 
           {/* CENTER — logo in normal flow, drives row height */}
           <Link to="/" className="flex justify-center select-none">

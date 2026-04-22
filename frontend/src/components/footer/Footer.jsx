@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { ArrowRight, ArrowUp} from "lucide-react";
 import { FaFacebook, FaInstagram, FaYoutube, FaPinterest, FaTiktok } from "react-icons/fa";
@@ -12,6 +13,7 @@ const QUICK_LINKS = [
   { label: "CONTACT", href: "/contact" },
 ];
 
+
 export default function Footer() {
   const [email, setEmail] = useState("");
 
@@ -23,6 +25,7 @@ export default function Footer() {
   };
 
   return (
+
     <footer className="bg-white pt-16 pb-0 relative">
       <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-12 pb-12">
         <div className="flex flex-col">
@@ -150,4 +153,5 @@ export default function Footer() {
       </div>
     </footer>
   );
+
 }
