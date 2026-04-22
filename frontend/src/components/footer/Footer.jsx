@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-import React from 'react'
-// import styles from './Footer.module.css'
-=======
+
 import { useState } from "react";
 import { ArrowRight, ArrowUp} from "lucide-react";
 import { FaFacebook, FaInstagram, FaYoutube, FaPinterest, FaTiktok } from "react-icons/fa";
@@ -15,7 +12,7 @@ const QUICK_LINKS = [
   { label: "TERMS OF SERVICE", href: "/terms-of-service" },
   { label: "CONTACT", href: "/contact" },
 ];
->>>>>>> 1fa6627b296995f4925458892e19314b3fed88f8
+
 
 export default function Footer() {
   const [email, setEmail] = useState("");
@@ -28,10 +25,7 @@ export default function Footer() {
   };
 
   return (
-<<<<<<< HEAD
-    <div className="">Footer</div>
-  )
-=======
+
     <footer className="bg-white pt-16 pb-0 relative">
       <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-12 pb-12">
         <div className="flex flex-col">
@@ -159,5 +153,5 @@ export default function Footer() {
       </div>
     </footer>
   );
->>>>>>> 1fa6627b296995f4925458892e19314b3fed88f8
+
 }
