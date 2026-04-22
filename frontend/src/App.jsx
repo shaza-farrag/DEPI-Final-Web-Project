@@ -1,38 +1,39 @@
-import {Routes , Route, createBrowserRouter, RouterProvider} from 'react-router-dom'
-import Footer from './components/footer/Footer'
-import Header from './components/header/Header'
+import {Routes , Route} from 'react-router-dom'
+import Home from './pages/home/Home'
+import Login from './pages/login/Login'
+import Signup from './pages/signup/Signup'
 import Dashboard from './pages/dashboard/Dashboard'
+import Landing from './pages/Landing'
+import About from './pages/about/About'
+import Verify from './pages/verifyEmail/Verify'
+import ForgotPassword from "./pages/forgotPassword/ForgotPassword";
+import ShoppingCartProvider from "./context/ShoppingCartContext"; // 1. استيراد الـ Provider
+import ResetPassword from "./pages/resetPassword/ResetPassword"
+import SuccessfulEmail from './pages/successfulEmail/SuccessfulEmail'
 
 
 function App() {
 
-  const router = createBrowserRouter ([
-    {
-      path : "/",
-      exact : true ,
-      element : <>
-      <section className='main'>
-        <Header/>
-        
-      </section>
-      {/* <Dashboard/> */}
-      </>
-    }
-  ])
   return (
-      
-    // <Routes>
-    //   <Route path="/" element={<Home />} />
-    //   <Route path="/login" element={<Login />} />
-    //   <Route path="/dashboard" element={<Dashboard />} />
-    // </Routes>
 
-  <>
-  <RouterProvider router={router} />
-  {/* <Dashboard/>  */}
- </> 
-    
-  )
+    <ShoppingCartProvider>
+      <Routes>
+        <Route path="/" element={<Landing />}>
+          <Route index element={<Home />} />
+          <Route path="dashboard" element={<Dashboard />} />
+          <Route path="about" element={<About />} />
+        </Route>
+
+        <Route path="signup" element={<Signup />} />
+        <Route path="login" element={<Login />} />
+        <Route path="verifyEmail" element={<Verify />} />
+        <Route path="forgotPassword" element={<ForgotPassword />} />
+        <Route path="resetPassword" element={<ResetPassword />} />
+        <Route path="successfulEmail" element={<SuccessfulEmail />} />
+      </Routes>
+    </ShoppingCartProvider>
+  );
+
 }
 
-export default App
+export default App;

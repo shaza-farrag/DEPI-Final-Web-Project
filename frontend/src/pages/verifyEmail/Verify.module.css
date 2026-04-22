@@ -1,0 +1,27 @@
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fdf5f5;
+}
+
+.box {
+    background: white;
+    padding: 40px;
+    text-align: center;
+    width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+}
+
+h2 {
+    color: rgb(215, 148, 148);
+    margin-bottom: 15px;
+    font: 20px bold;
+}
+
+p {
+    color: #04040479;
+    line-height: 1.6;
+}
