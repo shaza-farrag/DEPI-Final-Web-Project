@@ -78,7 +78,9 @@ const Shopping_Cart = ({ isOpen }) => {
               <span>{FormatCurrency(total)}</span>
             </div>
             <p className={styles.taxNote}>Shipping & taxes calculated at checkout</p>
-            <button className={styles.checkoutBtn}>Checkout</button>
+           <button className={styles.checkoutBtn} onClick={() => navigate("/Checkout")}>
+              Checkout
+            </button>
           </div>
         )}
 

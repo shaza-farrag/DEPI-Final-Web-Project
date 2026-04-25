@@ -1,5 +1,7 @@
 import { useState } from "react";
 import styles from "./Checkout.module.css";
+import { Search } from 'lucide-react';
+import Header from "../../components/header/Header";
 
 
 const INITIAL_PRODUCTS = [
@@ -45,14 +47,17 @@ export default function CheckoutPage() {
   };
 
   return (
+    <>
+    <Header/>
+    <div className={styles.fpage}>
     <div className={styles.wrap}>
       <div className={styles.left}>
         
-
+      <div className={styles.inputs}>
         {/* Contact */}
         <div className={styles.sectionRow}>
           <h2 className={styles.sectionTitle}>Contact</h2>
-          <span className={styles.signIn}>Sign in</span>
+          <a href="/login" className={styles.signIn}>Sign in</a>
         </div >
         
         <input
@@ -164,6 +169,7 @@ export default function CheckoutPage() {
           <span>Save this information for next time</span>
         </label>
 
+
         <hr className={styles.divider} />
 
         {/* Shipping method */}
@@ -191,6 +197,7 @@ export default function CheckoutPage() {
         </div>*/}
 
         <button className={styles.btnPay}>Pay now</button>
+      </div>
       </div>
 
       {/* Order summary */}
@@ -238,5 +245,7 @@ export default function CheckoutPage() {
         </div>
       </div>
     </div>
+    </div>
+    </>
   );
 }

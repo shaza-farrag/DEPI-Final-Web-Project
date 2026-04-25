@@ -10,18 +10,20 @@ import ForgotPassword from "./pages/forgotPassword/ForgotPassword";
 import ShoppingCartProvider from "./context/ShoppingCartContext"; // 1. استيراد الـ Provider
 import ResetPassword from "./pages/resetPassword/ResetPassword"
 import SuccessfulEmail from './pages/successfulEmail/SuccessfulEmail'
+import Users from './pages/dashboard/pages/Users'
+import Orders from './pages/dashboard/pages/Orders'
 import Checkout from './pages/Checkout/Checkout'
 
 
 function App() {
 
   return (
-
+    <>
     <ShoppingCartProvider>
       <Routes>
         <Route path="/" element={<Landing />}>
           <Route index element={<Home />} />
-          <Route path="dashboard" element={<Dashboard />} />
+          {/* <Route path="dashboard" element={<Dashboard />} /> */}
           <Route path="about" element={<About />} />
         </Route>
 
@@ -35,6 +37,15 @@ function App() {
 
       </Routes>
     </ShoppingCartProvider>
+    
+      <Routes>
+    <Route path="/dashboard" element={<Dashboard />}>
+        <Route path="users" element={<Users />} />
+        <Route path="Orders" element={<Orders />} />
+
+    </Route>
+    </Routes>
+    </>
   );
 
 }
