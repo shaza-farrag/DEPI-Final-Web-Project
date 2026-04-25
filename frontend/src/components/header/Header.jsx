@@ -1,10 +1,15 @@
-import { useState, useEffect, useRef } from "react";
+
+import { useState, useEffect, useRef, forwardRef } from "react";
 import { Search, X } from "lucide-react";
-import { FaFacebook, FaInstagram, FaYoutube, FaPinterest, FaTiktok, FaShoppingCart, FaUser, FaChevronCircleDown } from "react-icons/fa";
+import { FaShoppingCart, FaUser, FaChevronCircleDown } from "react-icons/fa";
+import { Link } from "react-router-dom";
+import { useShoppingCart } from "../../context/ShoppingCartContext";
+import logo from "../../assets/logo.png";
 
 const SHOP_ITEMS = ["Hijabs", "Mugs", "Skincare", "Makeup"];
 
-export default function Header() {
+const Header = forwardRef(function Header(_, headerRef) {
+  const { openCart, cartQuantity } = useShoppingCart();
   const [searchOpen, setSearchOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const [shopOpen, setShopOpen] = useState(false);
@@ -39,97 +44,57 @@ export default function Header() {
     return () => document.removeEventListener("mousedown", close);
   }, []);
 
+
   return (
+
     <>
       <header
+        ref={headerRef}
         className="fixed top-0 left-0 right-0 z-50 bg-white shadow-sm"
         style={{
           transform: visible ? "translateY(0)" : "translateY(-100%)",
           transition: "transform 0.4s cubic-bezier(0.4, 0, 0.2, 1)",
         }}
       >
-        <div className="flex items-center justify-between px-6 py-3 border-b border-gray-100">
-          <button
-            aria-label="Open search"
-            onClick={() => setSearchOpen(true)}
-            className="p-1 text-gray-700 hover:text-black transition-colors"
-          >
-            <Search size={20} strokeWidth={1.5} />
-          </button>
-
-          <a href="/" className="flex flex-col items-center select-none">
-            <div className="flex items-baseline gap-1 leading-none">
-              <span
-                className="text-3xl font-black tracking-widest uppercase"
-                style={{
-                  color: "#d4a0a0",
-                  fontFamily: "'Arial Black', sans-serif",
-                }}
-              >
-                OUR BRAND
-              </span>
-            </div>
-          </a>
-
-          <div className="flex items-center gap-3 text-black">
-            <a
-              href="#"
-              aria-label="Facebook"
-              className="hover:text-[#d4a0a0] transition-colors hidden sm:inline-flex"
+        <div className="grid grid-cols-3 items-center px-6 py-2 border-b border-gray-100">
+          {/* LEFT — search */}
+          <div className="flex items-center">
+            <button
+              aria-label="Open search"
+              onClick={() => setSearchOpen(true)}
+              className="p-1 text-gray-700 hover:text-black transition-colors"
             >
-              <FaFacebook />
-            </a>
-            <a
-              href="#"
-              aria-label="Pinterest"
-              className="hover:text-[#d4a0a0] transition-colors hidden sm:inline-flex"
-            >
-              <FaPinterest />
-            </a>
+              <Search size={20} strokeWidth={1.5} />
+            </button>
+          </div>
 
-            <a
-              href="#"
-              aria-label="Instagram"
-              className="hover:text-[#d4a0a0] transition-colors hidden sm:inline-flex"
-            >
-              <FaInstagram/>
-            </a>
 
-            <a
-              href="#"
-              aria-label="TikTok"
-              className="hover:text-[#d4a0a0] transition-colors hidden sm:inline-flex"
-            >
-              <FaTiktok />
-            </a>
-            <a
-              href="#"
-              aria-label="YouTube"
-              className="hover:text-[#d4a0a0] transition-colors hidden sm:inline-flex"
-            >
-            </a>
+          {/* CENTER — logo in normal flow, drives row height */}
+          <Link to="/" className="flex justify-center select-none">
+            <img src={logo} alt="Brand Logo" className="h-[120px] w-auto object-contain" />
+          </Link>
 
-            <a
-              href="/cart"
+          {/* RIGHT — cart + user */}
+          <div className="flex items-center justify-end gap-6 text-black">
+            <button
+              onClick={openCart}
               aria-label="Cart"
               className="relative hover:text-[#d4a0a0] transition-colors ml-1"
             >
-              <FaShoppingCart size={20} strokeWidth={1.5} />
-              <span
-                className="absolute -top-1.5 -right-1.5 text-white text-[9px] font-bold w-4 h-4 rounded-full flex items-center justify-center"
-                style={{ background: "#111" }}
-              >
-                0
-              </span>
-            </a>
+              <FaShoppingCart size={20} />
+              {cartQuantity > 0 && (
+                <span
+                  className="absolute -top-1.5 -right-1.5 text-white text-[9px] font-bold w-4 h-4 rounded-full flex items-center justify-center"
+                  style={{ background: "#111" }}
+                >
+                  {cartQuantity}
+                </span>
+              )}
+            </button>
 
-            <a
-              href="/account"
-              aria-label="Account"
-              className="hover:text-[#d4a0a0] transition-colors"
-            >
-              <FaUser size={20} strokeWidth={1.5} />
-            </a>
+            <Link to="/login" aria-label="Account" className="hover:text-[#d4a0a0] transition-colors">
+              <FaUser size={20} />
+            </Link>
           </div>
         </div>
 
@@ -137,15 +102,21 @@ export default function Header() {
           className="flex items-center justify-center gap-8 px-6 py-2.5 text-xs font-bold tracking-widest"
           style={{ background: "#fce8e8" }}
         >
-          {["HOME", "ABOUT US", "FAQ", "BLOG", "CONTACT"].map((item) => (
-            <a
-              key={item}
-              href={`/${item.toLowerCase().replace(/\s+/g, "-")}`}
-              className=" text-black hover:text-[#d4a0a0] transition-colors"
+          {[
+            { label: "HOME", to: "/" },
+            { label: "ABOUT", to: "/about" },
+            { label: "FAQ", to: "/faq" },
+            { label: "BLOG", to: "/blog" },
+            { label: "CONTACT", to: "/contact" },
+          ].map(({ label, to }) => (
+            <Link
+              key={label}
+              to={to}
+              className="text-black hover:text-[#d4a0a0] transition-colors"
               style={{ letterSpacing: "0.12em" }}
             >
-              {item}
-            </a>
+              {label}
+            </Link>
           ))}
 
           <div className="relative" data-shop-dropdown>
@@ -157,7 +128,6 @@ export default function Header() {
               SHOP
               <FaChevronCircleDown
                 size={12}
-                strokeWidth={2}
                 style={{
                   transform: shopOpen ? "rotate(180deg)" : "rotate(0deg)",
                   transition: "transform 0.25s ease",
@@ -168,13 +138,14 @@ export default function Header() {
             {shopOpen && (
               <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-40 bg-white shadow-lg border border-gray-100 rounded z-50">
                 {SHOP_ITEMS.map((s) => (
-                  <a
+                  <Link
                     key={s}
-                    href={`/shop/${s.toLowerCase()}`}
+                    to={`/shop/${s.toLowerCase()}`}
                     className="block px-4 py-2.5 text-xs tracking-widest text-gray-600 hover:underline hover:text-black transition-colors font-semibold"
+                    onClick={() => setShopOpen(false)}
                   >
                     {s.toUpperCase()}
-                  </a>
+                  </Link>
                 ))}
               </div>
             )}
@@ -186,7 +157,7 @@ export default function Header() {
         role="dialog"
         aria-modal="true"
         aria-label="Search"
-        className="fixed inset-0 z-[100] flex items-start justify-center"
+        className="fixed inset-0 z-100 flex items-start justify-center"
         style={{
           background: "rgba(255,255,255,0.96)",
           opacity: searchOpen ? 1 : 0,
@@ -224,4 +195,6 @@ export default function Header() {
       </div>
     </>
   );
-}
+});
+
+export default Header;
