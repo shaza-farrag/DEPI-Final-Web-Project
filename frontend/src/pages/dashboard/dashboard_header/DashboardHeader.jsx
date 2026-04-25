@@ -36,14 +36,14 @@ function DashboardHeader() {
     setanchorMyAcc(null);
   };
   return (
-    <header className='w-full h-auto py-2 pl-7 pr-7 bg-[#ffff] border-b border-[rgba(0,0,0,0.1)] flex items-center justify-between '>
+    <header className='w-full h-auto py-2 pl-[21%] pr-7 bg-[#ffff]  flex items-center justify-between shadow-md '>
         <div className="part1">
           <Button className='w-10! h-10! rounded-full! min-w-10! mx-auto '>
             <RiMenu2Line className=' text-[35px] text-black' />
 
           </Button>
         </div>
-        <div className="part2 w-[40%] flex items-center justify-end gap-4">
+        <div className="part2 w-[40%] flex items-center  justify-end gap-5">
             <IconButton aria-label="cart">
                 <StyledBadge badgeContent={4} color="secondary">
                     <FaRegBell />
