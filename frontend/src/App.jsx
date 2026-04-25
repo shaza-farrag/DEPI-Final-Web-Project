@@ -12,7 +12,6 @@ import ResetPassword from "./pages/resetPassword/ResetPassword"
 import SuccessfulEmail from './pages/successfulEmail/SuccessfulEmail'
 import Users from './pages/dashboard/pages/Users'
 import Orders from './pages/dashboard/pages/Orders'
-import Checkout from './pages/Checkout/Checkout'
 
 
 function App() {
@@ -33,8 +32,6 @@ function App() {
         <Route path="forgotPassword" element={<ForgotPassword />} />
         <Route path="resetPassword" element={<ResetPassword />} />
         <Route path="successfulEmail" element={<SuccessfulEmail />} />
-         <Route path="Checkout" element={<Checkout />} />
-
       </Routes>
     </ShoppingCartProvider>
     
