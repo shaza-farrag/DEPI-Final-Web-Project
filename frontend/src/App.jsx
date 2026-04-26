@@ -14,6 +14,7 @@ import ResetPassword from "./pages/resetPassword/ResetPassword"
 import SuccessfulEmail from './pages/successfulEmail/SuccessfulEmail'
 import Users from './pages/dashboard/pages/Users'
 import Orders from './pages/dashboard/pages/Orders'
+import Checkout from './pages/checkout/Checkout';
 
 
 function App() {
@@ -27,8 +28,9 @@ function App() {
           <Route path="about" element={<About />} />
           <Route path="products" element={<Products />} />
           <Route path="products/:id" element={<ProductDetails />} />
+          <Route path="checkout" element={<Checkout/>} />
         </Route>
-
+ 
         <Route path="signup" element={<Signup />} />
         <Route path="login" element={<Login />} />
         <Route path="verifyEmail" element={<Verify />} />
@@ -42,6 +44,8 @@ function App() {
     <Route path="/dashboard" element={<Dashboard />}>
         <Route path="users" element={<Users />} />
         <Route path="orders" element={<Orders />} />
+        
+
 
     </Route>
     </Routes>
