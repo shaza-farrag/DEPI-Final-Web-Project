@@ -12,9 +12,7 @@
   
   padding-left: 15%;  
 }
-.fpage{
-  margin-top: 10%;
-}
+
 
 /* ── Left panel ── */
 .left {
@@ -379,6 +377,10 @@ select.field {
   font-size: 11px;
   color: #aaa;
   margin-right: 4px;
+}
+.final {
+
+  color:#dcc8c4;
 }
 
 /* ── Responsive ── */
