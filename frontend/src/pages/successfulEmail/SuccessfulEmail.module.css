@@ -21,7 +21,19 @@ h2 {
     font: 20px bold;
 }
 
-p {
-    color: #04040479;
-    line-height: 1.6;
+.subbtn {
+    margin-top: 20px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.2s;
+    background: rgb(215, 148, 148);
+    color: white;
+
+}
+
+.subbtn:hover {
+    opacity: 0.8;
 }

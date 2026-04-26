@@ -10,26 +10,44 @@ import ForgotPassword from "./pages/forgotPassword/ForgotPassword";
 import ShoppingCartProvider from "./context/ShoppingCartContext"; // 1. استيراد الـ Provider
 import Products from './pages/products/Products'
 import ProductDetails from './pages/products/ProductDetails'
+import ResetPassword from "./pages/resetPassword/ResetPassword"
+import SuccessfulEmail from './pages/successfulEmail/SuccessfulEmail'
+import Users from './pages/dashboard/pages/Users'
+import Orders from './pages/dashboard/pages/Orders'
+
 
 function App() {
+
   return (
+    <>
     <ShoppingCartProvider>
-    <Routes>
-      <Route path="/" element={<Landing />}>
-        <Route index element={<Home />} />
-        <Route path="login" element={<Login />} />
+      <Routes>
+        <Route path="/" element={<Landing />}>
+          <Route index element={<Home />} />
+          <Route path="about" element={<About />} />
+          <Route path="products" element={<Products />} />
+          <Route path="products/:id" element={<ProductDetails />} />
+        </Route>
+
         <Route path="signup" element={<Signup />} />
-        <Route path="dashboard" element={<Dashboard />} />
-        <Route path="about" element={<About />} />
+        <Route path="login" element={<Login />} />
         <Route path="verifyEmail" element={<Verify />} />
         <Route path="forgotPassword" element={<ForgotPassword />} />
-        <Route path="products" element={<Products />} />
-        <Route path="products/:id" element={<ProductDetails />} />
+        <Route path="resetPassword" element={<ResetPassword />} />
+        <Route path="successfulEmail" element={<SuccessfulEmail />} />
+      </Routes>
+    </ShoppingCartProvider>
+    
+      <Routes>
+    <Route path="/dashboard" element={<Dashboard />}>
+        <Route path="users" element={<Users />} />
+        <Route path="orders" element={<Orders />} />
 
-      </Route>
+    </Route>
     </Routes>
-  </ShoppingCartProvider>
+    </>
   );
+
 }
 
 export default App;
