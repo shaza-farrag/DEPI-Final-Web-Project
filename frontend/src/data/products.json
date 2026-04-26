@@ -1,0 +1,1570 @@
+[
+  {
+    "ProductName": "Synthetic Hydrating Cleanser (Test-01)",
+    "BrandName": "CeraVe",
+    "Price": "$15.99",
+    "Category": "Skin Care",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773064202/Synthetic_Hydrating_Cleanser_Test-01_a3am2s.jpg",
+    "PublicID": "Synthetic_Hydrating_Cleanser_Test-01_a3am2s"
+  },
+  {
+    "ProductName": "Foaming Facial Wash - Beta Build",
+    "BrandName": "CeraVe",
+    "Price": "$16.50",
+    "Category": "Skin Care",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773064197/Foaming_Facial_Wash_-_Beta_Build_mejnuy.jpg",
+    "PublicID": "Foaming_Facial_Wash_-_Beta_Build_mejnuy"
+  },
+  {
+    "ProductName": "PM Moisture Surge (Synthetic)",
+    "BrandName": "CeraVe",
+    "Price": "$18.99",
+    "Category": "Skin Care",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773064199/PM_Moisture_Surge_Synthetic_wdyqxl.jpg",
+    "PublicID": "PM_Moisture_Surge_Synthetic_wdyqxl"
+  },
+  {
+    "ProductName": "AM Defense SPF 30 - Test Protocol",
+    "BrandName": "CeraVe",
+    "Price": "$19.25",
+    "Category": "Skin Care",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773064199/AM_Defense_SPF_30_-_Test_Protocol_doou26.jpg",
+    "PublicID": "AM_Defense_SPF_30_-_Test_Protocol_doou26"
+  },
+  {
+    "ProductName": "Skin Renewing Retinol (Sample A)",
+    "BrandName": "CeraVe",
+    "Price": "$24.99",
+    "Category": "Skin Care",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773064202/Skin_Renewing_Retinol_Sample_A_ucjwwa.jpg",
+    "PublicID": "Skin_Renewing_Retinol_Sample_A_ucjwwa"
+  },
+  {
+    "ProductName": "SA Smoothing Cream - Data Point",
+    "BrandName": "CeraVe",
+    "Price": "$21.50",
+    "Category": "Skin Care",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773064205/SA_Smoothing_Cream_-_Data_Point_tjbtlu.jpg",
+    "PublicID": "SA_Smoothing_Cream_-_Data_Point_tjbtlu"
+  },
+  {
+    "ProductName": "Hydrating Mineral Sunscreen (Alpha)",
+    "BrandName": "CeraVe",
+    "Price": "$17.80",
+    "Category": "Skin Care",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773064204/Hydrating_Mineral_Sunscreen_Alpha_f1ir5m.jpg",
+    "PublicID": "Hydrating_Mineral_Sunscreen_Alpha_f1ir5m"
+  },
+  {
+    "ProductName": "Eye Repair Complex - Synthetic",
+    "BrandName": "CeraVe",
+    "Price": "$14.95",
+    "Category": "Skin Care",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773064199/Eye_Repair_Complex_-_Synthetic_xtaetz.jpg",
+    "PublicID": "Eye_Repair_Complex_-_Synthetic_xtaetz"
+  },
+  {
+    "ProductName": "Comforting Cleansing Balm (V2)",
+    "BrandName": "CeraVe",
+    "Price": "$13.40",
+    "Category": "Skin Care",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773064197/Comforting_Cleansing_Balm_V2_gjupto.jpg",
+    "PublicID": "Comforting_Cleansing_Balm_V2_gjupto"
+  },
+  {
+    "ProductName": "Resurfacing Serum - Test Only",
+    "BrandName": "CeraVe",
+    "Price": "$22.00",
+    "Category": "Skin Care",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773064203/Resurfacing_Serum_-_Test_Only_kq8r3s.jpg",
+    "PublicID": "Resurfacing_Serum_-_Test_Only_kq8r3s"
+  },
+  {
+    "ProductName": "Daily Relief Lotion (Bulk Test)",
+    "BrandName": "CeraVe",
+    "Price": "$12.99",
+    "Category": "Skin Care",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773064202/Daily_Relief_Lotion_Bulk_Test_melbso.jpg",
+    "PublicID": "Daily_Relief_Lotion_Bulk_Test_melbso"
+  },
+  {
+    "ProductName": "Vitamin C Brightening (Synthetic)",
+    "BrandName": "CeraVe",
+    "Price": "$26.50",
+    "Category": "Skin Care",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773064206/Vitamin_C_Brightening_Synthetic_cyugxm.jpg",
+    "PublicID": "Vitamin_C_Brightening_Synthetic_cyugxm"
+  },
+  {
+    "ProductName": "Acne Control Gel - Lab Sample",
+    "BrandName": "CeraVe",
+    "Price": "$19.99",
+    "Category": "Skin Care",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773064197/Acne_Control_Gel_-_Lab_Sample_e7scck.jpg",
+    "PublicID": "Acne_Control_Gel_-_Lab_Sample_e7scck"
+  },
+  {
+    "ProductName": "Ultra-Light Moisturizing Gel (Beta)",
+    "BrandName": "CeraVe",
+    "Price": "$18.25",
+    "Category": "Skin Care",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773064203/Ultra-Light_Moisturizing_Gel_Beta_bi7ujy.jpg",
+    "PublicID": "Ultra-Light_Moisturizing_Gel_Beta_bi7ujy"
+  },
+  {
+    "ProductName": "Healing Ointment - Dev Version",
+    "BrandName": "CeraVe",
+    "Price": "$11.50",
+    "Category": "Skin Care",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773064199/Healing_Ointment_-_Dev_Version_tl09vi.jpg",
+    "PublicID": "Healing_Ointment_-_Dev_Version_tl09vi"
+  },
+  {
+    "ProductName": "Hyaluronic Acid 2% + B5 (Simulated)",
+    "BrandName": "The Ordinary",
+    "Price": "$9.90",
+    "Category": "Skin Care",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773064356/Hyaluronic_Acid_2_B5_Simulated_ulb0fc.jpg",
+    "PublicID": "Hyaluronic_Acid_2_B5_Simulated_ulb0fc"
+  },
+  {
+    "ProductName": "Niacinamide 10% - Test Array",
+    "BrandName": "The Ordinary",
+    "Price": "$7.50",
+    "Category": "Skin Care",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773064361/Niacinamide_10_-_Test_Array_xueumw.jpg",
+    "PublicID": "Niacinamide_10_-_Test_Array_xueumw"
+  },
+  {
+    "ProductName": "Caffeine Solution (Mockup)",
+    "BrandName": "The Ordinary",
+    "Price": "$8.25",
+    "Category": "Skin Care",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773064354/Caffeine_Solution_Mockup_vy8i8a.jpg",
+    "PublicID": "Caffeine_Solution_Mockup_vy8i8a"
+  },
+  {
+    "ProductName": "Natural Moisturizing Factors (Beta)",
+    "BrandName": "The Ordinary",
+    "Price": "$11.30",
+    "Category": "Skin Care",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773064360/Natural_Moisturizing_Factors_Beta_ympff9.jpg",
+    "PublicID": "Natural_Moisturizing_Factors_Beta_ympff9"
+  },
+  {
+    "ProductName": "Glycolic Acid 7% Toning (Synthetic)",
+    "BrandName": "The Ordinary",
+    "Price": "$13.50",
+    "Category": "Skin Care",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773064356/Glycolic_Acid_7_Toning_Synthetic_dvijex.jpg",
+    "PublicID": "Glycolic_Acid_7_Toning_Synthetic_dvijex"
+  },
+  {
+    "ProductName": "Squalane Cleanser - Sample Mode",
+    "BrandName": "The Ordinary",
+    "Price": "$10.00",
+    "Category": "Skin Care",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773064366/Squalane_Cleanser_-_Sample_Mode_eikrrl.jpg",
+    "PublicID": "Squalane_Cleanser_-_Sample_Mode_eikrrl"
+  },
+  {
+    "ProductName": "Buffet + Copper Peptides (Alpha)",
+    "BrandName": "The Ordinary",
+    "Price": "$30.90",
+    "Category": "Skin Care",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773064357/Buffet_Copper_Peptides_Alpha_idkkud.jpg",
+    "PublicID": "Buffet_Copper_Peptides_Alpha_idkkud"
+  },
+  {
+    "ProductName": "AHA 30% Peeling Solution (Test-X)",
+    "BrandName": "The Ordinary",
+    "Price": "$9.50",
+    "Category": "Skin Care",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773064354/AHA_30_Peeling_Solution_Test-X_ux0z8c.jpg",
+    "PublicID": "AHA_30_Peeling_Solution_Test-X_ux0z8c"
+  },
+  {
+    "ProductName": "Azelaic Acid Suspension (Data)",
+    "BrandName": "The Ordinary",
+    "Price": "$12.40",
+    "Category": "Skin Care",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773064353/Azelaic_Acid_Suspension_Data_hlblxl.jpg",
+    "PublicID": "Azelaic_Acid_Suspension_Data_hlblxl"
+  },
+  {
+    "ProductName": "Rose Hip Seed Oil - Synthetic",
+    "BrandName": "The Ordinary",
+    "Price": "$11.00",
+    "Category": "Skin Care",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773064363/Rose_Hip_Seed_Oil_-_Synthetic_dolujb.jpg",
+    "PublicID": "Rose_Hip_Seed_Oil_-_Synthetic_dolujb"
+  },
+  {
+    "ProductName": "Multi-Peptide Lash Serum (Trial)",
+    "BrandName": "The Ordinary",
+    "Price": "$14.50",
+    "Category": "Skin Care",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773064357/Multi-Peptide_Lash_Serum_Trial_z0m1md.jpg",
+    "PublicID": "Multi-Peptide_Lash_Serum_Trial_z0m1md"
+  },
+  {
+    "ProductName": "Vitamin C Suspension (Dev Build)",
+    "BrandName": "The Ordinary",
+    "Price": "$8.90",
+    "Category": "Skin Care",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773064368/Vitamin_C_Suspension_Dev_Build_ec5v0j.jpg",
+    "PublicID": "Vitamin_C_Suspension_Dev_Build_ec5v0j"
+  },
+  {
+    "ProductName": "Salicylic Acid 2% Masque (Sample)",
+    "BrandName": "The Ordinary",
+    "Price": "$13.80",
+    "Category": "Skin Care",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773064365/Salicylic_Acid_2_Masque_Sample_lcicuy.jpg",
+    "PublicID": "Salicylic_Acid_2_Masque_Sample_lcicuy"
+  },
+  {
+    "ProductName": "Glucoside Foaming Cleanser (Test)",
+    "BrandName": "The Ordinary",
+    "Price": "$12.00",
+    "Category": "Skin Care",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773064354/Glucoside_Foaming_Cleanser_Test_qipqih.jpg",
+    "PublicID": "Glucoside_Foaming_Cleanser_Test_qipqih"
+  },
+  {
+    "ProductName": "Pycnogenol 5% - Synthetic Run",
+    "BrandName": "The Ordinary",
+    "Price": "$10.50",
+    "Category": "Skin Care",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773064361/Pycnogenol_5_-_Synthetic_Run_cymwfw.jpg",
+    "PublicID": "Pycnogenol_5_-_Synthetic_Run_cymwfw"
+  },
+  {
+    "ProductName": "Anthelios UV-Mune 400 (Synthetic)",
+    "BrandName": "La Roche-Posay",
+    "Price": "$32.50",
+    "Category": "Skin Care",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773064281/Anthelios_UV-Mune_400_Synthetic_qtsefl.jpg",
+    "PublicID": "Anthelios_UV-Mune_400_Synthetic_qtsefl"
+  },
+  {
+    "ProductName": "Effaclar Mat - Test Logic",
+    "BrandName": "La Roche-Posay",
+    "Price": "$22.99",
+    "Category": "Skin Care",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773064283/Effaclar_Mat_-_Test_Logic_paxmm5.jpg",
+    "PublicID": "Effaclar_Mat_-_Test_Logic_paxmm5"
+  },
+  {
+    "ProductName": "Hyalu B5 Serum - Synthetic Gold",
+    "BrandName": "La Roche-Posay",
+    "Price": "$43.00",
+    "Category": "Skin Care",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773064286/Hyalu_B5_Serum_-_Synthetic_Gold_ijibtb.jpg",
+    "PublicID": "Hyalu_B5_Serum_-_Synthetic_Gold_ijibtb"
+  },
+  {
+    "ProductName": "Toleriane Double Repair (Beta)",
+    "BrandName": "La Roche-Posay",
+    "Price": "$21.50",
+    "Category": "Skin Care",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773064289/Toleriane_Double_Repair_Beta_qmygla.jpg",
+    "PublicID": "Toleriane_Double_Repair_Beta_qmygla"
+  },
+  {
+    "ProductName": "Cicaplast Baume B5 (Data Sample)",
+    "BrandName": "La Roche-Posay",
+    "Price": "$17.95",
+    "Category": "Skin Care",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773064282/Cicaplast_Baume_B5_Data_Sample_x5tumg.jpg",
+    "PublicID": "Cicaplast_Baume_B5_Data_Sample_x5tumg"
+  },
+  {
+    "ProductName": "Lipikar AP+ Body Wash (Test)",
+    "BrandName": "La Roche-Posay",
+    "Price": "$19.00",
+    "Category": "Skin Care",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773064285/Lipikar_AP_Body_Wash_Test_thvy2g.jpg",
+    "PublicID": "Lipikar_AP_Body_Wash_Test_thvy2g"
+  },
+  {
+    "ProductName": "Pure Vitamin C12 (Synthetic Run)",
+    "BrandName": "La Roche-Posay",
+    "Price": "$48.50",
+    "Category": "Skin Care",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773064291/Pure_Vitamin_C12_Synthetic_Run_fg77mu.jpg",
+    "PublicID": "Pure_Vitamin_C12_Synthetic_Run_fg77mu"
+  },
+  {
+    "ProductName": "Mela B3 Dark Spot (Simulated)",
+    "BrandName": "La Roche-Posay",
+    "Price": "$49.00",
+    "Category": "Skin Care",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773064286/Mela_B3_Dark_Spot_Simulated_ryh5cc.jpg",
+    "PublicID": "Mela_B3_Dark_Spot_Simulated_ryh5cc"
+  },
+  {
+    "ProductName": "Toleriane Purifying Wash (Alpha)",
+    "BrandName": "La Roche-Posay",
+    "Price": "$16.99",
+    "Category": "Skin Care",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773064290/Toleriane_Purifying_Wash_Alpha_zq6oyk.jpg",
+    "PublicID": "Toleriane_Purifying_Wash_Alpha_zq6oyk"
+  },
+  {
+    "ProductName": "Thermal Spring Water (Mock Data)",
+    "BrandName": "La Roche-Posay",
+    "Price": "$14.00",
+    "Category": "Skin Care",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773064288/Thermal_Spring_Water_Mock_Data_wwsl9c.jpg",
+    "PublicID": "Thermal_Spring_Water_Mock_Data_wwsl9c"
+  },
+  {
+    "ProductName": "Retinol B3 Serum - Test Variant",
+    "BrandName": "La Roche-Posay",
+    "Price": "$44.50",
+    "Category": "Skin Care",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773064287/Retinol_B3_Serum_-_Test_Variant_xuxac2.jpg",
+    "PublicID": "Retinol_B3_Serum_-_Test_Variant_xuxac2"
+  },
+  {
+    "ProductName": "Anthelios Tinted Mineral (Beta)",
+    "BrandName": "La Roche-Posay",
+    "Price": "$34.00",
+    "Category": "Skin Care",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773064282/Anthelios_Tinted_Mineral_Beta_zg5qtq.jpg",
+    "PublicID": "Anthelios_Tinted_Mineral_Beta_zg5qtq"
+  },
+  {
+    "ProductName": "Effaclar Duo Acne (Synthetic)",
+    "BrandName": "La Roche-Posay",
+    "Price": "$23.50",
+    "Category": "Skin Care",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773064285/Effaclar_Duo_Acne_Synthetic_eekizp.jpg",
+    "PublicID": "Effaclar_Duo_Acne_Synthetic_eekizp"
+  },
+  {
+    "ProductName": "Hydraphase Intensive (Data)",
+    "BrandName": "La Roche-Posay",
+    "Price": "$28.00",
+    "Category": "Skin Care",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773064284/Hydraphase_Intensive_Data_rwsc0c.jpg",
+    "PublicID": "Hydraphase_Intensive_Data_rwsc0c"
+  },
+  {
+    "ProductName": "Rosaliac AR Intense (Test Only)",
+    "BrandName": "La Roche-Posay",
+    "Price": "$26.50",
+    "Category": "Skin Care",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773064288/Rosaliac_AR_Intense_Test_Only_t6cy3w.jpg",
+    "PublicID": "Rosaliac_AR_Intense_Test_Only_t6cy3w"
+  },
+  {
+    "ProductName": "Aloe vera Gel",
+    "BrandName": "Hey Sugar",
+    "Price": 135,
+    "Category": "Skin Care",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773442217/1-aloe-vera-gel_httuph.png",
+    "PublicID": "1-aloe-vera-gel_httuph"
+  },
+  {
+    "ProductName": "Collagen Gel",
+    "BrandName": "Hey Sugar",
+    "Price": 150,
+    "Category": "Skin Care",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773442217/2-collegen-gel_fmnkxd.png",
+    "PublicID": "2-collegen-gel_fmnkxd"
+  },
+  {
+    "ProductName": "Eye Brow Soap",
+    "BrandName": "Hey Sugar",
+    "Price": 70,
+    "Category": "Skin Care",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773442215/3-eye-brow-soap_i9ydbs.jpg",
+    "PublicID": "3-eye-brow-soap_i9ydbs"
+  },
+  {
+    "ProductName": "Eye cream",
+    "BrandName": "Hey Sugar",
+    "Price": 130,
+    "Category": "Skin Care",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773442215/4-eye-cream-1_b82let.png",
+    "PublicID": "4-eye-cream-1_b82let"
+  },
+  {
+    "ProductName": "Glowy Cream",
+    "BrandName": "Hey Sugar",
+    "Price": 150,
+    "Category": "Skin Care",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773442214/5-Glowy-cream_fytp3u.png",
+    "PublicID": "5-Glowy-cream_fytp3u"
+  },
+  {
+    "ProductName": "Hyalu Foam Face Wash",
+    "BrandName": "Hey Sugar",
+    "Price": 170,
+    "Category": "Skin Care",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773442214/6-hyalu-foam-face-wash-1_azkijt.png",
+    "PublicID": "6-hyalu-foam-face-wash-1_azkijt"
+  },
+  {
+    "ProductName": "Hyalu Serum",
+    "BrandName": "Hey Sugar",
+    "Price": 220,
+    "Category": "Skin Care",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773442213/7-hyalu-serum-2_tqef7r.png",
+    "PublicID": "7-hyalu-serum-2_tqef7r"
+  },
+  {
+    "ProductName": "Miceller Water",
+    "BrandName": "Hey Sugar",
+    "Price": 150,
+    "Category": "Skin Care",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773442211/8-micellar-water_dpiwzn.png",
+    "PublicID": "8-micellar-water_dpiwzn"
+  },
+  {
+    "ProductName": "Milk Honey Soap",
+    "BrandName": "Hey Sugar",
+    "Price": 100,
+    "Category": "Skin Care",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773442210/9-milk-honey-soap-1_tog3la.png",
+    "PublicID": "9-milk-honey-soap-1_tog3la"
+  },
+  {
+    "ProductName": "Oily Skin Foam Fase Wash",
+    "BrandName": "Hey Sugar",
+    "Price": 160,
+    "Category": "Skin Care",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773442210/10-oily-skin-foam-face-wash-1-_mumyur.png",
+    "PublicID": "10-oily-skin-foam-face-wash-1-_mumyur"
+  },
+  {
+    "ProductName": "Pearl Cream",
+    "BrandName": "Hey Sugar",
+    "Price": 120,
+    "Category": "Skin Care",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773442209/11-pearl-cream_zwtc1z.png",
+    "PublicID": "11-pearl-cream_zwtc1z"
+  },
+  {
+    "ProductName": "Rose Gel",
+    "BrandName": "Hey Sugar",
+    "Price": 130,
+    "Category": "Skin Care",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773442208/12-rose-gel-1-_oli7ah.png",
+    "PublicID": "12-rose-gel-1-_oli7ah"
+  },
+  {
+    "ProductName": "SunBlock",
+    "BrandName": "Hey Sugar",
+    "Price": 200,
+    "Category": "Skin Care",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773442208/13-sunblock-_ozjnxh.png",
+    "PublicID": "13-sunblock-_ozjnxh"
+  },
+  {
+    "ProductName": "Skin Booster Serum",
+    "BrandName": "Hey Sugar",
+    "Price": 130,
+    "Category": "Skin Care",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773442208/14-skin-booster-serum-1-_o8dfs8.png",
+    "PublicID": "14-skin-booster-serum-1-_o8dfs8"
+  },
+  {
+    "ProductName": "Lip mask",
+    "BrandName": "Hey Sugar",
+    "Price": 100,
+    "Category": "Skin Care",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773442208/15-lip-mask_f6mtop.png",
+    "PublicID": "15-lip-mask_f6mtop"
+  },
+  {
+    "ProductName": "Lip Gloss Super Red",
+    "BrandName": "Hey Sugar",
+    "Price": 150,
+    "Category": "Skin Care",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773442207/16-lip-gloss-super-red_ovld07.jpg",
+    "PublicID": "16-lip-gloss-super-red_ovld07"
+  },
+  {
+    "ProductName": "Lip Balm Brown",
+    "BrandName": "Hey Sugar",
+    "Price": 70,
+    "Category": "Skin Care",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773442207/17-lip-balm-brown_qq4br7.png",
+    "PublicID": "17-lip-balm-brown_qq4br7"
+  },
+  {
+    "ProductName": "blue indigo body scrub",
+    "BrandName": "Hey Sugar",
+    "Price": 170,
+    "Category": "Body Care",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773442725/1-blue-indiago-scrub_hfvncu.png",
+    "PublicID": "1-blue-indiago-scrub_hfvncu"
+  },
+  {
+    "ProductName": "Body butter Floral",
+    "BrandName": "Hey Sugar",
+    "Price": 160,
+    "Category": "Body Care",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773442723/2-floral-butter-1_vjwxhn.png",
+    "PublicID": "2-floral-butter-1_vjwxhn"
+  },
+  {
+    "ProductName": "Body butter Paradise",
+    "BrandName": "Hey Sugar",
+    "Price": 160,
+    "Category": "Body Care",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773442722/3-paradise-butter_rdmjja.png",
+    "PublicID": "3-paradise-butter_rdmjja"
+  },
+  {
+    "ProductName": "Body butter Strawberry",
+    "BrandName": "Hey Sugar",
+    "Price": 160,
+    "Category": "Body Care",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773442720/4-strawberry-butter_ywimdf.png",
+    "PublicID": "4-strawberry-butter_ywimdf"
+  },
+  {
+    "ProductName": "Body lotion Bonbon",
+    "BrandName": "Hey Sugar",
+    "Price": 200,
+    "Category": "Body Care",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773442718/5-body-lotion-bonbon_uqz0nl.png",
+    "PublicID": "5-body-lotion-bonbon_uqz0nl"
+  },
+  {
+    "ProductName": "Body lotion Floral",
+    "BrandName": "Hey Sugar",
+    "Price": 200,
+    "Category": "Body Care",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773442718/6-body-lotion-floral-_wzxhb0.png",
+    "PublicID": "6-body-lotion-floral-_wzxhb0"
+  },
+  {
+    "ProductName": "Body lotion Into the stars",
+    "BrandName": "Hey Sugar",
+    "Price": 220,
+    "Category": "Body Care",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773442716/7-into-the-stars-lotion_fnuyqt.png",
+    "PublicID": "7-into-the-stars-lotion_fnuyqt"
+  },
+  {
+    "ProductName": "Body mist (floral)",
+    "BrandName": "Hey Sugar",
+    "Price": 150,
+    "Category": "Body Care",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773442714/8-floral-mist_qcgxgp.png",
+    "PublicID": "8-floral-mist_qcgxgp"
+  },
+  {
+    "ProductName": "Body mist (fruity )",
+    "BrandName": "Hey Sugar",
+    "Price": 150,
+    "Category": "Body Care",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773442713/9-body-mist-fruity_qgxuwy.png",
+    "PublicID": "9-body-mist-fruity_qgxuwy"
+  },
+  {
+    "ProductName": "Body mist love is heaven",
+    "BrandName": "Hey Sugar",
+    "Price": 130,
+    "Category": "Body Care",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773442711/10-paradise-mist_cdabwe.png",
+    "PublicID": "10-paradise-mist_cdabwe"
+  },
+  {
+    "ProductName": "Body oil",
+    "BrandName": "Hey Sugar",
+    "Price": 200,
+    "Category": "Body Care",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773442710/11-body-oil_mblfik.png",
+    "PublicID": "11-body-oil_mblfik"
+  },
+  {
+    "ProductName": "Bronze body oil",
+    "BrandName": "Hey Sugar",
+    "Price": 200,
+    "Category": "Body Care",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773442709/12-bronze-body-oil_v6lbng.png",
+    "PublicID": "12-bronze-body-oil_v6lbng"
+  },
+  {
+    "ProductName": "Coffee body scrub",
+    "BrandName": "Hey Sugar",
+    "Price": 160,
+    "Category": "Body Care",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773442708/13-coffee-body-scrub_vomtoa.png",
+    "PublicID": "13-coffee-body-scrub_vomtoa"
+  },
+  {
+    "ProductName": "Deodrant bonbon",
+    "BrandName": "Hey Sugar",
+    "Price": 160,
+    "Category": "Body Care",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773442707/14-bonbon-deodrant-1_rfmuah.png",
+    "PublicID": "14-bonbon-deodrant-1_rfmuah"
+  },
+  {
+    "ProductName": "Deodrant Pomegranate",
+    "BrandName": "Hey Sugar",
+    "Price": 160,
+    "Category": "Body Care",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773442705/15-pomegrnate-deodrant_rxrqg5.png",
+    "PublicID": "15-pomegrnate-deodrant_rxrqg5"
+  },
+  {
+    "ProductName": "Deodrant Floral",
+    "BrandName": "Hey Sugar",
+    "Price": 160,
+    "Category": "Body Care",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773442704/16-deodrant-flowery_k3jwqt.png",
+    "PublicID": "16-deodrant-flowery_k3jwqt"
+  },
+  {
+    "ProductName": "Deodrant for-him",
+    "BrandName": "Hey Sugar",
+    "Price": 160,
+    "Category": "Body Care",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773442703/17-deodrant-for-him-2_kci7ea.png",
+    "PublicID": "17-deodrant-for-him-2_kci7ea"
+  },
+  {
+    "ProductName": "Deodrant Lavender",
+    "BrandName": "Hey Sugar",
+    "Price": 160,
+    "Category": "Body Care",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773442702/18-lavender-deodrant_djpi7s.png",
+    "PublicID": "18-lavender-deodrant_djpi7s"
+  },
+  {
+    "ProductName": "Foot cream",
+    "BrandName": "Hey Sugar",
+    "Price": 160,
+    "Category": "Body Care",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773442701/19foot-cream_kr26xx.png",
+    "PublicID": "19foot-cream_kr26xx"
+  },
+  {
+    "ProductName": "Perfume oil",
+    "BrandName": "Hey Sugar",
+    "Price": 100,
+    "Category": "Body Care",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773442700/20-bikini-perfume_qz8zhu.png",
+    "PublicID": "20-bikini-perfume_qz8zhu"
+  },
+  {
+    "ProductName": "Pink wink",
+    "BrandName": "Hey Sugar",
+    "Price": 210,
+    "Category": "Body Care",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773442699/21bikini-balm_b88ynf.png",
+    "PublicID": "21bikini-balm_b88ynf"
+  },
+  {
+    "ProductName": "Anti dandruff shampoo",
+    "BrandName": "Hey Sugar",
+    "Price": 200,
+    "Category": "Hair Care",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773442878/1-Anti-dandruff-shampoo_lmtjij.jpg",
+    "PublicID": "1-Anti-dandruff-shampoo_lmtjij"
+  },
+  {
+    "ProductName": "anti hair loss spray",
+    "BrandName": "Hey Sugar",
+    "Price": 250,
+    "Category": "Hair Care",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773442878/2-Anti-Hair-Loss-Spray-Bottle_kh7m0t.png",
+    "PublicID": "2-Anti-Hair-Loss-Spray-Bottle_kh7m0t"
+  },
+  {
+    "ProductName": "Baby leave in spray",
+    "BrandName": "Hey Sugar",
+    "Price": 130,
+    "Category": "Hair Care",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773442875/3-baby-spray_u5kaz3.jpg",
+    "PublicID": "3-baby-spray_u5kaz3"
+  },
+  {
+    "ProductName": "baby hair brush",
+    "BrandName": "Hey Sugar",
+    "Price": 120,
+    "Category": "Hair Care",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773442874/5-baby-hair-brush_edoyla.png",
+    "PublicID": "5-baby-hair-brush_edoyla"
+  },
+  {
+    "ProductName": "creamy shampoo",
+    "BrandName": "Hey Sugar",
+    "Price": 200,
+    "Category": "Hair Care",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773442872/4-shampoo-new_wxqxug.png",
+    "PublicID": "4-shampoo-new_wxqxug"
+  },
+  {
+    "ProductName": "Hair balm",
+    "BrandName": "Hey Sugar",
+    "Price": 220,
+    "Category": "Hair Care",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773442871/6-hair-balm-1_sssiwr.png",
+    "PublicID": "6-hair-balm-1_sssiwr"
+  },
+  {
+    "ProductName": "Hair cream",
+    "BrandName": "Hey Sugar",
+    "Price": 200,
+    "Category": "Hair Care",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773442869/7-hair-cream-22_qwpnxm.png",
+    "PublicID": "7-hair-cream-22_qwpnxm"
+  },
+  {
+    "ProductName": "Hair mask",
+    "BrandName": "Hey Sugar",
+    "Price": 250,
+    "Category": "Hair Care",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773442869/8-hair-mask-2_bipx9h.png",
+    "PublicID": "8-hair-mask-2_bipx9h"
+  },
+  {
+    "ProductName": "longer hair",
+    "BrandName": "Hey Sugar",
+    "Price": 200,
+    "Category": "Hair Care",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773442867/9-longer-hair_w23hv9.jpg",
+    "PublicID": "9-longer-hair_w23hv9"
+  },
+  {
+    "ProductName": "Hair stick",
+    "BrandName": "Hey Sugar",
+    "Price": 200,
+    "Category": "Hair Care",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773442866/10-Hair-stick_wnkgnz.png",
+    "PublicID": "10-Hair-stick_wnkgnz"
+  },
+  {
+    "ProductName": "slick wooden brush",
+    "BrandName": "Hey Sugar",
+    "Price": 120,
+    "Category": "Hair Care",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773442864/11-dark-brush_bdib4y.png",
+    "PublicID": "11-dark-brush_bdib4y"
+  },
+  {
+    "ProductName": "brown Bow Clip",
+    "BrandName": "Bowy",
+    "Price": 80,
+    "Category": "Hair Care",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1774389171/brown_Bow_Clip_ar4fcc.jpg",
+    "PublicID": "brown_Bow_Clip_ar4fcc"
+  },
+  {
+    "ProductName": "White Scrunchie",
+    "BrandName": "Bowy",
+    "Price": 55,
+    "Category": "Hair Care",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1774389153/White_Scrunchie.jpg_x5snjc.jpg",
+    "PublicID": "White_Scrunchie.jpg_x5snjc"
+  },
+  {
+    "ProductName": "Pink Scrunchie",
+    "BrandName": "Bowy",
+    "Price": 55,
+    "Category": "Hair Care",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1774389154/Pink_Scrunchie_wsv2xe.jpg",
+    "PublicID": "Pink_Scrunchie_wsv2xe"
+  },
+  {
+    "ProductName": "Beige Scrunchie",
+    "BrandName": "Bowy",
+    "Price": 55,
+    "Category": "Hair Care",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1774389155/Beige_Scrunchie_j3jjgx.jpg",
+    "PublicID": "Beige_Scrunchie_j3jjgx"
+  },
+  {
+    "ProductName": "brown Scrunchie",
+    "BrandName": "Bowy",
+    "Price": 55,
+    "Category": "Hair Care",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1774389156/brown_Scrunchie_gwtvex.jpg",
+    "PublicID": "brown_Scrunchie_gwtvex"
+  },
+  {
+    "ProductName": "pink Bow Clip",
+    "BrandName": "Bowy",
+    "Price": 55,
+    "Category": "Hair Care",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1774389158/pink_Bow_Clip_kls7a4.jpg",
+    "PublicID": "pink_Bow_Clip_kls7a4"
+  },
+  {
+    "ProductName": "Purple Bow Clip",
+    "BrandName": "Bowy",
+    "Price": 175,
+    "Category": "Hair Care",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1774389164/Purple_Bow_Clip_gstixw.jpg",
+    "PublicID": "Purple_Bow_Clip_gstixw"
+  },
+  {
+    "ProductName": "green Bow Clip",
+    "BrandName": "Bowy",
+    "Price": 175,
+    "Category": "Hair Care",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1774389164/green_Bow_Clip_amhpbt.jpg",
+    "PublicID": "green_Bow_Clip_amhpbt"
+  },
+  {
+    "ProductName": "white Bow  Clip",
+    "BrandName": "Bowy",
+    "Price": 175,
+    "Category": "Hair Care",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1774389170/white_Bow_Clip_iiue2o.jpg",
+    "PublicID": "white_Bow_Clip_iiue2o"
+  },
+  {
+    "ProductName": "Green Shawl",
+    "BrandName": "Scarvella",
+    "Price": 500,
+    "Category": "Scarf",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1774389152/Green_Scarf_h6xsi2.jpg",
+    "PublicID": "Green_Scarf_h6xsi2"
+  },
+  {
+    "ProductName": "Blue Shawl",
+    "BrandName": "Scarvella",
+    "Price": 500,
+    "Category": "Scarf",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1774389057/Blue_Scarf_lrhvsa.jpg",
+    "PublicID": "Blue_Scarf_lrhvsa"
+  },
+  {
+    "ProductName": "Brown Shawl",
+    "BrandName": "Scarvella",
+    "Price": 500,
+    "Category": "Scarf",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1774389059/Brown_Scarf_o5dapt.jpg",
+    "PublicID": "Brown_Scarf_o5dapt"
+  },
+  {
+    "ProductName": "Black Shawl",
+    "BrandName": "Scarvella",
+    "Price": 500,
+    "Category": "Scarf",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1774389057/Black_Scarf_dj4i5l.jpg",
+    "PublicID": "Black_Scarf_dj4i5l"
+  },
+  {
+    "ProductName": "Red Shawl",
+    "BrandName": "Scarvella",
+    "Price": 500,
+    "Category": "Scarf",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1774389057/Red_Scarf_ddkuvq.jpg",
+    "PublicID": "Red_Scarf_ddkuvq"
+  },
+  {
+    "ProductName": "Beige Shawl",
+    "BrandName": "Scarvella",
+    "Price": 500,
+    "Category": "Scarf",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1774389060/Beige_Scarf_ngdaes.jpg",
+    "PublicID": "Beige_Scarf_ngdaes"
+  },
+  {
+    "ProductName": "Pink Shawl",
+    "BrandName": "Scarvella",
+    "Price": 500,
+    "Category": "Scarf",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1774389058/Pink_Scarf_gg4x3d.jpg",
+    "PublicID": "Pink_Scarf_gg4x3d"
+  },
+  {
+    "ProductName": "Hen Mug",
+    "BrandName": "farmhouse pottery",
+    "Price": 117.9,
+    "Category": "Mug",
+    "ImageURL": "https://www.farmhousepottery.com/cdn/shop/files/MUG_98_1500x.jpg?v=1772370357",
+    "PublicID": "Hen-Mug_vlgbbr"
+  },
+  {
+    "ProductName": "Tulip Mug",
+    "BrandName": "farmhouse pottery",
+    "Price": 148.89,
+    "Category": "Mug",
+    "ImageURL": "https://www.farmhousepottery.com/cdn/shop/files/MUG_96_1500x.jpg?v=1769710351",
+    "PublicID": "Tulip-Mug_elmikt"
+  },
+  {
+    "ProductName": "Wooly Mug",
+    "BrandName": "farmhouse pottery",
+    "Price": 107.89,
+    "Category": "Mug",
+    "ImageURL": "https://www.farmhousepottery.com/cdn/shop/files/MUG_101_1500x.jpg?v=1773088359",
+    "PublicID": "Wooly-Mug_vdgndf"
+  },
+  {
+    "ProductName": "Bloom Mug",
+    "BrandName": "farmhouse pottery",
+    "Price": 90.89,
+    "Category": "Mug",
+    "ImageURL": "https://www.farmhousepottery.com/cdn/shop/files/MU�f61-4628-a762-250a7cb4555b_1500x.jpg?v=1744138346",
+    "PublicID": "Bloom-Mug_mt5rd5"
+  },
+  {
+    "ProductName": "Milkmaid Mug",
+    "BrandName": "farmhouse pottery",
+    "Price": 100.89,
+    "Category": "Mug",
+    "ImageURL": "https://www.farmhousepottery.com/cdn/shop/files/MUG_97_1500x.jpg?v=1769710368",
+    "PublicID": "Milkmaid-Mug_yi5kek"
+  },
+  {
+    "ProductName": "Classic Mug",
+    "BrandName": "greek market",
+    "Price": 136.89,
+    "Category": "Mug",
+    "ImageURL": "https://emersoncreekpottery.com/wp-content/uploads/2022/05/Stoneware-Pottery-Classic-Mug-1.jpg",
+    "PublicID": "Classic-Mug_g4gt2h"
+  },
+  {
+    "ProductName": "Latte Mug",
+    "BrandName": "greek market",
+    "Price": 134.89,
+    "Category": "Mug",
+    "ImageURL": "https://emersoncreekpottery.com/wp-content/uploads/2022/05/Stoneware-Pottery-Latte-Mug.jpg",
+    "PublicID": "Latte-Mug_pc7wot"
+  },
+  {
+    "ProductName": "Signature Mug",
+    "BrandName": "greek market",
+    "Price": 135.89,
+    "Category": "Mug",
+    "ImageURL": "https://emersoncreekpottery.com/wp-content/uploads/2022/05/Stoneware-Pottery-Signature-Mug-1-800x800.jpg",
+    "PublicID": "Signature-Mug_p7gn3w"
+  },
+  {
+    "ProductName": "Brookline Camp Mug",
+    "BrandName": "greek market",
+    "Price": 119.89,
+    "Category": "Mug",
+    "ImageURL": "https://emersoncreekpottery.com/wp-content/uploads/2022/05/Stoneware-Pottery-Brookline-Cup-2-800x800.jpg",
+    "PublicID": "Brookline-Camp-Mug_hswfwi"
+  },
+  {
+    "ProductName": "Children's Cups",
+    "BrandName": "greek market",
+    "Price": 145.89,
+    "Category": "Mug",
+    "ImageURL": "https://emersoncreekpottery.com/wp-content/uploads/2022/05/Childrens-Cups-800x800.jpg",
+    "PublicID": "Children_s-Cups_jpeg_hygjxv"
+  },
+  {
+    "ProductName": "Off White and Black Wax Resist Floral Cat Ceramic Mug",
+    "BrandName": "world mugs",
+    "Price": 97.89,
+    "Category": "Mug",
+    "ImageURL": "https://www.worldmarket.com/dw/image/v2/BJWT_PRD/o�067_XXX_v1.jpg?sw=385&sh=385&sm=fit&sfrm=jpg&q=80",
+    "PublicID": "Off-White-and-Black-Wax-Resist-Floral-Cat-Ceramic-Mug_zkszer"
+  },
+  {
+    "ProductName": "Lucky Cat Figural Ceramic Mug",
+    "BrandName": "world mugs",
+    "Price": 124.89,
+    "Category": "Mug",
+    "ImageURL": "https://www.worldmarket.com/dw/image/v2/BJWT_PRD/o�black_v1.jpg?sw=1984&sh=1984&sm=fit&sfrm=jpg&q=80",
+    "PublicID": "Lucky-Cat-Figural-Ceramic-Mug_l3i5h3"
+  },
+  {
+    "ProductName": "Cream Flower Hand Painted Ceramic Mug",
+    "BrandName": "world mugs",
+    "Price": 80.89,
+    "Category": "Mug",
+    "ImageURL": "https://www.worldmarket.com/dw/image/v2/BJWT_PRD/o�rchid_v1.jpg?sw=1984&sh=1984&sm=fit&sfrm=jpg&q=80",
+    "PublicID": "Cream-Flower-Hand-Painted-Ceramic-Mug_afyb1z"
+  },
+  {
+    "ProductName": "Cream and Yellow Dachshund Hand Painted Ceramic Mug",
+    "BrandName": "world mugs",
+    "Price": 105.89,
+    "Category": "Mug",
+    "ImageURL": "https://www.worldmarket.com/dw/image/v2/BJWT_PRD/o�051_XXX_v1.jpg?sw=385&sh=385&sm=fit&sfrm=jpg&q=80",
+    "PublicID": "Cream-and-Yellow-Dachshund-Hand-Painted-Ceramic-Mug_wcubtr"
+  },
+  {
+    "ProductName": "Blue and Red Floral Embossed Ceramic Mug",
+    "BrandName": "world mugs",
+    "Price": 93.89,
+    "Category": "Mug",
+    "ImageURL": "https://www.worldmarket.com/dw/image/v2/BJWT_PRD/o�084_XXX_v1.jpg?sw=385&sh=385&sm=fit&sfrm=jpg&q=80",
+    "PublicID": "Blue-and-Red-Floral-Embossed-Ceramic-Mug_mlipa6"
+  },
+  {
+    "ProductName": "Flora Flower and Bunny Organic Hand Painted Ceramic Mug",
+    "BrandName": "world mugs",
+    "Price": 145.89,
+    "Category": "Mug",
+    "ImageURL": "https://www.worldmarket.com/dw/image/v2/BJWT_PRD/o�675_XXX_v1.jpg?sw=385&sh=385&sm=fit&sfrm=jpg&q=80",
+    "PublicID": "Flora_Flower_and_Bunny_Organic_Hand_Painted_Ceramic_Mug_oxg0e6"
+  },
+  {
+    "ProductName": "Blue and Green Peacock Hand Painted Ceramic Mug",
+    "BrandName": "world mugs",
+    "Price": 129.89,
+    "Category": "Mug",
+    "ImageURL": "https://www.worldmarket.com/dw/image/v2/BJWT_PRD/o�093_XXX_v1.jpg?sw=385&sh=385&sm=fit&sfrm=jpg&q=80",
+    "PublicID": "Blue-and-Green-Peacock-Hand-Painted-Ceramic-Mug_yhctvr"
+  },
+  {
+    "ProductName": "Classic Cotton Hijab",
+    "BrandName": "Liya Veil",
+    "Price": 50,
+    "Category": "Hijab",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773504871/SnapInsta.to_475759727_1181081436717255_3644679665418076851_n_q5ripn.jpg",
+    "PublicID": "SnapInsta.to_475759727_1181081436717255_3644679665418076851_n_q5ripn"
+  },
+  {
+    "ProductName": "Premium Chiffon Hijab",
+    "BrandName": "Liya Veil",
+    "Price": 60,
+    "Category": "Hijab",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773504869/SnapInsta.to_475521778_1181081346717264_5029968946346490606_n_lwjren.jpg",
+    "PublicID": "SnapInsta.to_475521778_1181081346717264_5029968946346490606_n_lwjren"
+  },
+  {
+    "ProductName": "Crinkle Hijab",
+    "BrandName": "Liya Veil",
+    "Price": 35,
+    "Category": "Hijab",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773504864/SnapInsta.to_464639301_3762653263999743_6445380607894443029_n_izs9j3.jpg",
+    "PublicID": "SnapInsta.to_464639301_3762653263999743_6445380607894443029_n_izs9j3"
+  },
+  {
+    "ProductName": "Soft Jersey Hijab",
+    "BrandName": "Liya Veil",
+    "Price": 43,
+    "Category": "Hijab",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773504861/SnapInsta.to_463856550_1112488833576516_2022935515462474247_n_k0dbnv.jpg",
+    "PublicID": "SnapInsta.to_463856550_1112488833576516_2022935515462474247_n_k0dbnv"
+  },
+  {
+    "ProductName": "Silk Touch Hijab",
+    "BrandName": "Liya Veil",
+    "Price": 42.5,
+    "Category": "Hijab",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773504857/SnapInsta.to_448050774_1132410058039798_7784233705008258804_n_xwsk1p.jpg",
+    "PublicID": "SnapInsta.to_448050774_1132410058039798_7784233705008258804_n_xwsk1p"
+  },
+  {
+    "ProductName": "Satin Finish Hijab",
+    "BrandName": "Oriana",
+    "Price": 34.99,
+    "Category": "Hijab",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773504578/SnapInsta.to_447911154_1189245002350116_3118961863163660547_n_foevo9.jpg",
+    "PublicID": "SnapInsta.to_447911154_1189245002350116_3118961863163660547_n_foevo9"
+  },
+  {
+    "ProductName": "Linen Blend Hijab",
+    "BrandName": "Oriana",
+    "Price": 50,
+    "Category": "Hijab",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773504575/SnapInsta.to_447910450_305344352644914_8797533363459132185_n_qgxxvs.jpg",
+    "PublicID": "SnapInsta.to_447910450_305344352644914_8797533363459132185_n_qgxxvs"
+  },
+  {
+    "ProductName": "Lightweight Everyday Hijab",
+    "BrandName": "Oriana",
+    "Price": 87,
+    "Category": "Hijab",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773504571/SnapInsta.to_353977537_680191563917380_8716444106242048451_n_g38xx7.jpg",
+    "PublicID": "SnapInsta.to_353977537_680191563917380_8716444106242048451_n_g38xx7"
+  },
+  {
+    "ProductName": "Formal Occasion Hijab",
+    "BrandName": "Oriana",
+    "Price": 24,
+    "Category": "Hijab",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773504568/SnapInsta.to_353775885_928755255088319_3601804251241447568_n_go6ntf.jpg",
+    "PublicID": "SnapInsta.to_353775885_928755255088319_3601804251241447568_n_go6ntf"
+  },
+  {
+    "ProductName": "Sport Active Hijab",
+    "BrandName": "Oriana",
+    "Price": 60,
+    "Category": "Hijab",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773504566/SnapInsta.to_353554061_3566233187032093_1670230556111333151_n_xlqyir.jpg",
+    "PublicID": "SnapInsta.to_353554061_3566233187032093_1670230556111333151_n_xlqyir"
+  },
+  {
+    "ProductName": "Breathable Summer Hijab",
+    "BrandName": "Lamina",
+    "Price": 62,
+    "Category": "Hijab",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773503156/SnapInsta.to_353527910_1343660549694953_94642381236675175_n_frxsmo.jpg",
+    "PublicID": "Breathable-Summer-Hijab"
+  },
+  {
+    "ProductName": "Winter Warm Hijab",
+    "BrandName": "Lamina",
+    "Price": 28.99,
+    "Category": "Hijab",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773503153/SnapInsta.to_343270752_905988157359836_7504487678562042906_n_ip2s0m.jpg",
+    "PublicID": "SnapInsta.to_343270752_905988157359836_7504487678562042906_n_ip2s0m"
+  },
+  {
+    "ProductName": "Instant Slip-On Hijab",
+    "BrandName": "Lamina",
+    "Price": 54,
+    "Category": "Hijab",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773503151/SnapInsta.to_343111614_9335152976524850_2601629176783305074_n_edbvwh.jpg",
+    "PublicID": "SnapInsta.to_343111614_9335152976524850_2601629176783305074_n_edbvwh"
+  },
+  {
+    "ProductName": "Maxi Wrap Hijab",
+    "BrandName": "Lamina",
+    "Price": 36,
+    "Category": "Hijab",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773503151/SnapInsta.to_335986049_1346529319248927_4353091073417588026_n_ea1ojt.jpg",
+    "PublicID": "SnapInsta.to_335986049_1346529319248927_4353091073417588026_n_ea1ojt"
+  },
+  {
+    "ProductName": "Luxury Signature Hijab",
+    "BrandName": "Lamina",
+    "Price": 30,
+    "Category": "Hijab",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773503148/SnapInsta.to_295556523_1053303485577411_8387495810325792622_n_xy9o4s.jpg",
+    "PublicID": "SnapInsta.to_295556523_1053303485577411_8387495810325792622_n_xy9o4s"
+  },
+  {
+    "ProductName": "Branch_ring",
+    "BrandName": "",
+    "Price": "",
+    "Category": "",
+    "ImageURL": "",
+    "PublicID": ""
+  },
+  {
+    "ProductName": "Branch_ring",
+    "BrandName": "Cartier",
+    "Price": 35,
+    "Category": "Accessories",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773394315/download_24_cgg1s8.jpg",
+    "PublicID": "download_24_cgg1s8"
+  },
+  {
+    "ProductName": "wing -ring",
+    "BrandName": "Cartier",
+    "Price": 30,
+    "Category": "Accessories",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773394291/download_19_natuqn.jpg",
+    "PublicID": "download_19_natuqn"
+  },
+  {
+    "ProductName": "Pow Erraings",
+    "BrandName": "Cartier",
+    "Price": 40,
+    "Category": "Accessories",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773394188/download_15_hgmuyf.jpg",
+    "PublicID": "download_15_hgmuyf"
+  },
+  {
+    "ProductName": "pearl-pow Erraings",
+    "BrandName": "Cartier",
+    "Price": 40,
+    "Category": "Accessories",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773394182/download_16_wdndsj.jpg",
+    "PublicID": "download_16_wdndsj"
+  },
+  {
+    "ProductName": "Wired Bracelet",
+    "BrandName": "Cartier",
+    "Price": 45,
+    "Category": "Accessories",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773394173/39745d3f1fdde974c5b6e0f31b6ac7ba_hndq1c.webp",
+    "PublicID": "39745d3f1fdde974c5b6e0f31b6ac7ba_hndq1c"
+  },
+  {
+    "ProductName": "Simple-twins",
+    "BrandName": "Cartier",
+    "Price": 50,
+    "Category": "Accessories",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773394164/4402f956cba6eefbd5ba34acaa76ae66_vajjxj.webp",
+    "PublicID": "4402f956cba6eefbd5ba34acaa76ae66_vajjxj"
+  },
+  {
+    "ProductName": "Butterfly-ring",
+    "BrandName": "Cartier",
+    "Price": 35,
+    "Category": "Accessories",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773394151/4d910211611b434eebdd2f6a8cff7b3f_z9h2kw.webp",
+    "PublicID": "4d910211611b434eebdd2f6a8cff7b3f_z9h2kw"
+  },
+  {
+    "ProductName": "Black-Rose collection",
+    "BrandName": "Tiffany_Co",
+    "Price": 100,
+    "Category": "Accessories",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773396662/1pc_Elegant_Sweet_Black_Lucky_Five-Leaf_Clover_Pendant_Necklace_1pc_Bracelet_1_Pair_Earrings_-_Women_Jewelry_Set_Mother_s_Wedding_Gift_lc5r5c.jpg",
+    "PublicID": "1pc_Elegant_Sweet_Black_Lucky_Five-Leaf_Clover_Pendant_Necklace_1pc_Bracelet_1_Pair_Earrings_-_Women_Jewelry_Set_Mother_s_Wedding_Gift_lc5r5c"
+  },
+  {
+    "ProductName": "Crystal Saturn Pendant",
+    "BrandName": "Tiffany_Co",
+    "Price": 85,
+    "Category": "Accessories",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773396656/1pc_Cubic_Zirconia_Star_Planet_Pendant_Necklace_For_Teen_Girls_Delicate_Fashion_Party_Jewelry_For_Children_Birthday_Gift_wg7ra5.jpg",
+    "PublicID": "1pc_Cubic_Zirconia_Star_Planet_Pendant_Necklace_For_Teen_Girls_Delicate_Fashion_Party_Jewelry_For_Children_Birthday_Gift_wg7ra5"
+  },
+  {
+    "ProductName": "Green-Flowered-Earrings",
+    "BrandName": "Tiffany_Co",
+    "Price": 70,
+    "Category": "Accessories",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773395041/fb81d3465c77420901bfb33f69007ccd_mtqidb.webp",
+    "PublicID": "fb81d3465c77420901bfb33f69007ccd_mtqidb"
+  },
+  {
+    "ProductName": "Gold Linked Gemstone Bracelet",
+    "BrandName": "Tiffany_Co",
+    "Price": 75,
+    "Category": "Accessories",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773395002/download_12_ix3zah.jpg",
+    "PublicID": "download_12_ix3zah"
+  },
+  {
+    "ProductName": "Heart-Earrings",
+    "BrandName": "Tiffany_Co",
+    "Price": 90,
+    "Category": "Accessories",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773394993/download_18_v8xwc8.jpg",
+    "PublicID": "download_18_v8xwc8"
+  },
+  {
+    "ProductName": "Crystal Leaf Hoops",
+    "BrandName": "Tiffany_Co",
+    "Price": 50,
+    "Category": "Accessories",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773394985/download_17_n6luxh.jpg",
+    "PublicID": "download_17_n6luxh"
+  },
+  {
+    "ProductName": "Pink-FlowerEarring",
+    "BrandName": "Tiffany_Co",
+    "Price": 70,
+    "Category": "Accessories",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773394978/3526003bd7b456bb89b17593130efe06_nkmfpa.webp",
+    "PublicID": "3526003bd7b456bb89b17593130efe06_nkmfpa"
+  },
+  {
+    "ProductName": "Blue Garden Earrings",
+    "BrandName": "Tiffany_Co",
+    "Price": 75,
+    "Category": "Accessories",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773394972/watermarke8438d42de0d27c064baba1c0d0a18d0_rf8bep.webp",
+    "PublicID": "__ring__????_cgjx4u"
+  },
+  {
+    "ProductName": "Ginkgo Leaf Ring",
+    "BrandName": "Tiffany_Co",
+    "Price": 100,
+    "Category": "Accessories",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773394963/__ring__%D8%AE%D8%A7%D8%AA%D9%85_cgjx4u.jpg",
+    "PublicID": "Nonnyl_Gifts_for_Women-_Tahitian-Black-Pearl-Necklace_for_Women_12-13mm_Real_South_Sea_Pearls_Pendant_Sterling_Silver_Plated_18K_Gold_With_Urquoise-_Christmas_Mothers_Day_Valentine_s_Day_Jewelry_rchdom"
+  },
+  {
+    "ProductName": "Green Crystal Necklace",
+    "BrandName": "Tiffany_Co",
+    "Price": 100,
+    "Category": "Accessories",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773394959/Nonnyl_Gifts_for_Women-_Tahitian-Black-Pearl-Necklace_for_Women_12-13mm_Real_South_Sea_Pearls_Pendant_Sterling_Silver_Plated_18K_Gold_With_Urquoise-_Christmas_Mothers_Day_Valentine_s_Day_Jewelry_rchdom.jpg",
+    "PublicID": "Nonnyl_Gifts_for_Women-_Tahitian-Black-Pearl-Necklace_for_Women_12-13mm_Real_South_Sea_Pearls_Pendant_Sterling_Silver_Plated_18K_Gold_With_Urquoise-_Christmas_Mothers_Day_Valentine_s_Day_Jewelry_rchdom"
+  },
+  {
+    "ProductName": "Golden Weave Hoops",
+    "BrandName": "Van Cleef",
+    "Price": 90,
+    "Category": "Accessories",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773395888/O1CN01AqgKHX1dluysSOGfL__1936373777-0-cib_vzl4c3.jpg",
+    "PublicID": "O1CN01AqgKHX1dluysSOGfL__1936373777-0-cib_vzl4c3"
+  },
+  {
+    "ProductName": "Summer Breeze",
+    "BrandName": "Van Cleef",
+    "Price": 95,
+    "Category": "Accessories",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773395879/Kolye_tk4iru.jpg",
+    "PublicID": "Kolye_tk4iru"
+  },
+  {
+    "ProductName": "Bird-Ring",
+    "BrandName": "Van Cleef",
+    "Price": 55,
+    "Category": "Accessories",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773395830/download_23_ygsffw.jpg",
+    "PublicID": "download_23_ygsffw"
+  },
+  {
+    "ProductName": "Vintage Rose Band",
+    "BrandName": "Van Cleef",
+    "Price": 120,
+    "Category": "Accessories",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773395820/download_22_wdytns.jpg",
+    "PublicID": "download_22_wdytns"
+  },
+  {
+    "ProductName": "Sparkling Swan Pendant",
+    "BrandName": "Van Cleef",
+    "Price": 110,
+    "Category": "Accessories",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773395816/e88d28113dac1efb1f9cbe031edf065a_iz3cnp.jpg",
+    "PublicID": "e88d28113dac1efb1f9cbe031edf065a_iz3cnp"
+  },
+  {
+    "ProductName": "Blooming Rose Ring",
+    "BrandName": "Van Cleef",
+    "Price": 80,
+    "Category": "Accessories",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773395811/download_21_ffvhlw.jpg",
+    "PublicID": "download_21_ffvhlw"
+  },
+  {
+    "ProductName": "Amethyst Luck Bracelet",
+    "BrandName": "Van Cleef",
+    "Price": 25,
+    "Category": "Accessories",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773395806/e145882311dd59d41b2134405d932ec2_qpxc8g.webp",
+    "PublicID": "e145882311dd59d41b2134405d932ec2_qpxc8g"
+  },
+  {
+    "ProductName": "Butterfly-Earrings",
+    "BrandName": "Van Cleef",
+    "Price": 85,
+    "Category": "Accessories",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773395800/watermark44317f633f2ceef0cd4015583fd9f447_i5tx6a.webp",
+    "PublicID": "watermark44317f633f2ceef0cd4015583fd9f447_i5tx6a"
+  },
+  {
+    "ProductName": "Butterfly-collection",
+    "BrandName": "Van Cleef",
+    "Price": 100,
+    "Category": "Accessories",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773395796/%D8%A7%D9%83%D8%B3%D8%B3%D9%88%D8%A7%D8%B1%D8%A7%D8%AA_%D8%AC%D9%85%D9%8A%D9%84%D9%87_dfuif8.jpg",
+    "PublicID": "?????????_?????_dfuif8"
+  },
+  {
+    "ProductName": "Soft Bloom Bag",
+    "BrandName": "Lurelle",
+    "Price": "$300",
+    "Category": "Handmade bags",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773460235/cf43210e4f9730e5b01598d09bc7d48f_aoxwjq.webp",
+    "PublicID": "cf43210e4f9730e5b01598d09bc7d48f_aoxwjq"
+  },
+  {
+    "ProductName": "Pastel Mini Bag",
+    "BrandName": "Lurelle",
+    "Price": "$250",
+    "Category": "Handmade bags",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773460210/2c49ee8641b59b5e75406207f94804ca_ymmxfq.jpg",
+    "PublicID": "2c49ee8641b59b5e75406207f94804ca_ymmxfq"
+  },
+  {
+    "ProductName": "Cute Bag",
+    "BrandName": "Lurelle",
+    "Price": "$200",
+    "Category": "Handmade bags",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773460222/a5dd0b38b1a755a5a77f5fd138d4ea16_eekdf4.jpg",
+    "PublicID": "a5dd0b38b1a755a5a77f5fd138d4ea16_eekdf4"
+  },
+  {
+    "ProductName": "Daisy Handbag",
+    "BrandName": "Lurelle",
+    "Price": "$300",
+    "Category": "Handmade bags",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773460230/be9153dde9f74a43307cd756f6b870c6_wiycxw.jpg",
+    "PublicID": "be9153dde9f74a43307cd756f6b870c6_wiycxw"
+  },
+  {
+    "ProductName": "Velvet  Bag",
+    "BrandName": "Lurelle",
+    "Price": "$250",
+    "Category": "Handmade bags",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773460232/c3b6f146ac9351bb8cf32e3feb81a000_nynvjd.jpg",
+    "PublicID": "c3b6f146ac9351bb8cf32e3feb81a000_nynvjd"
+  },
+  {
+    "ProductName": "Cozy Knit Bag",
+    "BrandName": "Lurelle",
+    "Price": "$250",
+    "Category": "Handmade bags",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773460229/bd8349b04d9776ef9978e4087e020bbc_ntozw7.jpg",
+    "PublicID": "bd8349b04d9776ef9978e4087e020bbc_ntozw7"
+  },
+  {
+    "ProductName": "Classic Leather Bag",
+    "BrandName": "Velmora",
+    "Price": "$350",
+    "Category": "Handmade bags",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773460218/67faf0255b475bc0b3fb4d5fbd0bfd0d_ipgfwq.webp",
+    "PublicID": "67faf0255b475bc0b3fb4d5fbd0bfd0d_ipgfwq"
+  },
+  {
+    "ProductName": "Elegant Handbag",
+    "BrandName": "Velmora",
+    "Price": "$250",
+    "Category": "Handmade bags",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773460219/71bc8ab8f43ba40550e9ae1b600ad7e4_xhnxae.jpg",
+    "PublicID": "71bc8ab8f43ba40550e9ae1b600ad7e4_xhnxae"
+  },
+  {
+    "ProductName": "Clean Line Bag",
+    "BrandName": "Velmora",
+    "Price": "$200",
+    "Category": "Handmade bags",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773460236/e91a541644c2b5ee32e14a8ac8a09461_o1p9fu.jpg",
+    "PublicID": "e91a541644c2b5ee32e14a8ac8a09461_o1p9fu"
+  },
+  {
+    "ProductName": "Daily Elegance Bag",
+    "BrandName": "Velmora",
+    "Price": "$300",
+    "Category": "Handmade bags",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773460225/ba084fb52d9aeb6ba8fe082a43a58119_iwhucc.jpg",
+    "PublicID": "ba084fb52d9aeb6ba8fe082a43a58119_iwhucc"
+  },
+  {
+    "ProductName": "Luxe Touch Bag",
+    "BrandName": "Velmora",
+    "Price": "$350",
+    "Category": "Handmade bags",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773460226/bad7a38dc196a1b3158323bdd1bf9180_vt9y4j.webp",
+    "PublicID": "bad7a38dc196a1b3158323bdd1bf9180_vt9y4j"
+  },
+  {
+    "ProductName": "Urban Cross Bag",
+    "BrandName": "Vyxen",
+    "Price": "$200",
+    "Category": "Handmade bags",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773460239/efa72ac09682d6c2c77df554ca499f1c_jgyofd.jpg",
+    "PublicID": "efa72ac09682d6c2c77df554ca499f1c_jgyofd"
+  },
+  {
+    "ProductName": "Trendy Mini Bag",
+    "BrandName": "Vyxen",
+    "Price": "$350",
+    "Category": "Handmade bags",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773460217/44bd1de6b4c7f60d8c978bf235537ba2_kujqau.jpg",
+    "PublicID": "44bd1de6b4c7f60d8c978bf235537ba2_kujqau"
+  },
+  {
+    "ProductName": "Modern Fit Bag",
+    "BrandName": "Vyxen",
+    "Price": "$300",
+    "Category": "Handmade bags",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773460215/22d3d24b8ecc9d6f7b02f6e5535754b6_ddulb4.jpg",
+    "PublicID": "22d3d24b8ecc9d6f7b02f6e5535754b6_ddulb4"
+  },
+  {
+    "ProductName": "Beach Handbag",
+    "BrandName": "Vyxen",
+    "Price": "$250",
+    "Category": "Handmade bags",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773460211/4d585115deb713015b98e05fd28ef3ce_vk18hh.jpg",
+    "PublicID": "4d585115deb713015b98e05fd28ef3ce_vk18hh"
+  },
+  {
+    "ProductName": "Bold Line Bag",
+    "BrandName": "Vyxen",
+    "Price": "$300",
+    "Category": "Handmade bags",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773460241/fd391e09ba5c3a8632a3e181c749f5be_600x_mywac6.webp",
+    "PublicID": "fd391e09ba5c3a8632a3e181c749f5be_600x_mywac6"
+  },
+  {
+    "ProductName": "Edge Handbag",
+    "BrandName": "Vyxen",
+    "Price": "$250",
+    "Category": "Handmade bags",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773460233/c30bfe1339467e3748e506d2d604a137_sxbv46.webp",
+    "PublicID": "c30bfe1339467e3748e506d2d604a137_sxbv46"
+  },
+  {
+    "ProductName": "Floral Wall Piece",
+    "BrandName": "Orvella",
+    "Price": "$400",
+    "Category": "Antiques",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773460614/cf7910d5770868c41583ca32dc8027b1_ocxu5k.jpg",
+    "PublicID": "cf7910d5770868c41583ca32dc8027b1_ocxu5k"
+  },
+  {
+    "ProductName": "Rustic Hanging Decor",
+    "BrandName": "Orvella",
+    "Price": "$300",
+    "Category": "Antiques",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773460610/a1ada6622f123bf4cde0b510dc085c19_wobeul.jpg",
+    "PublicID": "a1ada6622f123bf4cde0b510dc085c19_wobeul"
+  },
+  {
+    "ProductName": "Vintage Wall Art",
+    "BrandName": "Orvella",
+    "Price": "$350",
+    "Category": "Antiques",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773460605/3757b895fe063081fe42d949dfd4e871_p5xucv.jpg",
+    "PublicID": "3757b895fe063081fe42d949dfd4e871_p5xucv"
+  },
+  {
+    "ProductName": "Boho Wall Charm",
+    "BrandName": "Orvella",
+    "Price": "$350",
+    "Category": "Antiques",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773460594/5fd8ecc7dceb9c34faeb1d96ea23ee1a_ljv3im.jpg",
+    "PublicID": "5fd8ecc7dceb9c34faeb1d96ea23ee1a_ljv3im"
+  },
+  {
+    "ProductName": "Handcrafted Wall Frame",
+    "BrandName": "Orvella",
+    "Price": "$400",
+    "Category": "Antiques",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773460596/006fc0c8194ef885fd3f985da04fb23d_cuxvvi.jpg",
+    "PublicID": "006fc0c8194ef885fd3f985da04fb23d_cuxvvi"
+  },
+  {
+    "ProductName": "Classic Hanging Piece",
+    "BrandName": "Orvella",
+    "Price": "$350",
+    "Category": "Antiques",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773460612/cb8828cdf1dd6aab8f33126d28980292_qof1av.jpg",
+    "PublicID": "cb8828cdf1dd6aab8f33126d28980292_qof1av"
+  },
+  {
+    "ProductName": "Nature Touch Decor",
+    "BrandName": "Orvella",
+    "Price": "$400",
+    "Category": "Antiques",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773460590/3bf81aa35ac706fc4a774063f1683ca5_wboftr.jpg",
+    "PublicID": "3bf81aa35ac706fc4a774063f1683ca5_wboftr"
+  },
+  {
+    "ProductName": "Art Vase",
+    "BrandName": "Calyra",
+    "Price": "$350",
+    "Category": "Antiques",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773460601/38a621024fb052b7c06e1ab130cf2350_tlsvbg.jpg",
+    "PublicID": "38a621024fb052b7c06e1ab130cf2350_tlsvbg"
+  },
+  {
+    "ProductName": "Elegant Home Vase",
+    "BrandName": "Calyra",
+    "Price": "$300",
+    "Category": "Antiques",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773460598/9dbb6fb0f2372fbf2f2f3c41748b2ab8_dcivxg.jpg",
+    "PublicID": "9dbb6fb0f2372fbf2f2f3c41748b2ab8_dcivxg"
+  },
+  {
+    "ProductName": "Handmade Texture",
+    "BrandName": "Calyra",
+    "Price": "$350",
+    "Category": "Antiques",
+    "ImageURL": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773460607/562470d0bd4be1a629a53254bb974252_il3mbs.jpg",
+    "PublicID": "562470d0bd4be1a629a53254bb974252_il3mbs"
+  }
+]

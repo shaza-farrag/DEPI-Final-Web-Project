@@ -8,6 +8,8 @@ import About from './pages/about/About'
 import Verify from './pages/verifyEmail/Verify'
 import ForgotPassword from "./pages/forgotPassword/ForgotPassword";
 import ShoppingCartProvider from "./context/ShoppingCartContext"; // 1. استيراد الـ Provider
+import Products from './pages/products/Products'
+import ProductDetails from './pages/products/ProductDetails'
 import ResetPassword from "./pages/resetPassword/ResetPassword"
 import SuccessfulEmail from './pages/successfulEmail/SuccessfulEmail'
 import Users from './pages/dashboard/pages/Users'
@@ -23,6 +25,8 @@ function App() {
         <Route path="/" element={<Landing />}>
           <Route index element={<Home />} />
           <Route path="about" element={<About />} />
+          <Route path="products" element={<Products />} />
+          <Route path="products/:id" element={<ProductDetails />} />
         </Route>
 
         <Route path="signup" element={<Signup />} />
