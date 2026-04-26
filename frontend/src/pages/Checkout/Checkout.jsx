@@ -10,6 +10,7 @@ const INITIAL_PRODUCTS = [
   { id: 3, name: "Flower Scrapbook Journal", variant: "Default", price: 32, qty: 3, emoji: "🌸" },
 ];
 
+
 export default function CheckoutPage() {
   const [cart, setCart] = useState(INITIAL_PRODUCTS.map((p) => ({ ...p })));
   const [form, setForm] = useState({
