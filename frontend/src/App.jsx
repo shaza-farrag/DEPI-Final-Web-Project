@@ -15,6 +15,7 @@ import SuccessfulEmail from './pages/successfulEmail/SuccessfulEmail'
 import Users from './pages/dashboard/pages/Users'
 import Orders from './pages/dashboard/pages/Orders'
 import Checkout from './pages/checkout/Checkout';
+import Content from './pages/dashboard/pages/Content'
 
 
 function App() {
@@ -37,10 +38,18 @@ function App() {
         <Route path="forgotPassword" element={<ForgotPassword />} />
         <Route path="resetPassword" element={<ResetPassword />} />
         <Route path="successfulEmail" element={<SuccessfulEmail />} />
+
+
+         {/* الصفحة الرئيسية */}
+        <Route path="/dashboard" element={<Dashboard />}>
+          <Route index element={<Content />} />
+          <Route path="users" element={<Users />} />
+          <Route path="orders" element={<Orders />} />
+        </Route>
       </Routes>
     </ShoppingCartProvider>
     
-      <Routes>
+      {/* <Routes>
     <Route path="/dashboard" element={<Dashboard />}>
         <Route path="users" element={<Users />} />
         <Route path="orders" element={<Orders />} />
@@ -48,7 +57,7 @@ function App() {
 
 
     </Route>
-    </Routes>
+    </Routes> */}
     </>
   );
 
