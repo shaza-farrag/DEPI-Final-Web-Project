@@ -33,13 +33,19 @@ function DashboardSidebar() {
             </div>
 
             <ul className="lmt-4">
-                <li><Button className=" list w-full capitalize! justify-start! flex gap-3 text-[16px]! 
-                 text-[#7a7171]! font-[800]! items-center py-2! hover:bg-[#f1f1f1]!">
+                
+                <li>
+                    <Link to="/dashboard">
+                    <Button className=" list w-full capitalize! justify-start! flex gap-3 text-[16px]! 
+                 text-[#7a7171]! font-extrabold! items-center py-2! hover:bg-[#f1f1f1]!">
                     <MdOutlineDashboardCustomize className="text-[20px]" />Dashboard</Button>
+                    </Link>
                 </li>  
 
-                <li><Button className=" list w-full capitalize! justify-start! flex gap-3 text-[16px]! 
-                 text-[#7a7171]! font-[800]! items-center py-2! hover:bg-[#f1f1f1]!" onClick={() => isOpenSubMenu (1)}>
+
+                <li>
+                    <Button className=" list w-full capitalize! justify-start! flex gap-3 text-[16px]! 
+                 text-[#7a7171]! font-extrabold! items-center py-2! hover:bg-[#f1f1f1]!" onClick={() => isOpenSubMenu (1)}>
                     <IoImageOutline className="text-[20px]" />Home Slides
                     <span className="w-7.5 ml-auto h-7.5 flex justify-center items-center "
                      >
@@ -63,38 +69,99 @@ function DashboardSidebar() {
                     </Collapse>
                 </li>                
 
-                <li><Button className=" list w-full capitalize! justify-start! flex gap-3 text-[16px]! 
-                 text-[#7a7171]! font-[800]! items-center py-2! hover:bg-[#f1f1f1]!">
+
+                <li>
+                    <Link to="/dashboard/users">
+                    <Button className=" list w-full capitalize! justify-start! flex gap-3 text-[16px]! 
+                 text-[#7a7171]! font-extrabold! items-center py-2! hover:bg-[#f1f1f1]!">
                     <LuUsers  className="text-[20px]" />Users</Button>
+                    </Link>
                 </li>  
 
                 <li><Button className=" list w-full capitalize! justify-start! flex gap-3 text-[16px]! 
-                 text-[#7a7171]! font-[800]! items-center py-2! hover:bg-[#f1f1f1]!">
-                    <RiProductHuntLine  className="text-[20px]" />Products
-                    <span className="w-7.5 ml-auto h-7.5 flex justify-center items-center ">
-                        <FaAngleDown />
-                    </span>                    
+                 text-[#7a7171]! font-extrabold! items-center py-2! hover:bg-[#f1f1f1]!" onClick={() => isOpenSubMenu (3)}>
+                    <RiProductHuntLine className="text-[20px]" />Products
+                    <span className="w-7.5 ml-auto h-7.5 flex justify-center items-center "
+                     >
+                        <FaAngleDown className={`transition-all ${subMenuIndex ===3 ? `rotate-180` : ``}`}/>
+                    </span>
                     </Button>
-                </li>    
 
+                    <Collapse isOpened={subMenuIndex ===3 ? true: false }>
+                    <ul className="w-full! ">
+                        <li className="w-full ">
+                            <Link to="/products">
+                            <Button className=" list text-[#7a7171]! capitalize! flex justify-start! w-full! text-[14px]! font-[600]!
+                            pl-9! gap-3 "><span className="block w-2.5 h-2.5 rounded-full bg-[rgba(0,0,0,0.1)] border border-[rgba(0,0,0,1)] "></span>
+                            Product list</Button>
+                            </Link>
+                        </li>
+                        <li className="w-full!">
+                            <Link to="/product/upload">
+                            <Button className=" list text-[#7a7171]! capitalize! flex justify-start! w-full! text-[14px]! font-[600]! 
+                             pl-9! gap-3 "><span className="block w-2.5 h-2.5 rounded-full bg-[rgba(0,0,0,0.1)] border border-[rgba(0,0,0,1)] "></span>
+                                Product Upload</Button>
+                                </Link>
+                        </li>                        
+                    </ul>
+                    </Collapse>
+                </li>  
+                
                 <li><Button className=" list w-full capitalize! justify-start! flex gap-3 text-[16px]! 
-                 text-[#7a7171]! font-[800]! items-center py-2! hover:bg-[#f1f1f1]!">
-                    <TbCategory  className="text-[20px]" />Cartegory
-                    <span className="w-7.5 ml-auto h-7.5 flex justify-center items-center ">
-                        <FaAngleDown />
-                    </span>                    
+                 text-[#7a7171]! font-extrabold! items-center py-2! hover:bg-[#f1f1f1]!" onClick={() => isOpenSubMenu (4)}>
+                    <TbCategory className="text-[20px]" />Category
+                    <span className="w-7.5 ml-auto h-7.5 flex justify-center items-center "
+                     >
+                        <FaAngleDown className={`transition-all ${subMenuIndex ===4 ? `rotate-180` : ``}`}/>
+                    </span>
                     </Button>
-                </li>
 
-                <li><Button className=" list w-full capitalize! justify-start! flex gap-3 text-[16px]! 
-                 text-[#7a7171]! font-[800]! items-center py-2! hover:bg-[#f1f1f1]!">
+                    <Collapse isOpened={subMenuIndex ===4 ? true: false }>
+                    <ul className="w-full! ">
+                        <li className="w-full ">
+                            <Link to="/catrgories">
+                            <Button className=" list text-[#7a7171]! capitalize! flex justify-start! w-full! text-[14px]! font-[600]!
+                            pl-9! gap-3 "><span className="block w-2.5 h-2.5 rounded-full bg-[rgba(0,0,0,0.1)] border border-[rgba(0,0,0,1)] "></span>
+                            Category list</Button>
+                            </Link>
+                        </li>
+                        <li className="w-full!">
+                            <Link to="/catrgory/add">
+                            <Button className=" list text-[#7a7171]! capitalize! flex justify-start! w-full! text-[14px]! font-[600]! 
+                             pl-9! gap-3 "><span className="block w-2.5 h-2.5 rounded-full bg-[rgba(0,0,0,0.1)] border border-[rgba(0,0,0,1)] "></span>
+                                Add a Category</Button>
+                                </Link>
+                        </li> 
+                        <li className="w-full!">
+                            <Link to="/catrgory/sub">
+                            <Button className=" list text-[#7a7171]! capitalize! flex justify-start! w-full! text-[14px]! font-[600]! 
+                             pl-9! gap-3 "><span className="block w-2.5 h-2.5 rounded-full bg-[rgba(0,0,0,0.1)] border border-[rgba(0,0,0,1)] "></span>
+                                Sub Category List</Button>
+                                </Link>
+                        </li> 
+                        <li className="w-full!">
+                            <Link to="/catrgorysub/add">
+                            <Button className=" list text-[#7a7171]! capitalize! flex justify-start! w-full! text-[14px]! font-[600]! 
+                             pl-9! gap-3 "><span className="block w-2.5 h-2.5 rounded-full bg-[rgba(0,0,0,0.1)] border border-[rgba(0,0,0,1)] "></span>
+                                Add a Sub Category List</Button>
+                                </Link>
+                        </li>                                                                        
+                    </ul>
+                    </Collapse>
+                </li> 
+
+                <li>
+                    <Link to="/dashboard/orders">
+                    <Button className=" list w-full capitalize! justify-start! flex gap-3 text-[16px]! 
+                 text-[#7a7171]! font-extrabold! items-center py-2! hover:bg-[#f1f1f1]!">
                     <IoBagHandleOutline  className="text-[20px]" />Orders</Button>
+                    </Link>
                 </li>   
  
   
 
                 <li><Button className=" list w-full capitalize! justify-start! flex gap-3 text-[16px]! 
-                 text-[#7a7171]! font-[800]! items-center py-2! hover:bg-[#f1f1f1]!">
+                 text-[#7a7171]! font-extrabold! items-center py-2! hover:bg-[#f1f1f1]!">
                     <FiLogOut className="text-[20px]" />Logout</Button>
                 </li>   
 
