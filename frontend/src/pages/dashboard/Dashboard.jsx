@@ -14,11 +14,11 @@ function Dashboard() {
       <DashboardHeader />
       <div className='contentMain flex'>
          
-        <div className='sidebarWrapper w-[20%]'>
+        <div className='sidebarWrapper w-[18%]'>
           <DashboardSidebar />
         </div>
 
-          <div className='mainContent w-[80%] bg-[#F8ECEC]'>
+          <div className='mainContent  bg-[#F8ECEC] w-[82%] px-5 py-4'>
            
           <Outlet />
         </div>

@@ -24,7 +24,7 @@ function DashboardSidebar() {
     };
     return(
         <>
-        <div className="sidebar fixed top-0 left-0 bg-[#ffffff] w-[20%] h-full border-r border-[rgba(0,0,0,0.1)]
+        <div className="sidebar fixed top-0 left-0 bg-[#ffffff] w-[18%] h-full border-r border-[rgba(0,0,0,0.1)]
         py-2 px-4">
             <div className="w-full ">
                 <Link to="/"><img src={logo} className="w-[120px] mx-auto py-2  " ></img>
@@ -37,7 +37,7 @@ function DashboardSidebar() {
                 <li>
                     <Link to="/dashboard">
                     <Button className=" list w-full capitalize! justify-start! flex gap-3 text-[16px]! 
-                 text-[#7a7171]! font-extrabold! items-center py-2! hover:bg-[#f1f1f1]!">
+                 text-[#7a7171]! font-extrabold! items-center py-2! hover:bg-[#F8ECEC]!">
                     <MdOutlineDashboardCustomize className="text-[20px]" />Dashboard</Button>
                     </Link>
                 </li>  
@@ -45,7 +45,7 @@ function DashboardSidebar() {
 
                 <li>
                     <Button className=" list w-full capitalize! justify-start! flex gap-3 text-[16px]! 
-                 text-[#7a7171]! font-extrabold! items-center py-2! hover:bg-[#f1f1f1]!" onClick={() => isOpenSubMenu (1)}>
+                 text-[#7a7171]! font-extrabold! items-center py-2! hover:bg-[#F8ECEC]!" onClick={() => isOpenSubMenu (1)}>
                     <IoImageOutline className="text-[20px]" />Home Slides
                     <span className="w-7.5 ml-auto h-7.5 flex justify-center items-center "
                      >
@@ -57,12 +57,12 @@ function DashboardSidebar() {
                     <ul className="w-full! ">
                         <li className="w-full ">
                             <Button className=" list text-[#7a7171]! capitalize! flex justify-start! w-full! text-[14px]! font-[600]!
-                            pl-9! gap-3 "><span className="block w-2.5 h-2.5 rounded-full bg-[rgba(0,0,0,0.1)] border border-[rgba(0,0,0,1)] "></span>
+                            pl-9! gap-3 hover:bg-[#F8ECEC]!"><span className="block w-2.5 h-2.5 rounded-full bg-[rgba(0,0,0,0.1)] border border-[rgba(0,0,0,1)] "></span>
                             Home banners list</Button>
                         </li>
                         <li className="w-full!">
                             <Button className=" list text-[#7a7171]! capitalize! flex justify-start! w-full! text-[14px]! font-[600]! 
-                             pl-9! gap-3 "><span className="block w-2.5 h-2.5 rounded-full bg-[rgba(0,0,0,0.1)] border border-[rgba(0,0,0,1)] "></span>
+                             pl-9! gap-3 hover:bg-[#F8ECEC]!"><span className="block w-2.5 h-2.5 rounded-full bg-[rgba(0,0,0,0.1)] border border-[rgba(0,0,0,1)] "></span>
                                 Add Home banner slide</Button>
                         </li>                        
                     </ul>
@@ -73,13 +73,13 @@ function DashboardSidebar() {
                 <li>
                     <Link to="/dashboard/users">
                     <Button className=" list w-full capitalize! justify-start! flex gap-3 text-[16px]! 
-                 text-[#7a7171]! font-extrabold! items-center py-2! hover:bg-[#f1f1f1]!">
+                 text-[#7a7171]! font-extrabold! items-center py-2! hover:bg-[#F8ECEC]!">
                     <LuUsers  className="text-[20px]" />Users</Button>
                     </Link>
                 </li>  
 
                 <li><Button className=" list w-full capitalize! justify-start! flex gap-3 text-[16px]! 
-                 text-[#7a7171]! font-extrabold! items-center py-2! hover:bg-[#f1f1f1]!" onClick={() => isOpenSubMenu (3)}>
+                 text-[#7a7171]! font-extrabold! items-center py-2! hover:bg-[#F8ECEC]!" onClick={() => isOpenSubMenu (3)}>
                     <RiProductHuntLine className="text-[20px]" />Products
                     <span className="w-7.5 ml-auto h-7.5 flex justify-center items-center "
                      >
@@ -92,14 +92,14 @@ function DashboardSidebar() {
                         <li className="w-full ">
                             <Link to="/products">
                             <Button className=" list text-[#7a7171]! capitalize! flex justify-start! w-full! text-[14px]! font-[600]!
-                            pl-9! gap-3 "><span className="block w-2.5 h-2.5 rounded-full bg-[rgba(0,0,0,0.1)] border border-[rgba(0,0,0,1)] "></span>
+                            pl-9! gap-3 hover:bg-[#F8ECEC]!"><span className="block w-2.5 h-2.5 rounded-full bg-[rgba(0,0,0,0.1)] border border-[rgba(0,0,0,1)] "></span>
                             Product list</Button>
                             </Link>
                         </li>
                         <li className="w-full!">
                             <Link to="/product/upload">
                             <Button className=" list text-[#7a7171]! capitalize! flex justify-start! w-full! text-[14px]! font-[600]! 
-                             pl-9! gap-3 "><span className="block w-2.5 h-2.5 rounded-full bg-[rgba(0,0,0,0.1)] border border-[rgba(0,0,0,1)] "></span>
+                             pl-9! gap-3 hover:bg-[#F8ECEC]!"><span className="block w-2.5 h-2.5 rounded-full bg-[rgba(0,0,0,0.1)] border border-[rgba(0,0,0,1)] "></span>
                                 Product Upload</Button>
                                 </Link>
                         </li>                        
@@ -108,7 +108,7 @@ function DashboardSidebar() {
                 </li>  
                 
                 <li><Button className=" list w-full capitalize! justify-start! flex gap-3 text-[16px]! 
-                 text-[#7a7171]! font-extrabold! items-center py-2! hover:bg-[#f1f1f1]!" onClick={() => isOpenSubMenu (4)}>
+                 text-[#7a7171]! font-extrabold! items-center py-2! hover:bg-[#F8ECEC]!" onClick={() => isOpenSubMenu (4)}>
                     <TbCategory className="text-[20px]" />Category
                     <span className="w-7.5 ml-auto h-7.5 flex justify-center items-center "
                      >
@@ -121,28 +121,28 @@ function DashboardSidebar() {
                         <li className="w-full ">
                             <Link to="/catrgories">
                             <Button className=" list text-[#7a7171]! capitalize! flex justify-start! w-full! text-[14px]! font-[600]!
-                            pl-9! gap-3 "><span className="block w-2.5 h-2.5 rounded-full bg-[rgba(0,0,0,0.1)] border border-[rgba(0,0,0,1)] "></span>
+                            pl-9! gap-3 hover:bg-[#F8ECEC]!"><span className="block w-2.5 h-2.5 rounded-full bg-[rgba(0,0,0,0.1)] border border-[rgba(0,0,0,1)]  "></span>
                             Category list</Button>
                             </Link>
                         </li>
                         <li className="w-full!">
                             <Link to="/catrgory/add">
                             <Button className=" list text-[#7a7171]! capitalize! flex justify-start! w-full! text-[14px]! font-[600]! 
-                             pl-9! gap-3 "><span className="block w-2.5 h-2.5 rounded-full bg-[rgba(0,0,0,0.1)] border border-[rgba(0,0,0,1)] "></span>
+                             pl-9! gap-3 hover:bg-[#F8ECEC]!"><span className="block w-2.5 h-2.5 rounded-full bg-[rgba(0,0,0,0.1)] border border-[rgba(0,0,0,1)]  "></span>
                                 Add a Category</Button>
                                 </Link>
                         </li> 
                         <li className="w-full!">
                             <Link to="/catrgory/sub">
                             <Button className=" list text-[#7a7171]! capitalize! flex justify-start! w-full! text-[14px]! font-[600]! 
-                             pl-9! gap-3 "><span className="block w-2.5 h-2.5 rounded-full bg-[rgba(0,0,0,0.1)] border border-[rgba(0,0,0,1)] "></span>
+                             pl-9! gap-3 hover:bg-[#F8ECEC]!"><span className="block w-2.5 h-2.5 rounded-full bg-[rgba(0,0,0,0.1)] border border-[rgba(0,0,0,1)]  "></span>
                                 Sub Category List</Button>
                                 </Link>
                         </li> 
                         <li className="w-full!">
                             <Link to="/catrgorysub/add">
                             <Button className=" list text-[#7a7171]! capitalize! flex justify-start! w-full! text-[14px]! font-[600]! 
-                             pl-9! gap-3 "><span className="block w-2.5 h-2.5 rounded-full bg-[rgba(0,0,0,0.1)] border border-[rgba(0,0,0,1)] "></span>
+                             pl-9! gap-3 hover:bg-[#F8ECEC]!"><span className="block w-2.5 h-2.5 rounded-full bg-[rgba(0,0,0,0.1)] border border-[rgba(0,0,0,1)]  "></span>
                                 Add a Sub Category List</Button>
                                 </Link>
                         </li>                                                                        
@@ -153,7 +153,7 @@ function DashboardSidebar() {
                 <li>
                     <Link to="/dashboard/orders">
                     <Button className=" list w-full capitalize! justify-start! flex gap-3 text-[16px]! 
-                 text-[#7a7171]! font-extrabold! items-center py-2! hover:bg-[#f1f1f1]!">
+                 text-[#7a7171]! font-extrabold! items-center py-2! hover:bg-[#F8ECEC]!">
                     <IoBagHandleOutline  className="text-[20px]" />Orders</Button>
                     </Link>
                 </li>   
@@ -161,7 +161,7 @@ function DashboardSidebar() {
   
 
                 <li><Button className=" list w-full capitalize! justify-start! flex gap-3 text-[16px]! 
-                 text-[#7a7171]! font-extrabold! items-center py-2! hover:bg-[#f1f1f1]!">
+                 text-[#7a7171]! font-extrabold! items-center py-2! hover:bg-[#F8ECEC]!">
                     <FiLogOut className="text-[20px]" />Logout</Button>
                 </li>   
 

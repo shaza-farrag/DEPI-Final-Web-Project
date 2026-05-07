@@ -38,13 +38,15 @@ function DashboardHeader() {
   return (
     <header className='w-full h-auto py-2 pl-[21%] pr-7 bg-[#ffff]  flex items-center justify-between shadow-md '>
         <div className="part1">
-          <Button className='w-10! h-10! rounded-full! min-w-10! mx-auto '>
+          
+          {/* Botton sidebar */}
+          <Button className='w-10! h-10! rounded-full! min-w-10! mx-auto hover:bg-[#F8ECEC]!'>
             <RiMenu2Line className=' text-[35px] text-black' />
-
           </Button>
+
         </div>
         <div className="part2 w-[40%] flex items-center  justify-end gap-5">
-            <IconButton aria-label="cart">
+            <IconButton aria-label="cart" className="hover:bg-[#F8ECEC]!">
                 <StyledBadge badgeContent={4} color="secondary">
                     <FaRegBell />
                 </StyledBadge>
@@ -103,19 +105,19 @@ function DashboardHeader() {
             </div>
         </MenuItem>
          <Divider />
-        <MenuItem onClick={handleCloseMyAcc} className='flex items-center gap-3'>
+        <MenuItem onClick={handleCloseMyAcc} className='flex items-center gap-3 hover:bg-[#F8ECEC]!'>
          <FaRegUserCircle className='text-[14px]' /> <span className='text-[14px]'>Profile</span>
         </MenuItem> 
 
-        <MenuItem onClick={handleCloseMyAcc} className='flex items-center gap-3'>
+        <MenuItem onClick={handleCloseMyAcc} className='flex items-center gap-3 hover:bg-[#F8ECEC]!'>
          <MdOutlineSettings  className='text-[14px]' /> <span className='text-[14px]'>Account Setting</span>
         </MenuItem> 
 
-         <MenuItem onClick={handleCloseMyAcc} className='flex items-center gap-3'>
+         <MenuItem onClick={handleCloseMyAcc} className='flex items-center gap-3 hover:bg-[#F8ECEC]!'>
          <FiActivity className='text-[14px]' /> <span className='text-[14px]'>Activity Log</span>
         </MenuItem>        
         <hr className=' opacity-19'></hr>
-        <MenuItem onClick={handleCloseMyAcc} className='flex items-center gap-3'>
+        <MenuItem onClick={handleCloseMyAcc} className='flex items-center gap-3 hover:bg-[#F8ECEC]!'>
          <PiSignOutBold className='text-[14px]' /> <span className='text-[14px]'>Sign out</span>
         </MenuItem>
 
