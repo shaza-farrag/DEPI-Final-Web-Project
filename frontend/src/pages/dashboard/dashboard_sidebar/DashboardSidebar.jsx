@@ -90,17 +90,24 @@ function DashboardSidebar() {
                     <Collapse isOpened={subMenuIndex ===3 ? true: false }>
                     <ul className="w-full! ">
                         <li className="w-full ">
-                            <Link to="/products">
+                            <Link to="/dashboard/products/list">
                             <Button className=" list text-[#7a7171]! capitalize! flex justify-start! w-full! text-[14px]! font-[600]!
                             pl-9! gap-3 hover:bg-[#F8ECEC]!"><span className="block w-2.5 h-2.5 rounded-full bg-[rgba(0,0,0,0.1)] border border-[rgba(0,0,0,1)] "></span>
-                            Product list</Button>
+                             list</Button>
                             </Link>
                         </li>
                         <li className="w-full!">
-                            <Link to="/product/upload">
+                            <Link to="/dashboard/products/upload">
                             <Button className=" list text-[#7a7171]! capitalize! flex justify-start! w-full! text-[14px]! font-[600]! 
                              pl-9! gap-3 hover:bg-[#F8ECEC]!"><span className="block w-2.5 h-2.5 rounded-full bg-[rgba(0,0,0,0.1)] border border-[rgba(0,0,0,1)] "></span>
-                                Product Upload</Button>
+                                Upload</Button>
+                                </Link>
+                        </li>                        
+                        <li className="w-full!">
+                            <Link to="/dashboard/products/edit">
+                            <Button className=" list text-[#7a7171]! capitalize! flex justify-start! w-full! text-[14px]! font-[600]! 
+                             pl-9! gap-3 hover:bg-[#F8ECEC]!"><span className="block w-2.5 h-2.5 rounded-full bg-[rgba(0,0,0,0.1)] border border-[rgba(0,0,0,1)] "></span>
+                                Edit</Button>
                                 </Link>
                         </li>                        
                     </ul>

@@ -1,52 +1,129 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { FiFilter, FiX, FiSearch } from "react-icons/fi";
+
+// Mock Data خارج الكمبوننت
+const mockProducts = [
+  {
+    _id: "1",
+    name: 'Apple MacBook Pro 17"',
+    price: 2999,
+    stock: 12,
+    category: { name: "Laptops" },
+    image: { url: "https://via.placeholder.com/150" },
+  },
+
+  ...Array.from({ length: 25 }, (_, i) => ({
+    _id: String(2 + i),
+    name: `Product ${2 + i}`,
+    price: 150 + i * 25,
+    stock: i % 6 === 0 ? 0 : 15 + i,
+    category: {
+      name:
+        i % 3 === 0
+          ? "Laptops"
+          : i % 3 === 1
+          ? "Phones"
+          : "Fashion",
+    },
+    image: { url: "https://via.placeholder.com/150" },
+  })),
+];
 
 export default function DashboardTable() {
+  const navigate = useNavigate();
+
+  const ITEMS_PER_PAGE = 10;
+
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
 
+  const [searchTerm, setSearchTerm] = useState("");
+  const [filterOpen, setFilterOpen] = useState(false);
+
+  const [statusFilter, setStatusFilter] = useState("All");
+  const [categoryFilter, setCategoryFilter] = useState("All");
+ const [minPrice, setMinPrice] = useState("");
+const [maxPrice, setMaxPrice] = useState("");
+
   const [currentPage, setCurrentPage] = useState(1);
+
   const [totalPages, setTotalPages] = useState(1);
   const [totalItems, setTotalItems] = useState(0);
 
-  const navigate = useNavigate();
-  const ITEMS_PER_PAGE = 10;
+  // رجوع لأول صفحة عند البحث أو الفلترة
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [searchTerm, statusFilter, categoryFilter ,  minPrice, maxPrice]);
 
   useEffect(() => {
     fetchProducts();
-  }, [currentPage]);
+  }, [  currentPage,
+        searchTerm,
+        statusFilter,
+        categoryFilter,
+        minPrice,
+        maxPrice]);
 
   const fetchProducts = async () => {
     try {
       setLoading(true);
 
-      // ─────────────────────────────────────────────
-      // الجزء ده هيتغير لما الباك يخلص
-      // ─────────────────────────────────────────────
-      const res = await fetch(
-        `http://localhost:5000/api/products?page=${currentPage}&limit=${ITEMS_PER_PAGE}`
-      );
+      let filtered = [...mockProducts];
 
-      if (!res.ok) {
-        throw new Error("API Error");
+      // Search
+      if (searchTerm.trim()) {
+        filtered = filtered.filter((p) =>
+          p.name.toLowerCase().includes(searchTerm.toLowerCase())
+        );
       }
 
-      const data = await res.json();
+      // Status Filter
+      if (statusFilter === "Active") {
+        filtered = filtered.filter((p) => p.stock > 0);
+      }
 
-      setProducts(data.products || []);
-      setTotalPages(data.totalPages || 1);
-      setTotalItems(data.totalItems || data.products?.length || 0);
+      if (statusFilter === "Sold Out") {
+        filtered = filtered.filter((p) => p.stock === 0);
+      }
 
+      // Category Filter
+      if (categoryFilter !== "All") {
+        filtered = filtered.filter(
+          (p) => p.category.name === categoryFilter
+        );
+      }
+      
+       // Price Filter
+      if (minPrice !== "") {
+        filtered = filtered.filter(
+          (p) => p.price >= Number(minPrice)
+        );
+      }
+
+      if (maxPrice !== "") {
+        filtered = filtered.filter(
+          (p) => p.price <= Number(maxPrice)
+        );
+      }
+
+      // Pagination
+      const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
+
+      const paginatedProducts = filtered.slice(
+        startIndex,
+        startIndex + ITEMS_PER_PAGE
+      );
+
+      setProducts(paginatedProducts);
+
+      setTotalItems(filtered.length);
+
+      setTotalPages(
+        Math.ceil(filtered.length / ITEMS_PER_PAGE)
+      );
     } catch (error) {
       console.error("Error fetching products:", error);
-      
-      // هذا الـ Mock هيتحذف نهائيًا لما الباك يشتغل
-      const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
-      const paginatedMock = mockProducts.slice(startIndex, startIndex + ITEMS_PER_PAGE);
-      
-      setProducts(paginatedMock);
-      setTotalPages(Math.ceil(mockProducts.length / ITEMS_PER_PAGE));
-      setTotalItems(mockProducts.length);
     } finally {
       setLoading(false);
     }
@@ -56,153 +133,274 @@ export default function DashboardTable() {
     navigate(`/dashboard/products/edit/${id}`);
   };
 
-  // ─────────────────────────────────────────────
-  // Mock Data → هيتحذف كامل بعد ما الباك يخلص
-  // ─────────────────────────────────────────────
-
-  const mockProducts = [
-    { _id: "1", name: "Apple MacBook Pro 17\"", price: 2999, stock: 12, category: { name: "Laptops" }, image: { url: "https://via.placeholder.com/150" } },
-    { _id: "2", name: "Microsoft Surface Pro", price: 1999, stock: 8, category: { name: "Laptops" }, image: { url: "https://via.placeholder.com/150" } },
-    { _id: "3", name: "Apple Watch Series 8", price: 399, stock: 25, category: { name: "Watches" }, image: { url: "https://via.placeholder.com/150" } },
-    { _id: "4", name: "Samsung Galaxy S23", price: 899, stock: 30, category: { name: "Phones" }, image: { url: "https://via.placeholder.com/150" } },
-    { _id: "5", name: "Sony Headphones", price: 299, stock: 45, category: { name: "Accessories" }, image: { url: "https://via.placeholder.com/150" } },
-    { _id: "6", name: "Dell XPS 15", price: 1899, stock: 7, category: { name: "Laptops" }, image: { url: "https://via.placeholder.com/150" } },
-    { _id: "7", name: "iPad Pro 12.9\"", price: 1099, stock: 18, category: { name: "Tablets" }, image: { url: "https://via.placeholder.com/150" } },
-    { _id: "8", name: "Nike Air Max", price: 129, stock: 60, category: { name: "Shoes" }, image: { url: "https://via.placeholder.com/150" } },
-    { _id: "9", name: "Canon EOS R6", price: 2499, stock: 5, category: { name: "Cameras" }, image: { url: "https://via.placeholder.com/150" } },
-    { _id: "10", name: "Samsung 4K TV", price: 799, stock: 14, category: { name: "Electronics" }, image: { url: "https://via.placeholder.com/150" } },
-    // أضفت 20 منتج إضافي عشان الـ Pagination يبان ويشتغل
-    ...Array.from({ length: 20 }, (_, i) => ({
-      _id: String(11 + i),
-      name: `Product ${11 + i}`,
-      price: 100 + i * 50,
-      stock: 10 + i,
-      category: { name: i % 2 === 0 ? "Electronics" : "Fashion" },
-      image: { url: "https://via.placeholder.com/150" }
-    }))
-  ];
-
   return (
-    <div className="relative overflow-x-auto bg-white my-5 shadow-md rounded-md border border-gray-200">
+    <div className="relative overflow-x-auto bg-white my-5 shadow-md rounded-xl border border-gray-200">
+      <div className="flex  py-6">
+        <h1 className="ml-5 font-semibold text-4xl">Products</h1>
+        <button 
+        onClick={() => navigate("/dashboard/products/upload")}
+        className="font-medium w-35 absolute right-4 py-2 leading-9 bg-[#D797C6] text-white
+         rounded-md cursor-pointer hover:bg-[#B6679F]"> 
+          + Add Product</button>
+      </div>
+      {/* Header */}
+      <div className="p-4 flex items-center justify-between border-b pb-6 border-gray-300">
 
-      {loading && (
-        <div className="p-4 text-center text-gray-500">
-          Loading products...
+        {/* Search */}
+        <div className="relative w-[88%]">
+          
+
+          <input
+            type="text"
+            placeholder="Search products..."
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+            className="w-full pl-5 pr-4 py-3 bg-[#F5F5F5] rounded-lg focus:outline-none focus:border-pink-500"
+          />
+          <FiSearch className="absolute right-4 top-4 text-gray-400" />
         </div>
-      )}
 
+        {/* Filter Button */}
+        <button
+          onClick={() => setFilterOpen(true)}
+          className="flex items-center gap-2 font-medium px-6 py-3 border border-gray-300 rounded-lg hover:bg-gray-50"
+        >
+          <FiFilter />
+          Filter
+        </button>
+      </div>
+
+      {/* Table */}
       <table className="w-full text-sm text-left text-gray-700">
-        <thead className="text-sm bg-[#F2DCDC] border-b border-gray-200">
+
+        <thead className="bg-[#F2DCDC]">
           <tr>
-            <th className="p-5 w-9">
-              
-            </th>
-            <th className="px-6 py-3">Product</th>
-            <th className="px-6 py-3">Category</th>
-            <th className="px-6 py-3">Price</th>
-            <th className="px-6 py-3">Stock</th>
-            <th className="px-6 py-3">Action</th>
+            <th className="px-6 py-4">Product</th>
+            <th className="px-6 py-4">Category</th>
+            <th className="px-6 py-4">Price</th>
+            <th className="px-6 py-4">Stock</th>
+            <th className="px-6 py-4">Status</th>
+            <th className="px-6 py-4 text-center">Action</th>
           </tr>
         </thead>
 
         <tbody>
-          {products.map((product) => (
-            <tr
-              key={product._id}
-              className="bg-white border-b hover:bg-[#F8ECEC]"
-            >
-              <td className="w-4 p-4">
-                <input type="checkbox" className="w-4 h-4 border border-gray-300 rounded" />
-              </td>
-
-              <th className="px-6 py-4 font-medium text-gray-900 flex items-center gap-3">
-                <img
-                  src={product.image?.url || product.image || "/placeholder.jpg"}
-                  alt={product.name}
-                  className="w-10 h-10 object-cover rounded border"
-                />
-                {product.name}
-              </th>
-
-              <td className="px-6 py-4">
-                {product.category?.name || product.category || "غير مصنف"}
-              </td>
-
-              <td className="px-6 py-4 font-semibold">
-                ${product.price}
-              </td>
-
-              <td className="px-6 py-4 text-center">
-                {product.stock || 0}
-              </td>
-
-              <td className="px-6 py-4">
-                <button
-                  onClick={() => handleEdit(product._id)}
-                  className="text-pink-600 hover:underline font-medium"
-                >
-                  Edit
-                </button>
+          {loading ? (
+            <tr>
+              <td colSpan="6" className="text-center py-10">
+                Loading...
               </td>
             </tr>
-          ))}
+          ) : products.length === 0 ? (
+            <tr>
+              <td colSpan="6" className="text-center py-10 text-gray-500">
+                No Products Found
+              </td>
+            </tr>
+          ) : (
+            products.map((product) => (
+              <tr
+                key={product._id}
+                className="border-b border-gray-300 hover:bg-pink-50 transition"
+              >
+                <td className="px-6 py-4">
+                  <div className="flex items-center gap-3">
+                    <img
+                      src={product.image.url}
+                      alt={product.name}
+                      className="w-12 h-12 rounded-lg object-cover border"
+                    />
+
+                    <span className="font-medium">
+                      {product.name}
+                    </span>
+                  </div>
+                </td>
+
+                <td className="px-6 py-4">
+                  {product.category.name}
+                </td>
+
+                <td className="px-6 py-4 font-semibold">
+                  ${product.price}
+                </td>
+
+                <td className="px-6 py-4">
+                  {product.stock}
+                </td>
+
+                <td className="px-6 py-4">
+                  <span
+                    className={`px-3 py-1 rounded-full text-xs font-medium ${
+                      product.stock > 0
+                        ? "bg-green-100 text-green-700"
+                        : "bg-red-100 text-red-700"
+                    }`}
+                  >
+                    {product.stock > 0
+                      ? "Active"
+                      : "Sold Out"}
+                  </span>
+                </td>
+
+                <td className="px-6 py-4 text-center">
+                  <button
+                    onClick={() => handleEdit(product._id)}
+                    className="text-pink-600 hover:underline mr-4"
+                  >
+                    Edit
+                  </button>
+
+                  <button className="text-red-500 hover:underline">
+                    Delete
+                  </button>
+                </td>
+              </tr>
+            ))
+          )}
         </tbody>
       </table>
 
-      {/* Pagination - هذا الجزء مش هيتغير كتير */}
-      <nav className="flex items-center justify-between p-4">
-        <span className="text-sm text-gray-700">
+      {/* Pagination */}
+      <div className="flex items-center justify-between p-4 border-t border-gray-300">
+
+        <span className="text-sm text-gray-600">
           Showing{" "}
-          <span className="font-semibold">
-            {(currentPage - 1) * ITEMS_PER_PAGE + 1}
-          </span>{" "}
-          to{" "}
-          <span className="font-semibold">
-            {Math.min(currentPage * ITEMS_PER_PAGE, totalItems)}
-          </span>{" "}
-          of{" "}
-          <span className="font-semibold">{totalItems}</span>
+          {(currentPage - 1) * ITEMS_PER_PAGE + 1}
+          {" "}to{" "}
+          {Math.min(
+            currentPage * ITEMS_PER_PAGE,
+            totalItems
+          )}
+          {" "}of {totalItems}
         </span>
 
-        <ul className="flex text-sm">
-          <li>
-            <button
-              onClick={() => setCurrentPage((p) => Math.max(p - 1, 1))}
-              disabled={currentPage === 1}
-              className="px-3 h-8 border border-gray-300 rounded-l-md hover:bg-gray-100 disabled:opacity-50 disabled:cursor-not-allowed"
-            >
-              Previous
-            </button>
-          </li>
+        <div className="flex items-center gap-2">
 
-          {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
-            <li key={page}>
-              <button
-                onClick={() => setCurrentPage(page)}
-                className={`w-8 h-8 border border-gray-300 ${
-                  currentPage === page
-                    ? "bg-pink-600 text-white"
-                    : "bg-white hover:bg-gray-100"
-                }`}
-              >
-                {page}
+          <button
+            disabled={currentPage === 1}
+            onClick={() =>
+              setCurrentPage((prev) => prev - 1)
+            }
+            className="px-4 py-2 bg-gray-200 rounded-lg disabled:opacity-50"
+          >
+            Previous
+          </button>
+
+          <span className="font-medium">
+            {currentPage} / {totalPages}
+          </span>
+
+          <button
+            disabled={currentPage === totalPages}
+            onClick={() =>
+              setCurrentPage((prev) => prev + 1)
+            }
+            className="px-4 py-2 bg-gray-200 rounded-lg disabled:opacity-50"
+          >
+            Next
+          </button>
+        </div>
+      </div>
+
+      {/* Sidebar Filter */}
+      {filterOpen && (
+        <div
+          className="fixed inset-0 bg-black/40 z-50"
+          onClick={() => setFilterOpen(false)}
+        >
+          <div
+            onClick={(e) => e.stopPropagation()}
+            className="absolute right-0 top-0 h-full w-80 bg-white p-6 shadow-xl"
+          >
+            <div className="flex items-center justify-between mb-6">
+              <h2 className="text-lg font-semibold">
+                Filters
+              </h2>
+
+              <button onClick={() => setFilterOpen(false)}>
+                <FiX size={24} />
               </button>
-            </li>
-          ))}
+            </div>
 
-          <li>
+            {/* Status */}
+            <div className="mb-5">
+              <label className="block mb-2 font-medium">
+                Status
+              </label>
+
+              <select
+                value={statusFilter}
+                onChange={(e) =>
+                  setStatusFilter(e.target.value)
+                }
+                className="w-full border p-3 rounded-lg"
+              >
+                <option value="All">All</option>
+                <option value="Active">Active</option>
+                <option value="Sold Out">Sold Out</option>
+              </select>
+            </div>
+
+            {/* Category */}
+            <div className="mb-5">
+              <label className="block mb-2 font-medium">
+                Category
+              </label>
+
+              <select
+                value={categoryFilter}
+                onChange={(e) =>
+                  setCategoryFilter(e.target.value)
+                }
+                className="w-full border p-3 rounded-lg"
+              >
+                <option value="All">All Categories</option>
+                <option value="Laptops">Laptops</option>
+                <option value="Phones">Phones</option>
+                <option value="Fashion">Fashion</option>
+              </select>
+            </div>
+            {/* Price Range */}
+            <div className="mb-5">
+              <label className="block mb-2 font-medium">
+                Price Range
+              </label>
+
+              <div className="flex gap-3">
+                
+                <input
+                  type="number"
+                  placeholder="Min"
+                  value={minPrice}
+                  onChange={(e) => setMinPrice(e.target.value)}
+                  className="w-full border p-3 rounded-lg"
+                />
+
+                <input
+                  type="number"
+                  placeholder="Max"
+                  value={maxPrice}
+                  onChange={(e) => setMaxPrice(e.target.value)}
+                  className="w-full border p-3 rounded-lg"
+                />
+              </div>
+            </div>
+
+            {/* Clear */}
             <button
-              onClick={() =>
-                setCurrentPage((p) => Math.min(p + 1, totalPages))
-              }
-              disabled={currentPage === totalPages}
-              className="px-3 h-8 border border-gray-300 rounded-r-md hover:bg-gray-100 disabled:opacity-50 disabled:cursor-not-allowed"
+              onClick={() => {
+                setStatusFilter("All");
+                setCategoryFilter("All");
+                setSearchTerm("");
+              }}
+              className="w-full py-3 border border-red-300 text-red-500 rounded-lg hover:bg-red-50"
             >
-              Next
+              Clear Filters
             </button>
-          </li>
-        </ul>
-      </nav>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

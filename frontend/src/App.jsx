@@ -16,6 +16,9 @@ import Users from './pages/dashboard/pages/Users'
 import Orders from './pages/dashboard/pages/Orders'
 import Checkout from './pages/checkout/Checkout';
 import Content from './pages/dashboard/pages/Content'
+import ProductsList from './pages/dashboard/pages/ProductsList';
+import ProductsAdd from './pages/dashboard/pages/ProductsAdd';
+import ProductsEdit from './pages/dashboard/pages/ProductsEdit';
 
 
 function App() {
@@ -45,6 +48,9 @@ function App() {
           <Route index element={<Content />} />
           <Route path="users" element={<Users />} />
           <Route path="orders" element={<Orders />} />
+          <Route path="products/list" element={<ProductsList />} />
+          <Route path="products/upload" element={<ProductsAdd />} />
+          <Route path="products/edit" element={<ProductsEdit />} />
         </Route>
       </Routes>
     </ShoppingCartProvider>

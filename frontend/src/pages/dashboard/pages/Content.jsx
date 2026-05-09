@@ -5,7 +5,7 @@ function Content (){
     return(
         <>
         <DashboardBoxes />
-        <DashboardTable/>
+        {/* <DashboardTable/> */}
         </>
     );
 }
