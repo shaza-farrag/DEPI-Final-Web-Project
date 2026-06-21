@@ -129,8 +129,13 @@ const [maxPrice, setMaxPrice] = useState("");
     }
   };
 
-  const handleEdit = (id) => {
-    navigate(`/dashboard/products/edit/${id}`);
+  // [تعديل] handleEdit بقت بتاخد المنتج بالكامل بدل الـ id بس
+  const handleEdit = (product) => {
+    // [تعديل] بنبعت بيانات المنتج كاملة مع التنقل عن طريق location state
+    // عشان صفحة الـ Edit تلاقيها جاهزة على طول من غير ما تطلب من أي API
+    navigate(`/dashboard/products/edit/${product._id}`, {
+      state: { product },
+    });
   };
 
   return (
@@ -245,7 +250,7 @@ const [maxPrice, setMaxPrice] = useState("");
 
                 <td className="px-6 py-4 text-center">
                   <button
-                    onClick={() => handleEdit(product._id)}
+                    onClick={() => handleEdit(product)} // [تعديل] بنبعت المنتج كامل بدل product._id بس
                     className="text-pink-600 hover:underline mr-4"
                   >
                     Edit

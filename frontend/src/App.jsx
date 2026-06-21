@@ -50,7 +50,7 @@ function App() {
           <Route path="orders" element={<Orders />} />
           <Route path="products/list" element={<ProductsList />} />
           <Route path="products/upload" element={<ProductsAdd />} />
-          <Route path="products/edit" element={<ProductsEdit />} />
+          <Route path="products/edit/:id" element={<ProductsEdit />} />
         </Route>
       </Routes>
     </ShoppingCartProvider>
