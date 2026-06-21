@@ -18,8 +18,8 @@ function Dashboard() {
           <DashboardSidebar />
         </div>
 
-          <div className='mainContent  bg-[#F8ECEC] w-[82%] px-5 py-4'>
-           
+          <div className='mainContent bg-[#F8ECEC]  w-[82%] px-5 py-4'>
+            
           <Outlet />
         </div>
 

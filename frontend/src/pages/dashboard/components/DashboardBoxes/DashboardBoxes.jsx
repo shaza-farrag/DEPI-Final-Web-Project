@@ -10,12 +10,13 @@ import { TbBrandProducthunt } from "react-icons/tb";
 import DashboardImg from "../../../../assets/DashboardImg.png";
 import { FaArrowTrendUp } from "react-icons/fa6";
 
+
 function DashboardBoxes (){
     return(
         <>
         
         <div className=" h-[300px] flex items-start gap-22!  p-9 mb-7  border border-[rgba(0,0,0,0.1)] shadow-md
-         rounded-md " >
+         rounded-md bg-white" >
             <div className="leading-50 ">
             <div className="flex" >
                 <span className="text-4xl font-bold! leading-20">Track. Analyze. Grow.</span>
@@ -24,15 +25,11 @@ function DashboardBoxes (){
                 </div>
                 <p>Monitor your store's performance and make smarter decisions , everyday </p>
                 <button className="font-medium w-35 leading-9 bg-[#D797C6] text-white
-                 rounded-md "> + Add Product</button>
+                 rounded-md cursor-pointer hover:bg-[#B6679F]"> 
+                 + Add Product</button>
             </div>
             <img src={DashboardImg} className="  w-[40%] p-0 items-start "></img>
         </div>
-
-
-
-
-
 
          <Swiper
         slidesPerView={4}
