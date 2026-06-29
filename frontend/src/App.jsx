@@ -19,6 +19,8 @@ import Content from './pages/dashboard/pages/Content'
 import ProductsList from './pages/dashboard/pages/ProductsList';
 import ProductsAdd from './pages/dashboard/pages/ProductsAdd';
 import ProductsEdit from './pages/dashboard/pages/ProductsEdit';
+import CategoryList from './pages/dashboard/pages/CategoryList';
+import CategoryAdd from './pages/dashboard/pages/CategoryAdd';
 
 
 function App() {
@@ -51,6 +53,9 @@ function App() {
           <Route path="products/list" element={<ProductsList />} />
           <Route path="products/upload" element={<ProductsAdd />} />
           <Route path="products/edit/:id" element={<ProductsEdit />} />
+          <Route path="category/list" element={<CategoryList />} />
+          <Route path="category/add" element={<CategoryAdd />} />
+
         </Route>
       </Routes>
     </ShoppingCartProvider>

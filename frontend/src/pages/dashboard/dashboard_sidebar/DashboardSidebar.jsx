@@ -126,28 +126,28 @@ function DashboardSidebar() {
                     <Collapse isOpened={subMenuIndex ===4 ? true: false }>
                     <ul className="w-full! ">
                         <li className="w-full ">
-                            <Link to="/catrgories">
+                            <Link to="/dashboard/category/list">
                             <Button className=" list text-[#7a7171]! capitalize! flex justify-start! w-full! text-[14px]! font-[600]!
                             pl-9! gap-3 hover:bg-[#F8ECEC]!"><span className="block w-2.5 h-2.5 rounded-full bg-[rgba(0,0,0,0.1)] border border-[rgba(0,0,0,1)]  "></span>
                             Category list</Button>
                             </Link>
                         </li>
                         <li className="w-full!">
-                            <Link to="/catrgory/add">
+                            <Link to="/dashboard/category/add">
                             <Button className=" list text-[#7a7171]! capitalize! flex justify-start! w-full! text-[14px]! font-[600]! 
                              pl-9! gap-3 hover:bg-[#F8ECEC]!"><span className="block w-2.5 h-2.5 rounded-full bg-[rgba(0,0,0,0.1)] border border-[rgba(0,0,0,1)]  "></span>
                                 Add a Category</Button>
                                 </Link>
                         </li> 
                         <li className="w-full!">
-                            <Link to="/catrgory/sub">
+                            <Link to="/dashboard/catrgory/sub">
                             <Button className=" list text-[#7a7171]! capitalize! flex justify-start! w-full! text-[14px]! font-[600]! 
                              pl-9! gap-3 hover:bg-[#F8ECEC]!"><span className="block w-2.5 h-2.5 rounded-full bg-[rgba(0,0,0,0.1)] border border-[rgba(0,0,0,1)]  "></span>
                                 Sub Category List</Button>
                                 </Link>
                         </li> 
                         <li className="w-full!">
-                            <Link to="/catrgorysub/add">
+                            <Link to="/dashboard/catrgorysub/add">
                             <Button className=" list text-[#7a7171]! capitalize! flex justify-start! w-full! text-[14px]! font-[600]! 
                              pl-9! gap-3 hover:bg-[#F8ECEC]!"><span className="block w-2.5 h-2.5 rounded-full bg-[rgba(0,0,0,0.1)] border border-[rgba(0,0,0,1)]  "></span>
                                 Add a Sub Category List</Button>
