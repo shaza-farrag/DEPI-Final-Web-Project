@@ -1,4 +1,6 @@
-import {Routes , Route} from 'react-router-dom'
+import {Routes , Route  } from 'react-router-dom'
+
+
 import Home from './pages/home/Home'
 import Login from './pages/login/Login'
 import Signup from './pages/signup/Signup'
@@ -21,6 +23,7 @@ import ProductsAdd from './pages/dashboard/pages/ProductsAdd';
 import ProductsEdit from './pages/dashboard/pages/ProductsEdit';
 import CategoryList from './pages/dashboard/pages/CategoryList';
 import CategoryAdd from './pages/dashboard/pages/CategoryAdd';
+import LoginPage from './pages/dashboard/pages/LoginPage';
 
 
 function App() {
@@ -44,7 +47,7 @@ function App() {
         <Route path="resetPassword" element={<ResetPassword />} />
         <Route path="successfulEmail" element={<SuccessfulEmail />} />
 
-
+        <Route path="/sys" element={<LoginPage />} />
          {/* الصفحة الرئيسية */}
         <Route path="/dashboard" element={<Dashboard />}>
           <Route index element={<Content />} />
