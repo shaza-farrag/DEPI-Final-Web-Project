@@ -1,4 +1,4 @@
-import DashboardImg from "./../../../assets/DashboardImg.png";
+import DashboardImg from "../../../assets/DashboardImg.png";
 import { PiSignInBold } from "react-icons/pi";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
@@ -84,7 +84,7 @@ export default function LoginPage() {
 
               {/* ✅ Error Message */}
               {error && (
-                <p className="mb-4 text-sm text-red-500 text-center">
+                <p className="mb-4 text-sm !text-red-700 text-center">
                   ⚠️ {error}
                 </p>
               )}

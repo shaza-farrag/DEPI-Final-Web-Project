@@ -17,12 +17,13 @@ export function AuthProvider({ children }) {
       setIsLoggedIn(true);
       return { success: true };
     }
-    return { success: false, error: "البريد الإلكتروني أو كلمة المرور غلط" };
+    return { success: false, error: "Username or Password is not correct !" };
   };
 
   const logout = () => {
     localStorage.removeItem("auth_token");
     setIsLoggedIn(false);
+    window.location.href = "/sys";
   };
 
   return (

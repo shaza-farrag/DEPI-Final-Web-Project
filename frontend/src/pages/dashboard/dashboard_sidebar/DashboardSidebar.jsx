@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import logo from "../../../assets/logo.png";
 import { Button } from "@mui/material";
 import { MdOutlineDashboardCustomize } from "react-icons/md";
@@ -12,6 +12,7 @@ import { FaAngleDown } from "react-icons/fa6";
 import {Collapse} from 'react-collapse';
 import './DashboardSidebar.css';
 import { useState } from "react";
+import { useAuth } from "../context/AuthContext";
 
 function DashboardSidebar() {
     const [subMenuIndex , setSubMenuIndex] = useState(null);
@@ -21,6 +22,14 @@ function DashboardSidebar() {
         }else{
         setSubMenuIndex(index)
     }
+    };
+
+    const { logout } = useAuth();
+    const navigate = useNavigate() ;
+
+    const handlelogout = () =>{
+        logout();
+        navigate("/sys");
     };
     return(
         <>
@@ -56,14 +65,18 @@ function DashboardSidebar() {
                     <Collapse isOpened={subMenuIndex ===1 ? true: false }>
                     <ul className="w-full! ">
                         <li className="w-full ">
+                            <Link to="/dashboard/homeslider/list">
                             <Button className=" list text-[#7a7171]! capitalize! flex justify-start! w-full! text-[14px]! font-[600]!
                             pl-9! gap-3 hover:bg-[#F8ECEC]!"><span className="block w-2.5 h-2.5 rounded-full bg-[rgba(0,0,0,0.1)] border border-[rgba(0,0,0,1)] "></span>
                             Home banners list</Button>
+                            </Link>
                         </li>
                         <li className="w-full!">
+                            <Link to="/dashboard/homeslider/add">
                             <Button className=" list text-[#7a7171]! capitalize! flex justify-start! w-full! text-[14px]! font-[600]! 
                              pl-9! gap-3 hover:bg-[#F8ECEC]!"><span className="block w-2.5 h-2.5 rounded-full bg-[rgba(0,0,0,0.1)] border border-[rgba(0,0,0,1)] "></span>
                                 Add Home banner slide</Button>
+                                </Link>
                         </li>                        
                     </ul>
                     </Collapse>
@@ -159,7 +172,9 @@ function DashboardSidebar() {
 
                 <li>
                     <Link to="/dashboard/orders">
-                    <Button className=" list w-full capitalize! justify-start! flex gap-3 text-[16px]! 
+                    <Button 
+                    
+                    className=" list w-full capitalize! justify-start! flex gap-3 text-[16px]! 
                  text-[#7a7171]! font-extrabold! items-center py-2! hover:bg-[#F8ECEC]!">
                     <IoBagHandleOutline  className="text-[20px]" />Orders</Button>
                     </Link>
@@ -167,7 +182,9 @@ function DashboardSidebar() {
  
   
 
-                <li><Button className=" list w-full capitalize! justify-start! flex gap-3 text-[16px]! 
+                <li><Button 
+                onClick={handlelogout}
+                className=" list w-full capitalize! justify-start! flex gap-3 text-[16px]! 
                  text-[#7a7171]! font-extrabold! items-center py-2! hover:bg-[#F8ECEC]!">
                     <FiLogOut className="text-[20px]" />Logout</Button>
                 </li>   
