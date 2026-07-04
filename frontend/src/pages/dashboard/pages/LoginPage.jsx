@@ -43,7 +43,7 @@ export default function LoginPage() {
         </div>
 
         {/* الفورم */}
-        <div className="w-full h-[100vh] md:w-1/2 bg-[#EDAEC2] flex items-center justify-center p-6">
+        <div className="w-full h-screen md:w-1/2 bg-[#EDAEC2] flex items-center justify-center p-6">
           <div className="w-full max-w-xl bg-white rounded-2xl shadow-2xl p-8">
             <h1 className="mb-2 text-3xl font-medium text-[#32393f] sm:text-4xl">
               Welcome Back
@@ -84,7 +84,7 @@ export default function LoginPage() {
 
               {/* ✅ Error Message */}
               {error && (
-                <p className="mb-4 text-sm !text-red-700 text-center">
+                <p className="mb-4 text-sm text-red-700! text-center">
                   ⚠️ {error}
                 </p>
               )}

@@ -27,6 +27,9 @@ import CategoryAdd from './pages/dashboard/pages/CategoryAdd';
 import LoginPage from './pages/dashboard/pages/LoginPage';
 import HomeBannerList from './pages/dashboard/pages/HomeBannerList';
 import HomeBannerAdd from './pages/dashboard/pages/HomeBannerAdd';
+import Faq from './pages/faq/faq'
+import Blog from './pages/blog/blog'
+import Contact from './pages/contact/contact'
 
 
 function App() {
@@ -41,6 +44,9 @@ function App() {
           <Route path="products" element={<Products />} />
           <Route path="products/:id" element={<ProductDetails />} />
           <Route path="checkout" element={<Checkout/>} />
+          <Route path="faq" element={<Faq />} />
+          <Route path="blog" element={<Blog />} />
+          <Route path="contact" element={<Contact />} />
         </Route>
  
         <Route path="signup" element={<Signup />} />
