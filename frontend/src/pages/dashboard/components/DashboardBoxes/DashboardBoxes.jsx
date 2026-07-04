@@ -9,6 +9,8 @@ import { PiBankLight } from "react-icons/pi";
 import { TbBrandProducthunt } from "react-icons/tb";
 import DashboardImg from "../../../../assets/DashboardImg.png";
 import { FaArrowTrendUp } from "react-icons/fa6";
+import { Link } from "react-router-dom";
+
 
 
 function DashboardBoxes (){
@@ -24,9 +26,11 @@ function DashboardBoxes (){
 
                 </div>
                 <p>Monitor your store's performance and make smarter decisions , everyday </p>
+                <Link to="/dashboard/products/upload">
                 <button className="font-medium w-35 leading-9 bg-[#D797C6] text-white
-                 rounded-md cursor-pointer hover:bg-[#B6679F]"> 
+                 rounded-md cursor-pointer hover:bg-[#B6679F] "> 
                  + Add Product</button>
+                 </Link>
             </div>
             <img src={DashboardImg} className="  w-[40%] p-0 items-start "></img>
         </div>

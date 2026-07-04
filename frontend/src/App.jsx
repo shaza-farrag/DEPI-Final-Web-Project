@@ -1,4 +1,7 @@
-import {Routes , Route} from 'react-router-dom'
+import {Routes , Route, Navigate   } from 'react-router-dom'
+import ProtectedRoute from "./pages/dashboard/components/ProtectedRoute";
+import { AuthProvider } from "./pages/dashboard/context/AuthContext";
+
 import Home from './pages/home/Home'
 import Login from './pages/login/Login'
 import Signup from './pages/signup/Signup'
@@ -19,6 +22,11 @@ import Content from './pages/dashboard/pages/Content'
 import ProductsList from './pages/dashboard/pages/ProductsList';
 import ProductsAdd from './pages/dashboard/pages/ProductsAdd';
 import ProductsEdit from './pages/dashboard/pages/ProductsEdit';
+import CategoryList from './pages/dashboard/pages/CategoryList';
+import CategoryAdd from './pages/dashboard/pages/CategoryAdd';
+import LoginPage from './pages/dashboard/pages/LoginPage';
+import HomeBannerList from './pages/dashboard/pages/HomeBannerList';
+import HomeBannerAdd from './pages/dashboard/pages/HomeBannerAdd';
 
 
 function App() {
@@ -42,15 +50,40 @@ function App() {
         <Route path="resetPassword" element={<ResetPassword />} />
         <Route path="successfulEmail" element={<SuccessfulEmail />} />
 
-
-         {/* الصفحة الرئيسية */}
-        <Route path="/dashboard" element={<Dashboard />}>
+        {/* ── Admin Auth + Dashboard (AuthProvider هنا بس) ── */}
+        <Route
+          path="/sys"
+          element={
+            <AuthProvider>
+              <LoginPage />
+            </AuthProvider>
+          }
+        />
+ 
+        <Route
+          path="/dashboard"
+          element={
+            <AuthProvider>
+              <ProtectedRoute>
+                <Dashboard />
+              </ProtectedRoute>
+            </AuthProvider>
+          }
+        >
+          
           <Route index element={<Content />} />
           <Route path="users" element={<Users />} />
           <Route path="orders" element={<Orders />} />
           <Route path="products/list" element={<ProductsList />} />
           <Route path="products/upload" element={<ProductsAdd />} />
           <Route path="products/edit/:id" element={<ProductsEdit />} />
+          <Route path="category/list" element={<CategoryList />} />
+          <Route path="category/add" element={<CategoryAdd />} />
+          <Route path="homeslider/list" element={<HomeBannerList />} />
+          <Route path="homeslider/add" element={<HomeBannerAdd />} />
+
+
+           <Route path="*" element={<Navigate to="/" replace />} />
         </Route>
       </Routes>
     </ShoppingCartProvider>
