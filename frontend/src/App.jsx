@@ -10,6 +10,7 @@ import ForgotPassword from "./pages/forgotPassword/ForgotPassword";
 import ShoppingCartProvider from "./context/ShoppingCartContext"; // 1. استيراد الـ Provider
 import ResetPassword from "./pages/resetPassword/ResetPassword"
 import SuccessfulEmail from './pages/successfulEmail/SuccessfulEmail'
+import FAQ from './pages/faq/FAQ'
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route index element={<Home />} />
           <Route path="dashboard" element={<Dashboard />} />
           <Route path="about" element={<About />} />
+          <Route path="faq" element={<FAQ/>}/>
         </Route>
 
         <Route path="signup" element={<Signup />} />
