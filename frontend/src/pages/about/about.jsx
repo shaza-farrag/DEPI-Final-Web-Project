@@ -3,7 +3,7 @@ import styles from "./About.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faQuoteRight } from "@fortawesome/free-solid-svg-icons";
 import { Link,useNavigate } from "react-router-dom";
-import logoPaige from "../../assets/logo.png";
+import logoPaige from "../../assets/logoPaige.png";
 import heroAbout from "../../assets/heroAbout.jpg.jpeg"
 
 function About() {
