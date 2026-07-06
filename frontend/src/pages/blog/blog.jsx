@@ -1,5 +1,29 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { ArrowRight } from "lucide-react";
+
+// Scroll Reveal Hook
+function useScrollReveal() {
+  const ref = useRef(null);
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setVisible(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.15 }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
+  return [ref, visible];
+}
 
 const BLOG_POSTS = [
   {
@@ -41,6 +65,10 @@ const BLOG_POSTS = [
 ];
 
 export default function Blog() {
+  const [bannerRef, bannerVisible] = useScrollReveal();
+  const [subRef, subVisible] = useScrollReveal();
+  const [gridRef, gridVisible] = useScrollReveal();
+
   const [email, setEmail] = useState("");
   const [subscribed, setSubscribed] = useState(false);
 
@@ -55,7 +83,15 @@ export default function Blog() {
   return (
     <div className="w-full bg-white font-sans">
       {/* WELCOME BANNER SECTION */}
-      <section className="relative w-full bg-[#fdf5f5] overflow-hidden py-16 md:py-24 border-b border-gray-100 flex justify-center">
+      <section 
+        ref={bannerRef}
+        className="relative w-full bg-[#fdf5f5] overflow-hidden py-16 md:py-24 border-b border-gray-100 flex justify-center"
+        style={{
+          opacity: bannerVisible ? 1 : 0,
+          transform: bannerVisible ? "translateY(0)" : "translateY(40px)",
+          transition: "opacity 0.8s ease, transform 0.8s ease",
+        }}
+      >
         {/* Soft Watercolor Blobs for Artistic Pink Aesthetic */}
         <div className="absolute top-[-20%] left-[-10%] w-[50%] h-[80%] rounded-[50%] bg-[#fce8e8] blur-[80px] opacity-70 pointer-events-none" />
         <div className="absolute bottom-[-20%] right-[-10%] w-[50%] h-[80%] rounded-[50%] bg-[#fce8e8] blur-[80px] opacity-70 pointer-events-none" />
@@ -146,7 +182,15 @@ export default function Blog() {
       </section>
 
       {/* SUBSCRIBE SECTION */}
-      <section className="bg-[#fdf5f5] py-12 px-6 flex flex-col items-center justify-center border-b border-gray-100">
+      <section 
+        ref={subRef}
+        className="bg-[#fdf5f5] py-12 px-6 flex flex-col items-center justify-center border-b border-gray-100"
+        style={{
+          opacity: subVisible ? 1 : 0,
+          transform: subVisible ? "translateY(0)" : "translateY(40px)",
+          transition: "opacity 0.8s ease 0.1s, transform 0.8s ease 0.1s",
+        }}
+      >
         <h2 className="text-[#d4a0a0] font-black tracking-[0.25em] text-center text-sm md:text-base uppercase mb-2">
           SUBSCRIBE TO KNOW WHEN A NEW POST LAUNCHES!
         </h2>
@@ -180,7 +224,15 @@ export default function Blog() {
       </section>
 
       {/* BLOG POSTS GRID */}
-      <section className="max-w-6xl mx-auto py-16 px-6">
+      <section 
+        ref={gridRef}
+        className="max-w-6xl mx-auto py-16 px-6"
+        style={{
+          opacity: gridVisible ? 1 : 0,
+          transform: gridVisible ? "translateY(0)" : "translateY(40px)",
+          transition: "opacity 0.8s ease 0.15s, transform 0.8s ease 0.15s",
+        }}
+      >
         <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-20">
           {BLOG_POSTS.map((post) => (
             <article key={post.id} className="flex flex-col items-center bg-white shadow-sm border border-gray-100">
