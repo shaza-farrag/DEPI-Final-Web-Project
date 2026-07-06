@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { FiFilter, FiX, FiSearch } from "react-icons/fi";
 
 // Mock Data خارج الكمبوننت
-const mockProducts = [
+export const mockProducts = [
   {
     _id: "1",
     name: 'Apple MacBook Pro 17"',
