@@ -1,0 +1,373 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100..900&display=swap');
+
+.container{
+    width:100%;
+    overflow-x:hidden;
+    background:#fff;
+}
+
+/* ================= HERO ================= */
+
+.hero{
+    position:relative;
+    width:100%;
+    height:75vh;
+}
+
+.hero img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    filter:brightness(70%);
+}
+
+.overlay{
+    position:absolute;
+    top:50%;
+    left:40%;
+    transform:translate(-50%,-50%);
+    text-align:center;
+    color:white;
+    width:90%;
+}
+
+.overlay h1{
+    font-family:Oswald;
+    letter-spacing:4px;
+    font-size:52px;
+    font-weight:500;
+    margin-bottom:20px;
+}
+
+.overlay p{
+    font-family:Raleway;
+    font-size:18px;
+    line-height:1.8;
+    max-width:650px;
+    /* font-weight:500; */
+    margin:auto;
+}
+
+/* ================= FAQ ================= */
+
+.faqSection{
+    background:rgb(255,248,247);
+    padding:90px 20px;
+}
+
+.faqSection h2{
+    text-align:center;
+    font-family:Oswald;
+    font-size:38px;
+    letter-spacing:4px;
+    color:rgb(225,182,182);
+    margin-bottom:60px;
+    font-weight:500;
+}
+
+.faqCard{
+    width:70%;
+    margin:20px auto;
+    background:white;
+    border:1px solid rgb(238,220,220);
+    border-radius:15px;
+    overflow:hidden;
+    transition:.3s;
+    box-shadow:0 5px 15px rgba(0,0,0,.05);
+}
+
+.faqCard:hover{
+    transform:translateY(-3px);
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.question{
+    padding:24px 30px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    cursor:pointer;
+    font-family:Oswald;
+    letter-spacing:1px;
+    font-size:20px;
+    color:#333;
+}
+
+.answer{
+    padding:0 30px 25px;
+    animation:fade .3s ease;
+}
+
+.answer p{
+    font-family:Raleway;
+    line-height:1.9;
+    color:#666;
+    font-size:16px;
+}
+
+/* ================= LAST SECTION ================= */
+
+.helpSection{
+    position: relative;
+    min-height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../../assets/lastFAQ.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.lastSection::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,.45);
+}
+
+.helpCard{
+    width:70%;
+    background:white;
+    padding:50px 40px;
+    text-align:center;
+    border-radius:100px;
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+    margin:20px auto;
+    position: relative;
+    z-index: 2;
+}
+
+.helpCard h2{
+    font-family:Oswald;
+    letter-spacing:4px;
+    color:rgb(225,182,182);
+    margin-bottom:25px;
+    font-size:38px;
+    font-weight:500;
+}
+
+.helpCard p{
+    max-width:650px;
+    margin:auto;
+    line-height:2;
+    color:#555;
+    font-family:Raleway;
+    margin-bottom:40px;
+}
+
+.contactBtn{
+    display:inline-block;
+    padding:14px 50px;
+    background:rgb(225,182,182);
+    color:white;
+    text-decoration:none;
+    font-family:Oswald;
+    letter-spacing:3px;
+    transition:.3s;
+    border-radius:100px;
+
+}
+
+.contactBtn:hover{
+    opacity:.85;
+}
+
+/* ================= Animation ================= */
+
+@keyframes fade{
+
+    from{
+        opacity:0;
+        transform:translateY(-10px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+/* ================= Responsive ================= */
+
+@media (max-width: 992px) {
+
+    .hero{
+        height:55vh;
+        margin-top:50px;
+    }
+
+    .overlay{
+        left:50%;
+        width:90%;
+    }
+
+    .overlay h1{
+        font-size:42px;
+    }
+
+    .overlay p{
+        font-size:16px;
+    }
+
+    .faqSection{
+        padding:70px 20px;
+    }
+
+    .faqCard{
+        width:90%;
+    }
+
+    .question{
+        padding:20px 25px;
+        font-size:18px;
+    }
+
+    .answer p{
+        font-size:15px;
+    }
+
+    .helpSection{
+        padding:80px 20px;
+        min-height:50vh;
+    }
+
+    .helpCard{
+        width:90%;
+        padding:40px 25px;
+    }
+
+    .helpCard h2{
+        font-size:32px;
+    }
+
+    .contactBtn{
+        display:block;
+        width:220px;
+        margin:auto;
+    }
+
+}
+
+@media (max-width:768px){
+
+    .hero{
+        height:45vh;
+    }
+
+    .overlay h1{
+        font-size:34px;
+        letter-spacing:2px;
+    }
+
+    .overlay p{
+        font-size:15px;
+    }
+
+    .faqSection h2{
+        font-size:30px;
+    }
+
+    .question{
+        font-size:17px;
+        padding:18px 20px;
+    }
+
+    .answer{
+        padding:0 20px 20px;
+    }
+
+    .helpCard h2{
+        font-size:28px;
+    }
+
+    .helpCard p{
+        font-size:15px;
+    }
+
+}
+
+@media (max-width:576px){
+
+    .hero{
+        height:35vh;
+    }
+
+    .overlay h1{
+        font-size:28px;
+        line-height:1.3;
+    }
+
+    .overlay p{
+        font-size:14px;
+        padding:0 10px;
+    }
+
+    .faqSection{
+        padding:60px 15px;
+    }
+
+    .faqSection h2{
+        font-size:26px;
+        letter-spacing:2px;
+    }
+
+    .faqCard{
+        width:100%;
+        border-radius:12px;
+    }
+
+    .question{
+        font-size:16px;
+        padding:18px;
+    }
+
+    .answer p{
+        font-size:14px;
+        line-height:1.8;
+    }
+
+    .helpSection{
+        padding:60px 15px;
+    }
+
+    .helpCard{
+        width:100%;
+        padding:30px 20px;
+        border-radius:15px;
+    }
+
+    .helpCard h2{
+        font-size:24px;
+        letter-spacing:2px;
+    }
+
+    .helpCard p{
+        font-size:14px;
+        line-height:1.8;
+    }
+
+    .contactBtn{
+        width:100%;
+        padding:12px;
+    }
+
+}
+
+@media (max-width:400px){
+
+    .hero{
+        height:28vh;
+    }
+
+    .overlay h1{
+        font-size:22px;
+    }
+
+    .overlay p{
+        font-size:13px;
+    }
+
+}
