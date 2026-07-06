@@ -29,8 +29,16 @@ const userSchema = new Schema({
     type: Boolean,
     default: false,
   },
+  role: {
+  type: String,
+  enum: ["user", "admin"],
+  default: "user",
+},
   verificationToken: String,
   verificationTokenExpires: Date,
+  
+  resetPasswordToken: String,
+  resetPasswordExpires: Date,
 });
 
 userSchema.pre("save", async function () {

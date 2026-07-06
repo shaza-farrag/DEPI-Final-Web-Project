@@ -62,3 +62,19 @@
 2026-04-16 06:43:31 | INFO | {"firstName":"Shaza","lastName":"Farrag","email":"sw1190@fayoum.edu.eg","password":"123456789"}
 2026-04-16 06:44:34 | INFO | {"firstName":"Shaza","lastName":"Farrag","email":"sw1190@fayoum.edu.eg","password":"123456789"}
 2026-04-16 06:47:08 | INFO | {"firstName":"Shaza","lastName":"Farrag","email":"sw1190@fayoum.edu.eg","password":"123456789"}
+2026-07-04 20:58:56 | ERROR | Error: secretOrPrivateKey must have a value
+    at module.exports [as sign] (C:\Users\yathrip\Desktop\DEPI-Final-Web-Project\backend\node_modules\jsonwebtoken\sign.js:111:20)
+    at Object.login (C:\Users\yathrip\Desktop\DEPI-Final-Web-Project\backend\controllers\auth.control.js:112:25)
+2026-07-04 20:59:14 | INFO | {"firstName":"Shaza","lastName":"Farrag","email":"sw1190@fayoum.edu.eg","password":"123456789"}
+2026-07-04 21:12:44 | INFO | {"firstName":"Shaza","lastName":"Farrag","email":"sw1190@fayoum.edu.eg","password":"123456789"}
+2026-07-04 21:12:44 | ERROR | TypeError: sendVerificationEmail is not a function
+    at newUser (C:\Users\yathrip\Desktop\DEPI-Final-Web-Project\backend\controllers\auth.control.js:32:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2026-07-04 21:14:00 | INFO | {"firstName":"Shaza","lastName":"Farrag","email":"sw1190@fayoum.edu.eg","password":"123456789"}
+2026-07-04 21:14:08 | INFO | {"firstName":"Shaza","lastName":"Farrag","email":"sw1190@fayoum.edu.eg","password":"123456789"}
+2026-07-04 21:14:09 | ERROR | ReferenceError: transporter is not defined
+    at sendVerificationEmail (C:\Users\yathrip\Desktop\DEPI-Final-Web-Project\backend\services\mail.service.js:5:18)
+    at newUser (C:\Users\yathrip\Desktop\DEPI-Final-Web-Project\backend\controllers\auth.control.js:32:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2026-07-04 21:15:16 | INFO | {"firstName":"Shaza","lastName":"Farrag","email":"sw1190@fayoum.edu.eg","password":"123456789"}
+2026-07-04 21:18:08 | INFO | {"firstName":"Shaza","lastName":"Farrag","email":"sw1190@fayoum.edu.eg","password":"123456789"}

@@ -2,20 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
-
-/* .scroll {
-    opacity: 0;
-    transform: translateY(50px);
-    animation: fadeInUp linear forwards;
-    animation-timeline: view();
-    animation-range: entry 0% cover 40%;
-} */
 
 .container {
     width: 100%;
