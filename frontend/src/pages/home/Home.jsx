@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { ArrowRight, ChevronLeft, ChevronRight, Pause, Play } from "lucide-react";
 import ProductCard from "../../components/ProductCard";
+import logo from "../../assets/logo.png";
 
 // ─────────────────────────────────────────────────────────────────────────────
 // SCROLL REVEAL HOOK
@@ -35,9 +36,8 @@ const SLIDES = [
     percent: "25%",
     sub: "THE ENTIRE SITE",
     shopHref: "/shop/hijabs",
-    // Replace with your real image URLs
-    img: "",
-    imgAlt: "Hijabs",
+    img: "/hijab-slider.png",
+    imgAlt: "Aesthetic Hijab Collection",
   },
   {
     id: 2,
@@ -45,8 +45,8 @@ const SLIDES = [
     percent: "Fresh",
     sub: "ARRIVALS THIS WEEK",
     shopHref: "/shop/mugs",
-    img: "",
-    imgAlt: "Mugs arrivals",
+    img: "https://images.unsplash.com/photo-1576092768241-dec231879fc3?w=800&q=80",
+    imgAlt: "Cozy Aesthetic Mugs",
   },
   {
     id: 3,
@@ -54,17 +54,17 @@ const SLIDES = [
     percent: "Vibes",
     sub: "SHOP THE COLLECTION",
     shopHref: "/shop/skincare",
-    img: "",
-    imgAlt: "Skin Care collection",
+    img: "https://images.unsplash.com/photo-1608248597279-f99d160bfcbc?w=800&q=80",
+    imgAlt: "Natural Skincare Products",
   },
   {
-    id: 3,
+    id: 4,
     headline: "Makeup",
     percent: "Vibes",
     sub: "SHOP THE COLLECTION",
     shopHref: "/shop/makeup",
-    img: "",
-    imgAlt: "Makeup collection",
+    img: "https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=800&q=80",
+    imgAlt: "Minimalist Makeup Collection",
   },
 ];
 
@@ -365,9 +365,9 @@ function AboutSherwit() {
             style={{ top: "20px", left: "10px", width: "220px", zIndex: 1, transform: "rotate(-2deg)" }}
           >
             <img
-              src=""
+              src={logo}
               alt="About Sweet Sherwit"
-              className="w-full object-cover"
+              className="w-full object-contain"
               style={{ aspectRatio: "3/4" }}
             />
           </div>

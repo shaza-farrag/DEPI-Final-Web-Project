@@ -8,6 +8,7 @@ import About from './pages/about/About'
 import Verify from './pages/verifyEmail/Verify'
 import ForgotPassword from "./pages/forgotPassword/ForgotPassword";
 import ShoppingCartProvider from "./context/ShoppingCartContext"; // 1. استيراد الـ Provider
+import Blog from "./pages/blog/blog";
 
 function App() {
   return (
@@ -21,7 +22,7 @@ function App() {
         <Route path="about" element={<About />} />
         <Route path="verifyEmail" element={<Verify />} />
         <Route path="forgotPassword" element={<ForgotPassword />} />
-
+        <Route path="blog" element={<Blog />} />
       </Route>
     </Routes>
   </ShoppingCartProvider>
