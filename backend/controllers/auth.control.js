@@ -22,9 +22,13 @@ const userController = {
                 const verificationToken = crypto.randomBytes(32).toString("hex");
 
                 let newUser = new User({
-                    ...data,
-                    verificationToken,
-                    verificationTokenExpires: Date.now() + 60 * 60 * 1000,
+                  firstName: data.firstName,
+                  lastName: data.lastName,
+                  email: data.email,
+                  password: data.password,
+                  role: data.role,
+                  verificationToken,
+                  verificationTokenExpires: Date.now() + 60 * 60 * 1000,
                 });
 
                 await newUser.save();

@@ -78,3 +78,46 @@
     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
 2026-07-04 21:15:16 | INFO | {"firstName":"Shaza","lastName":"Farrag","email":"sw1190@fayoum.edu.eg","password":"123456789"}
 2026-07-04 21:18:08 | INFO | {"firstName":"Shaza","lastName":"Farrag","email":"sw1190@fayoum.edu.eg","password":"123456789"}
+2026-07-06 16:21:08 | ERROR | MongooseError: Operation `users.findOne()` buffering timed out after 10000ms
+    at Timeout._onTimeout (C:\Users\yathrip\Desktop\DEPI-Final-Web-Project\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:142:25)
+    at listOnTimeout (node:internal/timers:588:17)
+    at process.processTimers (node:internal/timers:523:7)
+2026-07-06 16:21:27 | ERROR | MongooseError: Operation `users.findOne()` buffering timed out after 10000ms
+    at Timeout._onTimeout (C:\Users\yathrip\Desktop\DEPI-Final-Web-Project\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:142:25)
+    at listOnTimeout (node:internal/timers:588:17)
+    at process.processTimers (node:internal/timers:523:7)
+2026-07-06 16:25:23 | ERROR | TypeError: Cannot destructure property 'password' of 'req.body' as it is undefined.
+    at resetPassword (C:\Users\yathrip\Desktop\DEPI-Final-Web-Project\backend\controllers\auth.control.js:187:13)
+    at Layer.handleRequest (C:\Users\yathrip\Desktop\DEPI-Final-Web-Project\backend\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\yathrip\Desktop\DEPI-Final-Web-Project\backend\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Users\yathrip\Desktop\DEPI-Final-Web-Project\backend\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Users\yathrip\Desktop\DEPI-Final-Web-Project\backend\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\Users\yathrip\Desktop\DEPI-Final-Web-Project\backend\node_modules\router\lib\layer.js:152:17)
+    at C:\Users\yathrip\Desktop\DEPI-Final-Web-Project\backend\node_modules\router\index.js:295:15
+    at param (C:\Users\yathrip\Desktop\DEPI-Final-Web-Project\backend\node_modules\router\index.js:600:14)
+    at param (C:\Users\yathrip\Desktop\DEPI-Final-Web-Project\backend\node_modules\router\index.js:610:14)
+    at processParams (C:\Users\yathrip\Desktop\DEPI-Final-Web-Project\backend\node_modules\router\index.js:664:3)
+2026-07-06 16:26:49 | ERROR | ValidationError: User validation failed: password: Path `password` (`1234`, length 4) is shorter than the minimum allowed length (8).
+    at model.validate (C:\Users\yathrip\Desktop\DEPI-Final-Web-Project\backend\node_modules\mongoose\lib\document.js:2864:36)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async model.$__save (C:\Users\yathrip\Desktop\DEPI-Final-Web-Project\backend\node_modules\mongoose\lib\model.js:393:7)
+    at async model.save (C:\Users\yathrip\Desktop\DEPI-Final-Web-Project\backend\node_modules\mongoose\lib\model.js:667:5)
+    at async resetPassword (C:\Users\yathrip\Desktop\DEPI-Final-Web-Project\backend\controllers\auth.control.js:219:5)
+2026-07-06 16:40:33 | ERROR | Error: secretOrPrivateKey must have a value
+    at module.exports [as sign] (C:\Users\yathrip\Desktop\DEPI-Final-Web-Project\backend\node_modules\jsonwebtoken\sign.js:111:20)
+    at Object.login (C:\Users\yathrip\Desktop\DEPI-Final-Web-Project\backend\controllers\auth.control.js:112:25)
+2026-07-06 16:41:10 | ERROR | Error: secretOrPrivateKey must have a value
+    at module.exports [as sign] (C:\Users\yathrip\Desktop\DEPI-Final-Web-Project\backend\node_modules\jsonwebtoken\sign.js:111:20)
+    at Object.login (C:\Users\yathrip\Desktop\DEPI-Final-Web-Project\backend\controllers\auth.control.js:112:25)
+2026-07-06 16:42:04 | ERROR | Error: secretOrPrivateKey must have a value
+    at module.exports [as sign] (C:\Users\yathrip\Desktop\DEPI-Final-Web-Project\backend\node_modules\jsonwebtoken\sign.js:111:20)
+    at Object.login (C:\Users\yathrip\Desktop\DEPI-Final-Web-Project\backend\controllers\auth.control.js:112:25)
+2026-07-06 17:20:53 | INFO | {"firstName":"Shaza","lastName":"wael","email":"sw1190@fayoum.edu.eg","password":"12345678"}
+2026-07-06 17:21:23 | INFO | {"firstName":"Shaza","lastName":"wael","email":"shazawael75@gmail.com","password":"12345678"}
+2026-07-06 17:37:06 | INFO | {"firstName":"shaza","lastName":"wael","email":"shazawael75@gmail.com","password":"12345678"}
+2026-07-06 17:54:05 | INFO | {"firstName":"shaza","lastName":"wael","email":"shazawael75@gmail.com","password":"12345678"}
+2026-07-06 17:56:15 | INFO | {"firstName":"shaza","lastName":"wael","email":"shazawael75@gmail.com","password":"12345678"}
+2026-07-06 18:25:43 | INFO | {"firstName":"shaza","lastName":"wael","email":"shazawael75@gmail.com","password":"12345678"}
+2026-07-06 18:25:52 | INFO | {"firstName":"shaza","lastName":"wael","email":"shazawael75@gmail.com","password":"12345678"}
+2026-07-06 18:25:54 | INFO | {"firstName":"shaza","lastName":"wael","email":"shazawael75@gmail.com","password":"12345678"}
+2026-07-06 19:05:00 | INFO | {"firstName":"Shaza","lastName":"Farrag","email":"sw1190@fayoum.edu.eg","password":"12345678","role":"admin"}

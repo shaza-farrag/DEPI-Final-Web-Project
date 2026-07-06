@@ -3,6 +3,7 @@ import { PiSignInBold } from "react-icons/pi";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "./../context/AuthContext";
+import { AdminLoginApi } from "../../../services/auth.service";
 
 export default function LoginPage() {
   const [email, setEmail] = useState("");
@@ -14,19 +15,30 @@ export default function LoginPage() {
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
-    setError("");
-    setLoading(true);
+      e.preventDefault();
 
-    const result = login(email, password);
+      setError("");
+      setLoading(true);
 
-    if (result.success) {
-      navigate("/dashboard");
-    } else {
-      setError(result.error);
-    }
+      try {
+        const response = await AdminLoginApi({
+          email,
+          password,
+        });
 
-    setLoading(false);
+        login(
+          response.data.user,
+          response.data.token
+        );
+
+        navigate("/dashboard");
+      } catch (err) {
+        setError(
+          err.response?.data?.message || "Login failed"
+        );
+      } finally {
+        setLoading(false);
+      }
   };
 
   return (
@@ -95,7 +107,7 @@ export default function LoginPage() {
                 className={`flex w-full items-center justify-center gap-2 rounded border border-[#d1d3d4] bg-[#E6709C] p-3 text-[20px] font-normal text-white transition sm:text-[22px]
                   ${loading ? "opacity-60 cursor-not-allowed" : "hover:bg-[#c24271]"}`}
               >
-                {loading ? "جاري التحقق..." : "Sign In"}
+                {loading ? "loading..." : "Sign In"}
                 {!loading && <PiSignInBold className="text-[22px]" />}
               </button>
 
