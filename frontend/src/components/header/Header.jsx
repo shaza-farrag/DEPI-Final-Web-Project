@@ -1,3 +1,4 @@
+
 import { useState, useEffect, useRef, forwardRef } from "react";
 import { Search, X } from "lucide-react";
 import { FaShoppingCart, FaUser, FaChevronCircleDown } from "react-icons/fa";
@@ -5,7 +6,7 @@ import { Link } from "react-router-dom";
 import { useShoppingCart } from "../../context/ShoppingCartContext";
 import logo from "../../assets/logo.png";
 
-const SHOP_ITEMS = ["Hijabs", "Mugs", "Skincare", "Makeup"];
+const SHOP_ITEMS = ["Hijab", "Mug", "Skin Care", "Body Care", "Hair Care", "Scarf", "Accessories", "Handmade bags", "Antiques"];
 
 const Header = forwardRef(function Header(_, headerRef) {
   const { openCart, cartQuantity } = useShoppingCart();
@@ -43,7 +44,9 @@ const Header = forwardRef(function Header(_, headerRef) {
     return () => document.removeEventListener("mousedown", close);
   }, []);
 
+
   return (
+
     <>
       <header
         ref={headerRef}
@@ -64,6 +67,7 @@ const Header = forwardRef(function Header(_, headerRef) {
               <Search size={20} strokeWidth={1.5} />
             </button>
           </div>
+
 
           {/* CENTER — logo in normal flow, drives row height */}
           <Link to="/" className="flex justify-center select-none">
@@ -136,7 +140,7 @@ const Header = forwardRef(function Header(_, headerRef) {
                 {SHOP_ITEMS.map((s) => (
                   <Link
                     key={s}
-                    to={`/shop/${s.toLowerCase()}`}
+                    to={`/products?category=${s}`}
                     className="block px-4 py-2.5 text-xs tracking-widest text-gray-600 hover:underline hover:text-black transition-colors font-semibold"
                     onClick={() => setShopOpen(false)}
                   >

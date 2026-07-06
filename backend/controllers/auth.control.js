@@ -1,7 +1,10 @@
+const sendResetPasswordEmail = require("../services/resetPassword.service");
 const User = require("../models/user.model");
 const loggerEvent = require("../services/logger.service");
 const logger = loggerEvent("auth");
 const crypto = require("crypto");
+const bcrypt = require("bcrypt");
+const jwt = require("jsonwebtoken");
 const sendVerificationEmail = require("../services/mail.service");
 
 const userController = {
@@ -74,6 +77,168 @@ const userController = {
       });
     }
   },
+    login: async (req, res, role) => {
+    try {
+      const { email, password } = req.body;
+
+      const user = await User.findOne({ email });
+
+      if (!user) {
+        return res.status(401).json({
+          message: "Invalid email or password",
+        });
+      }
+
+      const isMatch = await bcrypt.compare(password, user.password);
+
+      if (!isMatch) {
+        return res.status(401).json({
+          message: "Invalid email or password",
+        });
+      }
+
+      if (!user.isVerified) {
+        return res.status(403).json({
+          message: "Please verify your email first",
+        });
+      }
+
+      if (user.role !== role) {
+        return res.status(403).json({
+          message: "Unauthorized",
+        });
+      }
+
+      const token = jwt.sign(
+        {
+          id: user._id,
+          role: user.role,
+        },
+        process.env.JWT_SECRET,
+        {
+          expiresIn: "1d",
+        }
+      );
+
+      return res.status(200).json({
+        message: "Login successful",
+        token,
+        user: {
+          id: user._id,
+          firstName: user.firstName,
+          lastName: user.lastName,
+          email: user.email,
+          role: user.role,
+        },
+      });
+    } catch (error) {
+      logger.error(error);
+
+      return res.status(500).json({
+        message: "Login failed",
+        error: error.message,
+      });
+    }
+  },
+    forgotPassword: async (req, res) => {
+      try {
+
+        const { email } = req.body;
+
+        const user = await User.findOne({ email });
+
+        if (!user) {
+          return res.status(404).json({
+            message: "User not found",
+          });
+        }
+
+        const resetToken = crypto.randomBytes(32).toString("hex");
+
+        user.resetPasswordToken = resetToken;
+
+        user.resetPasswordExpires = Date.now() + 60 * 60 * 1000;
+
+        await user.save();
+
+        await sendResetPasswordEmail(user.email, resetToken);
+
+        return res.status(200).json({
+          message: "Reset password email sent successfully",
+        });
+
+      } catch (error) {
+
+        logger.error(error);
+
+        return res.status(500).json({
+          message: "Failed to send reset password email",
+          error: error.message,
+        });
+
+      }
+    },
+    resetPassword: async (req, res) => {
+
+  try {
+
+    const { token } = req.params;
+
+    const { password, confirmPassword } = req.body;
+
+    if (password !== confirmPassword) {
+
+      return res.status(400).json({
+        message: "Passwords do not match",
+      });
+
+    }
+
+    const user = await User.findOne({
+
+      resetPasswordToken: token,
+
+      resetPasswordExpires: { $gt: Date.now() },
+
+    });
+
+    if (!user) {
+
+      return res.status(400).json({
+        message: "Invalid or expired token",
+      });
+
+    }
+
+    user.password = password;
+
+    user.resetPasswordToken = undefined;
+
+    user.resetPasswordExpires = undefined;
+
+    await user.save();
+
+    return res.status(200).json({
+
+      message: "Password reset successfully",
+
+    });
+
+  } catch (error) {
+
+    logger.error(error);
+
+    return res.status(500).json({
+
+      message: "Password reset failed",
+
+      error: error.message,
+
+    });
+
+  }
+
+},
 }
 
 module.exports = userController;

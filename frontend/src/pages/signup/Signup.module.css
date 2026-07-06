@@ -23,6 +23,12 @@
     border: 1px solid #eee;
 }
 
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .form h2 {
     margin: 0;
 }

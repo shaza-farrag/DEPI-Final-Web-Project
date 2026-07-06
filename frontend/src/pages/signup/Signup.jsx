@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './Signup.module.css'
 import { Link, useNavigate } from 'react-router-dom'
-import logo from '../login/logo.webp'
+import logoWhite from '../../assets/logoWhite.png'
 
 
 function Signup() {
@@ -17,8 +17,8 @@ function Signup() {
       <form className={styles.form} onSubmit={handleSubmit}>
         
         <h1>
-          <Link to="/">
-            <img src={logo} alt="logo" width="80" />
+          <Link to="/" className={styles.logo}>
+            <img src={logoWhite} alt="logo" width="80" />
           </Link>
         </h1>
 

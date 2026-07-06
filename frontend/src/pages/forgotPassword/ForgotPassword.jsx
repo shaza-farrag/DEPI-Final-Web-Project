@@ -17,7 +17,7 @@ function ForgotPassword() {
 
     if (email === "test@gmail.com") {
         setError("");
-        navigate("/verifyEmail"); 
+        navigate("/resetPassword"); 
     } else {
         setError("Email not found ");
     }
@@ -27,7 +27,7 @@ function ForgotPassword() {
         <div className={styles.container}>
             <div className={styles.card}>
             <h2>Forgot Password</h2>
-            <p>Enter your email to receive OTP</p>
+            <p>Enter your Email and Check Box</p>
 
             <form onSubmit={handleSubmit}>
                 <input
@@ -41,7 +41,7 @@ function ForgotPassword() {
             {error && <p className={styles.error}>{error}</p>}
 
             <button type="submit" className={styles.button}>
-                Send Code
+                Next
             </button>
             </form>
             </div>

@@ -3,64 +3,25 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #ffffff;
+    background: #fdf5f5;
 }
 
-.card {
-    width: 380px;
-    padding: 30px;
-    border-radius: 16px;
-    background: #fff;
+.box {
+    background: white;
+    padding: 40px;
+    text-align: center;
+    width: 400px;
+    border-radius: 10px;
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
-    text-align: center;
-    border: 1px solid #eee;
 }
 
-.card h2 {
-    margin-bottom: 20px;
-}
-
-.otpBox {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
+h2 {
+    color: rgb(215, 148, 148);
     margin-bottom: 15px;
+    font: 20px bold;
 }
 
-.input {
-    width: 45px;
-    height: 50px;
-    text-align: center;
-    font-size: 18px;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    outline: none;
-    transition: 0.3s;
-}
-
-.input:focus {
-    border-color: rgb(215, 148, 148);
-    box-shadow: 0 0 0 3px rgba(215, 148, 148, 0.25);
-}
-
-.error {
-    color: red;
-    margin-bottom: 10px;
-    font-size: 14px;
-}
-
-.button {
-    width: 100%;
-    padding: 12px;
-    border: none;
-    border-radius: 10px;
-    background: rgb(215, 148, 148);
-    color: white;
-    font-weight: bold;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.button:hover {
-    opacity: 0.9;
+p {
+    color: #04040479;
+    line-height: 1.6;
 }

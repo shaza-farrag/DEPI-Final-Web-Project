@@ -2,7 +2,7 @@ import React from 'react'
 import { useState } from "react"
 import styles from './Login.module.css'
 import { Link, useNavigate } from "react-router-dom"
-import logo from "./logo.webp"
+import logoWhite from "../../assets/logoWhite.png"
 
 
 function Login() {
@@ -19,16 +19,16 @@ function Login() {
       setError('')
       navigate('/')  
     } else {
-      setError("Wrong email or password ")
+      setError("wrong email or password ")
     }
   }
 
   return (
     <div className={styles.login}>
       <form className={styles.form} onSubmit={handleLogin} >
-        <h1>
+        <h1 className={styles.logo}>
           <Link to="/">
-            <img src={logo} alt="logo" width="80" />
+            <img src={logoWhite} alt="logo" width="80"  />
           </Link>
         </h1>
 
@@ -43,13 +43,13 @@ function Login() {
 
         {error && <p style={{ color: "red" }}>{error}</p>}
 
-        <label><input type='checkbox' />Remember me</label>
+        {/* <label><input type='checkbox' />Remember me</label> */}
         <Link to="/forgotPassword">Forgot Passward?</Link>
         
-        <button type="submit">Sign in</button>
+        <button type="submit" className={styles.subbtn}>Sign in</button>
 
           <p>Don't have an account ?</p>
-          <button onClick={() => navigate('/signup')}>
+          <button onClick={() => navigate('/signup')} className={styles.regbtn}>
             Register
           </button>
       </form>

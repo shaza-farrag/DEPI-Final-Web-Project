@@ -332,7 +332,7 @@ function AboutSherwit() {
         }}
       >
         {/* ── LEFT: image collage ── */}
-        <div className="relative flex-shrink-0 w-72 h-80">
+        <div className="relative shrink-0 w-72 h-80">
           {/* Pink brush-stroke background */}
           <div
             className="absolute"
