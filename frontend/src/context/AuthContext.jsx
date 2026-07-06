@@ -12,32 +12,27 @@ export function AuthProvider({ children }) {
     return localStorage.getItem("token");
   });
 
-  const [isLoggedIn, setIsLoggedIn] = useState(() => {
-    return !!localStorage.getItem("token");
-  });
 
   useEffect(() => {
     if (token) {
       localStorage.setItem("token", token);
       localStorage.setItem("user", JSON.stringify(user));
-      setIsLoggedIn(true);
     } else {
       localStorage.removeItem("token");
       localStorage.removeItem("user");
-      setIsLoggedIn(false);
     }
   }, [token, user]);
+
+  const isLoggedIn = !!token;
 
   const login = (userData, tokenData) => {
     setUser(userData);
     setToken(tokenData);
-    setIsLoggedIn(true);
   };
 
   const logout = () => {
     setUser(null);
     setToken(null);
-    setIsLoggedIn(false);
 
     localStorage.removeItem("token");
     localStorage.removeItem("user");
@@ -58,4 +53,4 @@ export function AuthProvider({ children }) {
   );
 }
 
-export const useAuth = () => useContext(AuthContext);
+export const UseAuth = () => useContext(AuthContext);

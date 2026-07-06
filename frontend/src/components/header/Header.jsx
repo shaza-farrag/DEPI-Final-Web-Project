@@ -2,7 +2,7 @@
 import { useState, useEffect, useRef, forwardRef } from "react";
 import { Search, X } from "lucide-react";
 import { FaShoppingCart, FaUser, FaChevronCircleDown } from "react-icons/fa";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useShoppingCart } from "../../context/ShoppingCartContext";
 import logo from "../../assets/logo.png";
 import { useAuth } from "../../context/AuthContext";
@@ -11,7 +11,7 @@ const SHOP_ITEMS = ["Hijab", "Mug", "Skin Care", "Body Care", "Hair Care", "Scar
 
 const Header = forwardRef(function Header(_, headerRef) {
   const { openCart, cartQuantity } = useShoppingCart();
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   const { isLoggedIn, logout } = useAuth();
 
 
@@ -80,7 +80,7 @@ const Header = forwardRef(function Header(_, headerRef) {
 
           {/* CENTER — logo in normal flow, drives row height */}
           <Link to="/" className="flex justify-center select-none">
-            <img src={logo} alt="Brand Logo" className="h-[120px] w-auto object-contain" />
+            <img src={logo} alt="Brand Logo" className="h-30 w-auto object-contain" />
           </Link>
 
           {/* RIGHT — cart + user */}
