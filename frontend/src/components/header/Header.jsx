@@ -5,14 +5,14 @@ import { FaShoppingCart, FaUser, FaChevronCircleDown } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { useShoppingCart } from "../../context/ShoppingCartContext";
 import logo from "../../assets/logo.png";
-import { useAuth } from "../../context/AuthContext";
+import { UseAuth } from "../../context/AuthContext";
 
 const SHOP_ITEMS = ["Hijab", "Mug", "Skin Care", "Body Care", "Hair Care", "Scarf", "Accessories", "Handmade bags", "Antiques"];
 
 const Header = forwardRef(function Header(_, headerRef) {
   const { openCart, cartQuantity } = useShoppingCart();
   // const navigate = useNavigate();
-  const { isLoggedIn, logout } = useAuth();
+  const { isLoggedIn, logout } = UseAuth();
 
 
   const handleLogout = () => {

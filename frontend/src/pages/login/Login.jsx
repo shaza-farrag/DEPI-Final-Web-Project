@@ -4,12 +4,12 @@ import styles from './Login.module.css'
 import { Link, useNavigate } from "react-router-dom"
 import logoWhite from "../../assets/logoWhite.png"
 import { LoginApi } from "../../services/auth.service";
-import { useAuth } from "../../context/AuthContext";
+import { UseAuth } from "../../context/AuthContext";
 
 
 function Login() {
   const navigate = useNavigate()
-  const { login } = useAuth();
+  const { login } = UseAuth();
 
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')

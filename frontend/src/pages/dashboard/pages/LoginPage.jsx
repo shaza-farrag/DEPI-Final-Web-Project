@@ -2,7 +2,7 @@ import DashboardImg from "../../../assets/DashboardImg.png";
 import { PiSignInBold } from "react-icons/pi";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { useAuth } from "./../context/AuthContext";
+import { UseAuth } from "./../context/AuthContext";
 import { AdminLoginApi } from "../../../services/auth.service";
 
 export default function LoginPage() {
@@ -11,7 +11,7 @@ export default function LoginPage() {
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
 
-  const { login } = useAuth();
+  const { login } = UseAuth();
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
