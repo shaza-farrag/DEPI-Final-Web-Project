@@ -30,6 +30,7 @@ import HomeBannerAdd from './pages/dashboard/pages/HomeBannerAdd';
 import Faq from './pages/faq/faq'
 import Blog from './pages/blog/blog'
 import Contact from './pages/contact/contact'
+import CheckResetEmail from './pages/forgotPassword/CheckResetEmail'
 
 
 function App() {
@@ -51,9 +52,13 @@ function App() {
  
         <Route path="signup" element={<Signup />} />
         <Route path="login" element={<Login />} />
+        
         <Route path="verifyEmail" element={<Verify />} />
+        <Route path="verifyEmail/:token" element={<Verify />} />
+
         <Route path="forgotPassword" element={<ForgotPassword />} />
-        <Route path="resetPassword" element={<ResetPassword />} />
+        <Route path="checkResetEmail" element={<CheckResetEmail />} />
+        <Route path="resetPassword/:token" element={<ResetPassword />} />
         <Route path="successfulEmail" element={<SuccessfulEmail />} />
 
         {/* ── Admin Auth + Dashboard (AuthProvider هنا بس) ── */}

@@ -3,25 +3,41 @@ import { useState } from "react"
 import styles from './Login.module.css'
 import { Link, useNavigate } from "react-router-dom"
 import logoWhite from "../../assets/logoWhite.png"
+import { LoginApi } from "../../services/auth.service";
+import { UseAuth } from "../../context/AuthContext";
 
 
 function Login() {
   const navigate = useNavigate()
+  const { login } = UseAuth();
 
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [error, setError] = useState('')
 
-  const handleLogin = (e) => {
-    e.preventDefault()  
-    
-      if (email === "test@gmail.com" && password === "123456") {
-      setError('')
-      navigate('/')  
-    } else {
-      setError("wrong email or password ")
-    }
+ const handleLogin = async (e) => {
+  e.preventDefault();
+
+  setError("");
+
+  try {
+    const response = await LoginApi({
+      email,
+      password,
+    });
+
+    login(
+      response.data.user,
+      response.data.token
+    );
+
+    navigate("/");
+  } catch (err) {
+    setError(
+      err.response?.data?.message || "Something went wrong"
+    );
   }
+};
 
   return (
     <div className={styles.login}>

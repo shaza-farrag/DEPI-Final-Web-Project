@@ -12,7 +12,7 @@ import { FaAngleDown } from "react-icons/fa6";
 import {Collapse} from 'react-collapse';
 import './DashboardSidebar.css';
 import { useState } from "react";
-import { useAuth } from "../context/AuthContext";
+import {UseAuth } from "../context/AuthContext";
 
 function DashboardSidebar() {
     const [subMenuIndex , setSubMenuIndex] = useState(null);
@@ -24,7 +24,7 @@ function DashboardSidebar() {
     }
     };
 
-    const { logout } = useAuth();
+    const { logout } = UseAuth();
     const navigate = useNavigate() ;
 
     const handlelogout = () =>{
@@ -36,7 +36,7 @@ function DashboardSidebar() {
         <div className="sidebar fixed top-0 left-0 bg-[#ffffff] w-[18%] h-full border-r border-[rgba(0,0,0,0.1)]
         py-2 px-4">
             <div className="w-full ">
-                <Link to="/"><img src={logo} className="w-[120px] mx-auto py-2  " ></img>
+                <Link to="/"><img src={logo} className="w-30 mx-auto py-2  " ></img>
             
                 </Link>
             </div>
@@ -66,14 +66,14 @@ function DashboardSidebar() {
                     <ul className="w-full! ">
                         <li className="w-full ">
                             <Link to="/dashboard/homeslider/list">
-                            <Button className=" list text-[#7a7171]! capitalize! flex justify-start! w-full! text-[14px]! font-[600]!
+                            <Button className=" list text-[#7a7171]! capitalize! flex justify-start! w-full! text-[14px]! font-semibold!
                             pl-9! gap-3 hover:bg-[#F8ECEC]!"><span className="block w-2.5 h-2.5 rounded-full bg-[rgba(0,0,0,0.1)] border border-[rgba(0,0,0,1)] "></span>
                             Home banners list</Button>
                             </Link>
                         </li>
                         <li className="w-full!">
                             <Link to="/dashboard/homeslider/add">
-                            <Button className=" list text-[#7a7171]! capitalize! flex justify-start! w-full! text-[14px]! font-[600]! 
+                            <Button className=" list text-[#7a7171]! capitalize! flex justify-start! w-full! text-[14px]! font-semibold!
                              pl-9! gap-3 hover:bg-[#F8ECEC]!"><span className="block w-2.5 h-2.5 rounded-full bg-[rgba(0,0,0,0.1)] border border-[rgba(0,0,0,1)] "></span>
                                 Add Home banner slide</Button>
                                 </Link>
@@ -104,14 +104,14 @@ function DashboardSidebar() {
                     <ul className="w-full! ">
                         <li className="w-full ">
                             <Link to="/dashboard/products/list">
-                            <Button className=" list text-[#7a7171]! capitalize! flex justify-start! w-full! text-[14px]! font-[600]!
+                            <Button className=" list text-[#7a7171]! capitalize! flex justify-start! w-full! text-[14px]! font-semibold!
                             pl-9! gap-3 hover:bg-[#F8ECEC]!"><span className="block w-2.5 h-2.5 rounded-full bg-[rgba(0,0,0,0.1)] border border-[rgba(0,0,0,1)] "></span>
                              list</Button>
                             </Link>
                         </li>
                         <li className="w-full!">
                             <Link to="/dashboard/products/upload">
-                            <Button className=" list text-[#7a7171]! capitalize! flex justify-start! w-full! text-[14px]! font-[600]! 
+                            <Button className=" list text-[#7a7171]! capitalize! flex justify-start! w-full! text-[14px]! font-semibold!
                              pl-9! gap-3 hover:bg-[#F8ECEC]!"><span className="block w-2.5 h-2.5 rounded-full bg-[rgba(0,0,0,0.1)] border border-[rgba(0,0,0,1)] "></span>
                                 Upload</Button>
                                 </Link>
@@ -140,28 +140,28 @@ function DashboardSidebar() {
                     <ul className="w-full! ">
                         <li className="w-full ">
                             <Link to="/dashboard/category/list">
-                            <Button className=" list text-[#7a7171]! capitalize! flex justify-start! w-full! text-[14px]! font-[600]!
+                            <Button className=" list text-[#7a7171]! capitalize! flex justify-start! w-full! text-[14px]! font-semibold!
                             pl-9! gap-3 hover:bg-[#F8ECEC]!"><span className="block w-2.5 h-2.5 rounded-full bg-[rgba(0,0,0,0.1)] border border-[rgba(0,0,0,1)]  "></span>
                             Category list</Button>
                             </Link>
                         </li>
                         <li className="w-full!">
                             <Link to="/dashboard/category/add">
-                            <Button className=" list text-[#7a7171]! capitalize! flex justify-start! w-full! text-[14px]! font-[600]! 
+                            <Button className=" list text-[#7a7171]! capitalize! flex justify-start! w-full! text-[14px]! font-semibold!
                              pl-9! gap-3 hover:bg-[#F8ECEC]!"><span className="block w-2.5 h-2.5 rounded-full bg-[rgba(0,0,0,0.1)] border border-[rgba(0,0,0,1)]  "></span>
                                 Add a Category</Button>
                                 </Link>
                         </li> 
                         <li className="w-full!">
                             <Link to="/dashboard/catrgory/sub">
-                            <Button className=" list text-[#7a7171]! capitalize! flex justify-start! w-full! text-[14px]! font-[600]! 
+                            <Button className=" list text-[#7a7171]! capitalize! flex justify-start! w-full! text-[14px]! font-semibold!
                              pl-9! gap-3 hover:bg-[#F8ECEC]!"><span className="block w-2.5 h-2.5 rounded-full bg-[rgba(0,0,0,0.1)] border border-[rgba(0,0,0,1)]  "></span>
                                 Sub Category List</Button>
                                 </Link>
                         </li> 
                         <li className="w-full!">
                             <Link to="/dashboard/catrgorysub/add">
-                            <Button className=" list text-[#7a7171]! capitalize! flex justify-start! w-full! text-[14px]! font-[600]! 
+                            <Button className=" list text-[#7a7171]! capitalize! flex justify-start! w-full! text-[14px]! font-semibold!
                              pl-9! gap-3 hover:bg-[#F8ECEC]!"><span className="block w-2.5 h-2.5 rounded-full bg-[rgba(0,0,0,0.1)] border border-[rgba(0,0,0,1)]  "></span>
                                 Add a Sub Category List</Button>
                                 </Link>

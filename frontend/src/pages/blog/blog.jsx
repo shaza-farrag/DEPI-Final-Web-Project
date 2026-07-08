@@ -103,7 +103,7 @@ export default function Blog() {
           <div className="lg:col-span-7 flex justify-center items-center relative">
             
             {/* Top-Left Sparkles */}
-            <div className="absolute left-[-20px] top-[-30px] md:left-[20px] md:top-[-40px] text-black z-20 flex items-start gap-1">
+            <div className="absolute -left-5 -top-7.5 md:left-5 md:-top-10 text-black z-20 flex items-start gap-1">
               <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M12 0c.2 4.4 3.6 7.8 8 8-4.4.2-7.8 3.6-8 8-.2-4.4-3.6-7.8-8-8 4.4-.2 7.8-3.6 8-8z" />
               </svg>
@@ -118,9 +118,9 @@ export default function Blog() {
             </div>
 
             {/* Image Cluster Container */}
-            <div className="relative w-full max-w-[420px] aspect-[4/3] mr-4 md:mr-12">
+            <div className="relative w-full max-w-105 aspect-4/3 mr-4 md:mr-12">
               {/* Main iMac Desk Setup Image */}
-              <div className="w-[85%] h-full ml-auto border-[8px] border-[#d4a0a0] bg-white shadow-[12px_12px_0px_0px_rgba(17,17,17,1)] overflow-hidden">
+              <div className="w-[85%] h-full ml-auto border-8 border-[#d4a0a0] bg-white shadow-[12px_12px_0px_0px_rgba(17,17,17,1)] overflow-hidden">
                 <img 
                   src="https://images.unsplash.com/photo-1518640467707-6811f4a6ab73?w=800&q=80" 
                   alt="Rose computer setup" 
@@ -129,7 +129,7 @@ export default function Blog() {
               </div>
 
               {/* Overlapping Inset Flatlay Image */}
-              <div className="absolute left-[-10px] bottom-[-20px] md:left-[-30px] w-[50%] aspect-square border-[8px] border-white shadow-[0_10px_25px_-5px_rgba(0,0,0,0.15)] overflow-hidden z-10">
+              <div className="absolute -left-2.5 -bottom-5 md:-left-7.5 w-[50%] aspect-square border-8 border-white shadow-[0_10px_25px_-5px_rgba(0,0,0,0.15)] overflow-hidden z-10">
                 <img 
                   src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=800&q=80" 
                   alt="Flatlay accessories" 
@@ -155,7 +155,7 @@ export default function Blog() {
                 </h1>
                 
                 {/* Bottom-Right Sparkles */}
-                <div className="absolute right-[-45px] bottom-0 text-black flex items-start gap-1">
+                <div className="absolute right-11.25 bottom-0 text-black flex items-start gap-1">
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
                     <path d="M12 0c.2 4.4 3.6 7.8 8 8-4.4.2-7.8 3.6-8 8-.2-4.4-3.6-7.8-8-8 4.4-.2 7.8-3.6 8-8z" />
                   </svg>
@@ -169,7 +169,7 @@ export default function Blog() {
             </div>
 
             {/* Vertical Elegant Cursive Text on the Far Right */}
-            <div className="hidden sm:block absolute right-[-40px] md:right-[-60px] top-1/2 -translate-y-1/2 rotate-90 origin-center translate-x-12">
+            <div className="hidden sm:block absolute -right-10 md:-right-15 top-1/2 -translate-y-1/2 rotate-90 origin-center translate-x-12">
               <span 
                 className="text-[#d4a0a0]/60 text-4xl md:text-5xl tracking-wide whitespace-nowrap select-none"
                 style={{ fontFamily: "'Great Vibes', cursive" }}
@@ -236,7 +236,7 @@ export default function Blog() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-20">
           {BLOG_POSTS.map((post) => (
             <article key={post.id} className="flex flex-col items-center bg-white shadow-sm border border-gray-100">
-              <div className="w-full overflow-hidden aspect-[4/3] bg-gray-50 group cursor-pointer">
+              <div className="w-full overflow-hidden aspect-4/3bg-gray-50 group cursor-pointer">
                 <img
                   src={post.img}
                   alt={post.imgAlt}
@@ -245,7 +245,7 @@ export default function Blog() {
                 />
               </div>
 
-              <div className="w-full bg-[#fce8e8] p-6 md:p-8 flex flex-col items-center flex-grow">
+              <div className="w-full bg-[#fce8e8] p-6 md:p-8 flex flex-col items-center grow">
                 <h3 className="text-[#d4a0a0] font-black tracking-[0.18em] text-center text-base md:text-lg mb-1 uppercase hover:text-black transition-colors duration-300 cursor-pointer">
                   {post.title}
                 </h3>

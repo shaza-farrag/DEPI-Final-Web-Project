@@ -246,9 +246,7 @@ export default function CheckoutPage() {
         </div>
       </div>
     </div>
-    <hr className={styles.final}/>
     </div>
-    
     </>
   );
 }
