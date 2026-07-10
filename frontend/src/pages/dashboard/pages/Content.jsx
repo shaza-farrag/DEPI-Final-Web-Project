@@ -13,11 +13,11 @@ function Content (){
         <>
         <DashboardBoxes />
 
-        <div className="flex gap-8 mb-8">
-        <AreaChartSales/>
+        <div className="lg:flex lg:flex-row gap-8 mb-8 sm:flex-col ">
+        <AreaChartSales />
         <PieChartOrders/>
         </div>
-        <div className="flex gap-8 ">
+        <div className="lg:flex lg:flex-row gap-8 sm:flex-col">
         <RevenueCategory/>
         <TopProducts/>
         </div>

@@ -19,12 +19,14 @@ function DashboardBoxes (){
     return(
         <>
         
-        <div className=" h-[300px] flex items-start gap-22!  p-9 mb-7  border border-[rgba(0,0,0,0.1)] shadow-md
-         rounded-md bg-white" >
-            <div className="leading-50 ">
-            <div className="flex" >
-                <span className="text-4xl font-bold! leading-20">Track. Analyze. Grow.</span>
-                <FaArrowTrendUp className="items-start text-5xl mx-5 my-auto text-[#D797C6]" />
+        <div className=" lg:h-[300px] md:h-[280px]  md:flex items-start gap-22!  p-9 mb-7  border border-[rgba(0,0,0,0.1)] shadow-md
+         rounded-md bg-white
+         
+         " >
+            <div className="leading-20 sm:leading-20 xl:leading-50 md:leading-40  text-center sm:text-center md:text-left  ">
+            <div className="flex flex-col sm:flex-col md:flex-row items-center sm:items-center md:items-start gap-2 sm:gap-2" >
+                <span className="text-xl sm:text-2xl  lg:text-4xl font-bold! xl:leading-20 md:text-3xl md:leading-15">Track. Analyze. Grow.</span>
+                <FaArrowTrendUp className="text-4xl xl:text-5xl  my-auto text-[#D797C6] md:text-4xl" />
 
                 </div>
                 <p>Monitor your store's performance and make smarter decisions , everyday </p>
@@ -34,32 +36,48 @@ function DashboardBoxes (){
                  + Add Product</button>
                  </Link>
             </div>
-            <img src={DashboardImg} className="  w-[40%] p-0 items-start "></img>
+            <img src={DashboardImg} className=" hidden md:block md:w-[30%] lg:w-[40%] p-0 items-start  "></img>
         </div>
-    <Swiper
-            slidesPerView={4}
-            spaceBetween={10}
-            navigation={true}
-            modules={[Navigation]}
-            className="dashboardBoxesSlide mb-10 "
-        >
+<Swiper
+className=" mb-10 "
+  slidesPerView={4}
+  spaceBetween={10}
+  navigation
+  modules={[Navigation]}
+breakpoints={{
+  0: {
+    slidesPerView: 1,
+  },
+    400: {
+    slidesPerView: 2,
+  },
+  700: {
+    slidesPerView: 3,
+  },
+  900: {
+    slidesPerView: 4,
+  },
+}}
+>
         <SwiperSlide>
         <div
             className="bg-white rounded-2xl border border-gray-100
-                    p-4 h-[160px] shadow-sm hover:shadow-lg hover:-translate-y-1
-                    transition-all duration-300 flex flex-col justify-between"
+                    p-4  h-[160px] shadow-sm hover:shadow-lg hover:-translate-y-1
+                    transition-all duration-300 flex flex-col justify-between
+                    
+                    "
         >
             <div className="flex items-center gap-3">
-            <div className="w-11 h-11 rounded-xl bg-green-100 flex items-center justify-center">
-                <RiMoneyPoundCircleFill className="text-2xl text-green-600" />
+            <div className="w-11 h-11  rounded-xl bg-green-100 flex items-center justify-center">
+                <RiMoneyPoundCircleFill className="text-2xl  text-green-600" />
             </div>
 
-            <span className="text-sm font-medium text-gray-500">
+            <span className="text-sm  font-medium text-gray-500">
                 Total Revenue
             </span>
             </div>
 
-            <h3 className="text-3xl font-bold text-center text-gray-800">
+            <h3 className="text-3xl  font-bold text-center text-gray-800">
             EGP 325,000
             </h3>
 
@@ -92,7 +110,7 @@ function DashboardBoxes (){
             </span>
             </div>
 
-            <h3 className="text-3xl font-bold text-center text-gray-800">
+            <h3 className="text-3xl   font-bold text-center text-gray-800">
             1,254
             </h3>
 

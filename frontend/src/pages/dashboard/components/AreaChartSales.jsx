@@ -37,7 +37,7 @@ const CustomTooltip = ({ active, payload, label }) => {
 };
 
 const AreaChartSales = () => (
-  <div className="bg-white rounded-2xl border border-[rgba(0,0,0,0.07)] shadow-sm p-5 w-[60%]">
+  <div className="bg-white rounded-2xl border lg:mb-0 lg:w-[60%] mb-6 md:mx-auto border-[rgba(0,0,0,0.07)] shadow-sm p-5 w-full">
 
     {/* Header */}
     <div className="flex items-center justify-between mb-4">

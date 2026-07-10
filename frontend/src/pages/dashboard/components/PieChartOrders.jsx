@@ -11,7 +11,8 @@ const totalOrders = data.reduce((sum, item) => sum + item.value, 0);
 export default function PieChartOrders() {
   return (
     <>
-    <div className="flex bg-white border-2 border-gray-200 rounded-2xl w-[40%] p-4 ">
+    <div className="flex bg-white border-2 border-gray-200 rounded-2xl lg:w-[40%] p-4 
+       lg:mb-0 mb-6 mx-auto lg:mx-0  shadow-sm  sm:w-[80%] w-[100%] ">
         
     <div className="relative w-full h-[300px] ">
         <h3 className="text-[18px] font-semibold text-[#383338]  w-fit">Orders status</h3>
@@ -24,6 +25,7 @@ export default function PieChartOrders() {
             outerRadius={100}
             paddingAngle={2}
             stroke="none"
+            className="w-[50%] sm:w-full"
           >
             {data.map((entry, index) => (
               <Cell key={index} fill={entry.color} />
