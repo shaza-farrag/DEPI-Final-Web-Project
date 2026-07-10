@@ -4,7 +4,7 @@ import { Search, X } from "lucide-react";
 import { FaShoppingCart, FaUser, FaChevronCircleDown } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { useShoppingCart } from "../../context/ShoppingCartContext";
-import logo from "../../assets/logo.png";
+import logoWhite from "../../assets/logoWhite.png";
 import { UseAuth } from "../../context/AuthContext";
 
 const SHOP_ITEMS = ["Hijab", "Mug", "Skin Care", "Body Care", "Hair Care", "Scarf", "Accessories", "Handmade bags", "Antiques"];
@@ -80,7 +80,7 @@ const Header = forwardRef(function Header(_, headerRef) {
 
           {/* CENTER — logo in normal flow, drives row height */}
           <Link to="/" className="flex justify-center select-none">
-            <img src={logo} alt="Brand Logo" className="h-30 w-auto object-contain" />
+            <img src={logoWhite} alt="Brand Logo" className="h-30 w-auto object-contain" />
           </Link>
 
           {/* RIGHT — cart + user */}
