@@ -5,7 +5,7 @@ const topProducts = mockProducts.slice(0, 5);
 
 export default function TopProducts() {
   return (
-    <div className="bg-white rounded-2xl p-6 shadow w-[50%]">
+    <div className="bg-white rounded-2xl p-6 shadow lg:w-[50%] w-full">
 
         <h3 className="text-lg font-semibold text-[#383338]">
           Top Selling Products
