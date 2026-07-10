@@ -32,72 +32,99 @@ function useScrollReveal() {
 const SLIDES = [
   {
     id: 1,
-    headline: "Hijabs",
-    percent: "25%",
-    sub: "THE ENTIRE SITE",
-    shopHref: "/shop/hijabs",
-    img: "/hijab-slider.png",
-    imgAlt: "Aesthetic Hijab Collection",
+    headline: "Classic Cotton Hijab",
+    price: "$50.00",
+    category: "Hijab",
+    tagline: "Premium quality lightweight wrap by Liya Veil",
+    shopHref: "/products?category=Hijab",
+    img: "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773504871/SnapInsta.to_475759727_1181081436717255_3644679665418076851_n_q5ripn.jpg",
+    imgAlt: "Classic Cotton Hijab",
   },
   {
     id: 2,
-    headline: "Mugs",
-    percent: "Fresh",
-    sub: "ARRIVALS THIS WEEK",
-    shopHref: "/shop/mugs",
-    img: "https://images.unsplash.com/photo-1576092768241-dec231879fc3?w=800&q=80",
-    imgAlt: "Cozy Aesthetic Mugs",
+    headline: "Hen Mug",
+    price: "$117.90",
+    category: "Mug",
+    tagline: "Artisanal, cozy earthenware by farmhouse pottery",
+    shopHref: "/products?category=Mug",
+    img: "https://www.farmhousepottery.com/cdn/shop/files/MUG_98_1500x.jpg?v=1772370357",
+    imgAlt: "Hen Mug by Farmhouse Pottery",
   },
   {
     id: 3,
-    headline: "Skin Care",
-    percent: "Vibes",
-    sub: "SHOP THE COLLECTION",
-    shopHref: "/shop/skincare",
-    img: "https://images.unsplash.com/photo-1608248597279-f99d160bfcbc?w=800&q=80",
-    imgAlt: "Natural Skincare Products",
+    headline: "Hydrating Cleanser",
+    price: "$15.99",
+    category: "Skin Care",
+    tagline: "Gentle, moisture-restoring daily cleanser by CeraVe",
+    shopHref: "/products?category=Skin Care",
+    img: "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773064202/Synthetic_Hydrating_Cleanser_Test-01_a3am2s.jpg",
+    imgAlt: "Hydrating Cleanser by CeraVe",
   },
   {
     id: 4,
-    headline: "Makeup",
-    percent: "Vibes",
-    sub: "SHOP THE COLLECTION",
-    shopHref: "/shop/makeup",
-    img: "https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=800&q=80",
-    imgAlt: "Minimalist Makeup Collection",
+    headline: "Soft Bloom Bag",
+    price: "$300.00",
+    category: "Handmade bags",
+    tagline: "Elegantly hand-woven floral handbag by Lurelle",
+    shopHref: "/products?category=Handmade bags",
+    img: "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773460235/cf43210e4f9730e5b01598d09bc7d48f_aoxwjq.webp",
+    imgAlt: "Soft Bloom Bag by Lurelle",
+  },
+  {
+    id: 5,
+    headline: "Green Shawl",
+    price: "$500.00",
+    category: "Scarf",
+    tagline: "Chic and comfortable wrap scarf by Scarvella",
+    shopHref: "/products?category=Scarf",
+    img: "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1774389152/Green_Scarf_h6xsi2.jpg",
+    imgAlt: "Green Shawl by Scarvella",
+  },
+  {
+    id: 6,
+    headline: "Blue Indigo Scrub",
+    price: "$170.00",
+    category: "Body Care",
+    tagline: "Exfoliating and refreshing organic scrub by Hey Sugar",
+    shopHref: "/products?category=Body Care",
+    img: "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773442725/1-blue-indiago-scrub_hfvncu.png",
+    imgAlt: "Blue Indigo Scrub by Hey Sugar",
   },
 ];
 
 const PRODUCTS = [
   {
     id: 1,
-    name: "FLOWER SCRAPBOOK JOURNAL",
-    price: 32.0,
-    originalPrice: 39.0,
+    name: "Synthetic Hydrating Cleanser (Test-01)",
+    price: 15.99,
+    originalPrice: 19.99,
     isSale: true,
-    href: "",
-    img: "",
-    imgAlt: "Flower Scrapbook Journal",
+    href: "/products/Synthetic_Hydrating_Cleanser_Test-01_a3am2s",
+    img: "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773064202/Synthetic_Hydrating_Cleanser_Test-01_a3am2s.jpg",
+    imgAlt: "Synthetic Hydrating Cleanser",
+    vendor: "CeraVe",
   },
   {
     id: 2,
-    name: "PINK & GOLD JOURNAL",
-    price: 24.0,
+    name: "Classic Cotton Hijab",
+    price: 50.0,
     originalPrice: null,
     isSale: false,
-    href: "",
-    img: "",
-    imgAlt: "Pink & Gold Journal",
+    href: "/products/SnapInsta.to_475759727_1181081436717255_3644679665418076851_n_q5ripn",
+    img: "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773504871/SnapInsta.to_475759727_1181081436717255_3644679665418076851_n_q5ripn.jpg",
+    imgAlt: "Classic Cotton Hijab",
+    vendor: "Liya Veil",
   },
   {
     id: 3,
-    name: "HELLO THERE MUG",
-    price: 19.0,
-    originalPrice: null,
-    isSale: false,
-    href: "",
-    img: "",
-    imgAlt: "Hello There Mug",
+    name: "Hen Mug",
+    price: 117.9,
+    originalPrice: 130.0,
+    isSale: true,
+    href: "/products/Hen-Mug_vlgbbr",
+    img: "https://www.farmhousepottery.com/cdn/shop/files/MUG_98_1500x.jpg?v=1772370357",
+    imgAlt: "Hen Mug by Farmhouse Pottery",
+    vendor: "Farmhouse Pottery",
   },
 ];
 
@@ -193,22 +220,22 @@ function HeroSlider() {
                   <span className="text-2xl leading-none select-none">✦</span>
                 </div>
                 <h1
-                  className="text-7xl md:text-8xl leading-none text-black mb-1"
+                  className="text-6xl md:text-7xl leading-none text-black mb-2"
                   style={{ fontFamily: "Georgia, 'Times New Roman', serif", fontStyle: "italic", fontWeight: 900 }}
                 >
                   {slide.headline}
                 </h1>
-                <div className="flex items-end gap-3 mt-1 mb-4">
-                  <span className="text-5xl md:text-6xl font-black leading-none" style={{ color: "#c9a0a0", fontFamily: "'Arial Black', sans-serif" }}>
-                    {slide.percent}
+                <div className="flex items-center gap-3 mt-2 mb-4">
+                  <span className="text-4xl md:text-5xl font-black leading-none" style={{ color: "#c9a0a0", fontFamily: "'Arial Black', sans-serif" }}>
+                    {slide.price}
                   </span>
-                  <span className="text-3xl md:text-4xl font-black leading-none" style={{ color: "#d4b0b0", fontFamily: "'Arial Black', sans-serif" }}>
-                    OFF
+                  <span className="text-xs font-bold tracking-widest text-[#d4a0a0] uppercase border border-[#d4a0a0] px-2 py-0.5 rounded">
+                    {slide.category}
                   </span>
-                  <span className="text-xl leading-none select-none mb-1">✦</span>
+                  <span className="text-xl leading-none select-none">✦</span>
                 </div>
-                <p className="text-lg md:text-xl font-black tracking-[0.2em] text-gray-800 mb-2" style={{ letterSpacing: "0.22em" }}>
-                  {slide.sub}
+                <p className="text-base md:text-lg font-medium text-gray-700 mb-4 max-w-md italic">
+                  {slide.tagline}
                 </p>
               </div>
 
@@ -290,8 +317,7 @@ function ShopPicks() {
           SHOP OUR PICKS!
         </h2>
         <p className="text-sm text-gray-600 max-w-lg mx-auto leading-relaxed">
-          Share information about your brand with your customers. Describe a
-          product, make announcements, or welcome customers to your store
+          Explore our handpicked curation of bestsellers, crafted with premium fabrics and natural ingredients to elevate your daily aesthetic.
         </p>
       </div>
 
@@ -306,6 +332,7 @@ function ShopPicks() {
             price={p.price}
             originalPrice={p.originalPrice}
             href={p.href}
+            vendor={p.vendor}
           />
         ))}
       </div>
