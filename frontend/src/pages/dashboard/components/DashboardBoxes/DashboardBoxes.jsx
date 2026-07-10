@@ -11,18 +11,22 @@ import DashboardImg from "../../../../assets/DashboardImg.png";
 import { FaArrowTrendUp } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 
+import { RiMoneyPoundCircleFill } from "react-icons/ri";
+
 
 
 function DashboardBoxes (){
     return(
         <>
         
-        <div className=" h-[300px] flex items-start gap-22!  p-9 mb-7  border border-[rgba(0,0,0,0.1)] shadow-md
-         rounded-md bg-white" >
-            <div className="leading-50 ">
-            <div className="flex" >
-                <span className="text-4xl font-bold! leading-20">Track. Analyze. Grow.</span>
-                <FaArrowTrendUp className="items-start text-5xl mx-5 my-auto text-[#D797C6]" />
+        <div className=" lg:h-[300px] md:h-[280px]  md:flex items-start gap-22!  p-9 mb-7  border border-[rgba(0,0,0,0.1)] shadow-md
+         rounded-md bg-white
+         
+         " >
+            <div className="leading-20 sm:leading-20 xl:leading-50 md:leading-40  text-center sm:text-center md:text-left  ">
+            <div className="flex flex-col sm:flex-col md:flex-row items-center sm:items-center md:items-start gap-2 sm:gap-2" >
+                <span className="text-xl sm:text-2xl  lg:text-4xl font-bold! xl:leading-20 md:text-3xl md:leading-15">Track. Analyze. Grow.</span>
+                <FaArrowTrendUp className="text-4xl xl:text-5xl  my-auto text-[#D797C6] md:text-4xl" />
 
                 </div>
                 <p>Monitor your store's performance and make smarter decisions , everyday </p>
@@ -32,99 +36,190 @@ function DashboardBoxes (){
                  + Add Product</button>
                  </Link>
             </div>
-            <img src={DashboardImg} className="  w-[40%] p-0 items-start "></img>
+            <img src={DashboardImg} className=" hidden md:block md:w-[30%] lg:w-[40%] p-0 items-start  "></img>
         </div>
-
-         <Swiper
-        slidesPerView={4}
-        spaceBetween={10}
-        navigation={true}
-        modules={[Navigation]}
-        className="dashboardBoxesSlide "
-      >
+<Swiper
+className=" mb-10 "
+  slidesPerView={4}
+  spaceBetween={10}
+  navigation
+  modules={[Navigation]}
+breakpoints={{
+  0: {
+    slidesPerView: 1,
+  },
+    400: {
+    slidesPerView: 2,
+  },
+  700: {
+    slidesPerView: 3,
+  },
+  900: {
+    slidesPerView: 4,
+  },
+}}
+>
         <SwiperSlide>
-            <div className="box p-3 rounded-md border border-[rgba(0,0,0,0.2)] flex  items-center
-            gap-3 bg-white cursor-pointer  ">
-                <AiTwotoneGift className="text-5xl text-[#C95E91]" />
-                <div className="list info w-[70%] font-medium! text-[#7a7171]! ">
-                    <span className="block text-[18px]">New Orders</span>
-                    <h3 className="text-[#383338] text-[22px]! font-extrabold!">1,390</h3>
-                </div>
-                <div className="flex gap-1.5 items-end ">
-                    <div className="w-[5px] h-[40px] bg-[#C95E91] rounded-xl "></div>
-                    <div className="w-[5px] h-[30px] bg-[#C95E91] rounded-xl "></div>
-                    <div className="w-[5px] h-[20px] bg-[#C95E91] rounded-xl "></div>
-                    <div className="w-[5px] h-[30px] bg-[#C95E91] rounded-xl "></div>
-                    <div className="w-[5px] h-[20px] bg-[#C95E91] rounded-xl "></div>
-                    <div className="w-[5px] h-[30px] bg-[#C95E91] rounded-xl "></div>
-                    <div className="w-[5px] h-[40px] bg-[#C95E91] rounded-xl "></div>
-                </div>
+        <div
+            className="bg-white rounded-2xl border border-gray-100
+                    p-4  h-[160px] shadow-sm hover:shadow-lg hover:-translate-y-1
+                    transition-all duration-300 flex flex-col justify-between
+                    
+                    "
+        >
+            <div className="flex items-center gap-3">
+            <div className="w-11 h-11  rounded-xl bg-green-100 flex items-center justify-center">
+                <RiMoneyPoundCircleFill className="text-2xl  text-green-600" />
             </div>
 
-        </SwiperSlide>
-        <SwiperSlide>
-            <div className="box p-3 rounded-md border border-[rgba(0,0,0,0.2)] flex  items-center
-            gap-3 bg-white cursor-pointer  ">
-                <PiChartPieSliceDuotone  className="text-5xl text-[#10B981]" />
-                <div className="list info w-[70%] font-medium! text-[#7a7171]! ">
-                    <span className="block text-[18px]">Sales</span>
-                    <h3 className="text-[#383338] text-[20px]! font-extrabold!">$57,890</h3>
-                </div>
-                <div className="flex gap-1.5 items-end ">
-                    <div className="w-[5px] h-[20px] bg-[#10B981] rounded-xl "></div>
-                    <div className="w-[5px] h-[40px] bg-[#10B981] rounded-xl "></div>
-                    <div className="w-[5px] h-[30px] bg-[#10B981] rounded-xl "></div>
-                    <div className="w-[5px] h-[40px] bg-[#10B981] rounded-xl "></div>
-                    <div className="w-[5px] h-[20px] bg-[#10B981] rounded-xl "></div>
-                    <div className="w-[5px] h-[40px] bg-[#10B981] rounded-xl "></div>
-                </div>
+            <span className="text-sm  font-medium text-gray-500">
+                Total Revenue
+            </span>
             </div>
 
+            <h3 className="text-3xl  font-bold text-center text-gray-800">
+            EGP 325,000
+            </h3>
+
+            <div className="flex items-center gap-2">
+            <span className="px-2 py-1 rounded-full bg-green-100 text-green-600 text-xs font-semibold">
+                ↑ 15%
+            </span>
+
+            <span className="text-xs text-gray-400">
+                vs last month
+            </span>
+            </div>
+        </div>
         </SwiperSlide>
+
+        {/* Total Orders */}
         <SwiperSlide>
-            <div className="box p-3 rounded-md border border-[rgba(0,0,0,0.2)] flex  items-center
-            gap-3 bg-white cursor-pointer  ">
-                <PiBankLight  className="text-6xl text-[#7928CA]" />
-                <div className="list info w-[70%] font-medium! text-[#7a7171]! ">
-                    <span className="block text-[18px]">Revenue</span>
-                    <h3 className="text-[#383338] text-[20px]! font-extrabold!">$12,390</h3>
-                </div>
-                <div className="flex gap-1.5 items-end ">
-                    <div className="w-[5px] h-[20px] bg-[#7928CA] rounded-xl "></div>
-                    <div className="w-[5px] h-[30px] bg-[#7928CA] rounded-xl "></div>
-                    <div className="w-[5px] h-[40px] bg-[#7928CA] rounded-xl "></div>
-                    <div className="w-[5px] h-[30px] bg-[#7928CA] rounded-xl "></div>
-                    <div className="w-[5px] h-[20px] bg-[#7928CA] rounded-xl "></div>
-                    <div className="w-[5px] h-[25px] bg-[#7928CA] rounded-xl "></div>
-                    <div className="w-[5px] h-[40px] bg-[#7928CA] rounded-xl "></div>
-                </div>
+        <div
+            className="bg-white rounded-2xl border border-gray-100
+                    p-4 h-[160px] shadow-sm hover:shadow-lg hover:-translate-y-1
+                    transition-all duration-300 flex flex-col justify-between"
+        >
+            <div className="flex items-center gap-3">
+            <div className="w-11 h-11 rounded-xl bg-indigo-100 flex items-center justify-center">
+                <PiChartPieSliceDuotone className="text-2xl text-indigo-600" />
             </div>
 
-        </SwiperSlide>
-        <SwiperSlide>
-            <div className="box p-3 rounded-md border border-[rgba(0,0,0,0.2)] flex  items-center
-            gap-3 bg-white cursor-pointer  ">
-                <TbBrandProducthunt   className="text-6xl text-[#3872FA]" />
-                <div className="list info w-[70%] font-medium! text-[#7a7171]! ">
-                    <span className="block text-[18px]">Total Profit</span>
-                    <h3 className="text-[#383338] text-[20px]! font-extrabold!">$30,990</h3>
-                </div>
-                <div className="flex gap-1.5 items-end ">
-                    <div className="w-[5px] h-[20px] bg-[#3872FA] rounded-xl "></div>
-                    <div className="w-[5px] h-[30px] bg-[#3872FA] rounded-xl "></div>
-                    <div className="w-[5px] h-[40px] bg-[#3872FA] rounded-xl "></div>
-                    <div className="w-[5px] h-[30px] bg-[#3872FA] rounded-xl "></div>
-                    <div className="w-[5px] h-[20px] bg-[#3872FA] rounded-xl "></div>
-                    <div className="w-[5px] h-[25px] bg-[#3872FA] rounded-xl "></div>
-                    <div className="w-[5px] h-[40px] bg-[#3872FA] rounded-xl "></div>
-                </div>
+            <span className="text-sm font-medium text-gray-500">
+                Total Orders
+            </span>
             </div>
 
+            <h3 className="text-3xl   font-bold text-center text-gray-800">
+            1,254
+            </h3>
+
+            <div className="flex items-center gap-2">
+            <span className="px-2 py-1 rounded-full bg-indigo-100 text-indigo-600 text-xs font-semibold">
+                ↑ 24
+            </span>
+
+            <span className="text-xs text-gray-400">
+                Today
+            </span>
+            </div>
+        </div>
+        </SwiperSlide>
+ 
+        {/* Total Products */}
+        <SwiperSlide>
+        <div
+            className="bg-white rounded-2xl border border-gray-100
+                    p-4 h-[160px] shadow-sm hover:shadow-lg hover:-translate-y-1
+                    transition-all duration-300 flex flex-col justify-between"
+        >
+            <div className="flex items-center gap-3">
+            <div className="w-11 h-11 rounded-xl bg-purple-100 flex items-center justify-center">
+                <PiBankLight className="text-2xl text-purple-600" />
+            </div>
+
+            <span className="text-sm font-medium text-gray-500">
+                Total Products
+            </span>
+            </div>
+
+            <h3 className="text-3xl font-bold text-center text-gray-800">
+            320
+            </h3>
+
+            <div className="flex items-center gap-2">
+            <span className="px-2 py-1 rounded-full bg-purple-100 text-purple-600 text-xs font-semibold">
+                ↑ 8
+            </span>
+
+            <span className="text-xs text-gray-400">
+                This Week
+            </span>
+            </div>
+        </div>
+        </SwiperSlide>
+ 
+        {/* Customers */}
+        <SwiperSlide>
+        <div
+            className="bg-white rounded-2xl border border-gray-100
+                    p-4 h-[160px] shadow-sm hover:shadow-lg hover:-translate-y-1
+                    transition-all duration-300 flex flex-col justify-between"
+        >
+            <div className="flex items-center gap-3">
+            <div className="w-11 h-11 rounded-xl bg-amber-100 flex items-center justify-center">
+                <TbBrandProducthunt className="text-2xl text-amber-500" />
+            </div>
+
+            <span className="text-sm font-medium text-gray-500">
+                Customers
+            </span>
+            </div>
+            <h3 className="text-3xl font-bold text-center text-gray-800">
+            845
+            </h3>
+            <div className="flex items-center gap-2">
+            <span className="px-2 py-1 rounded-full bg-amber-100 text-amber-600 text-xs font-semibold">
+                ↑ 18
+            </span>
+
+            <span className="text-xs text-gray-400">
+                New Customers
+            </span>
+            </div>
+        </div>
+        </SwiperSlide>
+ 
+        {/* Pending Orders */}
+        <SwiperSlide>
+            <div
+            className="box bg-white rounded-2xl border border-gray-100
+                        p-4 shadow-sm hover:shadow-lg cursor-pointer hover:-translate-y-1
+                        transition-all duration-300 h-[160px] flex flex-col justify-between"
+            >
+            <div className="flex items-center gap-3">
+                <div className="w-11 h-11 rounded-xl bg-red-100 flex items-center justify-center">
+                <RiMoneyPoundCircleFill className="text-2xl text-red-500" />
+                </div>
+
+                <span className="text-sm font-medium text-gray-500">
+                Pending Orders
+                </span>
+            </div>
+            <h3 className="text-3xl font-bold text-center text-gray-800">
+                17
+            </h3>
+            <div className="flex items-center gap-2">
+                <span className="px-2 py-1 rounded-full bg-red-100 text-red-600 text-xs font-semibold">
+                Requires Action
+                </span>
+
+                <span className="text-red-500 text-lg">↺</span>
+            </div>
+            </div>
         </SwiperSlide>
 
-
-
-        </Swiper>
+        </Swiper>      
         </>
     );
 }

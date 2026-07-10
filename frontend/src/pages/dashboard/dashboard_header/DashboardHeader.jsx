@@ -15,7 +15,7 @@ import { FaRegUserCircle } from "react-icons/fa";
 import { MdOutlineSettings } from "react-icons/md";
 import { FiActivity } from "react-icons/fi";
 import { PiSignOutBold } from "react-icons/pi";
-
+import { useSidebar } from "../context/SidebarContext";
 
 const StyledBadge = styled(Badge)(({ theme }) => ({
   '& .MuiBadge-badge': {
@@ -27,6 +27,7 @@ const StyledBadge = styled(Badge)(({ theme }) => ({
 }));
 
 function DashboardHeader() {
+  const { toggleSidebar } = useSidebar();
  const [anchorMyAcc, setanchorMyAcc] = useState(null);
   const openMyAcc = Boolean(anchorMyAcc);
   const handleClickMyAcc = (event) => {
@@ -36,15 +37,14 @@ function DashboardHeader() {
     setanchorMyAcc(null);
   };
   return (
-    <header className='w-full h-auto py-2 pl-[21%] pr-7 bg-[#ffff]  flex items-center justify-between shadow-md '>
+    <header className='w-full h-auto py-2 pl-4 pr-7 bg-[#ffff]  flex items-center justify-between shadow-md '>
         <div className="part1">
-          
-          {/* Botton sidebar */}
-          <Button className='w-10! h-10! rounded-full! min-w-10! mx-auto hover:bg-[#F8ECEC]!'>
+          {/* الزرار ده هيظهر من مقاس اللابتوب ولّي أصغر بس، ويختفي على الشاشات الكبيرة */}
+          <Button onClick={toggleSidebar} className='xl:hidden! w-10! h-10! rounded-full! min-w-10! hover:bg-[#F8ECEC]!'>
             <RiMenu2Line className=' text-[35px] text-black' />
           </Button>
-
         </div>
+
         <div className="part2 w-[40%] flex items-center  justify-end gap-5">
             <IconButton aria-label="cart" className="hover:bg-[#F8ECEC]!">
                 <StyledBadge badgeContent={4} color="secondary">

@@ -1,0 +1,2537 @@
+[
+  {
+    "name": "Synthetic Hydrating Cleanser (Test-01)",
+    "brand": "CeraVe",
+    "price": 15.99,
+    "category": "Skin Care",
+    "description": "A gentle hydrating cleanser that cleans skin without stripping moisture.",
+    "stock": 166,
+    "soldCount": 57,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773064202/Synthetic_Hydrating_Cleanser_Test-01_a3am2s.jpg",
+      "publicId": "Synthetic_Hydrating_Cleanser_Test-01_a3am2s"
+    }
+  },
+  {
+    "name": "Foaming Facial Wash - Beta Build",
+    "brand": "CeraVe",
+    "price": 16.5,
+    "category": "Skin Care",
+    "description": "A foaming face wash that removes dirt and excess oil with a light touch.",
+    "stock": 9,
+    "soldCount": 8,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773064197/Foaming_Facial_Wash_-_Beta_Build_mejnuy.jpg",
+      "publicId": "Foaming_Facial_Wash_-_Beta_Build_mejnuy"
+    }
+  },
+  {
+    "name": "PM Moisture Surge (Synthetic)",
+    "brand": "CeraVe",
+    "price": 18.99,
+    "category": "Skin Care",
+    "description": "An intensive night cream that renews skin's moisture and freshness while you sleep.",
+    "stock": 65,
+    "soldCount": 57,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773064199/PM_Moisture_Surge_Synthetic_wdyqxl.jpg",
+      "publicId": "PM_Moisture_Surge_Synthetic_wdyqxl"
+    }
+  },
+  {
+    "name": "AM Defense SPF 30 - Test Protocol",
+    "brand": "CeraVe",
+    "price": 19.25,
+    "category": "Skin Care",
+    "description": "A daily SPF 30 protective cream that shields skin from sun damage.",
+    "stock": 38,
+    "soldCount": 94,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773064199/AM_Defense_SPF_30_-_Test_Protocol_doou26.jpg",
+      "publicId": "AM_Defense_SPF_30_-_Test_Protocol_doou26"
+    }
+  },
+  {
+    "name": "Skin Renewing Retinol (Sample A)",
+    "brand": "CeraVe",
+    "price": 24.99,
+    "category": "Skin Care",
+    "description": "A retinol serum that renews skin cells and reduces signs of aging.",
+    "stock": 29,
+    "soldCount": 69,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773064202/Skin_Renewing_Retinol_Sample_A_ucjwwa.jpg",
+      "publicId": "Skin_Renewing_Retinol_Sample_A_ucjwwa"
+    }
+  },
+  {
+    "name": "SA Smoothing Cream - Data Point",
+    "brand": "CeraVe",
+    "price": 21.5,
+    "category": "Skin Care",
+    "description": "A salicylic-acid cream that smooths skin texture and refines pores.",
+    "stock": 25,
+    "soldCount": 37,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773064205/SA_Smoothing_Cream_-_Data_Point_tjbtlu.jpg",
+      "publicId": "SA_Smoothing_Cream_-_Data_Point_tjbtlu"
+    }
+  },
+  {
+    "name": "Hydrating Mineral Sunscreen (Alpha)",
+    "brand": "CeraVe",
+    "price": 17.8,
+    "category": "Skin Care",
+    "description": "A hydrating mineral sunscreen that protects without clogging pores.",
+    "stock": 111,
+    "soldCount": 16,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773064204/Hydrating_Mineral_Sunscreen_Alpha_f1ir5m.jpg",
+      "publicId": "Hydrating_Mineral_Sunscreen_Alpha_f1ir5m"
+    }
+  },
+  {
+    "name": "Eye Repair Complex - Synthetic",
+    "brand": "CeraVe",
+    "price": 14.95,
+    "category": "Skin Care",
+    "description": "An eye cream that reduces puffiness and dark circles.",
+    "stock": 10,
+    "soldCount": 2,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773064199/Eye_Repair_Complex_-_Synthetic_xtaetz.jpg",
+      "publicId": "Eye_Repair_Complex_-_Synthetic_xtaetz"
+    }
+  },
+  {
+    "name": "Comforting Cleansing Balm (V2)",
+    "brand": "CeraVe",
+    "price": 13.4,
+    "category": "Skin Care",
+    "description": "A soothing cleansing balm that gently melts away makeup and impurities.",
+    "stock": 58,
+    "soldCount": 59,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773064197/Comforting_Cleansing_Balm_V2_gjupto.jpg",
+      "publicId": "Comforting_Cleansing_Balm_V2_gjupto"
+    }
+  },
+  {
+    "name": "Resurfacing Serum - Test Only",
+    "brand": "CeraVe",
+    "price": 22.0,
+    "category": "Skin Care",
+    "description": "A resurfacing serum that improves skin texture and radiance.",
+    "stock": 132,
+    "soldCount": 308,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773064203/Resurfacing_Serum_-_Test_Only_kq8r3s.jpg",
+      "publicId": "Resurfacing_Serum_-_Test_Only_kq8r3s"
+    }
+  },
+  {
+    "name": "Daily Relief Lotion (Bulk Test)",
+    "brand": "CeraVe",
+    "price": 12.99,
+    "category": "Skin Care",
+    "description": "A daily soothing lotion for sensitive or irritated skin.",
+    "stock": 9,
+    "soldCount": 17,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773064202/Daily_Relief_Lotion_Bulk_Test_melbso.jpg",
+      "publicId": "Daily_Relief_Lotion_Bulk_Test_melbso"
+    }
+  },
+  {
+    "name": "Vitamin C Brightening (Synthetic)",
+    "brand": "CeraVe",
+    "price": 26.5,
+    "category": "Skin Care",
+    "description": "A vitamin C serum that brightens skin and evens tone.",
+    "stock": 53,
+    "soldCount": 107,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773064206/Vitamin_C_Brightening_Synthetic_cyugxm.jpg",
+      "publicId": "Vitamin_C_Brightening_Synthetic_cyugxm"
+    }
+  },
+  {
+    "name": "Acne Control Gel - Lab Sample",
+    "brand": "CeraVe",
+    "price": 19.99,
+    "category": "Skin Care",
+    "description": "A gel that treats and helps prevent breakouts.",
+    "stock": 59,
+    "soldCount": 114,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773064197/Acne_Control_Gel_-_Lab_Sample_e7scck.jpg",
+      "publicId": "Acne_Control_Gel_-_Lab_Sample_e7scck"
+    }
+  },
+  {
+    "name": "Ultra-Light Moisturizing Gel (Beta)",
+    "brand": "CeraVe",
+    "price": 18.25,
+    "category": "Skin Care",
+    "description": "An ultra-light moisturizing gel suited to oily skin.",
+    "stock": 153,
+    "soldCount": 142,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773064203/Ultra-Light_Moisturizing_Gel_Beta_bi7ujy.jpg",
+      "publicId": "Ultra-Light_Moisturizing_Gel_Beta_bi7ujy"
+    }
+  },
+  {
+    "name": "Healing Ointment - Dev Version",
+    "brand": "CeraVe",
+    "price": 11.5,
+    "category": "Skin Care",
+    "description": "A healing ointment that soothes and repairs irritated skin.",
+    "stock": 210,
+    "soldCount": 6,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773064199/Healing_Ointment_-_Dev_Version_tl09vi.jpg",
+      "publicId": "Healing_Ointment_-_Dev_Version_tl09vi"
+    }
+  },
+  {
+    "name": "Hyaluronic Acid 2% + B5 (Simulated)",
+    "brand": "The Ordinary",
+    "price": 9.9,
+    "category": "Skin Care",
+    "description": "A hyaluronic acid and vitamin B5 serum for deep, intensive hydration.",
+    "stock": 197,
+    "soldCount": 412,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773064356/Hyaluronic_Acid_2_B5_Simulated_ulb0fc.jpg",
+      "publicId": "Hyaluronic_Acid_2_B5_Simulated_ulb0fc"
+    }
+  },
+  {
+    "name": "Niacinamide 10% - Test Array",
+    "brand": "The Ordinary",
+    "price": 7.5,
+    "category": "Skin Care",
+    "description": "A niacinamide serum that balances oil production and refines pores.",
+    "stock": 43,
+    "soldCount": 89,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773064361/Niacinamide_10_-_Test_Array_xueumw.jpg",
+      "publicId": "Niacinamide_10_-_Test_Array_xueumw"
+    }
+  },
+  {
+    "name": "Caffeine Solution (Mockup)",
+    "brand": "The Ordinary",
+    "price": 8.25,
+    "category": "Skin Care",
+    "description": "A caffeine solution that energizes skin and reduces under-eye puffiness.",
+    "stock": 111,
+    "soldCount": 174,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773064354/Caffeine_Solution_Mockup_vy8i8a.jpg",
+      "publicId": "Caffeine_Solution_Mockup_vy8i8a"
+    }
+  },
+  {
+    "name": "Natural Moisturizing Factors (Beta)",
+    "brand": "The Ordinary",
+    "price": 11.3,
+    "category": "Skin Care",
+    "description": "A moisturizer with natural moisturizing factors that mimic skin's own oils.",
+    "stock": 74,
+    "soldCount": 39,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773064360/Natural_Moisturizing_Factors_Beta_ympff9.jpg",
+      "publicId": "Natural_Moisturizing_Factors_Beta_ympff9"
+    }
+  },
+  {
+    "name": "Glycolic Acid 7% Toning (Synthetic)",
+    "brand": "The Ordinary",
+    "price": 13.5,
+    "category": "Skin Care",
+    "description": "A glycolic acid toner that gently exfoliates and boosts radiance.",
+    "stock": 58,
+    "soldCount": 86,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773064356/Glycolic_Acid_7_Toning_Synthetic_dvijex.jpg",
+      "publicId": "Glycolic_Acid_7_Toning_Synthetic_dvijex"
+    }
+  },
+  {
+    "name": "Squalane Cleanser - Sample Mode",
+    "brand": "The Ordinary",
+    "price": 10.0,
+    "category": "Skin Care",
+    "description": "A cleanser infused with squalane to keep skin moisturized while cleansing.",
+    "stock": 29,
+    "soldCount": 11,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773064366/Squalane_Cleanser_-_Sample_Mode_eikrrl.jpg",
+      "publicId": "Squalane_Cleanser_-_Sample_Mode_eikrrl"
+    }
+  },
+  {
+    "name": "Buffet + Copper Peptides (Alpha)",
+    "brand": "The Ordinary",
+    "price": 30.9,
+    "category": "Skin Care",
+    "description": "A multi-peptide and copper serum that supports skin elasticity.",
+    "stock": 100,
+    "soldCount": 24,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773064357/Buffet_Copper_Peptides_Alpha_idkkud.jpg",
+      "publicId": "Buffet_Copper_Peptides_Alpha_idkkud"
+    }
+  },
+  {
+    "name": "AHA 30% Peeling Solution (Test-X)",
+    "brand": "The Ordinary",
+    "price": 9.5,
+    "category": "Skin Care",
+    "description": "An intensive AHA peeling solution that resurfaces the skin.",
+    "stock": 94,
+    "soldCount": 216,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773064354/AHA_30_Peeling_Solution_Test-X_ux0z8c.jpg",
+      "publicId": "AHA_30_Peeling_Solution_Test-X_ux0z8c"
+    }
+  },
+  {
+    "name": "Azelaic Acid Suspension (Data)",
+    "brand": "The Ordinary",
+    "price": 12.4,
+    "category": "Skin Care",
+    "description": "An azelaic acid suspension that evens skin tone and calms redness.",
+    "stock": 91,
+    "soldCount": 154,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773064353/Azelaic_Acid_Suspension_Data_hlblxl.jpg",
+      "publicId": "Azelaic_Acid_Suspension_Data_hlblxl"
+    }
+  },
+  {
+    "name": "Rose Hip Seed Oil - Synthetic",
+    "brand": "The Ordinary",
+    "price": 11.0,
+    "category": "Skin Care",
+    "description": "A rosehip seed oil that hydrates and improves skin elasticity.",
+    "stock": 70,
+    "soldCount": 11,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773064363/Rose_Hip_Seed_Oil_-_Synthetic_dolujb.jpg",
+      "publicId": "Rose_Hip_Seed_Oil_-_Synthetic_dolujb"
+    }
+  },
+  {
+    "name": "Multi-Peptide Lash Serum (Trial)",
+    "brand": "The Ordinary",
+    "price": 14.5,
+    "category": "Skin Care",
+    "description": "A peptide serum that strengthens and lengthens lashes.",
+    "stock": 189,
+    "soldCount": 235,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773064357/Multi-Peptide_Lash_Serum_Trial_z0m1md.jpg",
+      "publicId": "Multi-Peptide_Lash_Serum_Trial_z0m1md"
+    }
+  },
+  {
+    "name": "Vitamin C Suspension (Dev Build)",
+    "brand": "The Ordinary",
+    "price": 8.9,
+    "category": "Skin Care",
+    "description": "A vitamin C suspension that brightens skin and fights aging signs.",
+    "stock": 140,
+    "soldCount": 63,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773064368/Vitamin_C_Suspension_Dev_Build_ec5v0j.jpg",
+      "publicId": "Vitamin_C_Suspension_Dev_Build_ec5v0j"
+    }
+  },
+  {
+    "name": "Salicylic Acid 2% Masque (Sample)",
+    "brand": "The Ordinary",
+    "price": 13.8,
+    "category": "Skin Care",
+    "description": "A salicylic acid mask that deep-cleans pores.",
+    "stock": 239,
+    "soldCount": 387,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773064365/Salicylic_Acid_2_Masque_Sample_lcicuy.jpg",
+      "publicId": "Salicylic_Acid_2_Masque_Sample_lcicuy"
+    }
+  },
+  {
+    "name": "Glucoside Foaming Cleanser (Test)",
+    "brand": "The Ordinary",
+    "price": 12.0,
+    "category": "Skin Care",
+    "description": "A mild foaming cleanser suited for daily use.",
+    "stock": 23,
+    "soldCount": 35,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773064354/Glucoside_Foaming_Cleanser_Test_qipqih.jpg",
+      "publicId": "Glucoside_Foaming_Cleanser_Test_qipqih"
+    }
+  },
+  {
+    "name": "Pycnogenol 5% - Synthetic Run",
+    "brand": "The Ordinary",
+    "price": 10.5,
+    "category": "Skin Care",
+    "description": "An antioxidant serum that protects skin from premature aging.",
+    "stock": 78,
+    "soldCount": 160,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773064361/Pycnogenol_5_-_Synthetic_Run_cymwfw.jpg",
+      "publicId": "Pycnogenol_5_-_Synthetic_Run_cymwfw"
+    }
+  },
+  {
+    "name": "Anthelios UV-Mune 400 (Synthetic)",
+    "brand": "La Roche-Posay",
+    "price": 32.5,
+    "category": "Skin Care",
+    "description": "A high-protection sunscreen that shields skin from harmful UV rays.",
+    "stock": 161,
+    "soldCount": 185,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773064281/Anthelios_UV-Mune_400_Synthetic_qtsefl.jpg",
+      "publicId": "Anthelios_UV-Mune_400_Synthetic_qtsefl"
+    }
+  },
+  {
+    "name": "Effaclar Mat - Test Logic",
+    "brand": "La Roche-Posay",
+    "price": 22.99,
+    "category": "Skin Care",
+    "description": "A mattifying moisturizer that controls shine on oily skin all day.",
+    "stock": 150,
+    "soldCount": 98,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773064283/Effaclar_Mat_-_Test_Logic_paxmm5.jpg",
+      "publicId": "Effaclar_Mat_-_Test_Logic_paxmm5"
+    }
+  },
+  {
+    "name": "Hyalu B5 Serum - Synthetic Gold",
+    "brand": "La Roche-Posay",
+    "price": 43.0,
+    "category": "Skin Care",
+    "description": "An intensive hyaluronic acid serum for instant, long-lasting hydration.",
+    "stock": 183,
+    "soldCount": 35,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773064286/Hyalu_B5_Serum_-_Synthetic_Gold_ijibtb.jpg",
+      "publicId": "Hyalu_B5_Serum_-_Synthetic_Gold_ijibtb"
+    }
+  },
+  {
+    "name": "Toleriane Double Repair (Beta)",
+    "brand": "La Roche-Posay",
+    "price": 21.5,
+    "category": "Skin Care",
+    "description": "A barrier-repairing moisturizer suited for sensitive skin.",
+    "stock": 14,
+    "soldCount": 14,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773064289/Toleriane_Double_Repair_Beta_qmygla.jpg",
+      "publicId": "Toleriane_Double_Repair_Beta_qmygla"
+    }
+  },
+  {
+    "name": "Cicaplast Baume B5 (Data Sample)",
+    "brand": "La Roche-Posay",
+    "price": 17.95,
+    "category": "Skin Care",
+    "description": "A soothing repair balm for chapped or irritated skin.",
+    "stock": 200,
+    "soldCount": 148,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773064282/Cicaplast_Baume_B5_Data_Sample_x5tumg.jpg",
+      "publicId": "Cicaplast_Baume_B5_Data_Sample_x5tumg"
+    }
+  },
+  {
+    "name": "Lipikar AP+ Body Wash (Test)",
+    "brand": "La Roche-Posay",
+    "price": 19.0,
+    "category": "Skin Care",
+    "description": "A moisturizing body wash for very dry skin.",
+    "stock": 23,
+    "soldCount": 54,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773064285/Lipikar_AP_Body_Wash_Test_thvy2g.jpg",
+      "publicId": "Lipikar_AP_Body_Wash_Test_thvy2g"
+    }
+  },
+  {
+    "name": "Pure Vitamin C12 (Synthetic Run)",
+    "brand": "La Roche-Posay",
+    "price": 48.5,
+    "category": "Skin Care",
+    "description": "A pure vitamin C serum for radiant, even-toned skin.",
+    "stock": 62,
+    "soldCount": 25,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773064291/Pure_Vitamin_C12_Synthetic_Run_fg77mu.jpg",
+      "publicId": "Pure_Vitamin_C12_Synthetic_Run_fg77mu"
+    }
+  },
+  {
+    "name": "Mela B3 Dark Spot (Simulated)",
+    "brand": "La Roche-Posay",
+    "price": 49.0,
+    "category": "Skin Care",
+    "description": "A serum that fades dark spots and evens skin tone.",
+    "stock": 100,
+    "soldCount": 71,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773064286/Mela_B3_Dark_Spot_Simulated_ryh5cc.jpg",
+      "publicId": "Mela_B3_Dark_Spot_Simulated_ryh5cc"
+    }
+  },
+  {
+    "name": "Toleriane Purifying Wash (Alpha)",
+    "brand": "La Roche-Posay",
+    "price": 16.99,
+    "category": "Skin Care",
+    "description": "A gentle cleanser designed for sensitive skin.",
+    "stock": 119,
+    "soldCount": 186,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773064290/Toleriane_Purifying_Wash_Alpha_zq6oyk.jpg",
+      "publicId": "Toleriane_Purifying_Wash_Alpha_zq6oyk"
+    }
+  },
+  {
+    "name": "Thermal Spring Water (Mock Data)",
+    "brand": "La Roche-Posay",
+    "price": 14.0,
+    "category": "Skin Care",
+    "description": "A soothing, refreshing thermal spring water mist.",
+    "stock": 44,
+    "soldCount": 47,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773064288/Thermal_Spring_Water_Mock_Data_wwsl9c.jpg",
+      "publicId": "Thermal_Spring_Water_Mock_Data_wwsl9c"
+    }
+  },
+  {
+    "name": "Retinol B3 Serum - Test Variant",
+    "brand": "La Roche-Posay",
+    "price": 44.5,
+    "category": "Skin Care",
+    "description": "A retinol and vitamin B3 serum that renews skin and reduces wrinkles.",
+    "stock": 93,
+    "soldCount": 53,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773064287/Retinol_B3_Serum_-_Test_Variant_xuxac2.jpg",
+      "publicId": "Retinol_B3_Serum_-_Test_Variant_xuxac2"
+    }
+  },
+  {
+    "name": "Anthelios Tinted Mineral (Beta)",
+    "brand": "La Roche-Posay",
+    "price": 34.0,
+    "category": "Skin Care",
+    "description": "A tinted mineral sunscreen that evens skin tone while protecting.",
+    "stock": 174,
+    "soldCount": 136,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773064282/Anthelios_Tinted_Mineral_Beta_zg5qtq.jpg",
+      "publicId": "Anthelios_Tinted_Mineral_Beta_zg5qtq"
+    }
+  },
+  {
+    "name": "Effaclar Duo Acne (Synthetic)",
+    "brand": "La Roche-Posay",
+    "price": 23.5,
+    "category": "Skin Care",
+    "description": "A dual-action treatment cream for acne and post-breakout marks.",
+    "stock": 182,
+    "soldCount": 349,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773064285/Effaclar_Duo_Acne_Synthetic_eekizp.jpg",
+      "publicId": "Effaclar_Duo_Acne_Synthetic_eekizp"
+    }
+  },
+  {
+    "name": "Hydraphase Intensive (Data)",
+    "brand": "La Roche-Posay",
+    "price": 28.0,
+    "category": "Skin Care",
+    "description": "An intensive moisturizing gel-cream for dry skin.",
+    "stock": 168,
+    "soldCount": 36,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773064284/Hydraphase_Intensive_Data_rwsc0c.jpg",
+      "publicId": "Hydraphase_Intensive_Data_rwsc0c"
+    }
+  },
+  {
+    "name": "Rosaliac AR Intense (Test Only)",
+    "brand": "La Roche-Posay",
+    "price": 26.5,
+    "category": "Skin Care",
+    "description": "A soothing moisturizer for skin prone to redness and irritation.",
+    "stock": 158,
+    "soldCount": 325,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773064288/Rosaliac_AR_Intense_Test_Only_t6cy3w.jpg",
+      "publicId": "Rosaliac_AR_Intense_Test_Only_t6cy3w"
+    }
+  },
+  {
+    "name": "Aloe vera Gel",
+    "brand": "Hey Sugar",
+    "price": 135.0,
+    "category": "Skin Care",
+    "description": "Natural aloe vera gel to soothe and hydrate skin and hair.",
+    "stock": 46,
+    "soldCount": 68,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773442217/1-aloe-vera-gel_httuph.png",
+      "publicId": "1-aloe-vera-gel_httuph"
+    }
+  },
+  {
+    "name": "Collagen Gel",
+    "brand": "Hey Sugar",
+    "price": 150.0,
+    "category": "Skin Care",
+    "description": "A collagen-infused gel that boosts skin elasticity and softness.",
+    "stock": 189,
+    "soldCount": 125,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773442217/2-collegen-gel_fmnkxd.png",
+      "publicId": "2-collegen-gel_fmnkxd"
+    }
+  },
+  {
+    "name": "Eye Brow Soap",
+    "brand": "Hey Sugar",
+    "price": 70.0,
+    "category": "Skin Care",
+    "description": "Brow-setting soap that styles and shapes eyebrow hair.",
+    "stock": 44,
+    "soldCount": 59,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773442215/3-eye-brow-soap_i9ydbs.jpg",
+      "publicId": "3-eye-brow-soap_i9ydbs"
+    }
+  },
+  {
+    "name": "Eye cream",
+    "brand": "Hey Sugar",
+    "price": 130.0,
+    "category": "Skin Care",
+    "description": "A cream for the eye area that reduces puffiness and dark circles.",
+    "stock": 100,
+    "soldCount": 69,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773442215/4-eye-cream-1_b82let.png",
+      "publicId": "4-eye-cream-1_b82let"
+    }
+  },
+  {
+    "name": "Glowy Cream",
+    "brand": "Hey Sugar",
+    "price": 150.0,
+    "category": "Skin Care",
+    "description": "A cream that gives skin a healthy, radiant glow.",
+    "stock": 239,
+    "soldCount": 570,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773442214/5-Glowy-cream_fytp3u.png",
+      "publicId": "5-Glowy-cream_fytp3u"
+    }
+  },
+  {
+    "name": "Hyalu Foam Face Wash",
+    "brand": "Hey Sugar",
+    "price": 170.0,
+    "category": "Skin Care",
+    "description": "A hyaluronic acid foaming face wash that cleanses and hydrates.",
+    "stock": 59,
+    "soldCount": 83,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773442214/6-hyalu-foam-face-wash-1_azkijt.png",
+      "publicId": "6-hyalu-foam-face-wash-1_azkijt"
+    }
+  },
+  {
+    "name": "Hyalu Serum",
+    "brand": "Hey Sugar",
+    "price": 220.0,
+    "category": "Skin Care",
+    "description": "A hyaluronic acid serum for deep skin hydration.",
+    "stock": 218,
+    "soldCount": 57,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773442213/7-hyalu-serum-2_tqef7r.png",
+      "publicId": "7-hyalu-serum-2_tqef7r"
+    }
+  },
+  {
+    "name": "Miceller Water",
+    "brand": "Hey Sugar",
+    "price": 150.0,
+    "category": "Skin Care",
+    "description": "Micellar water that gently cleanses the face and removes makeup.",
+    "stock": 61,
+    "soldCount": 8,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773442211/8-micellar-water_dpiwzn.png",
+      "publicId": "8-micellar-water_dpiwzn"
+    }
+  },
+  {
+    "name": "Milk Honey Soap",
+    "brand": "Hey Sugar",
+    "price": 100.0,
+    "category": "Skin Care",
+    "description": "A natural soap with milk and honey to cleanse and moisturize skin.",
+    "stock": 209,
+    "soldCount": 323,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773442210/9-milk-honey-soap-1_tog3la.png",
+      "publicId": "9-milk-honey-soap-1_tog3la"
+    }
+  },
+  {
+    "name": "Oily Skin Foam Fase Wash",
+    "brand": "Hey Sugar",
+    "price": 160.0,
+    "category": "Skin Care",
+    "description": "A foaming face wash designed for oily skin to reduce shine.",
+    "stock": 105,
+    "soldCount": 137,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773442210/10-oily-skin-foam-face-wash-1-_mumyur.png",
+      "publicId": "10-oily-skin-foam-face-wash-1-_mumyur"
+    }
+  },
+  {
+    "name": "Pearl Cream",
+    "brand": "Hey Sugar",
+    "price": 120.0,
+    "category": "Skin Care",
+    "description": "A pearl-extract cream that gives skin softness and radiance.",
+    "stock": 19,
+    "soldCount": 13,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773442209/11-pearl-cream_zwtc1z.png",
+      "publicId": "11-pearl-cream_zwtc1z"
+    }
+  },
+  {
+    "name": "Rose Gel",
+    "brand": "Hey Sugar",
+    "price": 130.0,
+    "category": "Skin Care",
+    "description": "A rose-extract gel to hydrate and soothe skin.",
+    "stock": 236,
+    "soldCount": 580,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773442208/12-rose-gel-1-_oli7ah.png",
+      "publicId": "12-rose-gel-1-_oli7ah"
+    }
+  },
+  {
+    "name": "SunBlock",
+    "brand": "Hey Sugar",
+    "price": 200.0,
+    "category": "Skin Care",
+    "description": "Sunscreen that protects skin from harmful sun rays.",
+    "stock": 227,
+    "soldCount": 322,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773442208/13-sunblock-_ozjnxh.png",
+      "publicId": "13-sunblock-_ozjnxh"
+    }
+  },
+  {
+    "name": "Skin Booster Serum",
+    "brand": "Hey Sugar",
+    "price": 130.0,
+    "category": "Skin Care",
+    "description": "A skin-boosting serum for fresh, revitalized skin.",
+    "stock": 57,
+    "soldCount": 127,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773442208/14-skin-booster-serum-1-_o8dfs8.png",
+      "publicId": "14-skin-booster-serum-1-_o8dfs8"
+    }
+  },
+  {
+    "name": "Lip mask",
+    "brand": "Hey Sugar",
+    "price": 100.0,
+    "category": "Skin Care",
+    "description": "A lip mask that hydrates and softens the lips.",
+    "stock": 104,
+    "soldCount": 234,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773442208/15-lip-mask_f6mtop.png",
+      "publicId": "15-lip-mask_f6mtop"
+    }
+  },
+  {
+    "name": "Lip Gloss Super Red",
+    "brand": "Hey Sugar",
+    "price": 150.0,
+    "category": "Skin Care",
+    "description": "A lip gloss in a bold red shade with high shine.",
+    "stock": 39,
+    "soldCount": 33,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773442207/16-lip-gloss-super-red_ovld07.jpg",
+      "publicId": "16-lip-gloss-super-red_ovld07"
+    }
+  },
+  {
+    "name": "Lip Balm Brown",
+    "brand": "Hey Sugar",
+    "price": 70.0,
+    "category": "Skin Care",
+    "description": "A brown-toned lip balm for hydration and light color.",
+    "stock": 38,
+    "soldCount": 31,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773442207/17-lip-balm-brown_qq4br7.png",
+      "publicId": "17-lip-balm-brown_qq4br7"
+    }
+  },
+  {
+    "name": "blue indigo body scrub",
+    "brand": "Hey Sugar",
+    "price": 170.0,
+    "category": "Body Care",
+    "description": "A blue indigo-scented body scrub that exfoliates dead skin.",
+    "stock": 193,
+    "soldCount": 287,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773442725/1-blue-indiago-scrub_hfvncu.png",
+      "publicId": "1-blue-indiago-scrub_hfvncu"
+    }
+  },
+  {
+    "name": "Body butter Floral",
+    "brand": "Hey Sugar",
+    "price": 160.0,
+    "category": "Body Care",
+    "description": "A floral-scented body butter for intense skin hydration.",
+    "stock": 140,
+    "soldCount": 134,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773442723/2-floral-butter-1_vjwxhn.png",
+      "publicId": "2-floral-butter-1_vjwxhn"
+    }
+  },
+  {
+    "name": "Body butter Paradise",
+    "brand": "Hey Sugar",
+    "price": 160.0,
+    "category": "Body Care",
+    "description": "A tropical-scented body butter for deep moisturizing.",
+    "stock": 194,
+    "soldCount": 299,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773442722/3-paradise-butter_rdmjja.png",
+      "publicId": "3-paradise-butter_rdmjja"
+    }
+  },
+  {
+    "name": "Body butter Strawberry",
+    "brand": "Hey Sugar",
+    "price": 160.0,
+    "category": "Body Care",
+    "description": "A strawberry-scented body butter for soft, nourished skin.",
+    "stock": 112,
+    "soldCount": 204,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773442720/4-strawberry-butter_ywimdf.png",
+      "publicId": "4-strawberry-butter_ywimdf"
+    }
+  },
+  {
+    "name": "Body lotion Bonbon",
+    "brand": "Hey Sugar",
+    "price": 200.0,
+    "category": "Body Care",
+    "description": "A sweet, candy-scented body lotion for daily hydration.",
+    "stock": 95,
+    "soldCount": 56,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773442718/5-body-lotion-bonbon_uqz0nl.png",
+      "publicId": "5-body-lotion-bonbon_uqz0nl"
+    }
+  },
+  {
+    "name": "Body lotion Floral",
+    "brand": "Hey Sugar",
+    "price": 200.0,
+    "category": "Body Care",
+    "description": "A floral-scented, fast-absorbing body lotion.",
+    "stock": 38,
+    "soldCount": 65,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773442718/6-body-lotion-floral-_wzxhb0.png",
+      "publicId": "6-body-lotion-floral-_wzxhb0"
+    }
+  },
+  {
+    "name": "Body lotion Into the stars",
+    "brand": "Hey Sugar",
+    "price": 220.0,
+    "category": "Body Care",
+    "description": "A distinctively scented body lotion that leaves skin soft and glowing.",
+    "stock": 129,
+    "soldCount": 46,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773442716/7-into-the-stars-lotion_fnuyqt.png",
+      "publicId": "7-into-the-stars-lotion_fnuyqt"
+    }
+  },
+  {
+    "name": "Body mist (floral)",
+    "brand": "Hey Sugar",
+    "price": 150.0,
+    "category": "Body Care",
+    "description": "A light, floral-scented body mist.",
+    "stock": 196,
+    "soldCount": 24,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773442714/8-floral-mist_qcgxgp.png",
+      "publicId": "8-floral-mist_qcgxgp"
+    }
+  },
+  {
+    "name": "Body mist (fruity )",
+    "brand": "Hey Sugar",
+    "price": 150.0,
+    "category": "Body Care",
+    "description": "A light, fruity-scented body mist.",
+    "stock": 223,
+    "soldCount": 112,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773442713/9-body-mist-fruity_qgxuwy.png",
+      "publicId": "9-body-mist-fruity_qgxuwy"
+    }
+  },
+  {
+    "name": "Body mist love is heaven",
+    "brand": "Hey Sugar",
+    "price": 130.0,
+    "category": "Body Care",
+    "description": "A romantic-scented body mist.",
+    "stock": 42,
+    "soldCount": 80,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773442711/10-paradise-mist_cdabwe.png",
+      "publicId": "10-paradise-mist_cdabwe"
+    }
+  },
+  {
+    "name": "Body oil",
+    "brand": "Hey Sugar",
+    "price": 200.0,
+    "category": "Body Care",
+    "description": "A body oil for natural hydration and shine.",
+    "stock": 43,
+    "soldCount": 101,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773442710/11-body-oil_mblfik.png",
+      "publicId": "11-body-oil_mblfik"
+    }
+  },
+  {
+    "name": "Bronze body oil",
+    "brand": "Hey Sugar",
+    "price": 200.0,
+    "category": "Body Care",
+    "description": "A body oil that gives skin a subtle bronzed glow.",
+    "stock": 177,
+    "soldCount": 216,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773442709/12-bronze-body-oil_v6lbng.png",
+      "publicId": "12-bronze-body-oil_v6lbng"
+    }
+  },
+  {
+    "name": "Coffee body scrub",
+    "brand": "Hey Sugar",
+    "price": 160.0,
+    "category": "Body Care",
+    "description": "A coffee body scrub that boosts circulation and exfoliates skin.",
+    "stock": 155,
+    "soldCount": 32,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773442708/13-coffee-body-scrub_vomtoa.png",
+      "publicId": "13-coffee-body-scrub_vomtoa"
+    }
+  },
+  {
+    "name": "Deodrant bonbon",
+    "brand": "Hey Sugar",
+    "price": 160.0,
+    "category": "Body Care",
+    "description": "A sweet, candy-scented deodorant.",
+    "stock": 101,
+    "soldCount": 97,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773442707/14-bonbon-deodrant-1_rfmuah.png",
+      "publicId": "14-bonbon-deodrant-1_rfmuah"
+    }
+  },
+  {
+    "name": "Deodrant Pomegranate",
+    "brand": "Hey Sugar",
+    "price": 160.0,
+    "category": "Body Care",
+    "description": "A pomegranate-scented deodorant.",
+    "stock": 155,
+    "soldCount": 239,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773442705/15-pomegrnate-deodrant_rxrqg5.png",
+      "publicId": "15-pomegrnate-deodrant_rxrqg5"
+    }
+  },
+  {
+    "name": "Deodrant Floral",
+    "brand": "Hey Sugar",
+    "price": 160.0,
+    "category": "Body Care",
+    "description": "A gentle floral-scented deodorant.",
+    "stock": 138,
+    "soldCount": 128,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773442704/16-deodrant-flowery_k3jwqt.png",
+      "publicId": "16-deodrant-flowery_k3jwqt"
+    }
+  },
+  {
+    "name": "Deodrant for-him",
+    "brand": "Hey Sugar",
+    "price": 160.0,
+    "category": "Body Care",
+    "description": "A deodorant with a distinctive men's scent.",
+    "stock": 144,
+    "soldCount": 5,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773442703/17-deodrant-for-him-2_kci7ea.png",
+      "publicId": "17-deodrant-for-him-2_kci7ea"
+    }
+  },
+  {
+    "name": "Deodrant Lavender",
+    "brand": "Hey Sugar",
+    "price": 160.0,
+    "category": "Body Care",
+    "description": "A calming lavender-scented deodorant.",
+    "stock": 177,
+    "soldCount": 369,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773442702/18-lavender-deodrant_djpi7s.png",
+      "publicId": "18-lavender-deodrant_djpi7s"
+    }
+  },
+  {
+    "name": "Foot cream",
+    "brand": "Hey Sugar",
+    "price": 160.0,
+    "category": "Body Care",
+    "description": "A hair care product that nourishes and improves hair's appearance.",
+    "stock": 32,
+    "soldCount": 68,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773442701/19foot-cream_kr26xx.png",
+      "publicId": "19foot-cream_kr26xx"
+    }
+  },
+  {
+    "name": "Perfume oil",
+    "brand": "Hey Sugar",
+    "price": 100.0,
+    "category": "Body Care",
+    "description": "A hair care product that nourishes and improves hair's appearance.",
+    "stock": 195,
+    "soldCount": 136,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773442700/20-bikini-perfume_qz8zhu.png",
+      "publicId": "20-bikini-perfume_qz8zhu"
+    }
+  },
+  {
+    "name": "Pink wink",
+    "brand": "Hey Sugar",
+    "price": 210.0,
+    "category": "Body Care",
+    "description": "A hair care product that nourishes and improves hair's appearance.",
+    "stock": 199,
+    "soldCount": 328,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773442699/21bikini-balm_b88ynf.png",
+      "publicId": "21bikini-balm_b88ynf"
+    }
+  },
+  {
+    "name": "Anti dandruff shampoo",
+    "brand": "Hey Sugar",
+    "price": 200.0,
+    "category": "Hair Care",
+    "description": "An anti-dandruff shampoo that treats the scalp and reduces flaking.",
+    "stock": 90,
+    "soldCount": 28,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773442878/1-Anti-dandruff-shampoo_lmtjij.jpg",
+      "publicId": "1-Anti-dandruff-shampoo_lmtjij"
+    }
+  },
+  {
+    "name": "anti hair loss spray",
+    "brand": "Hey Sugar",
+    "price": 250.0,
+    "category": "Hair Care",
+    "description": "An anti-hair-loss spray that strengthens hair follicles.",
+    "stock": 78,
+    "soldCount": 111,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773442878/2-Anti-Hair-Loss-Spray-Bottle_kh7m0t.png",
+      "publicId": "2-Anti-Hair-Loss-Spray-Bottle_kh7m0t"
+    }
+  },
+  {
+    "name": "Baby leave in spray",
+    "brand": "Hey Sugar",
+    "price": 130.0,
+    "category": "Hair Care",
+    "description": "A leave-in spray for babies that eases detangling and styling.",
+    "stock": 43,
+    "soldCount": 58,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773442875/3-baby-spray_u5kaz3.jpg",
+      "publicId": "3-baby-spray_u5kaz3"
+    }
+  },
+  {
+    "name": "baby hair brush",
+    "brand": "Hey Sugar",
+    "price": 120.0,
+    "category": "Hair Care",
+    "description": "A soft hairbrush designed for infants.",
+    "stock": 3,
+    "soldCount": 4,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773442874/5-baby-hair-brush_edoyla.png",
+      "publicId": "5-baby-hair-brush_edoyla"
+    }
+  },
+  {
+    "name": "creamy shampoo",
+    "brand": "Hey Sugar",
+    "price": 200.0,
+    "category": "Hair Care",
+    "description": "A creamy shampoo that gently cleanses and softens hair.",
+    "stock": 131,
+    "soldCount": 91,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773442872/4-shampoo-new_wxqxug.png",
+      "publicId": "4-shampoo-new_wxqxug"
+    }
+  },
+  {
+    "name": "Hair balm",
+    "brand": "Hey Sugar",
+    "price": 220.0,
+    "category": "Hair Care",
+    "description": "A hair balm that hydrates without weighing hair down.",
+    "stock": 132,
+    "soldCount": 54,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773442871/6-hair-balm-1_sssiwr.png",
+      "publicId": "6-hair-balm-1_sssiwr"
+    }
+  },
+  {
+    "name": "Hair cream",
+    "brand": "Hey Sugar",
+    "price": 200.0,
+    "category": "Hair Care",
+    "description": "A hair cream that moisturizes and eases styling.",
+    "stock": 225,
+    "soldCount": 305,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773442869/7-hair-cream-22_qwpnxm.png",
+      "publicId": "7-hair-cream-22_qwpnxm"
+    }
+  },
+  {
+    "name": "Hair mask",
+    "brand": "Hey Sugar",
+    "price": 250.0,
+    "category": "Hair Care",
+    "description": "An intensive hair mask that nourishes and repairs damage.",
+    "stock": 218,
+    "soldCount": 519,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773442869/8-hair-mask-2_bipx9h.png",
+      "publicId": "8-hair-mask-2_bipx9h"
+    }
+  },
+  {
+    "name": "longer hair",
+    "brand": "Hey Sugar",
+    "price": 200.0,
+    "category": "Hair Care",
+    "description": "A stylish hair accessory that adds a pretty finishing touch.",
+    "stock": 158,
+    "soldCount": 101,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773442867/9-longer-hair_w23hv9.jpg",
+      "publicId": "9-longer-hair_w23hv9"
+    }
+  },
+  {
+    "name": "Hair stick",
+    "brand": "Hey Sugar",
+    "price": 200.0,
+    "category": "Hair Care",
+    "description": "A stylish hair accessory that adds a pretty finishing touch.",
+    "stock": 42,
+    "soldCount": 47,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773442866/10-Hair-stick_wnkgnz.png",
+      "publicId": "10-Hair-stick_wnkgnz"
+    }
+  },
+  {
+    "name": "slick wooden brush",
+    "brand": "Hey Sugar",
+    "price": 120.0,
+    "category": "Hair Care",
+    "description": "A stylish hair accessory that adds a pretty finishing touch.",
+    "stock": 198,
+    "soldCount": 82,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773442864/11-dark-brush_bdib4y.png",
+      "publicId": "11-dark-brush_bdib4y"
+    }
+  },
+  {
+    "name": "brown Bow Clip",
+    "brand": "Bowy",
+    "price": 80.0,
+    "category": "Hair Care",
+    "description": "A stylish brown hair clip with a modern design, perfect for finishing any hairstyle.",
+    "stock": 141,
+    "soldCount": 271,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1774389171/brown_Bow_Clip_ar4fcc.jpg",
+      "publicId": "brown_Bow_Clip_ar4fcc"
+    }
+  },
+  {
+    "name": "White Scrunchie",
+    "brand": "Bowy",
+    "price": 55.0,
+    "category": "Hair Care",
+    "description": "A White fabric scrunchie that's comfortable and stylish.",
+    "stock": 238,
+    "soldCount": 0,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1774389153/White_Scrunchie.jpg_x5snjc.jpg",
+      "publicId": "White_Scrunchie.jpg_x5snjc"
+    }
+  },
+  {
+    "name": "Pink Scrunchie ",
+    "brand": "Bowy",
+    "price": 55.0,
+    "category": "Hair Care",
+    "description": "A Pink fabric scrunchie that's comfortable and stylish.",
+    "stock": 156,
+    "soldCount": 165,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1774389154/Pink_Scrunchie_wsv2xe.jpg",
+      "publicId": "Pink_Scrunchie_wsv2xe"
+    }
+  },
+  {
+    "name": "Beige Scrunchie ",
+    "brand": "Bowy",
+    "price": 55.0,
+    "category": "Hair Care",
+    "description": "A Beige fabric scrunchie that's comfortable and stylish.",
+    "stock": 128,
+    "soldCount": 9,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1774389155/Beige_Scrunchie_j3jjgx.jpg",
+      "publicId": "Beige_Scrunchie_j3jjgx"
+    }
+  },
+  {
+    "name": "brown Scrunchie ",
+    "brand": "Bowy",
+    "price": 55.0,
+    "category": "Hair Care",
+    "description": "A brown fabric scrunchie that's comfortable and stylish.",
+    "stock": 31,
+    "soldCount": 46,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1774389156/brown_Scrunchie_gwtvex.jpg",
+      "publicId": "brown_Scrunchie_gwtvex"
+    }
+  },
+  {
+    "name": "pink Bow Clip",
+    "brand": "Bowy",
+    "price": 55.0,
+    "category": "Hair Care",
+    "description": "A stylish pink hair clip with a modern design, perfect for finishing any hairstyle.",
+    "stock": 227,
+    "soldCount": 314,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1774389158/pink_Bow_Clip_kls7a4.jpg",
+      "publicId": "pink_Bow_Clip_kls7a4"
+    }
+  },
+  {
+    "name": "Purple Bow Clip",
+    "brand": "Bowy",
+    "price": 175.0,
+    "category": "Hair Care",
+    "description": "A soft Purple Bow Clip shawl, perfect for draping over the head or shoulders in style.",
+    "stock": 64,
+    "soldCount": 14,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1774389164/Purple_Bow_Clip_gstixw.jpg",
+      "publicId": "Purple_Bow_Clip_gstixw"
+    }
+  },
+  {
+    "name": "green Bow Clip ",
+    "brand": "Bowy",
+    "price": 175.0,
+    "category": "Hair Care",
+    "description": "A soft green Bow Clip shawl, perfect for draping over the head or shoulders in style.",
+    "stock": 64,
+    "soldCount": 145,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1774389164/green_Bow_Clip_amhpbt.jpg",
+      "publicId": "green_Bow_Clip_amhpbt"
+    }
+  },
+  {
+    "name": "white Bow  Clip ",
+    "brand": "Bowy",
+    "price": 175.0,
+    "category": "Hair Care",
+    "description": "A soft white Bow Clip shawl, perfect for draping over the head or shoulders in style.",
+    "stock": 245,
+    "soldCount": 80,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1774389170/white_Bow_Clip_iiue2o.jpg",
+      "publicId": "white_Bow_Clip_iiue2o"
+    }
+  },
+  {
+    "name": "Green Shawl",
+    "brand": "Scarvella",
+    "price": 500.0,
+    "category": "Scarf",
+    "description": "A soft Green shawl, perfect for draping over the head or shoulders in style.",
+    "stock": 24,
+    "soldCount": 46,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1774389152/Green_Scarf_h6xsi2.jpg",
+      "publicId": "Green_Scarf_h6xsi2"
+    }
+  },
+  {
+    "name": "Blue Shawl",
+    "brand": "Scarvella",
+    "price": 500.0,
+    "category": "Scarf",
+    "description": "A soft Blue shawl, perfect for draping over the head or shoulders in style.",
+    "stock": 127,
+    "soldCount": 35,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1774389057/Blue_Scarf_lrhvsa.jpg",
+      "publicId": "Blue_Scarf_lrhvsa"
+    }
+  },
+  {
+    "name": "Brown Shawl",
+    "brand": "Scarvella",
+    "price": 500.0,
+    "category": "Scarf",
+    "description": "A soft Brown shawl, perfect for draping over the head or shoulders in style.",
+    "stock": 197,
+    "soldCount": 272,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1774389059/Brown_Scarf_o5dapt.jpg",
+      "publicId": "Brown_Scarf_o5dapt"
+    }
+  },
+  {
+    "name": "Black Shawl",
+    "brand": "Scarvella",
+    "price": 500.0,
+    "category": "Scarf",
+    "description": "A soft Black shawl, perfect for draping over the head or shoulders in style.",
+    "stock": 199,
+    "soldCount": 64,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1774389057/Black_Scarf_dj4i5l.jpg",
+      "publicId": "Black_Scarf_dj4i5l"
+    }
+  },
+  {
+    "name": "Red Shawl",
+    "brand": "Scarvella",
+    "price": 500.0,
+    "category": "Scarf",
+    "description": "A ceramic mug with a distinctive design, great for hot or cold drinks.",
+    "stock": 35,
+    "soldCount": 84,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1774389057/Red_Scarf_ddkuvq.jpg",
+      "publicId": "Red_Scarf_ddkuvq"
+    }
+  },
+  {
+    "name": "Beige Shawl",
+    "brand": "Scarvella",
+    "price": 500.0,
+    "category": "Scarf",
+    "description": "A ceramic mug with a distinctive design, great for hot or cold drinks.",
+    "stock": 124,
+    "soldCount": 281,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1774389060/Beige_Scarf_ngdaes.jpg",
+      "publicId": "Beige_Scarf_ngdaes"
+    }
+  },
+  {
+    "name": "Pink Shawl",
+    "brand": "Scarvella",
+    "price": 500.0,
+    "category": "Scarf",
+    "description": "A ceramic mug with a distinctive design, great for hot or cold drinks.",
+    "stock": 45,
+    "soldCount": 33,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1774389058/Pink_Scarf_gg4x3d.jpg",
+      "publicId": "Pink_Scarf_gg4x3d"
+    }
+  },
+  {
+    "name": "Hen Mug",
+    "brand": "farmhouse pottery",
+    "price": 112.9,
+    "category": "Mug",
+    "description": "A ceramic mug with a charming hen design, great for hot drinks.",
+    "stock": 138,
+    "soldCount": 310,
+    "image": {
+      "url": "https://www.farmhousepottery.com/cdn/shop/files/MUG_98_1500x.jpg?v=1772370357",
+      "publicId": "Hen-Mug_vlgbbr"
+    }
+  },
+  {
+    "name": "Tulip Mug",
+    "brand": "farmhouse pottery",
+    "price": 119.89,
+    "category": "Mug",
+    "description": "A ceramic mug featuring an elegant tulip design.",
+    "stock": 111,
+    "soldCount": 108,
+    "image": {
+      "url": "https://www.farmhousepottery.com/cdn/shop/files/MUG_96_1500x.jpg?v=1769710351",
+      "publicId": "Tulip-Mug_elmikt"
+    }
+  },
+  {
+    "name": "Wooly Mug",
+    "brand": "farmhouse pottery",
+    "price": 135.89,
+    "category": "Mug",
+    "description": "A ceramic mug with a cozy, wool-inspired design.",
+    "stock": 240,
+    "soldCount": 552,
+    "image": {
+      "url": "https://www.farmhousepottery.com/cdn/shop/files/MUG_101_1500x.jpg?v=1773088359",
+      "publicId": "Wooly-Mug_vdgndf"
+    }
+  },
+  {
+    "name": "Bloom Mug",
+    "brand": "farmhouse pottery",
+    "price": 115.89,
+    "category": "Mug",
+    "description": "A ceramic mug decorated with blooming flowers.",
+    "stock": 196,
+    "soldCount": 373,
+    "image": {
+      "url": "https://www.farmhousepottery.com/cdn/shop/files/MU…f61-4628-a762-250a7cb4555b_1500x.jpg?v=1744138346",
+      "publicId": "Bloom-Mug_mt5rd5"
+    }
+  },
+  {
+    "name": "Milkmaid Mug",
+    "brand": "farmhouse pottery",
+    "price": 98.89,
+    "category": "Mug",
+    "description": "A ceramic mug with a charming rustic design.",
+    "stock": 179,
+    "soldCount": 102,
+    "image": {
+      "url": "https://www.farmhousepottery.com/cdn/shop/files/MUG_97_1500x.jpg?v=1769710368",
+      "publicId": "Milkmaid-Mug_yi5kek"
+    }
+  },
+  {
+    "name": "Classic Mug",
+    "brand": "greek market",
+    "price": 147.89,
+    "category": "Mug",
+    "description": "A classic ceramic mug with a simple, elegant design.",
+    "stock": 185,
+    "soldCount": 159,
+    "image": {
+      "url": "https://emersoncreekpottery.com/wp-content/uploads/2022/05/Stoneware-Pottery-Classic-Mug-1.jpg",
+      "publicId": "Classic-Mug_g4gt2h"
+    }
+  },
+  {
+    "name": "Latte Mug",
+    "brand": "greek market",
+    "price": 117.89,
+    "category": "Mug",
+    "description": "A wide ceramic mug perfect for latte-style drinks.",
+    "stock": 105,
+    "soldCount": 191,
+    "image": {
+      "url": "https://emersoncreekpottery.com/wp-content/uploads/2022/05/Stoneware-Pottery-Latte-Mug.jpg",
+      "publicId": "Latte-Mug_pc7wot"
+    }
+  },
+  {
+    "name": "Signature Mug",
+    "brand": "greek market",
+    "price": 144.89,
+    "category": "Mug",
+    "description": "A ceramic mug featuring a distinctive signature design.",
+    "stock": 115,
+    "soldCount": 264,
+    "image": {
+      "url": "https://emersoncreekpottery.com/wp-content/uploads/2022/05/Stoneware-Pottery-Signature-Mug-1-800x800.jpg",
+      "publicId": "Signature-Mug_p7gn3w"
+    }
+  },
+  {
+    "name": "Brookline Camp Mug",
+    "brand": "greek market",
+    "price": 81.89,
+    "category": "Mug",
+    "description": "A durable metal mug perfect for trips and camping.",
+    "stock": 118,
+    "soldCount": 61,
+    "image": {
+      "url": "https://emersoncreekpottery.com/wp-content/uploads/2022/05/Stoneware-Pottery-Brookline-Cup-2-800x800.jpg",
+      "publicId": "Brookline-Camp-Mug_hswfwi"
+    }
+  },
+  {
+    "name": "Children's Cups",
+    "brand": "greek market",
+    "price": 92.89,
+    "category": "Mug",
+    "description": "Cups designed for children with colorful, safe designs.",
+    "stock": 66,
+    "soldCount": 57,
+    "image": {
+      "url": "https://emersoncreekpottery.com/wp-content/uploads/2022/05/Childrens-Cups-800x800.jpg",
+      "publicId": "Children_s-Cups_jpeg_hygjxv"
+    }
+  },
+  {
+    "name": "Off White and Black Wax Resist Floral Cat Ceramic Mug",
+    "brand": "world mugs",
+    "price": 120.89,
+    "category": "Mug",
+    "description": "A wax-resist ceramic mug featuring a cat-and-floral design in off-white and black.",
+    "stock": 19,
+    "soldCount": 21,
+    "image": {
+      "url": "https://www.worldmarket.com/dw/image/v2/BJWT_PRD/o…067_XXX_v1.jpg?sw=385&sh=385&sm=fit&sfrm=jpg&q=80",
+      "publicId": "Off-White-and-Black-Wax-Resist-Floral-Cat-Ceramic-Mug_zkszer"
+    }
+  },
+  {
+    "name": "Lucky Cat Figural Ceramic Mug",
+    "brand": "world mugs",
+    "price": 132.89,
+    "category": "Mug",
+    "description": "A figural ceramic mug shaped like a lucky cat.",
+    "stock": 8,
+    "soldCount": 18,
+    "image": {
+      "url": "https://www.worldmarket.com/dw/image/v2/BJWT_PRD/o…black_v1.jpg?sw=1984&sh=1984&sm=fit&sfrm=jpg&q=80",
+      "publicId": "Lucky-Cat-Figural-Ceramic-Mug_l3i5h3"
+    }
+  },
+  {
+    "name": "Cream Flower Hand Painted Ceramic Mug",
+    "brand": "world mugs",
+    "price": 100.89,
+    "category": "Mug",
+    "description": "A hand-painted ceramic mug with an organic floral and bunny design.",
+    "stock": 144,
+    "soldCount": 117,
+    "image": {
+      "url": "https://www.worldmarket.com/dw/image/v2/BJWT_PRD/o…rchid_v1.jpg?sw=1984&sh=1984&sm=fit&sfrm=jpg&q=80",
+      "publicId": "Cream-Flower-Hand-Painted-Ceramic-Mug_afyb1z"
+    }
+  },
+  {
+    "name": "Cream and Yellow Dachshund Hand Painted Ceramic Mug",
+    "brand": "world mugs",
+    "price": 124.89,
+    "category": "Mug",
+    "description": "A hand-painted ceramic mug with an elegant blue and green peacock design.",
+    "stock": 153,
+    "soldCount": 112,
+    "image": {
+      "url": "https://www.worldmarket.com/dw/image/v2/BJWT_PRD/o…051_XXX_v1.jpg?sw=385&sh=385&sm=fit&sfrm=jpg&q=80",
+      "publicId": "Cream-and-Yellow-Dachshund-Hand-Painted-Ceramic-Mug_wcubtr"
+    }
+  },
+  {
+    "name": "Blue and Red Floral Embossed Ceramic Mug",
+    "brand": "world mugs",
+    "price": 90.89,
+    "category": "Mug",
+    "description": "An elegant hijab made from high-quality fabric.",
+    "stock": 4,
+    "soldCount": 1,
+    "image": {
+      "url": "https://www.worldmarket.com/dw/image/v2/BJWT_PRD/o…084_XXX_v1.jpg?sw=385&sh=385&sm=fit&sfrm=jpg&q=80",
+      "publicId": "Blue-and-Red-Floral-Embossed-Ceramic-Mug_mlipa6"
+    }
+  },
+  {
+    "name": "Flora Flower and Bunny Organic Hand Painted Ceramic Mug",
+    "brand": "world mugs",
+    "price": 133.89,
+    "category": "Mug",
+    "description": "An elegant hijab made from high-quality fabric.",
+    "stock": 184,
+    "soldCount": 323,
+    "image": {
+      "url": "https://www.worldmarket.com/dw/image/v2/BJWT_PRD/o…675_XXX_v1.jpg?sw=385&sh=385&sm=fit&sfrm=jpg&q=80",
+      "publicId": "Flora_Flower_and_Bunny_Organic_Hand_Painted_Ceramic_Mug_oxg0e6"
+    }
+  },
+  {
+    "name": "Blue and Green Peacock Hand Painted Ceramic Mug",
+    "brand": "world mugs",
+    "price": 136.89,
+    "category": "Mug",
+    "description": "An elegant hijab made from high-quality fabric.",
+    "stock": 18,
+    "soldCount": 14,
+    "image": {
+      "url": "https://www.worldmarket.com/dw/image/v2/BJWT_PRD/o…093_XXX_v1.jpg?sw=385&sh=385&sm=fit&sfrm=jpg&q=80",
+      "publicId": "Blue-and-Green-Peacock-Hand-Painted-Ceramic-Mug_yhctvr"
+    }
+  },
+  {
+    "name": "Classic Cotton Hijab",
+    "brand": "Liya Veil",
+    "price": 50.0,
+    "category": "Hijab",
+    "description": "A classic cotton hijab, soft and comfortable for everyday wear.",
+    "stock": 20,
+    "soldCount": 2,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773504871/SnapInsta.to_475759727_1181081436717255_3644679665418076851_n_q5ripn.jpg",
+      "publicId": "SnapInsta.to_475759727_1181081436717255_3644679665418076851_n_q5ripn"
+    }
+  },
+  {
+    "name": "Premium Chiffon Hijab",
+    "brand": "Liya Veil",
+    "price": 60.0,
+    "category": "Hijab",
+    "description": "A premium chiffon hijab, lightweight with an elegant sheen.",
+    "stock": 223,
+    "soldCount": 338,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773504869/SnapInsta.to_475521778_1181081346717264_5029968946346490606_n_lwjren.jpg",
+      "publicId": "SnapInsta.to_475521778_1181081346717264_5029968946346490606_n_lwjren"
+    }
+  },
+  {
+    "name": "Crinkle Hijab",
+    "brand": "Liya Veil",
+    "price": 35.0,
+    "category": "Hijab",
+    "description": "A crinkle-textured hijab that holds its shape without ironing.",
+    "stock": 21,
+    "soldCount": 32,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773504864/SnapInsta.to_464639301_3762653263999743_6445380607894443029_n_izs9j3.jpg",
+      "publicId": "SnapInsta.to_464639301_3762653263999743_6445380607894443029_n_izs9j3"
+    }
+  },
+  {
+    "name": "Soft Jersey Hijab",
+    "brand": "Liya Veil",
+    "price": 43.0,
+    "category": "Hijab",
+    "description": "A soft, stretchy jersey hijab that's easy to style.",
+    "stock": 63,
+    "soldCount": 71,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773504861/SnapInsta.to_463856550_1112488833576516_2022935515462474247_n_k0dbnv.jpg",
+      "publicId": "SnapInsta.to_463856550_1112488833576516_2022935515462474247_n_k0dbnv"
+    }
+  },
+  {
+    "name": "Silk Touch Hijab",
+    "brand": "Liya Veil",
+    "price": 42.5,
+    "category": "Hijab",
+    "description": "A hijab with a silky-soft, elegant touch.",
+    "stock": 174,
+    "soldCount": 248,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773504857/SnapInsta.to_448050774_1132410058039798_7784233705008258804_n_xwsk1p.jpg",
+      "publicId": "SnapInsta.to_448050774_1132410058039798_7784233705008258804_n_xwsk1p"
+    }
+  },
+  {
+    "name": "Satin Finish Hijab",
+    "brand": "Oriana",
+    "price": 34.99,
+    "category": "Hijab",
+    "description": "A hijab with a satin finish, ideal for special occasions.",
+    "stock": 57,
+    "soldCount": 138,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773504578/SnapInsta.to_447911154_1189245002350116_3118961863163660547_n_foevo9.jpg",
+      "publicId": "SnapInsta.to_447911154_1189245002350116_3118961863163660547_n_foevo9"
+    }
+  },
+  {
+    "name": "Linen Blend Hijab",
+    "brand": "Oriana",
+    "price": 50.0,
+    "category": "Hijab",
+    "description": "A linen-blend hijab with a natural, elegant look.",
+    "stock": 36,
+    "soldCount": 73,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773504575/SnapInsta.to_447910450_305344352644914_8797533363459132185_n_qgxxvs.jpg",
+      "publicId": "SnapInsta.to_447910450_305344352644914_8797533363459132185_n_qgxxvs"
+    }
+  },
+  {
+    "name": "Lightweight Everyday Hijab",
+    "brand": "Oriana",
+    "price": 87.0,
+    "category": "Hijab",
+    "description": "A lightweight hijab designed for comfortable daily wear.",
+    "stock": 150,
+    "soldCount": 242,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773504571/SnapInsta.to_353977537_680191563917380_8716444106242048451_n_g38xx7.jpg",
+      "publicId": "SnapInsta.to_353977537_680191563917380_8716444106242048451_n_g38xx7"
+    }
+  },
+  {
+    "name": "Formal Occasion Hijab",
+    "brand": "Oriana",
+    "price": 24.0,
+    "category": "Hijab",
+    "description": "An elegant hijab designed for formal occasions and celebrations.",
+    "stock": 65,
+    "soldCount": 121,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773504568/SnapInsta.to_353775885_928755255088319_3601804251241447568_n_go6ntf.jpg",
+      "publicId": "SnapInsta.to_353775885_928755255088319_3601804251241447568_n_go6ntf"
+    }
+  },
+  {
+    "name": "Sport Active Hijab",
+    "brand": "Oriana",
+    "price": 60.0,
+    "category": "Hijab",
+    "description": "A sport hijab that wicks sweat, ideal for physical activity.",
+    "stock": 209,
+    "soldCount": 416,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773504566/SnapInsta.to_353554061_3566233187032093_1670230556111333151_n_xlqyir.jpg",
+      "publicId": "SnapInsta.to_353554061_3566233187032093_1670230556111333151_n_xlqyir"
+    }
+  },
+  {
+    "name": "Breathable Summer Hijab",
+    "brand": "Lamina",
+    "price": 62.0,
+    "category": "Hijab",
+    "description": "A lightweight, breathable hijab suited for hot weather.",
+    "stock": 51,
+    "soldCount": 24,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773503156/SnapInsta.to_353527910_1343660549694953_94642381236675175_n_frxsmo.jpg",
+      "publicId": "Breathable-Summer-Hijab"
+    }
+  },
+  {
+    "name": "Winter Warm Hijab",
+    "brand": "Lamina",
+    "price": 28.99,
+    "category": "Hijab",
+    "description": "A warm, thick-fabric hijab that protects against cold.",
+    "stock": 27,
+    "soldCount": 55,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773503153/SnapInsta.to_343270752_905988157359836_7504487678562042906_n_ip2s0m.jpg",
+      "publicId": "SnapInsta.to_343270752_905988157359836_7504487678562042906_n_ip2s0m"
+    }
+  },
+  {
+    "name": "Instant Slip-On Hijab",
+    "brand": "Lamina",
+    "price": 54.0,
+    "category": "Hijab",
+    "description": "An elegant accessory piece with a distinctive design.",
+    "stock": 93,
+    "soldCount": 108,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773503151/SnapInsta.to_343111614_9335152976524850_2601629176783305074_n_edbvwh.jpg",
+      "publicId": "SnapInsta.to_343111614_9335152976524850_2601629176783305074_n_edbvwh"
+    }
+  },
+  {
+    "name": "Maxi Wrap Hijab",
+    "brand": "Lamina",
+    "price": 36.0,
+    "category": "Hijab",
+    "description": "An elegant accessory piece with a distinctive design.",
+    "stock": 108,
+    "soldCount": 239,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773503151/SnapInsta.to_335986049_1346529319248927_4353091073417588026_n_ea1ojt.jpg",
+      "publicId": "SnapInsta.to_335986049_1346529319248927_4353091073417588026_n_ea1ojt"
+    }
+  },
+  {
+    "name": "Luxury Signature Hijab",
+    "brand": "Lamina",
+    "price": 30.0,
+    "category": "Hijab",
+    "description": "An elegant accessory piece with a distinctive design.",
+    "stock": 224,
+    "soldCount": 55,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773503148/SnapInsta.to_295556523_1053303485577411_8387495810325792622_n_xy9o4s.jpg",
+      "publicId": "SnapInsta.to_295556523_1053303485577411_8387495810325792622_n_xy9o4s"
+    }
+  },
+  {
+    "name": "Branch_ring",
+    "brand": "Cartier",
+    "price": 35.0,
+    "category": "Accessories",
+    "description": "A ring with an elegant branch design for a natural touch.",
+    "stock": 175,
+    "soldCount": 334,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773394315/download_24_cgg1s8.jpg",
+      "publicId": "\ndownload_24_cgg1s8"
+    }
+  },
+  {
+    "name": "wing -ring",
+    "brand": "Cartier",
+    "price": 30.0,
+    "category": "Accessories",
+    "description": "A ring featuring a distinctive wing design.",
+    "stock": 168,
+    "soldCount": 50,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773394291/download_19_natuqn.jpg",
+      "publicId": "download_19_natuqn"
+    }
+  },
+  {
+    "name": "Pow Erraings",
+    "brand": "Cartier",
+    "price": 40.0,
+    "category": "Accessories",
+    "description": "Earrings with a bold, modern design.",
+    "stock": 18,
+    "soldCount": 25,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773394188/download_15_hgmuyf.jpg",
+      "publicId": "download_15_hgmuyf"
+    }
+  },
+  {
+    "name": "pearl-pow Erraings",
+    "brand": "Cartier",
+    "price": 40.0,
+    "category": "Accessories",
+    "description": "Pearl-embellished earrings with an elegant design.",
+    "stock": 189,
+    "soldCount": 173,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773394182/download_16_wdndsj.jpg",
+      "publicId": "download_16_wdndsj"
+    }
+  },
+  {
+    "name": "Wired Bracelet",
+    "brand": "Cartier",
+    "price": 45.0,
+    "category": "Accessories",
+    "description": "A bracelet made of artfully woven wire.",
+    "stock": 207,
+    "soldCount": 111,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773394173/39745d3f1fdde974c5b6e0f31b6ac7ba_hndq1c.webp",
+      "publicId": "39745d3f1fdde974c5b6e0f31b6ac7ba_hndq1c"
+    }
+  },
+  {
+    "name": "Simple-twins",
+    "brand": "Cartier",
+    "price": 50.0,
+    "category": "Accessories",
+    "description": "A minimalist matching-pair accessory piece.",
+    "stock": 66,
+    "soldCount": 49,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773394164/4402f956cba6eefbd5ba34acaa76ae66_vajjxj.webp",
+      "publicId": "4402f956cba6eefbd5ba34acaa76ae66_vajjxj"
+    }
+  },
+  {
+    "name": "Butterfly-ring",
+    "brand": "Cartier",
+    "price": 35.0,
+    "category": "Accessories",
+    "description": "A ring with a delicate butterfly design.",
+    "stock": 51,
+    "soldCount": 114,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773394151/4d910211611b434eebdd2f6a8cff7b3f_z9h2kw.webp",
+      "publicId": "4d910211611b434eebdd2f6a8cff7b3f_z9h2kw"
+    }
+  },
+  {
+    "name": "Black-Rose collection",
+    "brand": "Tiffany_Co",
+    "price": 100.0,
+    "category": "Accessories",
+    "description": "An accessory collection featuring an elegant black rose design.",
+    "stock": 38,
+    "soldCount": 54,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773396662/1pc_Elegant_Sweet_Black_Lucky_Five-Leaf_Clover_Pendant_Necklace_1pc_Bracelet_1_Pair_Earrings_-_Women_Jewelry_Set_Mother_s_Wedding_Gift_lc5r5c.jpg",
+      "publicId": "1pc_Elegant_Sweet_Black_Lucky_Five-Leaf_Clover_Pendant_Necklace_1pc_Bracelet_1_Pair_Earrings_-_Women_Jewelry_Set_Mother_s_Wedding_Gift_lc5r5c"
+    }
+  },
+  {
+    "name": "Crystal Saturn Pendant",
+    "brand": "Tiffany_Co",
+    "price": 85.0,
+    "category": "Accessories",
+    "description": "A pendant shaped like Saturn, embellished with crystal.",
+    "stock": 49,
+    "soldCount": 35,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773396656/1pc_Cubic_Zirconia_Star_Planet_Pendant_Necklace_For_Teen_Girls_Delicate_Fashion_Party_Jewelry_For_Children_Birthday_Gift_wg7ra5.jpg",
+      "publicId": "1pc_Cubic_Zirconia_Star_Planet_Pendant_Necklace_For_Teen_Girls_Delicate_Fashion_Party_Jewelry_For_Children_Birthday_Gift_wg7ra5"
+    }
+  },
+  {
+    "name": "Green-Flowered-Earrings",
+    "brand": "Tiffany_Co",
+    "price": 70.0,
+    "category": "Accessories",
+    "description": "Earrings featuring an elegant green floral design.",
+    "stock": 121,
+    "soldCount": 127,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773395041/fb81d3465c77420901bfb33f69007ccd_mtqidb.webp",
+      "publicId": "fb81d3465c77420901bfb33f69007ccd_mtqidb"
+    }
+  },
+  {
+    "name": "Gold Linked Gemstone Bracelet\n\n\n",
+    "brand": "Tiffany_Co",
+    "price": 75.0,
+    "category": "Accessories",
+    "description": "A gold link bracelet set with gemstones.",
+    "stock": 226,
+    "soldCount": 77,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773395002/download_12_ix3zah.jpg",
+      "publicId": "download_12_ix3zah"
+    }
+  },
+  {
+    "name": "Heart-Earrings",
+    "brand": "Tiffany_Co",
+    "price": 90.0,
+    "category": "Accessories",
+    "description": "Earrings with a romantic heart design.",
+    "stock": 116,
+    "soldCount": 281,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773394993/download_18_v8xwc8.jpg",
+      "publicId": "download_18_v8xwc8"
+    }
+  },
+  {
+    "name": "Crystal Leaf Hoops",
+    "brand": "Tiffany_Co",
+    "price": 50.0,
+    "category": "Accessories",
+    "description": "Hoop earrings featuring a leaf design set with crystals.",
+    "stock": 28,
+    "soldCount": 6,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773394985/download_17_n6luxh.jpg",
+      "publicId": "download_17_n6luxh"
+    }
+  },
+  {
+    "name": "Pink-FlowerEarring",
+    "brand": "Tiffany_Co",
+    "price": 70.0,
+    "category": "Accessories",
+    "description": "Earrings featuring a pink flower design.",
+    "stock": 169,
+    "soldCount": 276,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773394978/3526003bd7b456bb89b17593130efe06_nkmfpa.webp",
+      "publicId": "3526003bd7b456bb89b17593130efe06_nkmfpa"
+    }
+  },
+  {
+    "name": "Blue Garden Earrings",
+    "brand": "Tiffany_Co",
+    "price": 75.0,
+    "category": "Accessories",
+    "description": "Earrings with an elegant blue garden design.",
+    "stock": 217,
+    "soldCount": 15,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773394972/watermarke8438d42de0d27c064baba1c0d0a18d0_rf8bep.webp",
+      "publicId": "__ring__????_cgjx4u"
+    }
+  },
+  {
+    "name": "Ginkgo Leaf Ring",
+    "brand": "Tiffany_Co",
+    "price": 100.0,
+    "category": "Accessories",
+    "description": "A ring featuring a distinctive ginkgo leaf design.",
+    "stock": 26,
+    "soldCount": 30,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773394963/__ring__%D8%AE%D8%A7%D8%AA%D9%85_cgjx4u.jpg",
+      "publicId": "Nonnyl_Gifts_for_Women-_Tahitian-Black-Pearl-Necklace_for_Women_12-13mm_Real_South_Sea_Pearls_Pendant_Sterling_Silver_Plated_18K_Gold_With_Urquoise-_Christmas_Mothers_Day_Valentine_s_Day_Jewelry_rchdom"
+    }
+  },
+  {
+    "name": "Green Crystal Necklace",
+    "brand": "Tiffany_Co",
+    "price": 100.0,
+    "category": "Accessories",
+    "description": "A necklace set with green crystal stones.",
+    "stock": 45,
+    "soldCount": 52,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773394959/Nonnyl_Gifts_for_Women-_Tahitian-Black-Pearl-Necklace_for_Women_12-13mm_Real_South_Sea_Pearls_Pendant_Sterling_Silver_Plated_18K_Gold_With_Urquoise-_Christmas_Mothers_Day_Valentine_s_Day_Jewelry_rchdom.jpg",
+      "publicId": "             Nonnyl_Gifts_for_Women-_Tahitian-Black-Pearl-Necklace_for_Women_12-13mm_Real_South_Sea_Pearls_Pendant_Sterling_Silver_Plated_18K_Gold_With_Urquoise-_Christmas_Mothers_Day_Valentine_s_Day_Jewelry_rchdom"
+    }
+  },
+  {
+    "name": "Golden Weave Hoops",
+    "brand": "Van Cleef",
+    "price": 90.0,
+    "category": "Accessories",
+    "description": "Gold hoop earrings with a woven design.",
+    "stock": 127,
+    "soldCount": 246,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773395888/O1CN01AqgKHX1dluysSOGfL__1936373777-0-cib_vzl4c3.jpg",
+      "publicId": "O1CN01AqgKHX1dluysSOGfL__1936373777-0-cib_vzl4c3"
+    }
+  },
+  {
+    "name": "Summer Breeze",
+    "brand": "Van Cleef",
+    "price": 95.0,
+    "category": "Accessories",
+    "description": "A lightweight accessory reflecting the spirit of summer.",
+    "stock": 57,
+    "soldCount": 102,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773395879/Kolye_tk4iru.jpg",
+      "publicId": "Kolye_tk4iru"
+    }
+  },
+  {
+    "name": "Bird-Ring",
+    "brand": "Van Cleef",
+    "price": 55.0,
+    "category": "Accessories",
+    "description": "A ring with an elegant bird design.",
+    "stock": 234,
+    "soldCount": 60,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773395830/download_23_ygsffw.jpg",
+      "publicId": "download_23_ygsffw"
+    }
+  },
+  {
+    "name": "Vintage Rose Band",
+    "brand": "Van Cleef",
+    "price": 120.0,
+    "category": "Accessories",
+    "description": "A ring with a classic, vintage-inspired rose design.",
+    "stock": 45,
+    "soldCount": 48,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773395820/download_22_wdytns.jpg",
+      "publicId": "download_22_wdytns"
+    }
+  },
+  {
+    "name": "Sparkling Swan Pendant",
+    "brand": "Van Cleef",
+    "price": 110.0,
+    "category": "Accessories",
+    "description": "A pendant with an elegant, sparkling swan design.",
+    "stock": 3,
+    "soldCount": 6,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773395816/e88d28113dac1efb1f9cbe031edf065a_iz3cnp.jpg",
+      "publicId": "e88d28113dac1efb1f9cbe031edf065a_iz3cnp"
+    }
+  },
+  {
+    "name": "Blooming Rose Ring",
+    "brand": "Van Cleef",
+    "price": 80.0,
+    "category": "Accessories",
+    "description": "A ring featuring a delicate blooming rose design.",
+    "stock": 70,
+    "soldCount": 116,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773395811/download_21_ffvhlw.jpg",
+      "publicId": "download_21_ffvhlw"
+    }
+  },
+  {
+    "name": "Amethyst Luck Bracelet",
+    "brand": "Van Cleef",
+    "price": 25.0,
+    "category": "Accessories",
+    "description": "An elegant, practical bag suited for various occasions.",
+    "stock": 76,
+    "soldCount": 108,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773395806/e145882311dd59d41b2134405d932ec2_qpxc8g.webp",
+      "publicId": "e145882311dd59d41b2134405d932ec2_qpxc8g"
+    }
+  },
+  {
+    "name": "Butterfly-Earrings",
+    "brand": "Van Cleef",
+    "price": 85.0,
+    "category": "Accessories",
+    "description": "An elegant, practical bag suited for various occasions.",
+    "stock": 181,
+    "soldCount": 374,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773395800/watermark44317f633f2ceef0cd4015583fd9f447_i5tx6a.webp",
+      "publicId": "watermark44317f633f2ceef0cd4015583fd9f447_i5tx6a"
+    }
+  },
+  {
+    "name": "Butterfly-collection",
+    "brand": "Van Cleef",
+    "price": 100.0,
+    "category": "Accessories",
+    "description": "An elegant, practical bag suited for various occasions.",
+    "stock": 203,
+    "soldCount": 284,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773395796/%D8%A7%D9%83%D8%B3%D8%B3%D9%88%D8%A7%D8%B1%D8%A7%D8%AA_%D8%AC%D9%85%D9%8A%D9%84%D9%87_dfuif8.jpg",
+      "publicId": "?????????_?????_dfuif8"
+    }
+  },
+  {
+    "name": "Soft Bloom Bag",
+    "brand": "Lurelle",
+    "price": 300.0,
+    "category": "Handmade bags",
+    "description": "A soft bag with an elegant floral design.",
+    "stock": 172,
+    "soldCount": 367,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773460235/cf43210e4f9730e5b01598d09bc7d48f_aoxwjq.webp",
+      "publicId": "cf43210e4f9730e5b01598d09bc7d48f_aoxwjq"
+    }
+  },
+  {
+    "name": "Pastel Mini Bag",
+    "brand": "Lurelle",
+    "price": 250.0,
+    "category": "Handmade bags",
+    "description": "A mini bag in soothing pastel tones.",
+    "stock": 127,
+    "soldCount": 79,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773460210/2c49ee8641b59b5e75406207f94804ca_ymmxfq.jpg",
+      "publicId": "2c49ee8641b59b5e75406207f94804ca_ymmxfq"
+    }
+  },
+  {
+    "name": "Cute Bag",
+    "brand": "Lurelle",
+    "price": 200.0,
+    "category": "Handmade bags",
+    "description": "A small bag with a cute, practical design.",
+    "stock": 51,
+    "soldCount": 75,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773460222/a5dd0b38b1a755a5a77f5fd138d4ea16_eekdf4.jpg",
+      "publicId": "a5dd0b38b1a755a5a77f5fd138d4ea16_eekdf4"
+    }
+  },
+  {
+    "name": "Daisy Handbag",
+    "brand": "Lurelle",
+    "price": 300.0,
+    "category": "Handmade bags",
+    "description": "A handbag featuring a daisy flower design.",
+    "stock": 58,
+    "soldCount": 14,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773460230/be9153dde9f74a43307cd756f6b870c6_wiycxw.jpg",
+      "publicId": "be9153dde9f74a43307cd756f6b870c6_wiycxw"
+    }
+  },
+  {
+    "name": "Velvet  Bag",
+    "brand": "Lurelle",
+    "price": 250.0,
+    "category": "Handmade bags",
+    "description": "A bag made from luxurious velvet fabric.",
+    "stock": 151,
+    "soldCount": 376,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773460232/c3b6f146ac9351bb8cf32e3feb81a000_nynvjd.jpg",
+      "publicId": "c3b6f146ac9351bb8cf32e3feb81a000_nynvjd"
+    }
+  },
+  {
+    "name": "Cozy Knit Bag",
+    "brand": "Lurelle",
+    "price": 250.0,
+    "category": "Handmade bags",
+    "description": "A cozy knitted bag with a comfortable texture.",
+    "stock": 141,
+    "soldCount": 31,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773460229/bd8349b04d9776ef9978e4087e020bbc_ntozw7.jpg",
+      "publicId": "bd8349b04d9776ef9978e4087e020bbc_ntozw7"
+    }
+  },
+  {
+    "name": "Classic Leather Bag",
+    "brand": "Velmora",
+    "price": 350.0,
+    "category": "Handmade bags",
+    "description": "A classic, durable leather bag.",
+    "stock": 194,
+    "soldCount": 160,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773460218/67faf0255b475bc0b3fb4d5fbd0bfd0d_ipgfwq.webp",
+      "publicId": "67faf0255b475bc0b3fb4d5fbd0bfd0d_ipgfwq"
+    }
+  },
+  {
+    "name": "Elegant Handbag",
+    "brand": "Velmora",
+    "price": 250.0,
+    "category": "Handmade bags",
+    "description": "An elegant handbag suited for refined looks.",
+    "stock": 17,
+    "soldCount": 3,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773460219/71bc8ab8f43ba40550e9ae1b600ad7e4_xhnxae.jpg",
+      "publicId": "71bc8ab8f43ba40550e9ae1b600ad7e4_xhnxae"
+    }
+  },
+  {
+    "name": "Clean Line Bag",
+    "brand": "Velmora",
+    "price": 200.0,
+    "category": "Handmade bags",
+    "description": "A bag with a simple, clean-lined design.",
+    "stock": 152,
+    "soldCount": 244,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773460236/e91a541644c2b5ee32e14a8ac8a09461_o1p9fu.jpg",
+      "publicId": "e91a541644c2b5ee32e14a8ac8a09461_o1p9fu"
+    }
+  },
+  {
+    "name": "Daily Elegance Bag",
+    "brand": "Velmora",
+    "price": 300.0,
+    "category": "Handmade bags",
+    "description": "A practical, elegant bag for everyday use.",
+    "stock": 131,
+    "soldCount": 271,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773460225/ba084fb52d9aeb6ba8fe082a43a58119_iwhucc.jpg",
+      "publicId": "ba084fb52d9aeb6ba8fe082a43a58119_iwhucc"
+    }
+  },
+  {
+    "name": "Luxe Touch Bag",
+    "brand": "Velmora",
+    "price": 350.0,
+    "category": "Handmade bags",
+    "description": "A bag with a luxurious touch, suited for special occasions.",
+    "stock": 43,
+    "soldCount": 7,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773460226/bad7a38dc196a1b3158323bdd1bf9180_vt9y4j.webp",
+      "publicId": "bad7a38dc196a1b3158323bdd1bf9180_vt9y4j"
+    }
+  },
+  {
+    "name": "Urban Cross Bag",
+    "brand": "Vyxen",
+    "price": 200.0,
+    "category": "Handmade bags",
+    "description": "A practical crossbody bag with a modern urban design.",
+    "stock": 248,
+    "soldCount": 520,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773460239/efa72ac09682d6c2c77df554ca499f1c_jgyofd.jpg",
+      "publicId": "efa72ac09682d6c2c77df554ca499f1c_jgyofd"
+    }
+  },
+  {
+    "name": "Trendy Mini Bag",
+    "brand": "Vyxen",
+    "price": 350.0,
+    "category": "Handmade bags",
+    "description": "A small bag with a trendy, on-trend design.",
+    "stock": 23,
+    "soldCount": 54,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773460217/44bd1de6b4c7f60d8c978bf235537ba2_kujqau.jpg",
+      "publicId": "44bd1de6b4c7f60d8c978bf235537ba2_kujqau"
+    }
+  },
+  {
+    "name": "Modern Fit Bag",
+    "brand": "Vyxen",
+    "price": 300.0,
+    "category": "Handmade bags",
+    "description": "A bag with a modern design suited to various looks.",
+    "stock": 50,
+    "soldCount": 8,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773460215/22d3d24b8ecc9d6f7b02f6e5535754b6_ddulb4.jpg",
+      "publicId": "22d3d24b8ecc9d6f7b02f6e5535754b6_ddulb4"
+    }
+  },
+  {
+    "name": "Beach Handbag",
+    "brand": "Vyxen",
+    "price": 250.0,
+    "category": "Handmade bags",
+    "description": "An elegant home decor piece that adds a stylish touch to any space.",
+    "stock": 155,
+    "soldCount": 34,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773460211/4d585115deb713015b98e05fd28ef3ce_vk18hh.jpg",
+      "publicId": "4d585115deb713015b98e05fd28ef3ce_vk18hh"
+    }
+  },
+  {
+    "name": "Bold Line Bag",
+    "brand": "Vyxen",
+    "price": 300.0,
+    "category": "Handmade bags",
+    "description": "An elegant home decor piece that adds a stylish touch to any space.",
+    "stock": 175,
+    "soldCount": 120,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773460241/fd391e09ba5c3a8632a3e181c749f5be_600x_mywac6.webp",
+      "publicId": "fd391e09ba5c3a8632a3e181c749f5be_600x_mywac6"
+    }
+  },
+  {
+    "name": "Edge Handbag",
+    "brand": "Vyxen",
+    "price": 250.0,
+    "category": "Handmade bags",
+    "description": "An elegant home decor piece that adds a stylish touch to any space.",
+    "stock": 106,
+    "soldCount": 61,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773460233/c30bfe1339467e3748e506d2d604a137_sxbv46.webp",
+      "publicId": "c30bfe1339467e3748e506d2d604a137_sxbv46"
+    }
+  },
+  {
+    "name": "Floral Wall Piece",
+    "brand": "Orvella",
+    "price": 400.0,
+    "category": "Antiques",
+    "description": "A wall decor piece featuring an elegant floral design.",
+    "stock": 244,
+    "soldCount": 583,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773460614/cf7910d5770868c41583ca32dc8027b1_ocxu5k.jpg",
+      "publicId": "cf7910d5770868c41583ca32dc8027b1_ocxu5k"
+    }
+  },
+  {
+    "name": "Rustic Hanging Decor",
+    "brand": "Orvella",
+    "price": 300.0,
+    "category": "Antiques",
+    "description": "A hanging decor piece with a warm, rustic character.",
+    "stock": 66,
+    "soldCount": 148,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773460610/a1ada6622f123bf4cde0b510dc085c19_wobeul.jpg",
+      "publicId": "a1ada6622f123bf4cde0b510dc085c19_wobeul"
+    }
+  },
+  {
+    "name": "Vintage Wall Art",
+    "brand": "Orvella",
+    "price": 350.0,
+    "category": "Antiques",
+    "description": "A wall art piece with a classic, vintage character.",
+    "stock": 155,
+    "soldCount": 20,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773460605/3757b895fe063081fe42d949dfd4e871_p5xucv.jpg",
+      "publicId": "3757b895fe063081fe42d949dfd4e871_p5xucv"
+    }
+  },
+  {
+    "name": "Boho Wall Charm",
+    "brand": "Orvella",
+    "price": 350.0,
+    "category": "Antiques",
+    "description": "A wall decor piece with a distinctive boho character.",
+    "stock": 161,
+    "soldCount": 41,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773460594/5fd8ecc7dceb9c34faeb1d96ea23ee1a_ljv3im.jpg",
+      "publicId": "5fd8ecc7dceb9c34faeb1d96ea23ee1a_ljv3im"
+    }
+  },
+  {
+    "name": "Handcrafted Wall Frame",
+    "brand": "Orvella",
+    "price": 400.0,
+    "category": "Antiques",
+    "description": "A handcrafted wall frame made with fine craftsmanship.",
+    "stock": 110,
+    "soldCount": 267,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773460596/006fc0c8194ef885fd3f985da04fb23d_cuxvvi.jpg",
+      "publicId": "006fc0c8194ef885fd3f985da04fb23d_cuxvvi"
+    }
+  },
+  {
+    "name": "Classic Hanging Piece",
+    "brand": "Orvella",
+    "price": 350.0,
+    "category": "Antiques",
+    "description": "A hanging decor piece with an elegant classic design.",
+    "stock": 83,
+    "soldCount": 66,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773460612/cb8828cdf1dd6aab8f33126d28980292_qof1av.jpg",
+      "publicId": "cb8828cdf1dd6aab8f33126d28980292_qof1av"
+    }
+  },
+  {
+    "name": "Nature Touch Decor",
+    "brand": "Orvella",
+    "price": 400.0,
+    "category": "Antiques",
+    "description": "A decor piece that adds a natural touch to any space.",
+    "stock": 55,
+    "soldCount": 80,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773460590/3bf81aa35ac706fc4a774063f1683ca5_wboftr.jpg",
+      "publicId": "3bf81aa35ac706fc4a774063f1683ca5_wboftr"
+    }
+  },
+  {
+    "name": " Art Vase",
+    "brand": "Calyra",
+    "price": 350.0,
+    "category": "Antiques",
+    "description": "An artistic vase with a distinctive design that adds visual appeal.",
+    "stock": 64,
+    "soldCount": 67,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773460601/38a621024fb052b7c06e1ab130cf2350_tlsvbg.jpg",
+      "publicId": "38a621024fb052b7c06e1ab130cf2350_tlsvbg"
+    }
+  },
+  {
+    "name": "Elegant Home Vase",
+    "brand": "Calyra",
+    "price": 300.0,
+    "category": "Antiques",
+    "description": "An elegant vase suited for home decoration.",
+    "stock": 104,
+    "soldCount": 67,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773460598/9dbb6fb0f2372fbf2f2f3c41748b2ab8_dcivxg.jpg",
+      "publicId": "9dbb6fb0f2372fbf2f2f3c41748b2ab8_dcivxg"
+    }
+  },
+  {
+    "name": "Handmade Texture",
+    "brand": "Calyra",
+    "price": 350.0,
+    "category": "Antiques",
+    "description": "A handmade decor piece with a distinctive texture.",
+    "stock": 174,
+    "soldCount": 330,
+    "image": {
+      "url": "https://res.cloudinary.com/e-commerce-data-images/image/upload/v1773460607/562470d0bd4be1a629a53254bb974252_il3mbs.jpg",
+      "publicId": "562470d0bd4be1a629a53254bb974252_il3mbs"
+    }
+  }
+]

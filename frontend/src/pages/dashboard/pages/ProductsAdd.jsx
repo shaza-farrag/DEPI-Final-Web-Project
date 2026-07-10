@@ -202,7 +202,7 @@ export default function ProductsAdd() {
                 </div>
                 <div className="w-[65%] bg-white p-5 border-gray-200 border-2 rounded-2xl h-fit ">
                     <h3 className="text-zinc-600 text-[22px] font-medium mb-4">Pricing & Inventory</h3>
-                    <div className="flex justify-between mb-2"> {/* [تعديل] استبدلنا gap-[48%] بـ justify-between */}
+                    <div className="flex gap-[45%] mb-2"> {/* [تعديل] استبدلنا gap-[48%] بـ justify-between */}
                         <span className="text-zinc-500  text-[16px] font-semibold"> Price *</span>
                         <span className="text-zinc-500  text-[16px] font-semibold"> Stock Quantity *</span>
                     </div>
@@ -229,9 +229,9 @@ export default function ProductsAdd() {
                             {errors.stock && <p className="text-red-500 text-sm">{errors.stock}</p>}
                         </div>
                     </div>
-                    <div className="flex justify-between mb-2"> {/* [تعديل] استبدلنا gap-[40%] بـ justify-between */}
+                    <div className="flex gap-[40%] mb-2"> {/* [تعديل] استبدلنا gap-[40%] بـ justify-between */}
                         <span className="text-zinc-500  text-[16px] font-semibold"> Stock Status</span>
-                        <span className="text-zinc-500  text-[16px] font-semibold"> Supplier</span>
+                        <span className="text-zinc-500  text-[16px] font-semibold"> Brand *</span>
                     </div>
 
                     <div className="flex gap-[5%] ">
@@ -250,7 +250,7 @@ export default function ProductsAdd() {
                             name="supplier"
                             value={formData.supplier}
                             onChange={handleChange}
-                            placeholder="Supplier name"
+                            placeholder="Brand name"
                             className="bg-[#F5F5F5] p-2 w-[50%] h-9 rounded-lg focus:outline-gray-200 mb-3  " />
                     </div>
                 </div>

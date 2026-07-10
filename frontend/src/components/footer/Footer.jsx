@@ -78,7 +78,7 @@ export default function Footer() {
             </p>
           </div>
 
-          <hr className="border-gray-200 mb-6 w-full" />
+          <hr className="border-gray-200 mb-6 w-full max-w-xs md:max-w-none" />
 
           <div className="flex justify-center md:justify-start items-center gap-5 text-black">
             <a
