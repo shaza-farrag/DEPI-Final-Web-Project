@@ -3,7 +3,7 @@ export default function ProductCard({
   image,
   imageAlt = "Product image",
   name,
-  vendor = "",
+  vendor = "*",
   price,
   originalPrice = null,
   href = "#",

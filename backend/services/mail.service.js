@@ -18,8 +18,8 @@ transporter.verify((error, success) => {
 
 const sendVerificationEmail = async (email, token) => {
   try {
-    const verifyUrl = `http://localhost:5000/api/auth/verify-email/${token}`;
-
+   const verifyUrl = `http://localhost:5173/verifyEmail/${token}`;
+   
     const info = await transporter.sendMail({
       from: process.env.EMAIL_USER,
       to: email,

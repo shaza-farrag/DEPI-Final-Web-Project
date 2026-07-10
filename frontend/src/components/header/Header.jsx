@@ -5,12 +5,21 @@ import { FaShoppingCart, FaUser, FaChevronCircleDown } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { useShoppingCart } from "../../context/ShoppingCartContext";
 import logo from "../../assets/logo.png";
+import { UseAuth } from "../../context/AuthContext";
 import productsData from "../../data/products.json";
 
 const SHOP_ITEMS = ["Hijab", "Mug", "Skin Care", "Body Care", "Hair Care", "Scarf", "Accessories", "Handmade bags", "Antiques"];
 
 const Header = forwardRef(function Header(_, headerRef) {
   const { openCart, cartQuantity } = useShoppingCart();
+  // const navigate = useNavigate();
+  const { isLoggedIn, logout } = UseAuth();
+
+
+  const handleLogout = () => {
+  logout();
+  // navigate("/");
+};
   const [searchOpen, setSearchOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const [shopOpen, setShopOpen] = useState(false);
@@ -100,7 +109,7 @@ const Header = forwardRef(function Header(_, headerRef) {
 
           {/* CENTER — logo in normal flow, drives row height */}
           <Link to="/" className="flex justify-center select-none">
-            <img src={logo} alt="Brand Logo" className="h-[120px] w-auto object-contain" />
+            <img src={logo} alt="Brand Logo" className="h-30 w-auto object-contain" />
           </Link>
 
           {/* RIGHT — cart + user */}
@@ -121,9 +130,22 @@ const Header = forwardRef(function Header(_, headerRef) {
               )}
             </button>
 
-            <Link to="/login" aria-label="Account" className="hover:text-[#d4a0a0] transition-colors">
+            {isLoggedIn ? (
+            <button
+              onClick={handleLogout}
+              className="border border-red-700 text-red-700 hover:bg-red-700 hover:text-white px-4 py-2 rounded transition-all cursor-pointer text-xs font-semibold"
+            >
+              Logout
+            </button>
+          ) : (
+            <Link
+              to="/login"
+              aria-label="Account"
+              className="hover:text-[#d4a0a0] transition-colors"
+            >
               <FaUser size={20} />
             </Link>
+          )}
           </div>
         </div>
 

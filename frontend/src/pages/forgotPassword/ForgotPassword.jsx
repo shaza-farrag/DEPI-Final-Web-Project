@@ -1,25 +1,31 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import styles from "./ForgotPassword.module.css";
+import { ForgotPasswordApi } from "../../services/auth.service";
 
 function ForgotPassword() {
     const [email, setEmail] = useState("");
     const [error, setError] = useState("");
     const navigate = useNavigate();
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
+    const handleSubmit = async (e) => {
+    e.preventDefault();
 
     if (!email) {
         setError("Please enter your email");
         return;
     }
 
-    if (email === "test@gmail.com") {
-        setError("");
-        navigate("/resetPassword"); 
-    } else {
-        setError("Email not found ");
+    setError("");
+
+    try {
+        await ForgotPasswordApi(email);
+
+        navigate("/checkResetEmail");
+    } catch (err) {
+        setError(
+        err.response?.data?.message || "Something went wrong"
+        );
     }
     };
 

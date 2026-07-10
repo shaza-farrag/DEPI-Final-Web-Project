@@ -5,6 +5,7 @@ import { faQuoteRight } from "@fortawesome/free-solid-svg-icons";
 import { Link,useNavigate } from "react-router-dom";
 import logoPaige from "../../assets/logoPaige.png";
 import heroAbout from "../../assets/heroAbout.jpg.jpeg"
+
 function About() {
   const navigate = useNavigate();
 
@@ -27,14 +28,9 @@ function About() {
           creating a community built on creativity, ambition, and support.
         </p>
 
-        <a
-          href="https://wa.me/201000000000"
-          target="_blank"
-          rel="noreferrer"
-          className={styles.button}
-        >
+        <Link to="/contact" className={styles.button}>
           Contact Us
-        </a>
+        </Link>
       </div>
 
       <div className={styles.shopSection + " " + styles.scroll}>

@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import styles from "./ResetPassword.module.css";
+import { useParams } from "react-router-dom";
+import { ResetPasswordApi } from "../../services/auth.service";
 
 function ResetPassword() {
     const [password, setPassword] = useState("");
@@ -8,17 +10,18 @@ function ResetPassword() {
     const [error, setError] = useState("");
 
     const navigate = useNavigate();
+    const { token } = useParams();
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
 
         if (!password || !confirmPassword) {
             setError("Please fill all fields");
             return;
-    }
+        }
 
-        if (password.length < 6) {
-            setError("Password must be at least 6 characters");
+        if (password.length < 8) {
+            setError("Password must be at least 8 characters");
             return;
         }
 
@@ -28,9 +31,19 @@ function ResetPassword() {
         }
 
         setError("");
-        alert("Password reset successfu ✔️");
 
-        navigate("/login");
+        try {
+            await ResetPasswordApi(token, {
+            password,
+            confirmPassword,
+            });
+
+            navigate("/login");
+        } catch (err) {
+            setError(
+            err.response?.data?.message || "Something went wrong"
+            );
+        }
     };
 
 

@@ -16,7 +16,10 @@ let newUserschema = Joi.object({
         .required(),
     password: Joi.string()
         .pattern(new RegExp('^[a-zA-Z0-9]{8,30}$'))
-        .required()
+        .required(),
+    role: Joi.string()
+        .valid("user", "admin")
+        .default("user")
 })
 
 module.exports = {
