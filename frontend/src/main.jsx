@@ -7,13 +7,19 @@ import App from "./App";
 import ScrollToTop from "./components/ScrollToTop";
 import { AuthProvider } from "./context/AuthContext";
 
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+
+const queryClient = new QueryClient();
+
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <BrowserRouter>
-      <AuthProvider>
-        <ScrollToTop />
-        <App />
-      </AuthProvider>
+      <QueryClientProvider client={queryClient}>
+        <AuthProvider>
+          <ScrollToTop />
+          <App />
+        </AuthProvider>
+      </QueryClientProvider>
     </BrowserRouter>
   </StrictMode>
 );

@@ -12,20 +12,34 @@ app.use(
     credentials: true,
   })
 );
+
 app.use(express.json());
 app.use(cookieParser());
+
 app.use("/api", routes);
 
-const url = process.env.MONGO_URI
+const url = process.env.MONGO_URI;
 
-mongoose.connect(url)
-.then(() => {
-  console.log("Connected to MongoDB");
-}).catch((err) => {
-  console.error("Error connecting to MongoDB", err);
+mongoose
+  .connect(url)
+  .then(() => {
+    console.log("Connected to MongoDB");
+  })
+  .catch((err) => {
+    console.error("Error connecting to MongoDB", err);
+  });
+
+  app.use((err, req, res, next) => {
+  const statusCode = err.statusCode || 500;
+
+  res.status(statusCode).json({
+    success: false,
+    message: err.message || "Internal Server Error",
+  });
 });
 
 const Port = process.env.PORT || 5000;
+
 app.listen(Port, () => {
   console.log(`Server is running on port ${Port}`);
-})
+});
