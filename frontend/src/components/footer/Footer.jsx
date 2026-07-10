@@ -28,18 +28,19 @@ export default function Footer() {
 
     <footer className="bg-white pt-16 pb-0 relative">
       <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-12 pb-12">
-        <div className="flex flex-col">
-          <div className="mb-6">
-            <div className="relative w-40 h-36 flex items-center justify-center">
+        {/* Brand info and socials */}
+        <div className="flex flex-col items-center md:items-start text-center md:text-left">
+          <div className="mb-6 flex flex-col items-center md:items-start">
+            <div className="relative h-24 flex items-center justify-center md:justify-start">
               <div
                 className="absolute inset-0 rounded-full opacity-30"
                 style={{
-                  background: "radial-gradient(ellipse at 55% 50%, #f0b8b8 0%, transparent 70%)",
+                  background: "radial-gradient(ellipse at 50% 50%, #f0b8b8 0%, transparent 70%)",
                   transform: "scale(1.4,1)",
                 }}
               />
               <span
-                className="relative z-10 text-7xl leading-none select-none"
+                className="relative z-10 text-5xl md:text-6xl leading-none select-none"
                 style={{
                   fontFamily: "Georgia, 'Times New Roman', serif",
                   fontStyle: "italic",
@@ -50,40 +51,41 @@ export default function Footer() {
               >
                 <span style={{ color: "#d4a0a0" }}>sherwit</span>
               </span>
-              <span className="absolute top-3 right-5 text-black text-lg select-none">✦</span>
-              <span className="absolute top-1 right-8 text-black text-xs select-none">+</span>
-              <span className="absolute top-0 right-6 text-black text-[8px] select-none">+</span>
+              <span className="absolute top-2 -right-4 text-black text-base select-none">✦</span>
+              <span className="absolute -top-1 -right-1 text-black text-xs select-none">+</span>
+              <span className="absolute -top-2 -right-3 text-black text-[8px] select-none">+</span>
             </div>
             <p
-              className="text-xs tracking-[0.25em] font-semibold text-gray-700 mt-1"
+              className="text-xs tracking-[0.25em] font-semibold text-gray-700 mt-2"
               style={{ letterSpacing: "0.28em" }}
             >
               SHERWIT
             </p>
           </div>
 
-          <hr className="border-gray-200 mb-6 w-full" />
+          <hr className="border-gray-200 mb-6 w-full max-w-xs md:max-w-none" />
 
-          <div className="flex items-center gap-5 text-black">
+          <div className="flex items-center gap-5 text-black justify-center md:justify-start">
             <a href="#" aria-label="Facebook" className="hover:text-[#d4a0a0] transition-colors">
-            <FaFacebook />
+              <FaFacebook size={18} />
             </a>
             <a href="#" aria-label="Pinterest" className="hover:text-[#d4a0a0] transition-colors">
-            <FaPinterest />
+              <FaPinterest size={18} />
             </a>
             <a href="#" aria-label="Instagram" className="hover:text-[#d4a0a0] transition-colors">
-            <FaInstagram />
+              <FaInstagram size={18} />
             </a>
             <a href="#" aria-label="TikTok" className="hover:text-[#d4a0a0] transition-colors">
-            <FaTiktok />
+              <FaTiktok size={18} />
             </a>
             <a href="#" aria-label="YouTube" className="hover:text-[#d4a0a0] transition-colors">
-            <FaYoutube />
+              <FaYoutube size={18} />
             </a>
           </div>
         </div>
 
-        <div>
+        {/* Quick Links */}
+        <div className="text-center md:text-left flex flex-col items-center md:items-start">
           <h3
             className="text-xs tracking-[0.22em] font-bold mb-6"
             style={{ color: "#d4a0a0", letterSpacing: "0.22em" }}
@@ -105,14 +107,15 @@ export default function Footer() {
           </ul>
         </div>
 
-        <div>
+        {/* Stay In Touch */}
+        <div className="text-center md:text-left flex flex-col items-center md:items-start">
           <h3
             className="text-xs tracking-[0.22em] font-bold mb-6"
             style={{ color: "#d4a0a0", letterSpacing: "0.22em" }}
           >
             STAY IN TOUCH WITH US!
           </h3>
-          <form onSubmit={handleSubscribe} className="flex flex-col gap-3">
+          <form onSubmit={handleSubscribe} className="flex flex-col gap-3 w-full max-w-sm">
             <input
               type="email"
               placeholder="Email"

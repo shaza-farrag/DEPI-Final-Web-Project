@@ -11,6 +11,7 @@ import logo from "../../assets/logo.png";
 
 import { useShoppingCart } from "../../context/ShoppingCartContext";
 import { UseAuth } from "../../context/AuthContext";
+import productsData from "../../data/products.json";
 
 import { useMenu } from "../../hooks/useMenu";
 
@@ -75,6 +76,34 @@ const Header = forwardRef(function Header(_, headerRef) {
 
     document.addEventListener("mousedown", close);
 
+  const getSearchResults = () => {
+    const query = searchQuery.trim().toLowerCase();
+    
+    const filtered = query === ""
+      ? productsData
+      : productsData.filter(p => 
+          (p.ProductName && p.ProductName.toLowerCase().includes(query)) ||
+          (p.BrandName && p.BrandName.toLowerCase().includes(query)) ||
+          (p.Category && p.Category.toLowerCase().includes(query))
+        );
+
+    const groups = {};
+    filtered.forEach(p => {
+      const cat = p.Category || "Other";
+      const brand = p.BrandName || "Other Brand";
+      if (!groups[cat]) {
+        groups[cat] = {};
+      }
+      if (!groups[cat][brand]) {
+        groups[cat][brand] = [];
+      }
+      groups[cat][brand].push(p);
+    });
+    
+    return groups;
+  };
+
+  const results = getSearchResults();
     return () =>
       document.removeEventListener(
         "mousedown",
@@ -260,40 +289,96 @@ const Header = forwardRef(function Header(_, headerRef) {
         role="dialog"
         aria-modal="true"
         aria-label="Search"
-        className="fixed inset-0 z-100 flex items-start justify-center"
+        className="fixed inset-0 z-100 flex items-start justify-center overflow-y-auto"
         style={{
           background: "rgba(255,255,255,0.96)",
           opacity: searchOpen ? 1 : 0,
           pointerEvents: searchOpen ? "auto" : "none",
           transition: "opacity 0.3s ease",
         }}
-       >
-        <div className="w-full max-w-2xl mt-24 px-6 flex items-center gap-3">
-          <div className="flex-1 relative border border-gray-300">
-            <input
-              ref={searchInputRef}
-              type="text"
-              placeholder="Search"
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              onKeyDown={(e) => e.key === "Escape" && setSearchOpen(false)}
-              className="w-full py-3 pl-4 pr-10 text-sm text-gray-700 placeholder-gray-400 outline-none bg-transparent"
-            />
+      >
+        <div className="w-full max-w-2xl mt-24 px-6 flex flex-col gap-6">
+          <div className="flex items-center gap-3 w-full">
+            <div className="flex-1 relative border border-gray-300">
+              <input
+                ref={searchInputRef}
+                type="text"
+                placeholder="Search products, brands, or categories..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                onKeyDown={(e) => e.key === "Escape" && setSearchOpen(false)}
+                className="w-full py-3 pl-4 pr-10 text-sm text-gray-700 placeholder-gray-400 outline-none bg-transparent"
+              />
+              <button
+                aria-label="Submit search"
+                className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500 hover:text-[#d4a0a0]"
+              >
+                <Search size={18} strokeWidth={1.5} />
+              </button>
+            </div>
+
             <button
-              aria-label="Submit search"
-              className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500 hover:text-[#d4a0a0]"
+              aria-label="Close search"
+              onClick={() => {
+                setSearchOpen(false);
+                setSearchQuery("");
+              }}
+              className="text-gray-500 hover:text-[#d4a0a0] transition-colors p-1"
             >
-              <Search size={18} strokeWidth={1.5} />
+              <X size={22} strokeWidth={1.5} />
             </button>
           </div>
 
-          <button
-            aria-label="Close search"
-            onClick={() => setSearchOpen(false)}
-            className="text-gray-500 hover:text-[#d4a0a0] transition-colors p-1"
-          >
-            <X size={22} strokeWidth={1.5} />
-          </button>
+          {/* SEARCH RESULTS AREA */}
+          {searchOpen && (
+            <div className="w-full bg-white border border-gray-100 shadow-xl rounded max-h-[60vh] overflow-y-auto p-6 flex flex-col gap-4">
+              {Object.keys(results).length === 0 ? (
+                <p className="text-gray-500 text-sm text-center py-4">No results found for "{searchQuery}"</p>
+              ) : (
+                <div className="space-y-6">
+                  {Object.entries(results).map(([category, brands]) => (
+                    <div key={category} className="border-b border-gray-100 pb-4 last:border-b-0">
+                      {/* Category Title */}
+                      <h3 className="text-xs font-black text-[#d4a0a0] uppercase tracking-[0.2em] mb-3">
+                        {category}
+                      </h3>
+                      
+                      {/* Brands Container */}
+                      <div className="pl-4 space-y-4">
+                        {Object.entries(brands).map(([brand, items]) => (
+                          <div key={brand}>
+                            {/* Brand Title */}
+                            <h4 className="text-[10px] font-bold text-gray-800 uppercase tracking-[0.15em] mb-2">
+                              {brand}
+                            </h4>
+                            
+                            {/* Items List */}
+                            <ul className="pl-4 space-y-2">
+                              {items.map((item, idx) => (
+                                <li key={idx}>
+                                  <Link
+                                    to={`/products/${item.PublicID}`}
+                                    onClick={() => {
+                                      setSearchOpen(false);
+                                      setSearchQuery("");
+                                    }}
+                                    className="group flex items-center justify-between text-xs text-gray-600 hover:text-[#d4a0a0] transition-colors"
+                                  >
+                                    <span className="group-hover:underline">{item.ProductName}</span>
+                                    <span className="text-gray-400 font-semibold">{item.Price}</span>
+                                  </Link>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
+          )}
         </div>
       </div>
       )}
