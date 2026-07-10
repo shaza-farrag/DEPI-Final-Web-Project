@@ -2,6 +2,8 @@ import { useState, useEffect, useRef } from "react";
 import { ArrowRight, ChevronLeft, ChevronRight, Pause, Play } from "lucide-react";
 import ProductCard from "../../components/ProductCard";
 import logo from "../../assets/logo.png";
+import { useProducts } from "../../hooks/useProduct";
+
 
 // ─────────────────────────────────────────────────────────────────────────────
 // SCROLL REVEAL HOOK
@@ -68,38 +70,7 @@ const SLIDES = [
   },
 ];
 
-const PRODUCTS = [
-  {
-    id: 1,
-    name: "FLOWER SCRAPBOOK JOURNAL",
-    price: 32.0,
-    originalPrice: 39.0,
-    isSale: true,
-    href: "",
-    img: "",
-    imgAlt: "Flower Scrapbook Journal",
-  },
-  {
-    id: 2,
-    name: "PINK & GOLD JOURNAL",
-    price: 24.0,
-    originalPrice: null,
-    isSale: false,
-    href: "",
-    img: "",
-    imgAlt: "Pink & Gold Journal",
-  },
-  {
-    id: 3,
-    name: "HELLO THERE MUG",
-    price: 19.0,
-    originalPrice: null,
-    isSale: false,
-    href: "",
-    img: "",
-    imgAlt: "Hello There Mug",
-  },
-];
+
 
 const REVIEWS = [
   {
@@ -148,6 +119,7 @@ function HeroSlider() {
   const [playing, setPlaying] = useState(true);
   const timerRef = useRef(null);
   const [ref, visible] = useScrollReveal();
+
 
   const go = (idx) => setCurrent((idx + SLIDES.length) % SLIDES.length);
   const prev = () => go(current - 1);
@@ -270,9 +242,29 @@ function HeroSlider() {
 // ─────────────────────────────────────────────────────────────────────────────
 
 function ShopPicks() {
+  const { data, isLoading } = useProducts();
   const [ref, visible] = useScrollReveal();
+
+  const products = data?.data?.products;
+  const [randomProducts, setRandomProducts] = useState([]);
+
+  useEffect(() => {
+    if (products?.length) {
+      // Random selection is inherently impure and can't be computed
+      // during render (see react-hooks/purity). An effect is the
+      // correct place for this non-deterministic, one-time-per-fetch pick.
+      // eslint-disable-next-line react-hooks/set-state-in-effect
+      setRandomProducts(
+        [...products].sort(() => 0.5 - Math.random()).slice(0, 3)
+      );
+    }
+  }, [products]);
+
   return (
-    <section className="w-full min-h-screen py-14 px-6 flex flex-col justify-center" style={{ background: "#fce8e8" }}>
+    <section
+      className="w-full min-h-screen py-14 px-6 flex flex-col justify-center"
+      style={{ background: "#fce8e8" }}
+    >
       <div
         ref={ref}
         style={{
@@ -281,41 +273,47 @@ function ShopPicks() {
           transition: "opacity 0.7s ease, transform 0.7s ease",
         }}
       >
-      {/* Header */}
-      <div className="text-center mb-10">
-        <h2
-          className="text-2xl font-black tracking-[0.18em] text-gray-900 mb-3"
-          style={{ letterSpacing: "0.18em" }}
-        >
-          SHOP OUR PICKS!
-        </h2>
-        <p className="text-sm text-gray-600 max-w-lg mx-auto leading-relaxed">
-          Share information about your brand with your customers. Describe a
-          product, make announcements, or welcome customers to your store
-        </p>
-      </div>
+        {/* Header */}
+        <div className="text-center mb-10">
+          <h2
+            className="text-2xl font-black tracking-[0.18em] text-gray-900 mb-3"
+            style={{ letterSpacing: "0.18em" }}
+          >
+            SHOP OUR PICKS!
+          </h2>
 
-      {/* Product grid */}
-      <div className="max-w-5xl mx-auto bg-white p-6 grid grid-cols-1 sm:grid-cols-3 gap-3">
-        {PRODUCTS.map((p) => (
-          <ProductCard
-            key={p.id}
-            image={p.img}
-            imageAlt={p.imgAlt}
-            name={p.name}
-            price={p.price}
-            originalPrice={p.originalPrice}
-            href={p.href}
-          />
-        ))}
-      </div>
+          <p className="text-sm text-gray-600 max-w-lg mx-auto leading-relaxed">
+            Share information about your brand with your customers. Describe a
+            product, make announcements, or welcome customers to your store.
+          </p>
+        </div>
+
+        {isLoading ? (
+          <p className="text-center py-10">
+            Loading...
+          </p>
+        ) : (
+          <div className="max-w-5xl mx-auto bg-white p-6 grid grid-cols-1 sm:grid-cols-3 gap-3">
+            {randomProducts.map((product) => (
+              <ProductCard
+                key={product._id}
+                image={product.image.url}
+                imageAlt={product.name}
+                vendor={product.brand.name}
+                name={product.name}
+                price={product.price}
+                href={`/products/${product._id}`}
+              />
+            ))}
+          </div>
+        )}
       </div>
     </section>
   );
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
-// SECTION 3 – ABOUT  sherwit
+// SECTION 3 – ABOUT SHERWIT
 // ─────────────────────────────────────────────────────────────────────────────
 
 function AboutSherwit() {
@@ -475,7 +473,7 @@ function Subscribe() {
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
-// SECTION 4 – KIND WORDS (Testimonials)
+// SECTION 5 – KIND WORDS (Testimonials)
 // ─────────────────────────────────────────────────────────────────────────────
 
 function KindWords() {
