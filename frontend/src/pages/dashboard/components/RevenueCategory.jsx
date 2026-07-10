@@ -11,7 +11,7 @@ const categories = [
 export default function RevenueCategory (){
     return (
         <>
-<div className="bg-white p-6 rounded-xl shadow-md w-[30%]">
+<div className="bg-white p-6 rounded-xl shadow-md lg:w-[30%] w-full mb-6 lg:mb-0">
   <h3 className="text-[18px] font-semibold text-[#383338]  w-fit mb-2">
     Revenue by Category
   </h3>

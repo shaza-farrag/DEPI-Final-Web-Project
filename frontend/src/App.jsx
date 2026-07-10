@@ -29,7 +29,7 @@ import HomeBannerList from './pages/dashboard/pages/HomeBannerList';
 import HomeBannerAdd from './pages/dashboard/pages/HomeBannerAdd';
 import Faq from './pages/faq/faq'
 import Blog from './pages/blog/blog'
-import Contact from './pages/contact/contact'
+import Contact from './pages/contact/Contact'
 import CheckResetEmail from './pages/forgotPassword/CheckResetEmail'
 
 

@@ -13,7 +13,8 @@ import {Collapse} from 'react-collapse';
 import './DashboardSidebar.css';
 import { useState } from "react";
 import {UseAuth } from "../context/AuthContext";
-
+import { useSidebar } from "../context/SidebarContext";
+import { IoClose } from "react-icons/io5";
 function DashboardSidebar() {
     const [subMenuIndex , setSubMenuIndex] = useState(null);
     const isOpenSubMenu = (index) =>{
@@ -23,7 +24,8 @@ function DashboardSidebar() {
         setSubMenuIndex(index)
     }
     };
-
+    const { isSidebarOpen , closeSidebar} = useSidebar();
+    
     const { logout } = UseAuth();
     const navigate = useNavigate() ;
 
@@ -33,13 +35,23 @@ function DashboardSidebar() {
     };
     return(
         <>
-        <div className="sidebar fixed top-0 left-0 bg-[#ffffff] w-[18%] h-full border-r border-[rgba(0,0,0,0.1)]
-        py-2 px-4">
-            <div className="w-full ">
-                <Link to="/"><img src={logo} className="w-30 mx-auto py-2  " ></img>
+        <div className={`sidebar fixed top-0 left-0 z-80 bg-[#ffffff]  h-full border-r border-[rgba(0,0,0,0.1)]
+        w-[70%] sm:w-[50%] md:w-[35%] lg:w-[25%] xl:w-[18%] 
+       py-2 px-4 transition-transform duration-300
+        xl:translate-x-0 
+        ${isSidebarOpen ? "translate-x-0" : "-translate-x-full"}`}>
+            <div className=" flex  ">
+                <Link to="/"><img src={logo} className="w-30 items-center py-3  sm:mx-auto sm:py-2  " ></img>
             
                 </Link>
+                <button 
+                  onClick={closeSidebar} 
+                  className="xl:hidden text-[26px] relative bottom-6 left-30 md:left-25   text-[#7a7171] hover:text-black cursor-pointer"
+                >
+                  <IoClose />
+                </button>
             </div>
+
 
             <ul className="lmt-4">
                 

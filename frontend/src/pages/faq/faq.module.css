@@ -5,6 +5,19 @@
     width:100%;
     overflow-x:hidden;
     background:#fff;
+    animation: pageEnter 0.5s ease-out;
+}
+
+@keyframes pageEnter {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* ================= HERO ================= */
