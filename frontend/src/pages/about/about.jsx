@@ -2,9 +2,10 @@ import React from "react";
 import styles from "./About.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faQuoteRight } from "@fortawesome/free-solid-svg-icons";
-import { Link,useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import logoPaige from "../../assets/logoPaige.png";
-import heroAbout from "../../assets/heroAbout.jpg.jpeg"
+import heroAbout from "../../assets/heroAbout.jpg.jpeg";
+import { HeartHandshake, Truck, ShieldCheck } from "lucide-react";
 
 function About() {
   const navigate = useNavigate();
@@ -12,7 +13,7 @@ function About() {
   return (
     <div className={styles.container}>
       <div className={styles.hero}>
-        <img src={heroAbout}/>
+        <img src={heroAbout} />
       </div>
 
       <div className={styles.section}>
@@ -33,9 +34,42 @@ function About() {
         </Link>
       </div>
 
-      <div className={styles.shopSection + " " + styles.scroll}>
-        <h1>SHOP THE LATEST</h1>
-      </div>
+      <section className={styles.sectionWhy}>
+        <h2>WHY CHOOSE SHERWIT</h2>
+
+        <p className={styles.subtitle}>
+          More than just shopping, Sherwit is a community that empowers
+          women-led brands and delivers a smooth shopping experience.
+        </p>
+
+        <div className={styles.cards}>
+          <div className={styles.card}>
+            <HeartHandshake size={42} className={styles.icon} />
+            <h3>Support Women</h3>
+            <p>
+              Every purchase helps talented women-owned businesses grow and
+              reach more customers.
+            </p>
+          </div>
+
+          <div className={styles.card}>
+            <Truck size={42} className={styles.icon} />
+            <h3>Fast Shopping</h3>
+            <p>
+              Simple browsing, secure checkout and a seamless shopping journey.
+            </p>
+          </div>
+
+          <div className={styles.card}>
+            <ShieldCheck size={42} className={styles.icon} />
+            <h3>Trusted Quality</h3>
+            <p>
+              Carefully selected products from trusted local brands with premium
+              quality.
+            </p>
+          </div>
+        </div>
+      </section>
 
       <div className={styles.reviewSection + " " + styles.scroll}>
         <div className={styles.reviewCard}>
@@ -72,9 +106,9 @@ function About() {
         </div>
 
         <div className={styles.imageSide}>
-            <Link to="/">
-              <img src={logoPaige} alt="logo"  />
-            </Link>
+          <Link to="/">
+            <img src={logoPaige} alt="logo" />
+          </Link>
         </div>
       </div>
     </div>
