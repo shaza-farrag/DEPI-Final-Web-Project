@@ -129,10 +129,7 @@ const [maxPrice, setMaxPrice] = useState("");
     }
   };
 
-  // [تعديل] handleEdit بقت بتاخد المنتج بالكامل بدل الـ id بس
   const handleEdit = (product) => {
-    // [تعديل] بنبعت بيانات المنتج كاملة مع التنقل عن طريق location state
-    // عشان صفحة الـ Edit تلاقيها جاهزة على طول من غير ما تطلب من أي API
     navigate(`/dashboard/products/edit/${product._id}`, {
       state: { product },
     });

@@ -1,16 +1,16 @@
 import { useState } from "react";
-import { FiUpload } from "react-icons/fi";
 import { RiSave3Line } from "react-icons/ri";
 import { RxCross2 } from "react-icons/rx";
 
+const products = [];
+
 export default function HomeBannerAdd() {
     const [formData, setFormData] = useState({
-        name: "",
+        offer: "",
         description: "",
-        image: null,
     });
 
-    const [imagePreview, setImagePreview] = useState(null);
+    const [selectedProducts, setSelectedProducts] = useState([]);
     const [errors, setErrors] = useState({});
 
     const handleChange = (e) => {
@@ -18,17 +18,14 @@ export default function HomeBannerAdd() {
         setFormData((prev) => ({ ...prev, [name]: value }));
     };
 
-    const handleImageChange = (e) => {
-        const file = e.target.files[0];
-        if (file) {
-            setFormData((prev) => ({ ...prev, image: file }));
-            setImagePreview(URL.createObjectURL(file));
-        }
+    const toggleProduct = (id) => {
+        setSelectedProducts((prev) =>
+            prev.includes(id) ? prev.filter((p) => p !== id) : [...prev, id]
+        );
     };
 
     const validate = () => {
         const newErrors = {};
-        if (!formData.name.trim()) newErrors.name = "Banner title is required";
         setErrors(newErrors);
         return Object.keys(newErrors).length === 0;
     };
@@ -36,13 +33,12 @@ export default function HomeBannerAdd() {
     const handleSubmit = (e) => {
         e.preventDefault();
         if (!validate()) return;
-        // TODO: API call هنا لما الباك يخلص
-        console.log("Form Data to send:", formData);
+        console.log("Form Data to send:", { ...formData, selectedProducts });
     };
 
     const handleCancel = () => {
-        setFormData({ name: "", description: "", image: null });
-        setImagePreview(null);
+        setFormData({ offer: "", description: "" });
+        setSelectedProducts([]);
         setErrors({});
     };
 
@@ -61,23 +57,77 @@ export default function HomeBannerAdd() {
                     {/* ── Left Section ── */}
                     <div className="w-[65%] bg-white p-5 border-gray-200 border-2 rounded-2xl h-fit">
                         <h3 className="text-zinc-600 text-[22px] font-medium mb-4">Banner Information</h3>
-
-                        {/* Title */}
+                        
+                        {/* Products table (scrollable) */}
+                        <h4 className="text-zinc-500 mb-2 text-[16px] font-semibold">Select Products</h4>
+                        <div className="border border-gray-200 rounded-xl overflow-hidden">
+                            <div className="max-h-72 overflow-y-auto">
+                                <table className="w-full text-sm">
+                                    <thead className="sticky top-0 bg-[#F5F5F5] z-10">
+                                        <tr>
+                                            <th className="text-left font-semibold text-zinc-500 px-3 py-2">Image</th>
+                                            <th className="text-left font-semibold text-zinc-500 px-3 py-2">Name</th>
+                                            <th className="text-left font-semibold text-zinc-500 px-3 py-2">Price</th>
+                                            <th className="text-center font-semibold text-zinc-500 px-3 py-2">Select</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {products.map((product) => (
+                                            <tr
+                                                key={product.id}
+                                                className="border-t border-gray-100 hover:bg-[#FBF3F8] transition-colors"
+                                            >
+                                                <td className="px-3 py-2">
+                                                    <img
+                                                        src={product.image}
+                                                        alt={product.name}
+                                                        className="w-11 h-11 object-cover rounded-lg"
+                                                    />
+                                                </td>
+                                                <td className="px-3 py-2 text-zinc-600 font-medium">
+                                                    {product.name}
+                                                </td>
+                                                <td className="px-3 py-2 text-zinc-600">
+                                                    {product.price} EGP
+                                                </td>
+                                                <td className="px-3 py-2 text-center">
+                                                    <input
+                                                        type="checkbox"
+                                                        checked={selectedProducts.includes(product.id)}
+                                                        onChange={() => toggleProduct(product.id)}
+                                                        className="w-4 h-4 accent-[#D797C6] cursor-pointer"
+                                                    />
+                                                </td>
+                                            </tr>
+                                        ))}
+                                        {products.length === 0 && (
+                                        <tr>
+                                            <td colSpan={7} className="px-4 py-10 text-center text-gray-400">
+                                            No products Found
+                                            </td>
+                                        </tr>
+                                        )}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        {/* Offer (اختياري) */}
                         <label className="block mb-4">
-                            <h4 className="text-zinc-500 mb-2 text-[16px] font-semibold">Banner Title *</h4>
+                            <h4 className="text-zinc-500 mb-2 text-[16px] font-semibold">Offer</h4>
                             <input
                                 type="text"
-                                name="name"
-                                value={formData.name}
+                                name="offer"
+                                value={formData.offer}
                                 onChange={handleChange}
-                                placeholder="Enter banner title"
+                                placeholder="Enter offer (optional)"
                                 className="bg-[#F5F5F5] p-2 w-full h-9 rounded-lg focus:outline-gray-200"
                             />
-                            {errors.name && <p className="text-red-500 text-sm mt-1">{errors.name}</p>}
+                        
+                            {errors.offer && <p className="text-red-500 text-sm mt-1">{errors.offer} </p>} 
                         </label>
 
                         {/* Description */}
-                        <label className="block">
+                        <label className="block mb-5">
                             <h4 className="text-zinc-500 mb-2 text-[16px] font-semibold">Description</h4>
                             <textarea
                                 name="description"
@@ -87,40 +137,12 @@ export default function HomeBannerAdd() {
                                 className="bg-[#F5F5F5] p-2 w-full h-30 rounded-lg focus:outline-gray-200"
                             />
                         </label>
+
+
                     </div>
 
-                    {/* ── Right Section ── */}
-                    <div className="flex flex-col w-[35%] gap-4">
 
-                        {/* Image Upload */}
-                        <div className="bg-white p-5 border-gray-200 border-2 rounded-2xl">
-                            <h3 className="text-zinc-600 text-[22px] font-medium mb-4">Banner Image</h3>
-                            <div className="border-dashed border-2 border-gray-200 p-5 rounded-xl text-center">
-                                <label className="cursor-pointer block">
-                                    {imagePreview ? (
-                                        <img
-                                            src={imagePreview}
-                                            alt="Banner preview"
-                                            className="mx-auto mb-3 max-h-32 rounded-lg object-cover"
-                                        />
-                                    ) : (
-                                        <FiUpload className="mx-auto text-5xl text-gray-400 mb-3" />
-                                    )}
-                                    <span className="text-gray-600 font-medium">
-                                        {imagePreview ? "Change image" : "Drop your image here"}
-                                    </span>
-                                    <input
-                                        type="file"
-                                        accept="image/*"
-                                        className="hidden"
-                                        onChange={handleImageChange}
-                                    />
-                                </label>
-                                <p className="text-sm text-gray-400 mt-2">
-                                    Supports: JPG, PNG, GIF (Max 5MB)
-                                </p>
-                            </div>
-                        </div>
+                    <div className="flex flex-col w-[35%] gap-4">
 
                         {/* Actions */}
                         <div className="bg-white p-5 border-gray-200 border-2 rounded-2xl">

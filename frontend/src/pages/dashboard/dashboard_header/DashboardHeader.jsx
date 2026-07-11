@@ -37,10 +37,10 @@ function DashboardHeader() {
     setanchorMyAcc(null);
   };
   return (
-    <header className='w-full h-auto py-2 pl-4 pr-7 bg-[#ffff]  flex items-center justify-between shadow-md '>
+    <header className='w-full h-auto py-2 xl:pl-[20%] pl-4 pr-7 bg-[#ffff]  flex items-center justify-between shadow-md '>
         <div className="part1">
           {/* الزرار ده هيظهر من مقاس اللابتوب ولّي أصغر بس، ويختفي على الشاشات الكبيرة */}
-          <Button onClick={toggleSidebar} className='xl:hidden! w-10! h-10! rounded-full! min-w-10! hover:bg-[#F8ECEC]!'>
+          <Button onClick={toggleSidebar} className=' w-10! h-10! rounded-full! min-w-10! hover:bg-[#F8ECEC]!'>
             <RiMenu2Line className=' text-[35px] text-black' />
           </Button>
         </div>
