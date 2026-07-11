@@ -8,6 +8,7 @@ import { SidebarProvider } from "./context/SidebarContext";
 import Breadcrumb from './components/BreadcrumbAuto';
 
 
+
 function Dashboard() {
   return (
     <>
@@ -21,8 +22,11 @@ function Dashboard() {
         </div>
 
           <div className='mainContent bg-[#F8ECEC] w-full     xl:w-[82%] px-5 py-4'>
+            
            <Breadcrumb/> 
+
           <Outlet />
+          
         </div>
 
 

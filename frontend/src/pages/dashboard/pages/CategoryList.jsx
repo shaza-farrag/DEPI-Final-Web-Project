@@ -195,6 +195,7 @@ export default function CategoryList() {
                     </button>
                 </div>
             </div>
+            
         {deleteTarget !== null && (
         <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
           <div className="bg-white border border-gray-200 rounded-xl p-9 w-90 shadow-lg text-center!">

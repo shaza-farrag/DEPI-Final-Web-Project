@@ -31,6 +31,7 @@ import Faq from './pages/faq/faq'
 import Blog from './pages/blog/blog'
 import Contact from './pages/contact/Contact'
 import CheckResetEmail from './pages/forgotPassword/CheckResetEmail'
+import PageTransition from './pages/dashboard/components/PageTransition';
 
 
 function App() {
@@ -70,7 +71,8 @@ function App() {
             </AuthProvider>
           }
         />
- 
+
+        <Route element={<PageTransition/>}>
         <Route
           path="/dashboard"
           element={
@@ -95,6 +97,7 @@ function App() {
 
 
            <Route path="*" element={<Navigate to="/" replace />} />
+        </Route>
         </Route>
       </Routes>
     </ShoppingCartProvider>
