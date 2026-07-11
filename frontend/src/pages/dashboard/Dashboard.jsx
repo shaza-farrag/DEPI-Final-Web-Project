@@ -21,7 +21,7 @@ function Dashboard() {
           <DashboardSidebar />
         </div>
 
-          <div className='mainContent bg-[#F8ECEC] w-full     xl:w-[82%] px-5 py-4'>
+          <div className='mainContent bg-[#F8ECEC] w-[100%]     xl:w-[82%] px-5 py-4'>
             
            <Breadcrumb/> 
 

@@ -36,8 +36,17 @@ function DashboardHeader() {
   const handleCloseMyAcc = () => {
     setanchorMyAcc(null);
   };
+
+  const [anchorNotif, setAnchorNotif] = useState(null);
+  const openNotif = Boolean(anchorNotif);
+  const handleClickNotif = (event) => {
+    setAnchorNotif(event.currentTarget);
+  };
+  const handleCloseNotif = () => {
+  setAnchorNotif(null);
+};
   return (
-    <header className='w-full h-auto py-2 xl:pl-[20%] pl-4 pr-7 bg-[#ffff]  flex items-center justify-between shadow-md '>
+    <header className='w-full h-auto py-2  pl-4 pr-7 bg-[#ffff]  flex items-center justify-between shadow-md '>
         <div className="part1">
           {/* الزرار ده هيظهر من مقاس اللابتوب ولّي أصغر بس، ويختفي على الشاشات الكبيرة */}
           <Button onClick={toggleSidebar} className=' w-10! h-10! rounded-full! min-w-10! hover:bg-[#F8ECEC]!'>
@@ -46,11 +55,37 @@ function DashboardHeader() {
         </div>
 
         <div className="part2 w-[40%] flex items-center  justify-end gap-5">
-            <IconButton aria-label="cart" className="hover:bg-[#F8ECEC]!">
-                <StyledBadge badgeContent={4} color="secondary">
-                    <FaRegBell />
-                </StyledBadge>
-           </IconButton>
+        <IconButton
+          aria-label="cart"
+          onClick={handleClickNotif}
+          className="hover:bg-[#F8ECEC]!"
+        >
+          <StyledBadge badgeContent={4} color="secondary">
+            <FaRegBell />
+          </StyledBadge>
+        </IconButton>
+        
+        <Menu
+          anchorEl={anchorNotif}
+          open={openNotif}
+          onClose={handleCloseNotif}
+          anchorOrigin={{ vertical: "bottom", horizontal: "right" }}
+          transformOrigin={{ vertical: "top", horizontal: "right" }}
+          slotProps={{
+            paper: {
+              className: "mt-2! rounded-xl! shadow-lg!",
+              style: { minWidth: 260 },
+            },
+          }}
+        >
+          <div className="px-4 py-3 border-b border-gray-100">
+            <span className="font-semibold text-zinc-600 text-sm">Notifications</span>
+          </div>
+        
+          <div className="px-4 py-8 text-center text-gray-400 text-sm">
+            No Notification Found
+          </div>
+        </Menu>
          < div className='relative'>
                <div className='rounded-full w-10 h-10 overflow-hidden cursor-pointer' 
                  onClick={handleClickMyAcc}>
