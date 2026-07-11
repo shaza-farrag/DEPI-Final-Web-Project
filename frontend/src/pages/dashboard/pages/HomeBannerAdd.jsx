@@ -2,9 +2,55 @@ import { useState } from "react";
 import { RiSave3Line } from "react-icons/ri";
 import { RxCross2 } from "react-icons/rx";
 
-const products = [];
+import { useEffect } from "react";
+
+import { getProducts } from "../../../services/product.service";
+import { createBanner } from "../../../services/banner.service";
+
 
 export default function HomeBannerAdd() {
+    const [products, setProducts] = useState([]);
+    useEffect(() => {
+        fetchProducts();
+    }, []);
+
+    const fetchProducts = async () => {
+        try {
+            const res = await getProducts();
+
+            // 🔍 اطبع الشكل الحقيقي للـ response في الـ console
+            // (افتح الـ console وابعتلي اللي هيظهر لو لسه مش راضي يشتغل)
+            console.log("Products API raw response:", res);
+
+            // نجرب أكتر من شكل محتمل للـ response عشان نلاقي المصفوفة الصح
+            let productList = [];
+
+            if (Array.isArray(res)) {
+                productList = res;
+            } else if (Array.isArray(res?.products)) {
+                productList = res.products;
+            } else if (Array.isArray(res?.data)) {
+                productList = res.data;
+            } else if (Array.isArray(res?.data?.products)) {
+                productList = res.data.products;
+            } else if (Array.isArray(res?.data?.data?.products)) {
+                productList = res.data.data.products;
+            } else if (Array.isArray(res?.data?.data)) {
+                productList = res.data.data;
+            }
+
+            if (productList.length === 0) {
+                console.warn(
+                    "لم يتم العثور على مصفوفة منتجات في الـ response. تحقق من شكل الـ response في الـ console أعلاه."
+                );
+            }
+
+            setProducts(productList);
+        } catch (err) {
+            console.log(err);
+        }
+    };
+
     const [formData, setFormData] = useState({
         offer: "",
         description: "",
@@ -26,14 +72,37 @@ export default function HomeBannerAdd() {
 
     const validate = () => {
         const newErrors = {};
+
+        if (selectedProducts.length === 0) {
+            newErrors.products = "Select at least one product";
+        }
         setErrors(newErrors);
         return Object.keys(newErrors).length === 0;
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
+
         if (!validate()) return;
-        console.log("Form Data to send:", { ...formData, selectedProducts });
+
+        try {
+            await createBanner({
+                offer: formData.offer,
+                description: formData.description,
+                products: selectedProducts,
+            });
+
+            alert("Banner created successfully");
+
+            setFormData({
+                offer: "",
+                description: "",
+            });
+
+            setSelectedProducts([]);
+        } catch (err) {
+            console.log(err);
+        }
     };
 
     const handleCancel = () => {
@@ -57,7 +126,7 @@ export default function HomeBannerAdd() {
                     {/* ── Left Section ── */}
                     <div className="w-[65%] bg-white p-5 border-gray-200 border-2 rounded-2xl h-fit">
                         <h3 className="text-zinc-600 text-[22px] font-medium mb-4">Banner Information</h3>
-                        
+
                         {/* Products table (scrollable) */}
                         <h4 className="text-zinc-500 mb-2 text-[16px] font-semibold">Select Products</h4>
                         <div className="border border-gray-200 rounded-xl overflow-hidden">
@@ -72,14 +141,14 @@ export default function HomeBannerAdd() {
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        {products.map((product) => (
+                                        {products.map((product, index) => (
                                             <tr
-                                                key={product.id}
+                                                key={product._id ?? `product-${index}`}
                                                 className="border-t border-gray-100 hover:bg-[#FBF3F8] transition-colors"
                                             >
                                                 <td className="px-3 py-2">
                                                     <img
-                                                        src={product.image}
+                                                        src={product.image?.url}
                                                         alt={product.name}
                                                         className="w-11 h-11 object-cover rounded-lg"
                                                     />
@@ -93,24 +162,30 @@ export default function HomeBannerAdd() {
                                                 <td className="px-3 py-2 text-center">
                                                     <input
                                                         type="checkbox"
-                                                        checked={selectedProducts.includes(product.id)}
-                                                        onChange={() => toggleProduct(product.id)}
+                                                        checked={selectedProducts.includes(product._id)}
+                                                        onChange={() => toggleProduct(product._id)}
                                                         className="w-4 h-4 accent-[#D797C6] cursor-pointer"
                                                     />
                                                 </td>
                                             </tr>
                                         ))}
                                         {products.length === 0 && (
-                                        <tr>
-                                            <td colSpan={7} className="px-4 py-10 text-center text-gray-400">
-                                            No products Found
-                                            </td>
-                                        </tr>
+                                            <tr>
+                                                <td colSpan={7} className="px-4 py-10 text-center text-gray-400">
+                                                    No products Found
+                                                </td>
+                                            </tr>
                                         )}
                                     </tbody>
                                 </table>
                             </div>
+
                         </div>
+                        {errors.products && (
+                            <p className="text-red-500 mt-2">
+                                {errors.products}
+                            </p>
+                        )}
                         {/* Offer (اختياري) */}
                         <label className="block mb-4">
                             <h4 className="text-zinc-500 mb-2 text-[16px] font-semibold">Offer</h4>
@@ -122,8 +197,8 @@ export default function HomeBannerAdd() {
                                 placeholder="Enter offer (optional)"
                                 className="bg-[#F5F5F5] p-2 w-full h-9 rounded-lg focus:outline-gray-200"
                             />
-                        
-                            {errors.offer && <p className="text-red-500 text-sm mt-1">{errors.offer} </p>} 
+
+                            {errors.offer && <p className="text-red-500 text-sm mt-1">{errors.offer} </p>}
                         </label>
 
                         {/* Description */}

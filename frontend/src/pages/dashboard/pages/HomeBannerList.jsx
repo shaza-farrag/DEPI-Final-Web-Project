@@ -1,30 +1,71 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Plus, Pencil, Trash2 } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
-const initialBanners = [
-  {
-    id: "",
-    image: "",
-    Description: "",
-    offer: "",
-    status: "",
-    salary: "",
-  },
-];
+import { getBanners, deleteBanner } from "../../../services/banner.service";
 
 export default function BannerHomeList() {
-  const [banners, setBanners] = useState(initialBanners);
+  const [banners, setBanners] = useState([]);
+  const [loading, setLoading] = useState(true);
   const [deleteTarget, setDeleteTarget] = useState(null);
   const navigate = useNavigate();
+
+  useEffect(() => {
+    fetchBanners();
+  }, []);
+
+  const fetchBanners = async () => {
+    try {
+      setLoading(true);
+      const res = await getBanners();
+
+      // 🔍 اطبع شكل الـ response الحقيقي (شيلها بعد ما تتأكد إنها شغالة)
+      console.log("Banners API raw response:", res);
+
+      // نتعامل مع أكتر من شكل محتمل للـ response
+      let bannerList = [];
+
+      if (Array.isArray(res)) {
+        bannerList = res;
+      } else if (Array.isArray(res?.banners)) {
+        bannerList = res.banners;
+      } else if (Array.isArray(res?.data)) {
+        bannerList = res.data;
+      } else if (Array.isArray(res?.data?.banners)) {
+        bannerList = res.data.banners;
+      } else if (Array.isArray(res?.data?.data?.banners)) {
+        bannerList = res.data.data.banners;
+      } else if (Array.isArray(res?.data?.data)) {
+        bannerList = res.data.data;
+      }
+
+      if (bannerList.length === 0) {
+        console.warn(
+          "لم يتم العثور على مصفوفة بانرات في الـ response. تحقق من الشكل في الـ console أعلاه."
+        );
+      }
+
+      setBanners(bannerList);
+    } catch (err) {
+      console.log(err);
+    } finally {
+      setLoading(false);
+    }
+  };
 
   function handleEdit(id) {
     navigate(`/dashboard/homeslider/edit/${id}`);
   }
 
-  function confirmDelete(id) {
-    setBanners((prev) => prev.filter((b) => b.id !== id));
-    setDeleteTarget(null);
+  async function confirmDelete(id) {
+    try {
+      await deleteBanner(id);
+      setBanners((prev) => prev.filter((b) => b._id !== id));
+    } catch (err) {
+      console.log(err);
+    } finally {
+      setDeleteTarget(null);
+    }
   }
 
   return (
@@ -59,7 +100,7 @@ export default function BannerHomeList() {
                 Offer
               </th>
               <th className="font-bold! text-[#7a7171]! text-center px-4 py-3">
-                Salary
+                Products
               </th>
 
               <th className="font-bold! text-[#7a7171]! text-right px-4 py-3">
@@ -68,43 +109,51 @@ export default function BannerHomeList() {
             </tr>
           </thead>
           <tbody>
-            
-            {banners.map((banner) => (
+
+            {loading && (
+              <tr>
+                <td colSpan={6} className="px-4 py-10 text-center text-gray-400">
+                  Loading...
+                </td>
+              </tr>
+            )}
+
+            {!loading && banners.map((banner) => (
               <tr
-                key={banner.id}
+                key={banner._id}
                 className="hover:bg-[#F8ECEC]! transition-all border-b border-[rgba(0,0,0,0.06)]"
               >
                 <td className="font-medium! text-gray-500! px-4 py-3">
-                  #{banner.id}
+                  #{banner._id}
                 </td>
                 <td className="px-4 py-3">
-                  {banner.image ? (
+                  {banner.products?.[0]?.image?.url ? (
                     <img
-                      src={banner.image}
-                      alt={banner.Description}
+                      src={banner.products[0].image.url}
+                      alt={banner.description}
                       className="w-24 h-12 object-cover rounded-md border border-gray-200"
                     />
                   ) : (
                     <div className="w-24 h-12 rounded-md bg-gray-100 border border-gray-200" />
                   )}
                 </td>
-                <td className="font-medium! px-4 py-3">{banner.Description}</td>
+                <td className="font-medium! px-4 py-3">{banner.description}</td>
                 <td className="text-center px-4 py-3">{banner.offer}</td>
                 <td className="font-semibold! text-center px-4 py-3">
-                  {banner.salary}
+                  {banner.products?.length || 0}
                 </td>
 
                 <td className="px-4 py-3">
                   <div className="flex items-center justify-end gap-2">
                     <button
-                      onClick={() => handleEdit(banner.id)}
+                      onClick={() => handleEdit(banner._id)}
                       aria-label="Edit banner"
                       className="p-2 rounded-md text-[#7a7171] hover:text-[#D797C6] hover:bg-[#F8ECEC]! transition-colors cursor-pointer"
                     >
                       <Pencil size={16} />
                     </button>
                     <button
-                      onClick={() => setDeleteTarget(banner.id)}
+                      onClick={() => setDeleteTarget(banner._id)}
                       aria-label="Delete banner"
                       className="p-2 rounded-md text-[#7a7171] hover:text-red-500 hover:bg-[#F8ECEC]! transition-colors cursor-pointer"
                     >
@@ -115,9 +164,9 @@ export default function BannerHomeList() {
               </tr>
             ))}
 
-            {banners.length === 0 && (
+            {!loading && banners.length === 0 && (
               <tr>
-                <td colSpan={7} className="px-4 py-10 text-center text-gray-400">
+                <td colSpan={6} className="px-4 py-10 text-center text-gray-400">
                  No Banners Found
                 </td>
               </tr>

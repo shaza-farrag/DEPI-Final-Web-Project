@@ -1,4 +1,4 @@
-import api from "../api/axios";
+import api from "./api";
 
 export const getBrands = async (page = 1, limit = 10) => {
   const { data } = await api.get(

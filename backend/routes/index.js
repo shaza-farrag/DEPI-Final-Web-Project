@@ -9,6 +9,7 @@ const brandRoutes = require("./brand.route");
 const productRoutes = require("./product.route");
 const cartRoutes = require("./cart.route");
 const checkoutRoutes = require("./checkout.route");
+const bannerRoutes = require("./banner.routes");
 
 
 
@@ -22,5 +23,7 @@ router.use("/products", productRoutes);
 router.use("/cart", cartRoutes);
 
 router.use("/checkout", checkoutRoutes);
+
+router.use("/banners", bannerRoutes);
 
 module.exports = router;
