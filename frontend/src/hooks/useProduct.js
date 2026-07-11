@@ -13,6 +13,13 @@ export const useProduct = (id) => {
 export const useProducts = () => {
   return useQuery({
     queryKey: ["products"],
-    queryFn: getProducts,
+    queryFn: () => getProducts(),
+  });
+};
+
+export const useAllProducts = () => {
+  return useQuery({
+    queryKey: ["all-products"],
+    queryFn: () => getProducts(),
   });
 };

@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema
 const bcrypt = require("bcrypt");
+const product = require("./product.model");
 
 const userSchema = new Schema({
   firstName: {

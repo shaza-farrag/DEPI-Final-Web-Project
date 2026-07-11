@@ -101,8 +101,31 @@ const createProduct = asyncHandler(async (req, res) => {
 });
 
 const getProducts = asyncHandler(async (req, res) => {
-  const page = parseInt(req.query.page) || 1;
-  const limit = parseInt(req.query.limit) || 12;
+  const page = parseInt(req.query.page);
+  const limit = parseInt(req.query.limit);
+
+  if (!page || !limit) {
+    const products = await Product.find()
+      .populate("category", "name")
+      .populate("brand", "name")
+      .sort({ createdAt: -1 });
+
+    const productsWithProfit = products.map((product) => ({
+      ...product.toObject(),
+      profit: product.price * product.soldCount,
+    }));
+
+    return res.status(200).json(
+      new ApiResponse(
+        200,
+        {
+          products: productsWithProfit,
+          totalProducts: products.length,
+        },
+        "Products fetched successfully"
+      )
+    );
+  }
 
   const skip = (page - 1) * limit;
 
@@ -115,11 +138,16 @@ const getProducts = asyncHandler(async (req, res) => {
     .skip(skip)
     .limit(limit);
 
+  const productsWithProfit = products.map((product) => ({
+    ...product.toObject(),
+    profit: product.price * product.soldCount,
+  }));
+
   return res.status(200).json(
     new ApiResponse(
       200,
       {
-        products,
+        products: productsWithProfit,
         currentPage: page,
         totalPages: Math.ceil(totalProducts / limit),
         totalProducts,

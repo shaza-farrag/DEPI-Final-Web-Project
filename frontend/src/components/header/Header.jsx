@@ -9,12 +9,22 @@ import { Link } from "react-router-dom";
 import { useShoppingCart } from "../../context/ShoppingCartContext";
 import logoWhite from "../../assets/logoWhite.png";
 import { UseAuth } from "../../context/AuthContext";
-import productsData from "../../data/products.json";
+import { useCart } from "../../hooks/useCart";
+
+import { useAllProducts } from "../../hooks/useProduct";
 
 import { useMenu } from "../../hooks/useMenu";
 
 const Header = forwardRef(function Header(_, headerRef) {
-  const { openCart, cartQuantity } = useShoppingCart();
+  const { openCart } = useShoppingCart();
+  const { data: cartData } = useCart();
+
+  const cartQuantity =
+  cartData?.data?.items?.reduce(
+    (total, item) => total + item.quantity,
+    0
+  ) ?? 0;
+
   const { isLoggedIn, logout } = UseAuth();
 
   const {
@@ -22,6 +32,13 @@ const Header = forwardRef(function Header(_, headerRef) {
     isLoading,
     isError,
   } = useMenu();
+
+  const {
+  data: productsResponse,
+} = useAllProducts();
+
+const productsData =
+  productsResponse?.data?.products ?? [];
 
   const categories = data?.data ?? [];
 
@@ -66,48 +83,53 @@ const Header = forwardRef(function Header(_, headerRef) {
   }, [searchOpen]);
 
   useEffect(() => {
-    const close = (e) => {
-      if (!e.target.closest("[data-shop-dropdown]")) {
-        setShopOpen(false);
-      }
-    };
-
-    document.addEventListener("mousedown", close);
-
-  const getSearchResults = () => {
-    const query = searchQuery.trim().toLowerCase();
-    
-    const filtered = query === ""
-      ? productsData
-      : productsData.filter(p => 
-          (p.ProductName && p.ProductName.toLowerCase().includes(query)) ||
-          (p.BrandName && p.BrandName.toLowerCase().includes(query)) ||
-          (p.Category && p.Category.toLowerCase().includes(query))
-        );
-
-    const groups = {};
-    filtered.forEach(p => {
-      const cat = p.Category || "Other";
-      const brand = p.BrandName || "Other Brand";
-      if (!groups[cat]) {
-        groups[cat] = {};
-      }
-      if (!groups[cat][brand]) {
-        groups[cat][brand] = [];
-      }
-      groups[cat][brand].push(p);
-    });
-    
-    return groups;
+  const close = (e) => {
+    if (!e.target.closest("[data-shop-dropdown]")) {
+      setShopOpen(false);
+    }
   };
 
-  const results = getSearchResults();
-    return () =>
-      document.removeEventListener(
-        "mousedown",
-        close
+  document.addEventListener("mousedown", close);
+
+  return () =>
+    document.removeEventListener(
+      "mousedown",
+      close
+    );
+}, []);
+
+  console.log(productsData);
+  const getSearchResults = () => {
+  const query = searchQuery.trim().toLowerCase();
+
+  const filtered =
+  query === ""
+    ? productsData
+    : productsData.filter((p) =>
+        p.name.toLowerCase().includes(query) ||
+        p.brand?.name.toLowerCase().includes(query) ||
+        p.category?.name.toLowerCase().includes(query)
       );
-  }, []);
+
+  const groups = {};
+
+  filtered.forEach((p) => {
+    const cat = p.category?.name || "Other";
+    const brand = p.brand?.name || "Other Brand";
+
+    if (!groups[cat]) groups[cat] = {};
+    if (!groups[cat][brand]) groups[cat][brand] = [];
+
+    groups[cat][brand].push(p);
+  });
+
+  return groups;
+};
+
+
+const results = getSearchResults();
+
+console.log(results);
 
   return (
     <>
@@ -143,7 +165,7 @@ const Header = forwardRef(function Header(_, headerRef) {
               onClick={openCart}
               className="relative hover:text-[#d4a0a0]"
             >
-              <FaShoppingCart size={20} />
+              <FaShoppingCart size={20} className="cursor-pointer" />
 
               {cartQuantity > 0 && (
                 <span className="absolute -top-1.5 -right-1.5 w-4 h-4 rounded-full bg-black text-white text-[9px] flex items-center justify-center">
@@ -350,15 +372,15 @@ const Header = forwardRef(function Header(_, headerRef) {
                               {items.map((item, idx) => (
                                 <li key={idx}>
                                   <Link
-                                    to={`/products/${item.PublicID}`}
+                                    to={`/products/${item._id}`}
                                     onClick={() => {
                                       setSearchOpen(false);
                                       setSearchQuery("");
                                     }}
                                     className="group flex items-center justify-between text-xs text-gray-600 hover:text-[#d4a0a0] transition-colors"
                                   >
-                                    <span className="group-hover:underline">{item.ProductName}</span>
-                                    <span className="text-gray-400 font-semibold">{item.Price}</span>
+                                    <span className="group-hover:underline">{item.name}</span>
+                                    <span className="text-gray-400 font-semibold">${item.price}</span>
                                   </Link>
                                 </li>
                               ))}

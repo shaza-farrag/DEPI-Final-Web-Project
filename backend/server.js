@@ -5,6 +5,8 @@ const routes = require("./routes");
 const mongoose = require("mongoose");
 const cookieParser = require("cookie-parser");
 const cors = require("cors");
+const initializeStatistics = require("./utils/initializeStatistics");
+const webhookRoutes = require("./routes/webhook.route");
 
 app.use(
   cors({
@@ -13,6 +15,10 @@ app.use(
   })
 );
 
+app.use(
+  "/api/webhook",
+  webhookRoutes
+);
 app.use(express.json());
 app.use(cookieParser());
 
@@ -22,8 +28,12 @@ const url = process.env.MONGO_URI;
 
 mongoose
   .connect(url)
-  .then(() => {
+  .then(async () => {
     console.log("Connected to MongoDB");
+
+    await initializeStatistics();
+
+    console.log("Statistics initialized");
   })
   .catch((err) => {
     console.error("Error connecting to MongoDB", err);

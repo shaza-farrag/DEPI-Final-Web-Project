@@ -1,18 +1,27 @@
 import { useState } from "react";
 import styles from "./Checkout.module.css";
-import { Search } from 'lucide-react';
 import Header from "../../components/header/Header";
+import {
+  useCart,
+  useIncreaseQuantity,
+  useDecreaseQuantity,
+  useRemoveFromCart,
+} from "../../hooks/useCart";
+import { useCheckout } from "../../hooks/useCheckout";
+import PaymentForm from "../../components/PaymentForm";
 
-
-const INITIAL_PRODUCTS = [
-  { id: 1, name: "Pink and Black Planner", variant: "Default", price: 23, qty: 1, emoji: "📓" },
-  { id: 2, name: "Hello There Mug", variant: "White / 11oz", price: 19, qty: 1, emoji: "☕" },
-  { id: 3, name: "Flower Scrapbook Journal", variant: "Default", price: 32, qty: 3, emoji: "🌸" },
-];
 
 
 export default function CheckoutPage() {
-  const [cart, setCart] = useState(INITIAL_PRODUCTS.map((p) => ({ ...p })));
+
+  const [clientSecret, setClientSecret] =
+  useState("");
+
+  const {
+  mutate: createPaymentIntent,
+  isPending,
+} = useCheckout();
+
   const [form, setForm] = useState({
     email: "",
     newsOffers: false,
@@ -27,25 +36,78 @@ export default function CheckoutPage() {
     saveInfo: false,
   });
 
-  const changeQty = (id, delta) => {
-    setCart((prev) =>
-      prev.map((p) =>
-        p.id === id ? { ...p, qty: Math.max(1, p.qty + delta) } : p
-      )
-    );
-  };
+  
 
-  const removeItem = (id) => {
-    setCart((prev) => prev.filter((p) => p.id !== id));
-  };
+  
+  const handleCheckout = () => {
+  if (
+    !form.email ||
+    !form.lastName ||
+    !form.address ||
+    !form.city ||
+    !form.country ||
+    !form.zip
+  ) {
+    alert("Please fill in all required fields.");
+    return;
+  }
 
-  const totalQty = cart.reduce((s, p) => s + p.qty, 0);
-  const subtotal = cart.reduce((s, p) => s + p.price * p.qty, 0);
+  createPaymentIntent(form, {
+    onSuccess: (response) => {
+      setClientSecret(response.data.clientSecret);
+    },
+  });
+};
+
+  const { data, isLoading } = useCart();
+
+  const { mutate: increaseQuantity } =
+    useIncreaseQuantity();
+
+  const { mutate: decreaseQuantity } =
+    useDecreaseQuantity();
+
+  const { mutate: removeFromCart } =
+    useRemoveFromCart();
+
+  // Normalize quantity so it works whether the API returns
+  // `item.quantity` or `item.qty`, and always coerce to a number
+  // so price * quantity never produces NaN.
+  const cart = (data?.data?.items ?? []).map((item) => ({
+    ...item,
+    quantity: Number(item.quantity ?? item.qty ?? 0),
+  }));
+
+
+  const totalQty = cart.reduce(
+  (s, item) => s + item.quantity,
+  0
+);
+
+const subtotal = cart.reduce(
+  (s, item) =>
+    s +
+    Number(item.product.price) *
+      item.quantity,
+  0
+);
 
   const handleField = (e) => {
     const { name, value, type, checked } = e.target;
     setForm((prev) => ({ ...prev, [name]: type === "checkbox" ? checked : value }));
   };
+
+
+ if (isLoading) {
+  return (
+    <div>
+      <Header />
+      <div className="min-h-screen flex items-center justify-center">
+        Loading...
+      </div>
+    </div>
+  );
+}
 
   return (
     <>
@@ -58,7 +120,7 @@ export default function CheckoutPage() {
         {/* Contact */}
         <div className={styles.sectionRow}>
           <h2 className={styles.sectionTitle}>Contact</h2>
-          <a href="/login" className={styles.signIn}>Sign in</a>
+          {/* <a href="/login" className={styles.signIn}>Sign in</a> */}
         </div >
         
         <input
@@ -83,17 +145,6 @@ export default function CheckoutPage() {
 
         {/* Delivery */}
         <h2 className={styles.sectionTitle}>Delivery</h2>
-        <select
-          className={`${styles.field} ${styles.mb10}`}
-          name="country"
-          value={form.country}
-          onChange={handleField}
-        >
-          <option>United States</option>
-          <option>Egypt</option>
-          <option>United Kingdom</option>
-          <option>Canada</option>
-        </select>
         <div className={`${styles.fieldRow} ${styles.mb10}`}>
           <input
             className={styles.field}
@@ -131,35 +182,25 @@ export default function CheckoutPage() {
           value={form.apartment}
           onChange={handleField}
         />
-        <div className={`${styles.threeCol} ${styles.mb10}`}>
-          <input
-            className={styles.field}
-            type="text"
-            name="city"
-            placeholder="City"
-            value={form.city}
-            onChange={handleField}
-          />
-          <select
-            className={styles.field}
-            name="state"
-            value={form.state}
-            onChange={handleField}
-          >
-            <option value="">State</option>
-            <option>California</option>
-            <option>New York</option>
-            <option>Texas</option>
-          </select>
-          <input
-            className={styles.field}
-            type="text"
-            name="zip"
-            placeholder="ZIP code"
-            value={form.zip}
-            onChange={handleField}
-          />
-        </div>
+        <div className={`${styles.fieldRow} ${styles.mb10}`}>
+  <input
+    className={styles.field}
+    type="text"
+    name="city"
+    placeholder="City"
+    value={form.city}
+    onChange={handleField}
+  />
+
+  <input
+    className={styles.field}
+    type="text"
+    name="zip"
+    placeholder="ZIP code"
+    value={form.zip}
+    onChange={handleField}
+  />
+</div>
         <label className={styles.checkboxRow}>
           <input
             type="checkbox"
@@ -192,12 +233,21 @@ export default function CheckoutPage() {
           </svg>
           All transactions are secure and encrypted.
         </p>
-        {/*<div className={styles.payBox}>
-          <span className={styles.payIcon}>💳</span>
-          This store can't accept payments right now.
-        </div>*/}
 
-        <button className={styles.btnPay}>Pay now</button>
+        <button
+          className={styles.btnPay}
+          onClick={handleCheckout}
+          disabled={isPending}
+        >
+          {isPending ? "Loading..." : "Pay now"}
+        </button>
+        {clientSecret && (
+          <div className="mt-6">
+            <PaymentForm
+              clientSecret={clientSecret}
+            />
+          </div>    
+        )}
       </div>
       </div>
 
@@ -206,23 +256,59 @@ export default function CheckoutPage() {
         {cart.length === 0 ? (
           <p className={styles.emptyCart}>No items in cart</p>
         ) : (
-          cart.map((p) => (
-            <div className={styles.product} key={p.id}>
+          cart.map((item) => (
+            <div className={styles.product} key={item.product._id}>
               <div className={styles.productImg}>
-                <span>{p.emoji}</span>
-                <span className={styles.badge}>{p.qty}</span>
+                <img
+                    src={item.product.image.url}
+                    alt={item.product.name}
+                    style={{
+                      width: "100%",
+                      height: "100%",
+                      objectFit: "cover",
+                    }}
+                  />
               </div>
               <div className={styles.productInfo}>
-                <div className={styles.productName}>{p.name}</div>
-                <div className={styles.productVariant}>{p.variant}</div>
+                <div className={styles.productName}>
+                  {item.product.name}
+                </div>
+
+                <div className={styles.productVariant}>
+                  {item.product.brand?.name}
+                </div>
+
                 <div className={styles.qtyCtrl}>
-                  <button className={styles.qtyBtn} onClick={() => changeQty(p.id, -1)}>−</button>
-                  <span className={styles.qtyNum}>{p.qty}</span>
-                  <button className={styles.qtyBtn} onClick={() => changeQty(p.id, 1)}>+</button>
-                  <button className={styles.removeBtn} onClick={() => removeItem(p.id)}>Remove</button>
+                  <button
+                    className={styles.qtyBtn}
+                    onClick={() => decreaseQuantity(item.product._id)}
+                    disabled={item.quantity === 1}
+                  >
+                    −
+                  </button>
+
+                  <span className={styles.qtyNum}>{item.quantity}</span>
+
+                  <button
+                    className={styles.qtyBtn}
+                    onClick={() => increaseQuantity(item.product._id)}
+                    disabled={item.quantity >= item.product.stock}
+                  >
+                    +
+                  </button>
+
+                  <button
+                    className={styles.removeBtn}
+                    onClick={() => removeFromCart(item.product._id)}
+                  >
+                    Remove
+                  </button>
                 </div>
               </div>
-              <div className={styles.productPrice}>${(p.price * p.qty).toFixed(2)}</div>
+              <div className={styles.productPrice}>${(
+  Number(item.product.price) *
+  item.quantity
+).toFixed(2)}</div>
             </div>
           ))
         )}

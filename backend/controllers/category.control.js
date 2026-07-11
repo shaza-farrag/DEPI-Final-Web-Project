@@ -1,5 +1,6 @@
 const Category = require("../models/category.model");
 const Brand = require("../models/brand.model");
+const Product = require("../models/product.model");
 
 const asyncHandler = require("../middlewares/asyncHandler");
 const ApiError = require("../utils/ApiError");
@@ -42,11 +43,44 @@ const getCategories = asyncHandler(async (req, res) => {
     .skip(skip)
     .limit(limit);
 
+  const categoriesWithStats = await Promise.all(
+    categories.map(async (category) => {
+      const brandsCount = await Brand.countDocuments({
+        category: category._id,
+      });
+
+      const products = await Product.find({
+        category: category._id,
+      });
+
+      const productsCount = products.length;
+
+      const soldProducts = products.reduce(
+        (sum, product) => sum + product.soldCount,
+        0
+      );
+
+      const profit = products.reduce(
+        (sum, product) =>
+          sum + product.price * product.soldCount,
+        0
+      );
+
+      return {
+        ...category.toObject(),
+        brandsCount,
+        productsCount,
+        soldProducts,
+        profit,
+      };
+    })
+  );
+
   return res.status(200).json(
     new ApiResponse(
       200,
       {
-        categories,
+        categories: categoriesWithStats,
         currentPage: page,
         totalPages: Math.ceil(totalCategories / limit),
         totalCategories,

@@ -1,9 +1,13 @@
 import api from "./api";
 
-export const getProducts = async (page = 1, limit = 12) => {
-  const { data } = await api.get(
-    `/products?page=${page}&limit=${limit}`
-  );
+export const getProducts = async (page, limit) => {
+  let url = "/products";
+
+  if (page && limit) {
+    url += `?page=${page}&limit=${limit}`;
+  }
+
+  const { data } = await api.get(url);
 
   return data;
 };

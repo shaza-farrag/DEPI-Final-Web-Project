@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 
 import { useProduct } from "../../hooks/useProduct";
+import { useAddToCart } from "../../hooks/useCart";
 
 function ProductDetails() {
   const { id } = useParams();
@@ -9,6 +10,8 @@ function ProductDetails() {
   const { data, isLoading, isError } = useProduct(id);
 
   const product = data?.data;
+
+  const { mutate: addToCart, isPending } = useAddToCart();
 
   const [quantity, setQuantity] = useState(1);
 
@@ -31,6 +34,13 @@ function ProductDetails() {
       </div>
     );
   }
+
+  const handleAddToCart = () => {
+    addToCart({
+      productId: product._id,
+      quantity,
+    });
+  };
 
   return (
     <div className="bg-white min-h-screen p-12">
@@ -119,7 +129,8 @@ function ProductDetails() {
 )}
 
           <button
-            disabled={product.stock === 0}
+            onClick={handleAddToCart}
+            disabled={product.stock === 0 || isPending}
             className={`uppercase tracking-widest py-4 w-full transition
 
               ${
@@ -129,7 +140,7 @@ function ProductDetails() {
               }
             `}
           >
-            Add To Cart
+            {isPending ? "Adding..." : "Add To Cart"}
           </button>
 
           {product.stock === 0 && (

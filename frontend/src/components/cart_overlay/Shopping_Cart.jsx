@@ -13,11 +13,17 @@ function Cart_overlay() {
 export default Cart_overlay*/
 
 import React from "react";
-import { useShoppingCart } from "../../context/ShoppingCartContext.jsx";
+import {
+  useCart,
+  useIncreaseQuantity,
+  useDecreaseQuantity,
+  useRemoveFromCart,
+} from "../../hooks/useCart";
 import { useNavigate } from "react-router-dom";
 import CartItem from "./Cartitem.jsx";
 import FormatCurrency from "./FormatCurrency";
 import styles from "./Shopping_Cart.module.css";
+import { useShoppingCart } from "../../context/ShoppingCartContext";
 
 const Shopping_Cart = ({ isOpen }) => {
 
@@ -26,12 +32,45 @@ const Shopping_Cart = ({ isOpen }) => {
     closeCart();
     navigate("/login");
   }
-  const { closeCart, cartItems, storeItems } = useShoppingCart();
+  const { closeCart } = useShoppingCart();
 
-  const total = cartItems.reduce((total, cartItem) => {
-    const item = storeItems.find((i) => i.id === cartItem.id);
-    return total + (item?.price || 0) * cartItem.quantity;
-  }, 0);
+  const { data, isLoading } = useCart();
+
+  const { mutate: increaseQuantity } =
+    useIncreaseQuantity();
+
+  const { mutate: decreaseQuantity } =
+    useDecreaseQuantity();
+
+  const { mutate: removeFromCart } =
+    useRemoveFromCart();
+
+  const cartItems = data?.data?.items ?? [];
+
+  const total = data?.data?.total ?? 0;
+
+  if (isLoading) {
+  return (
+    <>
+      {isOpen && (
+        <div
+          className={styles.overlay}
+          onClick={closeCart}
+        />
+      )}
+
+      <div
+        className={`${styles.panel} ${
+          isOpen ? styles.panelOpen : ""
+        }`}
+      >
+        <p className="text-center py-5">
+          Loading...
+        </p>
+      </div>
+    </>
+  );
+}
 
   return (
     <>
@@ -64,7 +103,13 @@ const Shopping_Cart = ({ isOpen }) => {
           ) : (
             <div className={styles.itemsList}>
               {cartItems.map((item) => (
-                <CartItem key={item.id} {...item} />
+                <CartItem
+                  key={item.product._id}
+                  item={item}
+                  increaseQuantity={increaseQuantity}
+                  decreaseQuantity={decreaseQuantity}
+                  removeFromCart={removeFromCart}
+                />
               ))}
             </div>
           )}
@@ -78,7 +123,15 @@ const Shopping_Cart = ({ isOpen }) => {
               <span>{FormatCurrency(total)}</span>
             </div>
             <p className={styles.taxNote}>Shipping & taxes calculated at checkout</p>
-            <button className={styles.checkoutBtn}>Checkout</button>
+            <button
+              className={styles.checkoutBtn}
+              onClick={() => {
+                closeCart();
+                navigate("/checkout");
+              }}
+            >
+              Checkout
+            </button>
           </div>
         )}
 
