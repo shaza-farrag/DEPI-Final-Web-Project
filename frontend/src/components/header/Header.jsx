@@ -6,10 +6,8 @@ import {
   FaChevronCircleDown,
 } from "react-icons/fa";
 import { Link } from "react-router-dom";
-
-import logo from "../../assets/logo.png";
-
 import { useShoppingCart } from "../../context/ShoppingCartContext";
+import logoWhite from "../../assets/logoWhite.png";
 import { UseAuth } from "../../context/AuthContext";
 import productsData from "../../data/products.json";
 
@@ -134,15 +132,10 @@ const Header = forwardRef(function Header(_, headerRef) {
             </button>
           </div>
 
-          <Link
-            to="/"
-            className="flex justify-center"
-          >
-            <img
-              src={logo}
-              alt="Logo"
-              className="h-30 w-auto object-contain"
-            />
+
+          {/* CENTER — logo in normal flow, drives row height */}
+          <Link to="/" className="flex justify-center select-none">
+            <img src={logoWhite} alt="Brand Logo" className="h-30 w-auto object-contain" />
           </Link>
 
           <div className="flex justify-end items-center gap-6">
