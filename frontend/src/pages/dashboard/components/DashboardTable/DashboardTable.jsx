@@ -1,11 +1,12 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { FiFilter, FiX, FiSearch } from "react-icons/fi";
+import { Pencil, Trash2 } from "lucide-react";
 
 // Mock Data خارج الكمبوننت
 export const mockProducts = [
   {
-    _id: "1",
+    id: "1",
     name: 'Apple MacBook Pro 17"',
     price: 2999,
     stock: 12,
@@ -14,7 +15,7 @@ export const mockProducts = [
   },
 
   ...Array.from({ length: 25 }, (_, i) => ({
-    _id: String(2 + i),
+    id: String(2 + i),
     name: `Product ${2 + i}`,
     price: 150 + i * 25,
     stock: i % 6 === 0 ? 0 : 15 + i,
@@ -32,7 +33,7 @@ export const mockProducts = [
 
 export default function DashboardTable() {
   const navigate = useNavigate();
-
+  const [deleteTarget, setDeleteTarget] = useState(null);
   const ITEMS_PER_PAGE = 10;
 
   const [products, setProducts] = useState([]);
@@ -129,14 +130,16 @@ const [maxPrice, setMaxPrice] = useState("");
     }
   };
 
-  // [تعديل] handleEdit بقت بتاخد المنتج بالكامل بدل الـ id بس
   const handleEdit = (product) => {
-    // [تعديل] بنبعت بيانات المنتج كاملة مع التنقل عن طريق location state
-    // عشان صفحة الـ Edit تلاقيها جاهزة على طول من غير ما تطلب من أي API
     navigate(`/dashboard/products/edit/${product._id}`, {
       state: { product },
     });
   };
+
+    function confirmDelete(id) {
+    setProducts((prev) => prev.filter((b) => b.id !== id));
+    setDeleteTarget(null);
+  }
 
   return (
     <div className="relative overflow-x-auto bg-white my-5 shadow-md rounded-xl border border-gray-200">
@@ -205,7 +208,7 @@ const [maxPrice, setMaxPrice] = useState("");
           ) : (
             products.map((product) => (
               <tr
-                key={product._id}
+                key={product.id}
                 className="border-b border-gray-300 hover:bg-pink-50 transition"
               >
                 <td className="px-6 py-4">
@@ -249,16 +252,22 @@ const [maxPrice, setMaxPrice] = useState("");
                 </td>
 
                 <td className="px-6 py-4 text-center">
-                  <button
-                    onClick={() => handleEdit(product)} // [تعديل] بنبعت المنتج كامل بدل product._id بس
-                    className="text-pink-600 hover:underline mr-4"
-                  >
-                    Edit
-                  </button>
-
-                  <button className="text-red-500 hover:underline">
-                    Delete
-                  </button>
+                  <div className="flex items-center justify-end gap-2">
+                      <button
+                      onClick={() => handleEdit(product)}
+                      aria-label="Edit banner"
+                      className="p-2 rounded-md text-[#7a7171] hover:text-[#D797C6] hover:bg-[#F8ECEC]! transition-colors cursor-pointer"
+                      >
+                      <Pencil size={16} />
+                      </button>
+                      <button
+                      onClick={() => setDeleteTarget(product.id)}
+                      aria-label="Delete banner"
+                      className="p-2 rounded-md text-[#7a7171] hover:text-red-500 hover:bg-[#F8ECEC]! transition-colors cursor-pointer"
+                      >
+                      <Trash2 size={16} />
+                      </button>
+                  </div>
                 </td>
               </tr>
             ))
@@ -403,6 +412,30 @@ const [maxPrice, setMaxPrice] = useState("");
             >
               Clear Filters
             </button>
+          </div>
+        </div>
+      )}
+              {deleteTarget !== null && (
+        <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
+          <div className="bg-white border border-gray-200 rounded-xl p-9 w-90 shadow-lg text-center!">
+            <h2 className=" font-semibold text-2xl mb-2">Delete Product</h2>
+            <p className="text-gray-500 text-sm mb-5">
+             Are you sure to delete this Product ?
+            </p>
+            <div className="flex  gap-[30%] text-center!">
+              <button
+                onClick={() => setDeleteTarget(null)}
+                className="px-4 py-2 text-sm rounded-md   shadow-zinc-400 shadow-sm mx-auto text-gray-600 hover:bg-gray-100 transition-colors cursor-pointer"
+              >
+                Cancel
+              </button>
+              <button
+                onClick={() => confirmDelete(deleteTarget)}
+                className="px-4 py-2 mx-auto text-sm rounded-md bg-red-500 shadow-zinc-700 shadow-sm hover:bg-red-600 text-white transition-colors cursor-pointer"
+              >
+                Delete
+              </button>
+            </div>
           </div>
         </div>
       )}

@@ -57,7 +57,8 @@ export default function ProductsEdit() {
         } else {
             
             setLoadError(
-                "تعذر تحميل بيانات المنتج مباشرة. من فضلك ارجع لصفحة المنتجات واضغط Edit من الجدول."
+                "Unable to load the product data directly. Please return to the Products page and click 'Edit' from the product table."
+
             );
             setLoading(false);
         }
@@ -78,11 +79,11 @@ export default function ProductsEdit() {
 
     const validate = () => {
         const newErrors = {};
-        if (!formData.name.trim()) newErrors.name = "اسم المنتج مطلوب";
-        if (!formData.sku.trim()) newErrors.sku = "الـ SKU مطلوب";
-        if (formData.category === "All") newErrors.category = "اختار الفئة";
-        if (!formData.price || Number(formData.price) <= 0) newErrors.price = "السعر مطلوب ولازم يكون أكبر من صفر";
-        if (!formData.stock || Number(formData.stock) < 0) newErrors.stock = "الكمية مطلوبة";
+        if (!formData.name.trim()) newErrors.name = <h1 className="text-red-600 ml-2">Product's name *</h1> ;
+        if (!formData.sku.trim()) newErrors.sku = <h1 className="text-red-600 ml-2">SKU *</h1> ;
+        if (formData.category === "All") newErrors.category =<h1 className="text-red-600 ml-2">Category *</h1> ;
+        if (!formData.price || Number(formData.price) <= 0) newErrors.price = <h1 className="text-red-600 ml-2">Price *</h1> ;
+        if (!formData.stock || Number(formData.stock) < 0) newErrors.stock = <h1 className="text-red-600 ml-2">Stock *</h1> ;
         setErrors(newErrors);
         return Object.keys(newErrors).length === 0;
     };
@@ -93,8 +94,6 @@ export default function ProductsEdit() {
         e.preventDefault();
         if (!validate()) return;
 
-        // MOCK: السطر ده هيتستبدل بنداء حقيقي لما الباك يخلص، مثلاً:
-        // await api.put(`/products/${id}`, formData);
         console.log("Updated Product Data (id:", id, "):", formData);
 
         setSaveSuccess(true);
@@ -108,7 +107,7 @@ export default function ProductsEdit() {
     if (loading) {
         return (
             <div className="p-10 text-center text-zinc-500 text-lg">
-                جارِ تحميل بيانات المنتج...
+               Loading..
             </div>
         );
     }
@@ -117,13 +116,13 @@ export default function ProductsEdit() {
         return (
             <div className="p-10 text-center text-red-500 text-lg">
                 {loadError}
-                {/* [تعديل] زرار يرجعها لصفحة الجدول بسهولة بدل ما تفضل عالقة */}
+               
                 <div className="mt-4">
                     <button
                         onClick={() => navigate("/dashboard/products")}
                         className="px-5 py-2 bg-[#D797C6] text-white rounded-lg hover:bg-[#B6679F]"
                     >
-                        الرجوع لقائمة المنتجات
+                       Return to List
                     </button>
                 </div>
             </div>
@@ -141,7 +140,7 @@ export default function ProductsEdit() {
 
             {saveSuccess && (
                 <div className="mb-4 p-3 bg-green-100 text-green-700 rounded-lg text-center">
-                    تم حفظ التعديلات بنجاح (محليًا - لسه مش متصل بالباك)
+                   Save new data !
                 </div>
             )}
 
@@ -312,13 +311,3 @@ export default function ProductsEdit() {
         </>
     );
 }
-
-// [ملاحظة هامة] لما الباك يخلص لازم تعمل الآتي:
-// 1. تستبدل الاعتماد على location.state بنداء API حقيقي دايمًا، مثلاً:
-//    useEffect(() => { fetch(`/api/products/${id}`).then(...) }, [id]);
-//    وده هيخليها تشتغل صح حتى لو المستخدم فتح اللينك مباشرة أو عمل refresh (مش هتحتاج fallback تاني).
-// 2. الـ DashboardTable هيرجع يجيب بيانات المنتجات من API بدل mockProducts، فالـ category.name و
-//    image.url هيفضلوا بنفس الشكل لو السيرفر بيرجعهم بنفس الـ structure، أو هتحتاج تظبط mapProductToFormData
-//    على حسب شكل response الباك الفعلي.
-// 3. جوه handleSubmit تستبدل الـ console.log بنداء PUT/PATCH حقيقي للـ API.
-// 4. حقل sku و supplier مش موجودين في بيانات الجدول الحالية، تأكدي إن الباك بيرجعهم مع باقي بيانات المنتج.

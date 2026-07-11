@@ -1,28 +1,13 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { FiSearch } from "react-icons/fi";
+import { Pencil, Trash2 } from "lucide-react";
+const mockCategories = [];
 
-// ============================================================
-// 🔴 [BACKEND] امسحي الـ array ده بالكامل لما الباك يجهز
-// ============================================================
-const mockCategories = [
-    { _id: "1",  name: "Laptops",    productsCount: 14, createdAt: "2024-01-10", status: "Active"   },
-    { _id: "2",  name: "Phones",     productsCount: 22, createdAt: "2024-01-15", status: "Active"   },
-    { _id: "3",  name: "Fashion",    productsCount: 8,  createdAt: "2024-02-03", status: "Active"   },
-    { _id: "4",  name: "Tablets",    productsCount: 5,  createdAt: "2024-02-20", status: "Active"   },
-    { _id: "5",  name: "TVs",        productsCount: 9,  createdAt: "2024-03-01", status: "Inactive" },
-    { _id: "6",  name: "Cameras",    productsCount: 3,  createdAt: "2024-03-18", status: "Active"   },
-    { _id: "7",  name: "Gaming",     productsCount: 17, createdAt: "2024-04-05", status: "Active"   },
-    { _id: "8",  name: "Headphones", productsCount: 11, createdAt: "2024-04-22", status: "Inactive" },
-    { _id: "9",  name: "Speakers",   productsCount: 6,  createdAt: "2024-05-10", status: "Active"   },
-    { _id: "10", name: "Printers",   productsCount: 4,  createdAt: "2024-05-28", status: "Active"   },
-    { _id: "11", name: "Monitors",   productsCount: 7,  createdAt: "2024-06-14", status: "Active"   },
-    { _id: "12", name: "Storage",    productsCount: 2,  createdAt: "2024-06-30", status: "Inactive" },
-];
-// ============================================================
 
 export default function CategoryList() {
     const navigate = useNavigate();
+    const [deleteTarget, setDeleteTarget] = useState(null);
     const ITEMS_PER_PAGE = 10;
 
     const [categories, setCategories]   = useState([]);
@@ -44,22 +29,6 @@ export default function CategoryList() {
         try {
             setLoading(true);
 
-            // ============================================================
-            // 🔴 [BACKEND] امسحي كل الكود ده (السطور من هنا للـ Pagination)
-            // واستبدليه بالنداء ده:
-            //
-            // const res = await fetch(
-            //     `/api/categories?search=${searchTerm}&page=${currentPage}&limit=${ITEMS_PER_PAGE}`
-            // );
-            // const data = await res.json();
-            // setCategories(data.categories);
-            // setTotalItems(data.totalItems);
-            // setTotalPages(data.totalPages);
-            //
-            // وخلي الباك هو اللي يعمل البحث والـ pagination
-            // ============================================================
-
-            // --- الكود المؤقت (هيتمسح لما الباك يجهز) ---
             let filtered = [...mockCategories];
 
             if (searchTerm.trim()) {
@@ -73,8 +42,8 @@ export default function CategoryList() {
 
             setCategories(paginated);
             setTotalItems(filtered.length);
-            setTotalPages(Math.ceil(filtered.length / ITEMS_PER_PAGE));
-            // --- نهاية الكود المؤقت ---
+            setTotalPages(Math.max(1, Math.ceil(filtered.length / ITEMS_PER_PAGE)));
+           
 
         } catch (error) {
             console.error("Error fetching categories:", error);
@@ -83,32 +52,16 @@ export default function CategoryList() {
         }
     };
 
-    // ============================================================
-    // 🟡 [BACKEND] handleEdit مش محتاجة تتغير كتير،
-    // بس تأكدي إن الباك بيرجع نفس الـ fields دي في الـ category object:
-    // { _id, name, productsCount, createdAt, status }
-    // لو الأسماء اتغيرت (مثلاً "count" بدل "productsCount")،
-    // ظبطي الأسماء في الـ JSX تحت بنفس الأسماء اللي الباك بيرجعها
-    // ============================================================
     const handleEdit = (category) => {
         navigate(`/dashboard/category/edit/${category._id}`, {
             state: { category },
         });
     };
 
-    // ============================================================
-    // 🔴 [BACKEND] دالة الـ Delete - دلوقتي مفيش حاجة بتحصل
-    // لما الباك يجهز استبدليها بالنداء ده:
-    //
-    // const handleDelete = async (id) => {
-    //     if (!window.confirm("هل أنت متأكد من حذف هذا الكاتيجوري؟")) return;
-    //     await fetch(`/api/categories/${id}`, { method: "DELETE" });
-    //     fetchCategories(); // تحديث الجدول بعد الحذف
-    // };
-    //
-    // وغيري زرار الـ Delete تحت يبقى:
-    // <button onClick={() => handleDelete(category._id)}>Delete</button>
-    // ============================================================
+    function confirmDelete(id) {
+    setCategories((prev) => prev.filter((b) => b.id !== id));
+    setDeleteTarget(null);
+  }
 
 
     return (
@@ -144,13 +97,6 @@ export default function CategoryList() {
                         <th className="px-6 py-4">ID</th>
                         <th className="px-6 py-4">Category Name</th>
                         <th className="px-6 py-4">Products Count</th>
-                        {/* ============================================================
-                            🟡 [BACKEND] عمود Created At
-                            الباك المفروض يرجع التاريخ بصيغة ISO زي: "2024-01-10T00:00:00Z"
-                            لو كده غيري السطر ده يبقى:
-                            {new Date(category.createdAt).toLocaleDateString()}
-                            بدل {category.createdAt} عشان يتعرض بشكل منظم
-                            ============================================================ */}
                         <th className="px-6 py-4">Created At</th>
                         <th className="px-6 py-4">Status</th>
                         <th className="px-6 py-4 text-center">Action</th>
@@ -182,29 +128,15 @@ export default function CategoryList() {
                                     {category.name}
                                 </td>
 
-                                {/* ============================================================
-                                    🟡 [BACKEND] لو الباك بيرجع اسم الـ field مختلف
-                                    مثلاً "count" بدل "productsCount"، غيري هنا:
-                                    {category.count} products
-                                    ============================================================ */}
                                 <td className="px-6 py-4">
                                     {category.productsCount} products
                                 </td>
 
-                                {/* ============================================================
-                                    🟡 [BACKEND] لو الباك بيرجع تاريخ ISO، غيري هنا:
-                                    {new Date(category.createdAt).toLocaleDateString()}
-                                    ============================================================ */}
                                 <td className="px-6 py-4 text-gray-500">
                                     {category.createdAt}
                                 </td>
 
-                                {/* ============================================================
-                                    🟡 [BACKEND] لو الباك بيرجع status بشكل مختلف
-                                    مثلاً boolean: { isActive: true } بدل { status: "Active" }
-                                    غيري الشرط هنا يبقى:
-                                    category.isActive ? "Active" : "Inactive"
-                                    ============================================================ */}
+
                                 <td className="px-6 py-4">
                                     <span className={`px-3 py-1 rounded-full text-xs font-medium ${
                                         category.status === "Active"
@@ -216,21 +148,22 @@ export default function CategoryList() {
                                 </td>
 
                                 <td className="px-6 py-4 text-center">
-                                    <button
+                                    <div className="flex items-center justify-end gap-2">
+                                        <button
                                         onClick={() => handleEdit(category)}
-                                        className="text-pink-600 hover:underline mr-4"
-                                    >
-                                        Edit
-                                    </button>
-
-                                    {/* ============================================================
-                                        🔴 [BACKEND] الزرار ده مفيش ليه وظيفة دلوقتي
-                                        لما الباك يجهز غيريه يبقى:
-                                        <button onClick={() => handleDelete(category._id)}>Delete</button>
-                                        ============================================================ */}
-                                    <button className="text-red-500 hover:underline">
-                                        Delete
-                                    </button>
+                                        aria-label="Edit banner"
+                                        className="p-2 rounded-md text-[#7a7171] hover:text-[#D797C6] hover:bg-[#F8ECEC]! transition-colors cursor-pointer"
+                                        >
+                                        <Pencil size={16} />
+                                        </button>
+                                        <button
+                                        onClick={() => setDeleteTarget(category.id)}
+                                        aria-label="Delete banner"
+                                        className="p-2 rounded-md text-[#7a7171] hover:text-red-500 hover:bg-[#F8ECEC]! transition-colors cursor-pointer"
+                                        >
+                                        <Trash2 size={16} />
+                                        </button>
+                                    </div>
                                 </td>
                             </tr>
                         ))
@@ -262,6 +195,31 @@ export default function CategoryList() {
                     </button>
                 </div>
             </div>
+            
+        {deleteTarget !== null && (
+        <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
+          <div className="bg-white border border-gray-200 rounded-xl p-9 w-90 shadow-lg text-center!">
+            <h2 className=" font-semibold text-2xl mb-2">Delete category</h2>
+            <p className="text-gray-500 text-sm mb-5">
+             Are you sure to delete this category ?
+            </p>
+            <div className="flex  gap-[30%] text-center!">
+              <button
+                onClick={() => setDeleteTarget(null)}
+                className="px-4 py-2 text-sm rounded-md   shadow-zinc-400 shadow-sm mx-auto text-gray-600 hover:bg-gray-100 transition-colors cursor-pointer"
+              >
+                Cancel
+              </button>
+              <button
+                onClick={() => confirmDelete(deleteTarget)}
+                className="px-4 py-2 mx-auto text-sm rounded-md bg-red-500 shadow-zinc-700 shadow-sm hover:bg-red-600 text-white transition-colors cursor-pointer"
+              >
+                Delete
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
         </div>
     );
 }

@@ -31,6 +31,8 @@ import Faq from './pages/faq/faq'
 import Blog from './pages/blog/blog'
 import Contact from './pages/contact/Contact'
 import CheckResetEmail from './pages/forgotPassword/CheckResetEmail'
+import PageTransition from './pages/dashboard/components/PageTransition';
+import BrandList from './pages/dashboard/pages/BrandList';
 
 
 function App() {
@@ -70,7 +72,8 @@ function App() {
             </AuthProvider>
           }
         />
- 
+
+        <Route element={<PageTransition/>}>
         <Route
           path="/dashboard"
           element={
@@ -90,11 +93,13 @@ function App() {
           <Route path="products/edit/:id" element={<ProductsEdit />} />
           <Route path="category/list" element={<CategoryList />} />
           <Route path="category/add" element={<CategoryAdd />} />
+          <Route path="category/brand" element={<BrandList/>}/>
           <Route path="homeslider/list" element={<HomeBannerList />} />
           <Route path="homeslider/add" element={<HomeBannerAdd />} />
 
 
            <Route path="*" element={<Navigate to="/" replace />} />
+        </Route>
         </Route>
       </Routes>
     </ShoppingCartProvider>
